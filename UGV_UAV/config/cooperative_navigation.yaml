@@ -1,0 +1,9 @@
+version: 1
+
+# Physical safety bounds for combined-mode local planning. These are limits,
+# not commanded manoeuvres. DWB selects forward, rotational, or reverse
+# trajectories dynamically from the live local costmap.
+reverse_motion:
+  enabled: true
+  maximum_speed_mps: 0.25
+  velocity_samples: 30

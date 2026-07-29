@@ -1,0 +1,55 @@
+# Shared environment; resolved from the EiraX workspace root.
+world_file: simulation/worlds/baylands_editable.world
+startup_timeout_sec: 300
+health_period_sec: 2
+enable_waypoint_motion: true
+record_images: false
+required_topics:
+  - /clock
+  - /husky/lidar3d/points
+  - /ground_truth/pose
+  - /odom
+  - /tf
+  - /tf_static
+  - /imu
+  - /husky/gps
+  - /odometry/gps
+  - /lidar3d/odom
+slam_required_topics:
+  - /map
+  - /rtabmap3d/mapData
+  - /rtabmap_lidar/mapData
+record_topics:
+  - /husky/lidar3d/points
+  - /ground_truth/pose
+  - /wheel/odom
+  - /odometry/local
+  - /odom
+  - /lidar3d/odom
+  - /tf
+  - /tf_static
+  - /imu
+  - /husky/gps
+  - /odometry/gps
+  - /gps/filtered
+  - /cmd_vel
+  - /joint_states
+  - /map
+  - /rtabmap3d/mapData
+  - /rtabmap3d/mapGraph
+  - /plan
+  - /local_plan
+  - /diagnostics
+  - /mission/events
+  - /mission/state
+  - /cmd_vel_nav
+  - /rtabmap3d/cloud_map
+  - /rtabmap3d/info
+  - /rtabmap3d/global_pose
+  - /rtabmap3d/localization_pose
+  - /lidar3d/odom_info
+  - /lidar_slam/map
+  - /rtabmap_lidar/mapData
+  - /rtabmap_lidar/mapGraph
+  - /rtabmap_lidar/info
+  - /rtabmap_lidar/localization_pose
