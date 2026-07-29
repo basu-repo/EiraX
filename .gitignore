@@ -1,0 +1,81 @@
+# Generated mission datasets and recordings
+/datasets/*
+!/datasets/.gitkeep
+
+# Research reports are maintained outside Git
+/report/*
+!/report/.gitkeep
+
+# Gazebo worlds and model assets are maintained outside Git
+/simulation/*
+!/simulation/.gitkeep
+**/models/
+**/meshes/
+**/materials/
+**/*.dae
+**/*.DAE
+**/*.stl
+**/*.obj
+**/*.glb
+**/*.gltf
+**/*.mesh
+
+# Editor and local agent state
+/.vscode/
+/.agents/
+/.codex/
+/.AGENT/
+/.AGENTS/
+/.CODEX/
+
+# External repositories and locally built dependencies
+/PX4-Autopilot/
+/PX$-Autopilot/
+/UAV_UGV-main/
+/halmstad_ws-main/
+/HALMSTAD_WS-MAIN/
+/UGV_UAV_5G_CoSimulation/
+
+# Supplied UAS co-simulation files and their preservation manifest
+/**/*UAS_CoSimulation*
+
+# Recreated from their documented upstream versions during setup
+/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G/
+/UGV_UAV_5G_CoSimulation/sim/simu5g/inet4.5
+
+# Python caches and test caches
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+
+# ROS 2, colcon, CMake, and simulator build products
+**/build/
+**/install/
+**/log/
+**/logs/
+**/CMakeFiles/
+**/CMakeCache.txt
+
+# Runtime recordings and databases
+**/*.mcap
+**/*.db
+**/*.db-wal
+**/*.db-shm
+**/*.ulg
+**/*.bag
+**/*.backup
+**/*.backup_*
+
+# PX4 runtime state (the runtime programs remain repository inputs)
+**/px4_runtime/rootfs/dataman
+**/px4_runtime/rootfs/parameters*.bson
+**/px4_runtime/rootfs/param_import_fail.bson
+**/px4_runtime/rootfs/log/
+**/px4_runtime/rootfs/eeprom/
+**/px4_runtime/rootfs/mavlink/
+
+# Temporary files
+**/*.tmp
+**/*.swp
+**/*~
