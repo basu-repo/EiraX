@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="a200-0000">
+
+  <!-- Common -->
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/common.urdf.xacro"/>
+
+  <!-- Platform -->
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a200/a200.urdf.xacro"/>
+  <xacro:a200 control="diff_4wd" front_wheels="outdoor" rear_wheels="outdoor"/>
+
+
+  <!-- Attachments -->
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a200/attachments/bumper.urdf.xacro"/>
+  <xacro:bumper name="front_bumper" model="default" parent_link="front_bumper_mount" extension="0.0">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:bumper>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a200/attachments/bumper.urdf.xacro"/>
+  <xacro:bumper name="rear_bumper" model="default" parent_link="rear_bumper_mount" extension="0.0">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:bumper>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a200/attachments/top_plate.urdf.xacro"/>
+  <xacro:top_plate name="top_plate" model="default" parent_link="default_mount">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:top_plate>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a200/attachments/sensor_arch.urdf.xacro"/>
+  <xacro:sensor_arch name="sensor_arch" model="sensor_arch_300" parent_link="default_mount">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:sensor_arch>
+
+
+  <!-- Links -->
+
+
+  <!-- Mounts -->
+
+
+  <!-- Sensors -->
+
+  <!-- camera_0 -->
+  <xacro:include filename="$(find clearpath_sensors_description)/urdf/intel_realsense.urdf.xacro"/>
+  <xacro:intel_realsense name="camera_0" parent_link="base_link" update_rate="30" image_height="480" image_width="640" model="d435">
+    <origin xyz="0.36 0.0 0.15" rpy="0.0 -0.2 0.0"/>
+  </xacro:intel_realsense>
+
+
+  <!-- Manipulators -->
+
+
+  <!-- Extras -->
+
+  <xacro:include filename="/home/ruben/halmstad_ws/src/lrs_halmstad/clearpath/lidar3d_0_override.urdf.xacro"/>
+
+</robot>

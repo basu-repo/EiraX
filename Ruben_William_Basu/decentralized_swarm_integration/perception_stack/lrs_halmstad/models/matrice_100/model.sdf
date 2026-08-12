@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="dji">
+    <static>true</static>
+    <link name="robot_link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://matrice_100/meshes/lrs_m100.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://matrice_100/meshes/lrs_m100.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

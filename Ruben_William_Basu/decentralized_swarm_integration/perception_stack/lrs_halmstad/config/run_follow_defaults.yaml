@@ -1,0 +1,483 @@
+# <<------ Shared geometry and follow distance ------- >>
+/**:
+  ros__parameters:
+    # Camera pose in the UAV body frame.
+    camera_x_offset_m: 0.0     # UAV->camera X offset in UAV body frame (forward); shared across all nodes.
+    camera_y_offset_m: 0.0      # UAV->camera Y offset in UAV body frame (left); shared across all nodes.
+    camera_z_offset_m: 0.27      # UAV->camera Z offset; used by tilt geometry and simulator camera pose.
+
+    # Camera mount/sign conventions shared by simulator and camera_tracker.
+    camera_mount_pitch_deg: 45.0  # Fixed downward pitch of the camera mount in degrees (positive = nose-down); shared by simulator and camera_tracker.
+    camera_yaw_offset_deg: 0.0     # Fixed yaw offset between UAV forward axis and camera forward axis; shared by simulator and camera_tracker.
+    camera_pan_sign: 1.0            # Pan sign convention; +1.0 = positive pan is rightward; shared by camera_tracker and simulator.
+
+    # Leader look-at target in the leader body frame.
+    leader_look_target_x_m: 0.0      # Forward offset into the leader body frame for the pan/tilt look-at target point.
+    leader_look_target_y_m: 0.0       # Lateral offset into the leader body frame for the pan/tilt look-at target point.
+
+    # Canonical 3D UAV-leader standoff used by follow_uav and as estimator const fallback.
+    d_target: 10.0  # Canonical 3D UAV-leader standoff. Used by follow_uav and as estimator const fallback.
+
+
+# <<------ Core UAV follow command loop ------ >>
+follow_uav:
+  ros__parameters:
+    # Startup and initial command seeding.
+    seed_uav_cmd_on_start: false
+    uav_start_x: -7.0
+    uav_start_y: 0.0
+    uav_start_z: 7.0
+    uav_start_yaw_deg: 0.0
+    require_uav_actual_before_motion: false
+    use_uav_actual_z_on_start: true
+    start_delay_s: 0.0
+
+    # Loop timing and freshness.
+    tick_hz: 20.0
+    min_cmd_period_s: 0.05
+    pose_timeout_s: 3.0
+
+    # Anchor placement and horizontal motion.
+    xy_anchor_max: 20.0              # Safety radius for the horizontal anchor target around the leader.
+    follow_z_offset_m: 7.0           # Desired UAV height above leader. Horizontal distance is reduced so d_target remains the true 3D standoff.
+    follow_speed_mps: 5.0
+    follow_speed_gain: 2.0
+    leader_heading_offset_deg: 0.0   # Anchor heading offset for follow_uav and follow_uav_odom.
+    leader_motion_heading_min_speed_mps: 0.10  # Estimate-follow anchor heading switches to motion only above this leader speed.
+    leader_motion_heading_min_delta_m: 0.20    # Accumulate at least this much leader-estimate XY motion before updating heading.
+    leader_motion_heading_alpha: 0.8           # Low-pass alpha for estimate-follow motion heading; higher = faster heading changes.
+
+    # Yaw command.
+    follow_yaw: true
+    follow_yaw_rate_rad_s: 0.8
+    follow_yaw_rate_gain: 2.5
+
+    # Outputs.
+    publish_pose_cmd_topics: false
+
+
+# <<------ UAV simulator and gimbal dynamics ------ >>
+uav_simulator:
+  ros__parameters:
+    # Gimbal limits.
+    gimbal_pitch_min_rad: -1.5708        # Minimum gimbal pitch in radians (-pi/2 = -90 deg, straight down).
+    gimbal_pitch_max_rad: 0.5235         # Maximum gimbal pitch in radians (pi/4 = 45 deg up).
+
+    # Gimbal rate limits.
+    pan_rate_deg_s: 60.0                   # Maximum gimbal pan speed in deg/s; keep 20-120 deg/s.
+    tilt_rate_deg_s: 45.0                   # Maximum gimbal tilt speed in deg/s; keep 15-90 deg/s.
+
+    # Gazebo SetEntityPose protection.
+    startup_set_pose_grace_s: 3.0           # Block SetEntityPose calls for this long after startup to avoid Gazebo spam; keep 1-5 s.
+    set_pose_failure_backoff_s: 2.0         # Back off this long after a SetEntityPose failure before retrying.
+
+
+# <<------ Camera pan/tilt tracker ------ >>
+camera_tracker:
+  ros__parameters:
+    # Nominal target and held commands.
+    camera_look_target_z_m: 0.0              # Vertical offset above the leader target point for pan/tilt geometry solving. DO NOT CHANGE.
+    default_pan_deg: 0.0                    # Pan command held when pan tracking is disabled or stale; keep -30 to 30 deg.
+    default_tilt_deg: -45.0                # Tilt command held when tilt tracking is disabled or stale; negative = down; keep -90 to 0 deg.
+
+    # Tracking enable switches.
+    pan_enable: true                     # Enable geometric pan tracking; false = hold default_pan_deg.
+    tilt_enable: true                      # Enable geometric tilt tracking; false = hold default_tilt_deg.
+    prefer_visual_estimate_tilt_recovery: true  # Once direct detections drop out, let tilt recovery follow the visual target estimate earlier instead of waiting for the world-pose path to age out.
+
+    # Loop timing and pose freshness.
+    tick_hz: 10.0                    # Camera pan/tilt update rate; keep 5-30 Hz.
+    pose_timeout_s: 2.0                # UAV pose older than this is treated as stale; keep 1-4 s.
+    trackable_hold_timeout_s: 8.0    # Hold the last valid trackable-leader pose during CPU-YOLO inference gaps; keep 0.2-15 s.
+    gimbal_override_hold_s: 0.0      # Hold an external tilt/pan override for this many seconds; 0 = disabled. Set > gimbal_interval when using follow_control --gimbal.
+
+    # Image-centering correction from direct detections.
+    image_center_correction_enable: true    # Add image-space centering correction on top of geometry pan/tilt so the UAV camera actively re-centres weak detections.
+    image_center_correction_timeout_s: 0.45  # Keep using the latest box long enough to bridge the current ~3 Hz detector cadence without over-holding stale corrections.
+    image_center_correction_max_latency_ms: 1000.0  # Do not let late detector boxes kick the gimbal; geometry/truth reacquire handles slower recovery.
+    image_center_memory_timeout_s: 0.55      # After direct image correction times out, keep a small decaying memory of the last seen target direction so the camera still nudges toward reacquisition briefly.
+    pan_image_center_gain: 0.75             # Slightly stronger horizontal re-centering so the target spends less time near image borders.
+    pan_image_center_max_deg: 5.0           # Allow a modest extra pan correction before geometry-only tracking takes over again.
+    tilt_image_center_gain: 0.5            # Slightly stronger vertical re-centering to keep the UGV better framed through weak detections.
+    tilt_image_center_max_deg: 2.5          # Allow a modest extra tilt correction during recovery without making the camera twitchy.
+
+    # Weak detector-status correction for gimbal-only recovery.
+    weak_status_center_correction_enable: true  # When detections fall just below threshold, let camera_tracker use the weak raw target centre from detector status for gimbal-only recentering.
+    weak_status_center_correction_timeout_s: 0.35  # Only trust weak status centring briefly so stale low-confidence hints do not drag the gimbal around.
+    weak_status_center_conf_threshold: 0.02       # Minimum target_best_conf from leader_detection_status before we use it for camera-only weak recentering.
+    weak_status_center_min_area_norm: 0.002       # Ignore tiny weak-status candidates that are likely edge noise rather than the real UGV.
+    weak_status_center_correction_scale: 0.65     # Scale weak-status pan/tilt corrections below the direct-detection path so they help recenter without overreacting.
+
+    # Visual target estimate fallback.
+    visual_target_estimate_timeout_s: 0.75   # Let camera_tracker use fresh TRACKED/PREDICTED/DEGRADED visual target estimates as a reacquisition fallback before dropping to stale hold.
+
+    # Debug output.
+    publish_debug_topics: true          # Publish /<uav>/camera/{target,debug}/* geometry and image-centering topics.
+
+
+############################################################################################
+##                                !! --- PERCEPTION --- !!                                ##
+############################################################################################
+
+# << ---------------------------------- YOLO detector ----------------------------------- >>
+
+leader_detector:
+  ros__parameters:
+    # Topics and events.
+    out_topic: /coord/leader_detection           # Best-detection topic consumed by leader_estimator.
+    status_topic: /coord/leader_detection_status  # Detector status/debug topic.
+    event_topic: /coord/events                  # Topic for detector lifecycle/debug event strings.
+    publish_events: true                         # Publish detector lifecycle events on event_topic.
+
+    # Model/runtime.
+    device: 'auto'                             # Inference device: auto, cpu, 0 (first GPU), cuda:1.
+    backend: ultralytics                      # Runtime backend: ultralytics, onnx_cpu, or onnx_directml.
+    onnx_model: ""                            # Optional ONNX model path; empty auto-resolves beside yolo_weights when available.
+    imgsz: 640                                # YOLO inference image size in pixels; keep 320-1280.
+
+    # Scheduling and freshness.
+    predict_hz: 60.0                         # Maximum publish rate; actual rate is capped by incoming camera frames.
+    async_inference: true                     # Run inference in a worker thread so the image callback never blocks on YOLO.
+    latest_frame_only: true                   # Keep only the newest pending frame while inference is busy.
+    stale_detection_threshold_ms: 3000.0      # CPU YOLO in WSL/sim can publish >1 s after camera stamp; keep this above observed sim latency.
+    metrics_window_s: 5.0                     # Rolling window used for detector Hz reporting.
+    benchmark_csv_path: ""                    # Optional CSV path for per-frame detector timing logs.
+
+    # Image subscription QoS.
+    image_qos_depth: 1                        # Detector image subscription depth; 1 keeps only the freshest frame in ROS.
+    image_qos_reliability: best_effort        # Detector image QoS reliability; best_effort prioritises freshness for camera streams.
+
+    # Detection filters.
+    conf_threshold: 0.05                    # Minimum YOLO confidence to accept a detection; low values let weak-but-usable candidates reach the downstream filter.
+    iou_threshold: 0.5                    # NMS IOU threshold; keep 0.3-0.7.
+    target_class_id: -1                  # Restrict to this YOLO class ID; -1 = any class.
+    target_class_name: ""               # Filter by class name; empty = any class.
+
+    # Candidate continuity scoring.
+    bbox_continuity_class_bonus: 0.0      # Score bonus when the candidate class matches the previously latched detection.
+    bbox_continuity_max_px: 180.0          # Pixel jump at which continuity scoring applies a hard penalty; keep 50-300 px.
+    bbox_continuity_weight: 0.15            # Weight of the bbox continuity penalty in scoring; keep 0.0-0.3.
+
+
+# << ------ YOLO tracker ------ >>
+leader_tracker:
+  ros__parameters:
+    # Topics and events.
+    out_topic: /coord/leader_detection           # Best tracked detection topic consumed by leader_estimator.
+    status_topic: /coord/leader_detection_status  # Tracker status/debug topic.
+    event_topic: /coord/events                  # Topic for tracker lifecycle/debug event strings.
+    publish_events: true                           # Publish tracker lifecycle events on event_topic.
+
+    # Model/runtime.
+    device: 'auto'                                   # Tracking inference device: auto, cpu, 0 (first GPU), cuda:1.
+    backend: ultralytics                              # Runtime backend: ultralytics, onnx_cpu, or onnx_directml.
+    onnx_model: ""                                    # Optional ONNX model path; empty auto-resolves beside yolo_weights when available.
+    imgsz: 640                                        # Tracking inference image size in pixels; keep 320-1280.
+    tracker_config: bytetrack.yaml                      # Tracker config filename; resolved relative to config/trackers/ or as an absolute path.
+
+    # Scheduling and freshness.
+    predict_hz: 60.0                                   # Maximum publish rate; actual rate is capped by incoming camera frames.
+    async_inference: true                              # Run inference in a worker thread so the image callback never blocks on YOLO.
+    latest_frame_only: true                            # Keep only the newest pending frame while inference is busy.
+    stale_detection_threshold_ms: 3000.0               # CPU YOLO in WSL/sim can publish >1 s after camera stamp; keep this above observed sim latency.
+    metrics_window_s: 5.0                              # Rolling window used for detector Hz reporting.
+    benchmark_csv_path: ""                             # Optional CSV path for per-frame detector timing logs.
+
+    # Image subscription QoS.
+    image_qos_depth: 1                                 # Tracker image subscription depth; 1 keeps only the freshest frame in ROS.
+    image_qos_reliability: best_effort                 # Tracker image QoS reliability; best_effort prioritises freshness for camera streams.
+
+    # Tracking continuity.
+    pseudo_track_max_center_jump_px: 220.0             # ONNX fallback continuity gate before switching pseudo track IDs.
+
+    # Detection filters.
+    conf_threshold: 0.05                                   # Minimum tracker confidence; kept low so ByteTrack-style continuity can salvage weak but plausible UGV detections.
+    iou_threshold: 0.5                                     # IOU threshold passed into Ultralytics track(); keep 0.3-0.6.
+    target_class_id: -1                                     # Restrict tracked detections to this YOLO class ID; -1 = any class.
+    target_class_name: ""                                    # Filter by class name; empty = any class.
+
+
+# << ------ Leader pose estimator ------ >>
+leader_estimator:
+  ros__parameters:
+    # Input topics.
+    external_detection_topic: /coord/leader_detection               # Detection topic from leader_detector or leader_tracker.
+    external_detection_status_topic: /coord/leader_detection_status  # Detector/tracker status used for debug image overlay only.
+    radio_range_topic: /omnet/radio_distance  # OMNeT++ FSPL-inverted Euclidean range topic (std_msgs/Float64); empty = disabled.
+
+    # Output topics.
+    out_topic: /coord/leader_estimate                            # Published leader pose estimate topic.
+    status_topic: /coord/leader_estimate_status             # Status topic consumed by estimate-follow for quality gating.
+    fault_status_topic: /coord/leader_estimate_fault       # Latched estimator fault topic.
+    debug_image_topic: /coord/leader_debug_image          # Estimator debug overlay image topic.
+    event_topic: /coord/events                                    # Topic for estimator lifecycle/debug event strings.
+
+    # Output enable switches.
+    publish_status: true                                     # Publish estimator status strings.
+    publish_fault_status: true                                # Publish fault/state transitions on fault_status_topic.
+    publish_debug_image: true                                   # Publish diagnostic overlay image.
+    publish_events: true                                       # Publish estimator lifecycle events.
+
+    # Camera geometry used for projection.
+    cam_x_offset_m: 0.0                              # Camera X offset in UAV body frame.
+    cam_y_offset_m: 0.0                             # Camera Y offset in UAV body frame.
+    cam_z_offset_m: 0.27                           # Camera Z offset in UAV body frame.
+    cam_yaw_offset_deg: 0.0                            # Camera yaw mounting offset in degrees.
+    cam_pitch_offset_deg: 0.0                           # Camera pitch mounting offset in degrees; negative = nose-down.
+    cam_roll_offset_deg: 0.0                          # Camera roll mounting offset in degrees (reserved for future use).
+    target_ground_z_m: 0.0                   # World Z of the ground plane used for OBB heading projection; 0 = flat ground.
+
+    # Loop timing and input freshness.
+    est_hz: 20.0                               # Main estimator loop rate; keep 10-30 Hz.
+    image_timeout_s: 2.0                          # Camera images older than this trigger a fault; keep 1-3 s.
+    uav_pose_timeout_s: 2.0                      # UAV pose older than this triggers a fault; keep 1-3 s.
+    external_detection_timeout_s: 2.5                              # Keep sparse CPU YOLO hits alive long enough for selected-target/follow-point handoff.
+    external_detection_max_latency_ms: 3000.0                      # Match sim CPU detector latency budget so valid tracker hits can reach the estimator.
+
+    # Range source selection.
+    range_mode: auto  # Range source: auto (depth->radio->const fallback chain), depth, radio, or const.
+
+    # Depth range input.
+    depth_scale: 0.001                   # Scale factor converting raw 16UC1 depth pixel values to metres.
+    depth_timeout_s: 0.5                  # Depth frames older than this are rejected; keep 0.2-1.0 s.
+    depth_min_m: 1.0                      # Minimum valid depth sample in metres; keep 0.05-0.5 m.
+    depth_max_m: 20.0                      # Maximum valid depth sample in metres; keep 10-30 m.
+    depth_patch_min_valid_px: 10           # Minimum valid pixels in the inner-50% bbox depth patch; keep 5-20.
+    depth_percentile: 6.0                 # Percentile of valid depth patch pixels used as the range sample (1-99).
+    depth_max_estimate_jump_m: 5.0          # Reject depth if it would jump the leader estimate by more than this; 0 = disabled.
+
+    # Radio range input.
+    radio_range_timeout_s: 0.5               # Radio range older than this is discarded; keep 0.2-1.0 s.
+
+
+#########################################################################################################
+##                                !! --- VISUAL FOLLOW PIPELINE --- !!                                 ##
+#########################################################################################################
+
+# << --------------------------------------- Target Filtering  --------------------------------------- >>
+selected_target_filter:
+  ros__parameters:
+    # Confidence gates.
+    strong_confidence_threshold: 0.65  # Confidence at or above this is treated as a strong detection; keep 0.5-0.9.
+    weak_confidence_threshold: 0.35  # Confidence below this triggers the prediction/hold path; keep 0.2-0.5.
+    min_confidence_threshold: 0.08    # Absolute floor; detections below this are dropped entirely; keep 0.05-0.3.
+    track_switch_min_confidence: 0.60  # Minimum confidence required to accept a track ID change; keep 0.4-0.8.
+
+    # Short-gap hold/prediction.
+    hold_timeout_s: 0.45             # Keep the last accepted target alive just long enough to bridge brief detector gaps without over-holding stale targets.
+    prediction_enable: true           # Fill short dropout gaps by predicting the target state forward in time.
+    prediction_max_gap_s: 0.20       # Maximum gap duration to bridge with prediction; keep short so the filter does not over-commit to stale tracks.
+
+
+# <<------ Target Estimate from Image-Space Target ------ >>
+visual_target_estimator:
+  ros__parameters:
+    # Range model.
+    range_signal_mode: "auto"    # Range source: auto (projected first, area fallback), projected, or area.
+    reference_area_norm: 0.009     # Normalised bbox area fraction at shared d_target; keep 0.003-0.02.
+
+    # Smoothing.
+    position_alpha_projected: 0.65  # Position low-pass alpha for the projected-range path; keep 0.3-0.8.
+    position_alpha_area: 0.45      # Position low-pass alpha for the area-based range path; keep 0.2-0.7.
+    velocity_beta_projected: 0.35   # Velocity update beta for the projected-range path; keep 0.1-0.5.
+    velocity_beta_area: 0.18       # Velocity update beta for the area-based range path; keep 0.05-0.3.
+
+    # Loss and prediction state.
+    prediction_max_gap_s: 0.35     # Keep short-gap prediction alive briefly before entering the heavier degraded state.
+    degraded_after_s: 0.75         # Mark the estimate degraded after a short but meaningful loss window instead of holding predicted forever.
+    hard_lost_after_s: 1.35        # Collapse to LOST once the gap is genuinely too long for safe Chen-lite prediction.
+    predicted_velocity_decay: 0.92     # Keep predicted motion alive briefly during short gaps.
+    degraded_velocity_decay: 0.65      # Slow degraded-mode velocity just enough to stay useful without letting it drift too far.
+    continuity_miss_decay_per_s: 1.10  # Let continuity decay fast enough that recovery does not pretend weak vision is still trustworthy.
+
+    # Visibility quality scoring.
+    visibility_center_weight: 0.35   # Weight of image-centre proximity in estimate quality; higher = stronger penalty when the target drifts off-centre.
+    visibility_edge_weight: 0.40     # Weight of edge margin in estimate quality; stronger edge penalties make degraded handling kick in earlier when the target approaches the border.
+    visibility_area_weight: 0.25     # Weight of apparent target size in estimate quality; smaller/farther targets are treated more cautiously.
+    visibility_center_soft_radius_norm: 0.60  # Normalised radius at which centre-proximity quality fades to zero; smaller = more aggressive recentering bias.
+    visibility_edge_soft_margin_norm: 0.18    # Desired half-image margin between the bbox and the image border before edge quality starts collapsing.
+
+
+# <<------ Image-Space Controller ------ >>
+visual_follow_controller:
+  ros__parameters:
+    # Nominal gains and limits.
+    yaw_gain: 2.0              # Proportional gain from horizontal image error to yaw-rate command; keep 1-8.
+    yaw_rate_max_rad_s: 1.0       # Maximum yaw-rate command in rad/s; keep 0.3-2.0.
+    forward_range_gain: 0.75    # Proportional gain from range error to forward speed command; keep 0.3-2.0.
+    forward_area_gain: 6.0       # Proportional gain from area error to forward speed command; keep 2-10.
+    forward_speed_max_mps: 2.0     # Maximum forward speed command in m/s; keep 0.5-3.0.
+
+    # Loss/recovery behavior.
+    loss_hold_timeout_s: 0.35       # Hold the last valid command only briefly after detection loss; longer recovery is handled upstream.
+    recovery_recenter_error_norm: 0.16  # When the estimated target is this far off-centre, degraded/predicted mode suppresses forward motion and prioritises yaw re-centering.
+    recovery_quality_threshold: 0.45    # When estimate quality falls below this, the controller switches into a more conservative recenter-first response.
+    recovery_yaw_boost_scale: 1.20          # Mild yaw boost used during recovery so the UAV recentres before chasing range again.
+    tracked_forward_suppress_scale: 0.72  # Even before the estimate degrades, weak/edge-biased tracked targets suppress forward motion so yaw can recenter and preserve visibility.
+    tracked_yaw_boost_scale: 1.10         # Mild yaw boost in weak tracked mode to keep the UGV near image centre before the detector fully collapses.
+    predicted_forward_suppress_scale: 0.55  # Extra forward suppression applied in PREDICTED recovery mode; lower = more yaw-first behaviour.
+    degraded_forward_suppress_scale: 0.20   # Extra forward suppression applied in DEGRADED recovery mode; lower = more visibility-preserving behaviour.
+
+
+# <<------ Follow Point Generation ------ >>
+follow_point_generator:
+  ros__parameters:
+    # Source preference.
+    prefer_target_pose_position: false  # false = use visual_target_estimator bearing+range for world XY (goes through selected_target_filter trust gating); true = use leader_estimator OBB world-frame pose directly (old behaviour).
+    prefer_target_pose_heading: false  # true = use OBB yaw from leader_estimator for follow heading; false = use visual motion/held/anchor/view-line fallback. Keep this path runtime-validated before changing reverse semantics.
+
+    # Nominal follow geometry. Distance uses shared d_target; altitude uses follow_z_offset_m above the leader.
+    follow_z_offset_m: 7.0           # Desired UAV height above leader. Horizontal distance is reduced so d_target remains the true 3D standoff.
+    lateral_offset_m: 0.0           # Fixed lateral offset from the follow point; positive = left; keep -3 to 3 m.
+    lookahead_horizon_s: 0.15      # Lookahead horizon for leader velocity prediction when placing the follow point; keep 0.0-0.4 s.
+
+    # Heading and velocity estimation.
+    require_motion_to_start: true    # Hold the follow point in WAITING state until the UGV has started moving; prevents UAV from lunging before UGV is underway.
+    min_target_speed_mps: 0.10       # Minimum UGV speed before motion heading is trusted; lower = activates sooner at startup; keep 0.05-0.3 m/s.
+    target_velocity_alpha: 0.5       # EMA alpha for world-frame velocity used to derive motion heading; keep 0.2-0.8.
+    max_target_meas_speed_mps: 2.0  # Clamp raw measured UGV speed before EMA to reject position noise spikes; set to about 2-3x max UGV speed; keep 1.5-4.0 m/s.
+    heading_dir_alpha: 0.8        # Low-pass alpha for the estimated leader heading direction; higher = faster response to direction changes; keep 0.1-1.0.
+    heading_hold_timeout_s: 1.00     # Preserve heading continuity through short gaps without letting old motion linger too long.
+
+    # Output smoothing and jump rejection.
+    point_alpha: 0.35              # Low-pass alpha for the output follow point position; keep 0.2-0.7.
+    max_follow_point_jump_m: 1.0    # Reject follow point updates that jump more than this distance; keep 0.5-5.0 m.
+    hold_timeout_s: 0.50            # Keep the last follow point through short-gap windows instead of collapsing immediately.
+
+    # Predicted/degraded recovery geometry.
+    predicted_lookahead_scale: 0.65  # Reduce lookahead in predicted mode so the UAV keeps visual lock instead of chasing too hard on stale motion.
+    degraded_lookahead_scale: 0.35   # Reduce lookahead in degraded mode to prioritize recoverable geometry over aggressive pursuit.
+    predicted_recovery_blend: 0.18   # Blend predicted follow points slightly back toward the current camera pose so recovery does not over-translate on short gaps.
+    degraded_recovery_blend: 0.42    # Blend degraded follow points more strongly back toward the camera pose to preserve visibility instead of aggressively chasing.
+    predicted_follow_distance_scale: 0.82     # Short-gap predicted mode keeps a slightly closer standoff to preserve recall while still moving.
+    degraded_follow_distance_scale: 0.68      # Degraded mode pulls the UAV in more noticeably so the target stays detectable instead of shrinking away.
+    predicted_lateral_offset_scale: 0.70      # Predicted mode reduces lateral bias to favour reacquisition over nominal geometry.
+    degraded_lateral_offset_scale: 0.45       # Degraded mode strongly reduces lateral bias so recovery prioritises visibility first.
+    degraded_point_alpha_scale: 0.45  # Slow degraded follow-point movement so the camera can recenter before the spatial target drifts too far.
+
+    # Weak tracked recovery geometry.
+    tracked_recovery_quality_threshold: 0.55  # Start visibility-preserving geometry even in TRACKED mode once estimate quality drops below this threshold.
+    tracked_follow_distance_scale_min: 0.82   # Weak tracked targets bring the UAV a bit closer so the UGV stays larger in frame without a hard jump.
+    tracked_lateral_offset_scale_min: 0.65    # Reduce lateral offset during weak tracked phases so the camera recentres instead of holding side-biased geometry.
+    tracked_recovery_blend_max: 0.14          # Weak tracked follow points can blend slightly toward the camera pose before we enter true predicted/degraded recovery.
+
+
+# <<------ Follow Point Planner ------ >>
+follow_point_planner:
+  ros__parameters:
+    # Nominal low-pass smoothing.
+    xy_alpha: 0.30               # Low-pass alpha for the planned XY position; keep 0.1-0.6.
+    z_alpha: 0.45               # Low-pass alpha for the planned altitude; keep 0.1-0.6.
+    yaw_alpha: 0.20              # Low-pass alpha for the planned yaw; keep 0.1-0.6.
+
+    # Step limits.
+    max_planned_step_m: 0.25      # Maximum XY step per planner tick; at 20 Hz: 0.25 m/tick = 5 m/s max; keep 0.1-0.6 m.
+    max_planned_z_step_m: 0.40     # Maximum altitude step per planner tick; keep 0.1-0.6 m.
+    max_planned_yaw_step_rad: 0.02  # Maximum yaw step per planner tick; at 20 Hz: 0.02 rad/tick approx 23 deg/s; keep 0.02-0.15 rad.
+
+    # Freshness and short holds.
+    target_estimate_timeout_s: 1.00  # Keep the planner aligned with the estimate validity window without stretching it too far.
+    hold_timeout_s: 0.50            # Hold the last planned target across short follow-point dropouts while recovery is still plausible.
+    stale_fp_thresh_m: 0.05        # Follow-point movement below this is treated as stationary/cached upstream; triggers adaptive alpha.
+    stale_alpha_scale: 0.3         # Scale applied to xy_alpha when the follow point is stationary (cached upstream estimate).
+
+    # Predicted/degraded adaptive behavior.
+    predicted_xy_alpha_scale: 0.70  # Keep predicted planned targets moving, but more conservatively than tracked mode.
+    degraded_xy_alpha_scale: 0.45   # Keep degraded planned targets cautious so recovery does not drag the camera away from the UGV.
+    predicted_yaw_alpha_scale: 0.80  # Preserve yaw continuity in predicted mode so the UAV keeps facing the likely target direction.
+    degraded_yaw_alpha_scale: 0.55   # Keep some yaw authority in degraded mode for visibility recovery.
+    degraded_step_scale: 0.65        # Cap degraded planned-target motion so the system stays cautious instead of chasing hard.
+
+
+# <<------ Actuation Bridge ------ >>
+visual_actuation_bridge:
+  ros__parameters:
+    # Input selection and command mirroring.
+    input_mode: "auto"         # Input source: auto (prefers planned_target, falls back to follow_point), control, follow_point, or planned_target.
+    publish_pose_cmd_mirror: false  # Also publish the issued command on /<uav>/pose_cmd for logging/debug.
+    use_current_altitude: true   # Use the planned target Z; true would ignore planned Z and break 3D follow distance geometry.
+
+    # Control scaling.
+    forward_scale: 1.0        # Scale applied to controller forward speed before sending to the UAV.
+    yaw_scale: 0.5             # Scale applied to controller yaw rate before sending to the UAV.
+    yaw_cmd_sign: 1.0             # Yaw rotation direction: 1.0 = normal, -1.0 = inverted; flip if UAV yaws the wrong way.
+
+    # Step limits.
+    max_xy_step_m: 0.12         # Maximum XY step per bridge tick; at 20 Hz: 0.12 m/tick = 2.4 m/s max; keep 0.05-0.4 m.
+    max_yaw_step_rad: 0.06  # Maximum yaw step per bridge tick; at 20 Hz: 0.06 rad/tick approx 69 deg/s; keep 0.02-0.2 rad.
+
+    # Freshness and recovery scaling.
+    target_estimate_timeout_s: 1.00  # Keep the bridge aligned with the estimate validity window.
+    predicted_step_scale: 0.80       # Let predicted mode keep some motion without behaving like full tracked mode.
+    degraded_step_scale: 0.55        # Keep degraded mode cautious so the bridge helps recovery instead of dragging the camera off target.
+    lost_recovery_hold_s: 0.00       # Disabled by default; the bridge should hard-stop on LOST until we have stronger evidence this helps more than it hurts.
+    lost_step_scale: 0.25            # Motion scale reserved for optional lost-recovery experiments.
+
+#########################################################################################################
+##                                 !! --- UGV NAV AND PATH PLANNING --- !!                             ##
+#########################################################################################################
+# << ------------------------------------- UGV Nav2 route driver ------------------------------------- >>
+ugv_nav2_driver:
+  ros__parameters:
+    # Startup and lifecycle gating.
+    start_delay_s: 0.0           # Delay before starting route generation and Nav2 goal handling.
+    nav2_required_lifecycle_nodes: [map_server, amcl, controller_server, bt_navigator]  # Lifecycle nodes that must be ACTIVE before the first goal is sent.
+    goal_server_timeout_s: 30.0                 # Timeout waiting for the Nav2 action server to become ready.
+    goal_start_delay_s: 2.0                    # Delay before sending the first goal to let Nav2/TF/costmaps settle; keep 0.2-2 s.
+
+    # Localization input.
+    pose_topic: amcl_pose                 # Localization topic used to read the UGV pose.
+    pose_topic_type: pose_with_covariance  # Message type on pose_topic: pose_with_covariance or odom.
+    pose_timeout_s: 15.0        # Timeout waiting for the first localization pose; keep 5-30 s.
+    pose_stale_timeout_s: 2.0  # Reject localization poses older than this; keep 1-5 s.
+
+    # Initial pose publication.
+    set_initial_pose_enable: true      # Auto-publish an initial pose at startup if localization is not yet ready.
+    initial_pose_topic: initialpose  # Topic used to publish the AMCL/Nav2 initial pose.
+    initial_pose_frame_id: map         # Frame ID for the auto-published initial pose.
+    initial_pose_x: 0.0             # Initial pose X for localization bootstrap.
+    initial_pose_y: 0.0              # Initial pose Y for localization bootstrap.
+    initial_pose_yaw_deg: 0.0         # Initial pose yaw in degrees for localization bootstrap.
+    initial_pose_covariance_xy: 0.25     # XY covariance placed in the auto-published /initialpose; keep 0.1-1.0.
+    initial_pose_covariance_yaw: 0.068  # Yaw covariance placed in the auto-published /initialpose; keep 0.01-0.2.
+    initial_pose_publish_hz: 1.0      # Rate at which /initialpose is repeated until localization settles; keep 0.5-2 Hz.
+    initial_pose_skip_wait_s: 0.5    # Wait for existing localization for this long before publishing /initialpose; keep 0.5-10 s.
+    initial_pose_timeout_s: 15.0    # Give up auto-setting initial pose after this timeout; keep 10-30 s.
+
+    # Nav2 action and goal frame.
+    goal_action_name: navigate_to_pose   # Nav2 NavigateToPose action name.
+    goal_frame_id: map                    # Frame used for generated/supplied goals.
+    path_topic: planned_path             # Debug topic for the planned/sent Nav2 route.
+
+    # Explicit goal sequences.
+    goal_sequence_file: ""                     # Path to a YAML waypoint file; empty = use the internal route generator.
+    goal_sequence_csv: ""                     # Inline waypoint list (x,y,yaw_deg;...); overrides goal_sequence_file when set.
+    goal_sequence_randomize: false                # Randomize the loaded waypoint order; uses goal_sequence_seed.
+    goal_sequence_random_reverse: false          # Randomly reverse the loaded waypoint order on each cycle.
+    goal_sequence_relative_to_current_pose: false  # Keep waypoint files/csv absolute by default; set true only for intentionally relative offset routes.
+    goal_sequence_seed: -1                       # RNG seed for waypoint randomization; -1 = time-based seed.
+
+    # Goal acceptance/results behavior.
+    continue_on_goal_failure: true        # Move to the next goal when Nav2 rejects or fails the current one.
+    goal_reject_retry_count: 20            # Retries when a goal is rejected by the Nav2 action server; keep 2-20.
+    goal_reject_retry_delay_s: 0.5          # Delay between goal-rejection retries; keep 0.2-1.0 s.
+    goal_result_timeout_s: 600.0             # Cancel and advance if Nav2 has not returned a result within this timeout.
+    min_goal_xy_delta_m: 0.05                 # Skip a goal if its XY distance from current pose is below this; keep 0.01-0.5 m.
+    min_goal_yaw_delta_deg: 2.0              # Skip a goal if its yaw distance from current pose is below this; keep 1-10 deg.
+    pause_after_goal_s: 0.5                 # Dwell time at each completed goal before sending the next one.
+    lidar_settings_file: ""                 # Optional YAML with waypoints.<name>.pc2ls_* runtime overrides.
+    pc2ls_node_name: /a201_0000/pointcloud_to_laserscan  # Node updated when waypoint lidar overrides are present.
+    pc2ls_update_timeout_s: 2.0             # Timeout for runtime pointcloud_to_laserscan parameter updates.
+
+    # Internal generated route profile.
+    motion_profile: route              # Named motion profile for internal route generation.
+    cycles: 1                             # Number of route cycles when using the internal route generator.
+    forward_speed: 0.75                  # Forward speed for generated route segments in m/s.
+    forward_time_s: 0.90                # Duration of each generated forward segment in seconds.
+    turn_pattern: alternate         # Left/right turn pattern for generated turns: alternate, left, or right.
+    turn_speed: 0.55               # Angular speed for generated turns in rad/s.
+    turn_time_s: 0.65             # Duration of generated turns in seconds.
+    pause_every_n: 0                  # Insert a pause every N generated segments; 0 = disabled.
+    pause_time_s: 0.0                # Duration of generated pauses in seconds.
+    variation_enable: false      # Enable random variation in the generated route for more natural motion.
+    variation_amplitude: 0.10    # Amplitude of random variation added to generated segments; keep 0-0.3.
