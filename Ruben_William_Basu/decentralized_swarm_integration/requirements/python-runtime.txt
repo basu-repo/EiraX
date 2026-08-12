@@ -1,0 +1,10 @@
+# Recreate the local YOLO runtime with a compatible Python 3.12 environment.
+# Versions reflect the isolated runtime used for the August 2026 integration.
+numpy
+opencv-python
+torch
+torchvision
+ultralytics
+onnxruntime
+PyYAML
+pymavlink

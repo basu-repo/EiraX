@@ -1,0 +1,111 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Background Color: 32; 32; 32
+    Fixed Frame: uav_map
+    Frame Rate: 30
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Ground Grid
+      Enabled: true
+      Cell Size: 1
+      Plane: XY
+      Plane Cell Count: 40
+      Color: 90; 90; 90
+    - Class: rviz_default_plugins/PointCloud2
+      Name: RTAB 3D Map
+      Enabled: true
+      Topic:
+        Value: /uav_rtabmap/cloud_map
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 5
+      Style: Points
+      Size (Pixels): 1
+      Color Transformer: AxisColor
+      Axis: Z
+      Decay Time: 0
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Live 3D LiDAR
+      Enabled: true
+      Topic:
+        Value: /x500/lidar3d/points
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+      Style: Points
+      Size (Pixels): 1
+      Color Transformer: AxisColor
+      Axis: Z
+      Decay Time: 1
+    - Class: rviz_default_plugins/Odometry
+      Name: LiDAR Odometry
+      Enabled: true
+      Topic:
+        Value: /uav/lidar_odom
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+      Keep: 200
+      Shape:
+        Value: Arrow
+    - Class: rviz_default_plugins/Path
+      Name: Obstacle-Aware Planned Path
+      Enabled: true
+      Topic:
+        Value: /uav/planned_path
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+      Line Style: Lines
+      Line Width: 0.15
+      Color: 255; 40; 40
+      Alpha: 1
+      Buffer Length: 1
+      Pose Style: None
+    - Class: rviz_default_plugins/Map
+      Name: UAV Navigation Costmap
+      Enabled: true
+      Topic:
+        Value: /uav_nav/global_costmap/costmap
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 1
+      Alpha: 0.35
+      Color Scheme: costmap
+      Draw Behind: true
+    - Class: rviz_default_plugins/TF
+      Name: Coordinate Frames
+      Enabled: true
+      Frame Timeout: 15
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 25
+      Pitch: 0.65
+      Yaw: 0.8
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+Window Geometry:
+  Width: 1200
+  Height: 800

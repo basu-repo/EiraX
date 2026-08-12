@@ -1,0 +1,110 @@
+waypoints:
+  waypoint0:
+    name: rotundan_0
+    pose:
+    - 66.88222902882593
+    - 237.15084904414442
+    - 0.0
+    orientation:
+    - 0.23511821959298004
+    - 0.0
+    - 0.0
+    - 0.9719667807160012
+    group: rotundan
+  waypoint1:
+    name: rotundan_1
+    pose:
+    - 61.98302186238938
+    - 238.28776276470325
+    - 0.0
+    orientation:
+    - 0.30141695136974983
+    - 0.0
+    - 0.0
+    - 0.9534924338593179
+    group: rotundan
+  waypoint2:
+    name: rotundan_2
+    pose:
+    - 58.56347768828148
+    - 248.3315058816306
+    - 0.0
+    orientation:
+    - 0.48626780921572066
+    - 0.0
+    - 0.0
+    - 0.8738098292652375
+    group: rotundan
+  waypoint3:
+    name: rotundan_3
+    pose:
+    - 51.84449325644657
+    - 256.44669997701624
+    - 0.0
+    orientation:
+    - 0.7982260792059623
+    - 0.0
+    - 0.0
+    - 0.6023579720361281
+    group: rotundan
+  waypoint4:
+    name: rotundan_4
+    pose:
+    - 67.18577055028935
+    - 261.10498842955104
+    - 0.0
+    orientation:
+    - 0.7953172957380803
+    - 0.0
+    - 0.0
+    - -0.6061933677465193
+    group: rotundan
+  waypoint5:
+    name: rotundan_5
+    pose:
+    - 66.48372095125183
+    - 255.15226755588841
+    - 0.0
+    orientation:
+    - 0.9991836721667436
+    - 0.0
+    - 0.0
+    - -0.04039788701629437
+    group: rotundan
+  waypoint6:
+    name: rotundan_6
+    pose:
+    - 71.45019986139545
+    - 253.31061602701132
+    - 0.0
+    orientation:
+    - 0.9804688771074646
+    - 0.0
+    - 0.0
+    - -0.19667430188925958
+    group: rotundan
+  waypoint7:
+    name: rotundan_7
+    pose:
+    - 74.41272132996201
+    - 245.92375851746542
+    - 0.0
+    orientation:
+    - 0.02117326965072305
+    - 0.0
+    - 0.0
+    - -0.9997758211980813
+    group: rotundan
+  waypoint8:
+    name: rotundan_8
+    pose:
+    - 66.93650768549499
+    - 246.6706162052185
+    - 0.0
+    orientation:
+    - 0.739040740516183
+    - 0.0
+    - 0.0
+    - -0.6736607334981696
+    group: rotundan
+group: rotundan

@@ -1,0 +1,106 @@
+serial_number: a201-0000
+version: 0
+system:
+  username: lrs
+  hosts:
+    - hostname: localhost
+      ip: 127.0.0.1
+      onboard: {}
+      remote: {}
+  ros2:
+    namespace: a201_0000
+    domain_id: 3
+    rmw_implementation: rmw_fastrtps_cpp
+    workspaces: []
+platform:
+  controller: logitech
+  battery:
+    model: ES20_12C
+    configuration: S2P1
+  attachments:
+    - name: front_bumper
+      type: bumper
+      parent: front_bumper_mount
+    - name: rear_bumper
+      type: bumper
+      parent: rear_bumper_mount
+    - name: top_plate
+      type: top_plate
+    - name: sensor_arch
+      type: sensor_arch
+      parent: default_mount
+      enabled: true
+  extras:
+    urdf:
+      path: /home/ruben/halmstad_ws/src/lrs_halmstad/clearpath/lidar3d_0_override.urdf.xacro
+    ros_parameters:
+      platform_velocity_controller:
+        cmd_vel_timeout: 5.0
+        linear.x.max_velocity: 2.0
+        linear.x.min_velocity: -1.5
+        linear.x.max_acceleration: 1.2
+        angular.z.max_velocity: 1.0
+        angular.z.min_velocity: -1.0
+        angular.z.max_acceleration: 0.6
+        angular.z.max_deceleration: -0.8
+links:
+  box: []
+  cylinder: []
+  frame: []
+  mesh: []
+  sphere: []
+mounts:
+  bracket: []
+  fath_pivot: []
+  riser: []
+  disk: []
+  post: []
+sensors:
+  camera:
+    - model: intel_realsense
+      urdf_enabled: true
+      # Generated Clearpath camera launch is disabled. Gazebo still creates
+      # the camera from this URDF entry; ROS only receives the color topics
+      # bridged by lrs_halmstad/launch/ugv_rgb_camera_bridge.launch.py.
+      launch_enabled: false
+      parent: base_link
+      xyz: [0.36, 0.0, 0.15]
+      rpy: [0.0, -0.2, 0.0]
+      ros_parameters:
+        camera:
+          camera_name: camera_0
+          device_type: d435
+          serial_no: 801212070256
+          image_height: 480
+          image_width: 640
+          enable_color: true
+          rgb_camera.profile: 640,480,20
+  gps: []
+  imu: []
+  lidar2d:
+    - model: hokuyo_ust
+      urdf_enabled: false
+      launch_enabled: false
+      parent: base_link
+      xyz: [0.21, 0.13, 0.200]
+      rpy: [0.0, 0.0, 0.0]
+      ros_parameters:
+        urg_node:
+          laser_frame_id: lidar2d_0_laser
+          ip_address: 192.168.131.20
+          ip_port: 10940
+          angle_min: -3.141592653589793
+          angle_max: 3.141592653589793
+          min_range: 0.25
+          max_range: 25.0
+          update_rate: 10
+  lidar3d:
+    # Disabled in Clearpath generation. The active Gazebo lidar is defined by
+    # platform.extras.urdf above, and ROS only bridges its PointCloud2 through
+    # lrs_halmstad/launch/ugv_lidar3d_points_bridge.launch.py.
+    - model: velodyne_lidar
+      urdf_enabled: false
+      launch_enabled: false
+      parent: sensor_arch_mount
+      xyz: [0.0, 0.0, 0.0]
+      rpy: [0.0, 0.0, 0.0]

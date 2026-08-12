@@ -1,0 +1,362 @@
+<sdf version='1.10'>
+  <world name='baylands_editable'>
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'/>
+    <plugin name='gz::sim::systems::Imu' filename='gz-sim-imu-system'/>
+    <plugin name='gz::sim::systems::AirPressure' filename='gz-sim-air-pressure-system'/>
+    <plugin name='gz::sim::systems::Magnetometer' filename='gz-sim-magnetometer-system'/>
+    <plugin name='gz::sim::systems::NavSat' filename='gz-sim-navsat-system'/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>59.329300000000003</latitude_deg>
+      <longitude_deg>18.0686</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <physics name='default' type='ignored'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <include>
+      <uri>model://baylands</uri>
+      <name>baylands</name>
+      <pose>0 0 -0.016251301392912865 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://husky_cooperative</uri>
+      <name>husky</name>
+      <pose>208.12966918945318 -256.34744262695312 2.5857028961181627 -0.015570399413206905 -0.027439500224325498 3.0676000015594131</pose>
+    </include>
+    <include>
+      <uri>model://pickup</uri>
+      <name>pickup</name>
+      <pose>119.40699768066406 -274.34600830078125 1.9748799800872803 0.016363437465673092 -0.035607879477384599 0.020653898327053197</pose>
+    </include>
+    <include>
+      <uri>model://suv</uri>
+      <name>suv</name>
+      <pose>100.13504028320312 -260.84881591796875 2.5604498386383057 0.029556300231830295 -0.0064431704706809038 -0.0029049099273846159</pose>
+    </include>
+    <include>
+      <uri>model://ambulance</uri>
+      <name>ambulance</name>
+      <pose>152.96095275878906 -260.63613891601562 2.6137399673461914 0 0 1.597959962922411</pose>
+    </include>
+    <include>
+      <uri>model://goal_marker</uri>
+      <name>goal</name>
+      <pose>-29.546520233154297 -286.43212890625 1.6005200147628784 0 0 -1.2665100444806725</pose>
+    </include>
+    <include>
+      <uri>model://waypoint_marker</uri>
+      <name>waypoint_1</name>
+      <pose>133.30400085449219 -279.45498657226562 2.3313326835632324 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://waypoint_marker</uri>
+      <name>waypoint_2</name>
+      <pose>82.877403259277344 -241.2203369140625 2.5223100185394287 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://waypoint_marker</uri>
+      <name>waypoint_3</name>
+      <pose>24.646200180053711 -314.05880737304688 1.511139988899231 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Collapsed House</uri>
+      <name>collapsed_house</name>
+      <pose>115.59587860107422 -247.34500122070312 2.5012800693511963 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Collapsed House</uri>
+      <name>collapsed_house_0</name>
+      <pose>93.232101440429688 -250.375 2.2146100997924805 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://House</uri>
+      <name>house</name>
+      <pose>121.64600372314453 -281.114990234375 2.0173799991607666 1.3322700012424402e-14 0 0</pose>
+    </include>
+    <include>
+      <uri>model://House</uri>
+      <name>house_0</name>
+      <pose>114.34700012207031 -279.67825317382812 1.9083199501037598 9.2148511043887993e-15 0 0</pose>
+    </include>
+    <include>
+      <uri>model://oak_tree</uri>
+      <name>Oak tree_1</name>
+      <pose>114.74800109863281 -275.3800048828125 1.6316933631896973 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://oak_tree</uri>
+      <name>Oak tree_2</name>
+      <pose>126.88014221191406 -280.80624389648438 2.2147476673126221 0.015180298579342154 0.034449999428037156 -1.7572600487985546</pose>
+    </include>
+    <include>
+      <uri>model://suv</uri>
+      <name>suv_0</name>
+      <pose>126.01732635498047 -249.86436462402344 2.159062385559082 -0.11125499686702321 -1.1659321064172445e-08 -1.4697700194900816</pose>
+    </include>
+    <include>
+      <uri>model://ambulance</uri>
+      <name>ambulance_0</name>
+      <pose>137.82899475097656 -250.21299743652344 2.2388300895690918 0.044218003710079314 0.035328978703658788 -0.00032625250418208158</pose>
+    </include>
+    <include>
+      <uri>model://Grey Wall</uri>
+      <name>grey_wall</name>
+      <pose>121.89433288574219 -275.73300170898438 0.87331300973892212 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Grey Wall</uri>
+      <name>grey_wall_0</name>
+      <pose>134.43402099609375 -275.61199951171875 0.88462698459625244 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Grey Wall</uri>
+      <name>grey_wall_1</name>
+      <pose>141.91499328613281 -275.62338256835938 0.88295799493789673 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Grey Wall</uri>
+      <name>grey_wall_2</name>
+      <pose>115.20500183105469 -258.4840087890625 2.3206830024719238 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Grey Wall</uri>
+      <name>grey_wall_3</name>
+      <pose>122.66300201416016 -258.46499633789062 2.3359465599060059 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Grey Wall</uri>
+      <name>grey_wall_4</name>
+      <pose>130.03500366210938 -258.51800537109375 2.2982203960418701 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Grey Wall</uri>
+      <name>grey_wall_5</name>
+      <pose>137.18800354003906 -258.5 2.309990406036377 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Grey Wall</uri>
+      <name>grey_wall_6</name>
+      <pose>144.60099792480469 -258.48800659179688 2.3103458881378174 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Grey Wall</uri>
+      <name>grey_wall_7</name>
+      <pose>97.731903076171875 -258.739990234375 1.9965444803237915 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Grey Wall</uri>
+      <name>grey_wall_8</name>
+      <pose>89.988426208496094 -258.75100708007812 1.9996299743652344 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Grey Wall</uri>
+      <name>grey_wall_9</name>
+      <pose>107.47922515869141 -275.62200927734375 1.3939299583435059 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Grey Wall</uri>
+      <name>grey_wall_10</name>
+      <pose>99.678688049316406 -275.593994140625 1.3568700551986694 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://fire_hydrant</uri>
+      <name>fire_hydrant</name>
+      <pose>111.93000030517578 -275.73199462890625 1.824313759803772 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://house_2</uri>
+      <name>House 2</name>
+      <pose>152.61799621582031 -278.77099609375 2.077549934387207 -0.046956629824919688 -1.4740098985138728e-10 -3.0767500075410599</pose>
+    </include>
+    <include>
+      <uri>model://Pine Tree</uri>
+      <name>Pine Tree</name>
+      <pose>159.04208374023438 -276.10800170898438 2.3519001007080078 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Pine Tree</uri>
+      <name>Pine Tree_0</name>
+      <pose>161.42951965332031 -275.8909912109375 2.2781100273132324 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://suv</uri>
+      <name>suv_1</name>
+      <pose>140.41700744628906 -286.20599365234375 1.8309600353240967 -0.017216030889840084 -0.10422202948322332 1.6092446437588788</pose>
+    </include>
+    <include>
+      <uri>model://fire_hydrant</uri>
+      <name>fire_hydrant_0</name>
+      <pose>141.68299865722656 -281.2969970703125 1.9392087459564209 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://ground_station</uri>
+      <name>ground_station</name>
+      <pose>128.50100708007812 -289.00299072265625 1.7052361965179443 0 0 -1.5476099831354098</pose>
+    </include>
+    <include>
+      <uri>model://House_3</uri>
+      <name>House 3</name>
+      <pose>94.094902038574219 -278.6400146484375 1.7530698776245117 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://House</uri>
+      <name>house_1</name>
+      <pose>109.70091247558594 -281.55862426757812 1.8068392276763918 1.47323000840614e-07 -1.4553600166743075e-07 -3.1000399999114645</pose>
+    </include>
+    <include>
+      <uri>model://oak_tree</uri>
+      <name>Oak tree</name>
+      <pose>94.645210266113281 -291.50827026367188 2.1270101070404053 -0.074463195758026249 -1.8341651461528663e-09 1.0414899940828986</pose>
+    </include>
+    <include>
+      <uri>model://Pine Tree</uri>
+      <name>Pine Tree_1</name>
+      <pose>125.20400238037109 -287.0159912109375 1.5119545459747314 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Collapsed House</uri>
+      <name>collapsed_house_1</name>
+      <pose>85.242897033691406 -295.37518310546875 1.4539599418640137 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://ground_station</uri>
+      <name>ground_station_0</name>
+      <pose>68.86798095703125 -256.11184692382812 1.8643900156021118 0 0 -1.5432800573983829</pose>
+    </include>
+    <include>
+      <uri>model://House_3</uri>
+      <name>House 3_0</name>
+      <pose>20.063314437866211 -266.78488159179688 1.967210054397583 0 0 0.16619300430190742</pose>
+    </include>
+    <include>
+      <uri>model://House_3</uri>
+      <name>House 3_1</name>
+      <pose>41.113601684570312 -263.22000122070312 1.8772851228713989 0 0 0.1556590055793271</pose>
+    </include>
+    <include>
+      <uri>model://Pine Tree</uri>
+      <name>Pine Tree_2</name>
+      <pose>31.637599945068359 -266.29501342773438 2.1995885372161865 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Pine Tree</uri>
+      <name>Pine Tree_3</name>
+      <pose>27.720033645629883 -266.9052734375 2.0379800796508789 0 0 0.19957499998436151</pose>
+    </include>
+    <include>
+      <uri>model://pickup</uri>
+      <name>pickup_0</name>
+      <pose>-2.3337302207946777 -290.43301391601562 1.6705106496810913 0 0.026145801839955116 0</pose>
+    </include>
+    <include>
+      <uri>model://house_2</uri>
+      <name>House 2_0</name>
+      <pose>62.332801818847656 -295.4429931640625 1.6004675626754761 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://house_2</uri>
+      <name>House 2_1</name>
+      <pose>48.030601501464844 -301.49099731445312 1.4962551593780518 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://house_2</uri>
+      <name>House 2_2</name>
+      <pose>34.578601837158203 -309.04598999023438 1.3371628522872925 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://oak_tree</uri>
+      <name>Oak tree_0</name>
+      <pose>37.778701782226562 -300.58334350585938 1.3762799501419067 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://oak_tree</uri>
+      <name>Oak tree_3</name>
+      <pose>29.346399307250977 -302.53900146484375 1.4735556840896606 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://ground_station</uri>
+      <name>ground_station_1</name>
+      <pose>25.089899063110352 -307.2239990234375 1.62908935546875 0 0 -1.5447599658582927</pose>
+    </include>
+    <include>
+      <uri>model://ambulance</uri>
+      <name>ambulance_1</name>
+      <pose>-49.845798492431641 -300.81500244140625 1.9055043458938599 0 0 -1.6560200298931247</pose>
+    </include>
+    <include>
+      <uri>model://House</uri>
+      <name>house_2</name>
+      <pose>-58.889598846435547 -300.80999755859369 1.5644099712371826 -7.7737426091065095e-08 9.4280744648912027e-08 1.5696576875430786</pose>
+    </include>
+    <include>
+      <uri>model://House_3</uri>
+      <name>House 3_2</name>
+      <pose>-43.361400604248047 -284.93798828125 1.6584783792495728 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://oak_tree</uri>
+      <name>Oak tree_4</name>
+      <pose>-64.898200988769531 -302.02700805664062 1.7730084657669067 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://house_2</uri>
+      <name>House 2_3</name>
+      <pose>-73.89959716796875 -309.04400634765625 1.600242018699646 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://house_2</uri>
+      <name>House 2_4</name>
+      <pose>-89.740898132324219 -316.77301025390625 1.6329400539398193 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://ground_station</uri>
+      <name>ground_station_2</name>
+      <pose>-100.86799621582031 -312.947998046875 1.7950061559677124 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Pine Tree</uri>
+      <name>Pine Tree_4</name>
+      <pose>-96.935699462890625 -311.06201171875 1.7250826358795166 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Collapsed House</uri>
+      <name>collapsed_house_2</name>
+      <pose>-113.47299957275391 -310.41000366210938 1.6984701156616211 0 0 0</pose>
+    </include>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>3</intensity>
+      <direction>-0.5 0.5 -1</direction>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.100000001 0.100000001 0.100000001 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>

@@ -1,0 +1,146 @@
+waypoints:
+  waypoint0:
+    name: road_to_east_0
+    pose:
+    - -20.664766452853563
+    - 80.81424648919473
+    - 0.0
+    orientation:
+    - 0.9993323875408819
+    - 0.0
+    - 0.0
+    - 0.036534630309345416
+    group: road_to_east
+  waypoint1:
+    name: road_to_east_1
+    pose:
+    - -14.409648466811039
+    - 81.2289177006953
+    - 0.0
+    orientation:
+    - 0.9959057868601129
+    - 0.0
+    - 0.0
+    - -0.09039725492811881
+    group: road_to_east
+  waypoint2:
+    name: road_to_east_2
+    pose:
+    - 1.1487261156175907
+    - 80.64850484118163
+    - 0.0
+    orientation:
+    - 0.9999938211052822
+    - 0.0
+    - 0.0
+    - 0.003515359335387126
+    group: road_to_east
+  waypoint3:
+    name: road_to_east_3
+    pose:
+    - 10.351148370256112
+    - 77.14566895595308
+    - 0.0
+    orientation:
+    - 0.9597471387181685
+    - 0.0
+    - 0.0
+    - -0.2808655011251625
+    group: road_to_east
+  waypoint4:
+    name: road_to_east_4
+    pose:
+    - 14.738099826385904
+    - 73.67979907075606
+    - 0.0
+    orientation:
+    - 0.8702736014762107
+    - 0.0
+    - 0.0
+    - -0.49256863336354023
+    group: road_to_east
+  waypoint5:
+    name: road_to_east_5
+    pose:
+    - 17.298173025556903
+    - 68.58736094721966
+    - 0.0
+    orientation:
+    - 0.7079071479034295
+    - 0.0
+    - 0.0
+    - -0.7063055075158567
+    group: road_to_east
+  waypoint6:
+    name: road_to_east_6
+    pose:
+    - 18.85910594218279
+    - 67.58620185454996
+    - 0.0
+    orientation:
+    - 0.7002898234919183
+    - 0.0
+    - 0.0
+    - -0.7138586436498882
+    group: road_to_east
+  waypoint7:
+    name: road_to_east_7
+    pose:
+    - 17.141700536485292
+    - 62.670317722706116
+    - 0.0
+    orientation:
+    - 0.7352936061681059
+    - 0.0
+    - 0.0
+    - -0.6777487091306795
+    group: road_to_east
+  waypoint8:
+    name: road_to_east_8
+    pose:
+    - 18.42035381949718
+    - 44.66836276009699
+    - 0.0
+    orientation:
+    - 0.7307108715323709
+    - 0.0
+    - 0.0
+    - -0.6826870602438594
+    group: road_to_east
+  waypoint9:
+    name: road_to_east_9
+    pose:
+    - 12.306966122707314
+    - 40.46836358446414
+    - 0.0
+    orientation:
+    - 0.8685047212052722
+    - 0.0
+    - 0.0
+    - -0.49568089457245806
+    group: road_to_east
+  waypoint10:
+    name: road_to_east_10
+    pose:
+    - 18.219428199458672
+    - 36.45688192658348
+    - 0.0
+    orientation:
+    - 0.7154570816377378
+    - 0.0
+    - 0.0
+    - -0.698656685600597
+    group: road_to_east
+  waypoint11:
+    name: road_to_east_11
+    pose:
+    - 11.450725180037256
+    - 28.00409002005811
+    - 0.0
+    orientation:
+    - 0.034334254647242185
+    - 0.0
+    - 0.0
+    - -0.9994104056681711
+    group: road_to_east
+group: road_to_east

@@ -1,0 +1,110 @@
+waypoints:
+  waypoint0:
+    name: road_to_west_0
+    pose:
+    - 67.53548198672482
+    - 227.78398304970628
+    - 0.0
+    orientation:
+    - 0.6733685548006948
+    - 0.0
+    - 0.0
+    - -0.7393069656141646
+    group: road_to_west
+  waypoint1:
+    name: road_to_west_1
+    pose:
+    - 67.19167052697985
+    - 223.6788007777229
+    - 0.0
+    orientation:
+    - 0.6932704497345689
+    - 0.0
+    - 0.0
+    - -0.7206775170107838
+    group: road_to_west
+  waypoint2:
+    name: road_to_west_2
+    pose:
+    - 66.657121339049
+    - 216.29241643850077
+    - 0.0
+    orientation:
+    - 0.6438846069912477
+    - 0.0
+    - 0.0
+    - -0.7651226129711018
+    group: road_to_west
+  waypoint3:
+    name: road_to_west_3
+    pose:
+    - 65.56055516278978
+    - 211.60136278200164
+    - 0.0
+    orientation:
+    - 0.5264491069424703
+    - 0.0
+    - 0.0
+    - -0.8502066441750943
+    group: road_to_west
+  waypoint4:
+    name: road_to_west_4
+    pose:
+    - 61.14308352660519
+    - 207.8156530657084
+    - 0.0
+    orientation:
+    - 0.0243623508808834
+    - 0.0
+    - 0.0
+    - -0.9997031938828428
+    group: road_to_west
+  waypoint5:
+    name: road_to_west_5
+    pose:
+    - 43.22675582926255
+    - 209.02000341375125
+    - 0.0
+    orientation:
+    - 0.0636436738998728
+    - 0.0
+    - 0.0
+    - -0.9979726863860187
+    group: road_to_west
+  waypoint6:
+    name: road_to_west_6
+    pose:
+    - 24.367434465726564
+    - 206.77526401040882
+    - 0.0
+    orientation:
+    - 0.1184201631469446
+    - 0.0
+    - 0.0
+    - -0.9929635768547863
+    group: road_to_west
+  waypoint7:
+    name: road_to_west_7
+    pose:
+    - 17.584446049063324
+    - 201.69912372961946
+    - 0.0
+    orientation:
+    - 0.6228537343914083
+    - 0.0
+    - 0.0
+    - -0.7823383063321628
+    group: road_to_west
+  waypoint8:
+    name: road_to_west_8
+    pose:
+    - 9.075881521856946
+    - 200.61431382486512
+    - 0.0
+    orientation:
+    - 0.0007276522494475486
+    - 0.0
+    - 0.0
+    - 0.9999997352610669
+    group: road_to_west
+group: road_to_west

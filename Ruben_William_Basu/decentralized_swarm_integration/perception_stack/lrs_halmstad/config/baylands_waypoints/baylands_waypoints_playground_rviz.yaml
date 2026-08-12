@@ -1,0 +1,278 @@
+waypoints:
+  waypoint0:
+    name: playground_0
+    pose:
+    - 141.45934853163197
+    - 1.6903764981326466
+    - 0.0
+    orientation:
+    - 0.19664436929091034
+    - 0.0
+    - 0.0
+    - 0.9804748808746607
+    group: playground
+  waypoint1:
+    name: playground_1
+    pose:
+    - 136.3763696371555
+    - 10.024536227894139
+    - 0.0
+    orientation:
+    - 0.5162471371580902
+    - 0.0
+    - 0.0
+    - 0.8564396612582091
+    group: playground
+  waypoint2:
+    name: playground_2
+    pose:
+    - 133.47225015362054
+    - 15.298181007810925
+    - 0.0
+    orientation:
+    - 0.584416754834301
+    - 0.0
+    - 0.0
+    - 0.8114536688369488
+    group: playground
+  waypoint3:
+    name: playground_3
+    pose:
+    - 130.7322777645212
+    - 17.991278406953157
+    - 0.0
+    orientation:
+    - 0.684421236897267
+    - 0.0
+    - 0.0
+    - 0.7290868058633451
+    group: playground
+  waypoint4:
+    name: playground_4
+    pose:
+    - 131.76762412864224
+    - 25.671043631436476
+    - 0.0
+    orientation:
+    - 0.7760704590476193
+    - 0.0
+    - 0.0
+    - 0.630646210322093
+    group: playground
+  waypoint5:
+    name: playground_5
+    pose:
+    - 133.29921446547996
+    - 28.521607491799863
+    - 0.0
+    orientation:
+    - 0.30436628554739603
+    - 0.0
+    - 0.0
+    - 0.9525550714904
+    group: playground
+  waypoint6:
+    name: playground_6
+    pose:
+    - 128.48498476010423
+    - 32.068640902227
+    - 0.0
+    orientation:
+    - 0.7816037327488501
+    - 0.0
+    - 0.0
+    - 0.6237752840190641
+    group: playground
+  waypoint7:
+    name: playground_7
+    pose:
+    - 132.5953767234123
+    - 34.37393226232746
+    - 0.0
+    orientation:
+    - 0.9998863905514908
+    - 0.0
+    - 0.0
+    - -0.015073353638517414
+    group: playground
+  waypoint8:
+    name: playground_8
+    pose:
+    - 134.02462685701917
+    - 36.50409412838074
+    - 0.0
+    orientation:
+    - 0.6734074713450654
+    - 0.0
+    - 0.0
+    - 0.7392715181424515
+    group: playground
+  waypoint9:
+    name: playground_9
+    pose:
+    - 136.37789124655188
+    - 36.962889374121616
+    - 0.0
+    orientation:
+    - 0.9977886231490238
+    - 0.0
+    - 0.0
+    - -0.06646701072242693
+    group: playground
+  waypoint10:
+    name: playground_10
+    pose:
+    - 139.2514195903388
+    - 38.73492164803346
+    - 0.0
+    orientation:
+    - 0.9992959117600171
+    - 0.0
+    - 0.0
+    - 0.037519071679828424
+    group: playground
+  waypoint11:
+    name: playground_11
+    pose:
+    - 142.2115029394931
+    - 37.47144160431688
+    - 0.0
+    orientation:
+    - 0.9465222692592173
+    - 0.0
+    - 0.0
+    - -0.3226384877790956
+    group: playground
+  waypoint12:
+    name: playground_12
+    pose:
+    - 144.54581024262885
+    - 29.730520470601107
+    - 0.0
+    orientation:
+    - 0.9630385887724711
+    - 0.0
+    - 0.0
+    - 0.26936346547950313
+    group: playground
+  waypoint13:
+    name: playground_13
+    pose:
+    - 147.88367373132314
+    - 33.723409691936496
+    - 0.0
+    orientation:
+    - 0.9256570282888568
+    - 0.0
+    - 0.0
+    - 0.3783636689475387
+    group: playground
+  waypoint14:
+    name: playground_20
+    pose:
+    - 155.93829280695118
+    - -1.1435093299234709
+    - 0.0
+    orientation:
+    - 0.9373391979162429
+    - 0.0
+    - 0.0
+    - -0.3484181798496378
+    group: playground
+  waypoint15:
+    name: playground_21
+    pose:
+    - 162.6546878273443
+    - -0.893808683421917
+    - 0.0
+    orientation:
+    - 0.9817031389037943
+    - 0.0
+    - 0.0
+    - 0.1904178223445415
+    group: playground
+  waypoint16:
+    name: playground_22
+    pose:
+    - 171.9001854691543
+    - 5.478950243906721
+    - 0.0
+    orientation:
+    - 0.8837442054570606
+    - 0.0
+    - 0.0
+    - 0.46797027610850317
+    group: playground
+  waypoint17:
+    name: playground_23
+    pose:
+    - 178.67434518944245
+    - 9.744806992639
+    - 0.0
+    orientation:
+    - 0.9255095655600007
+    - 0.0
+    - 0.0
+    - 0.3787242322019263
+    group: playground
+  waypoint18:
+    name: playground_24
+    pose:
+    - 180.99263886820552
+    - 18.62414366878875
+    - 0.0
+    orientation:
+    - 0.7589627047916342
+    - 0.0
+    - 0.0
+    - 0.6511340973527394
+    group: playground
+  waypoint19:
+    name: playground_25
+    pose:
+    - 181.39544289439527
+    - 24.554138649369115
+    - 0.0
+    orientation:
+    - 0.6852406818929528
+    - 0.0
+    - 0.0
+    - 0.728316694768753
+    group: playground
+  waypoint20:
+    name: playground_26
+    pose:
+    - 173.63521243580925
+    - 39.66613706834087
+    - 0.0
+    orientation:
+    - 0.35485763114868984
+    - 0.0
+    - 0.0
+    - 0.934920350412558
+    group: playground
+  waypoint21:
+    name: playground_27
+    pose:
+    - 163.5978919759883
+    - 44.957183879163345
+    - 0.0
+    orientation:
+    - 0.0637519388711375
+    - 0.0
+    - 0.0
+    - 0.9979657761116715
+    group: playground
+  waypoint22:
+    name: playground_28
+    pose:
+    - 153.83825570593953
+    - 45.56384804012675
+    - 0.0
+    orientation:
+    - 0.16297610707856314
+    - 0.0
+    - 0.0
+    - -0.9866300160250127
+    group: playground
+group: playground

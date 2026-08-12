@@ -1,0 +1,61 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.runtime/
+
+# Experiment artifacts: never commit ROS bags, maps, logs or captured frames.
+datasets/
+runtime_logs/
+
+# Locally installed Python/Jupyter dependencies. Recreate from requirements/.
+third_party/
+analysis/python/
+
+# Generated ROS/colcon products.
+build/
+build_combined/
+install/
+install_combined/
+log/
+log_combined/
+log_combined_test/
+
+# Bundled compiled PX4 runtime. Keep only its documentation in Git.
+px4_runtime/*
+!px4_runtime/README.md
+
+# Baylands and vehicle geometry/texture payloads are distributed separately.
+# Keep model.config/model.sdf and worlds in Git so asset structure is visible.
+!simulation/models/
+!simulation/models/**/
+!perception_stack/lrs_halmstad/models/
+!perception_stack/lrs_halmstad/models/**/
+simulation/models/**/meshes/
+simulation/models/**/media/
+simulation/models/**/materials/
+perception_stack/lrs_halmstad/models/**/meshes/
+perception_stack/lrs_halmstad/models/**/media/
+perception_stack/lrs_halmstad/models/**/materials/
+simulation/models/**/*.dae
+simulation/models/**/*.DAE
+simulation/models/**/*.stl
+simulation/models/**/*.obj
+simulation/models/**/*.fbx
+simulation/models/**/*.png
+simulation/models/**/*.jpg
+simulation/models/**/*.jpeg
+simulation/models/**/*.tif
+simulation/models/**/*.tiff
+
+# Generated OMNeT++ products; retain source, NED, INI, XML and build script.
+omnet/.cmdenv-log
+omnet/Makefile
+omnet/omnet
+omnet/out/
+omnet/results/
+
+# Editor/OS debris.
+.vscode/
+.idea/
+.DS_Store
+*~
