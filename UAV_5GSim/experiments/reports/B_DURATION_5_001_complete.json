@@ -1,0 +1,11 @@
+{
+  "run_id": "B_DURATION_5_001",
+  "scenario": "duration_sensitivity",
+  "duration_sec": 300,
+  "speed_mps": 0.8,
+  "rows": 600,
+  "columns": 44,
+  "validation": "passed",
+  "trace_source": "B1_BASE_003",
+  "free_gib": 227.17945098876953
+}

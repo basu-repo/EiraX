@@ -27,6 +27,20 @@
           </mesh>
         </geometry>
       </visual>
+      <!-- Large visual-only identity plate. Its material is changed per PX4
+           instance after spawning: UAV0 blue, UAV1 green, UAV2 orange. -->
+      <visual name="eirax_uav_id_plate">
+        <pose>-0.055 0 0.064 0 0 0</pose>
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <box><size>0.080 0.055 0.012</size></box>
+        </geometry>
+        <material>
+          <ambient>0.10 0.55 1.00 1</ambient>
+          <diffuse>0.10 0.55 1.00 1</diffuse>
+          <emissive>0.02 0.11 0.20 1</emissive>
+        </material>
+      </visual>
       <visual name="5010_motor_base_0">
         <pose>0.174 0.174 .032 0 0 -.45</pose>
         <geometry>

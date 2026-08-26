@@ -1,0 +1,26 @@
+{
+  "dataset": "experiments/data/drone_network_telemetry_cosim_document_complete.csv",
+  "rows": 25490,
+  "columns": 44,
+  "missions": 37,
+  "sha256": "e3b917dc23426d4ce9bd31894653210d8547934e6231b48a615c1a63f5694e3f",
+  "class_distribution": {
+    "normal": 21282,
+    "malicious": 2970,
+    "suspicious": 1238
+  },
+  "extension_runs": [
+    "B_DURATION_5_001",
+    "B_DURATION_10_001",
+    "B_DURATION_20_001",
+    "B2_HOVER_VIDEO_001",
+    "B_SLICE_DUAL_001",
+    "B_SLICE_TRIPLE_001",
+    "M_DOS_30S_001",
+    "M_DOS_90S_001",
+    "M_DOS_REPEATED_001"
+  ],
+  "validation": "passed",
+  "core_dataset_preserved": "experiments/data/drone_network_telemetry_cosim.csv",
+  "model_report": "experiments/reports/document_complete_model_evaluation.json"
+}

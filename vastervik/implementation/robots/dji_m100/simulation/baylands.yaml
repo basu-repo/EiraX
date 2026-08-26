@@ -1,0 +1,14 @@
+runtime:
+  mode: simulation
+  use_sim_time: true
+
+world:
+  name: baylands
+
+aircraft:
+  model: dji_m100
+  flight_adapter: gazebo
+  spawn_xyz: [0.0, 0.0, 7.0]
+
+sensors:
+  camera_driver: ros_gz_bridge

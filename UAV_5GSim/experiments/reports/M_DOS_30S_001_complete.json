@@ -1,0 +1,11 @@
+{
+  "run_id": "M_DOS_30S_001",
+  "scenario": "dos_timing",
+  "timing": "30_second",
+  "sources": 1,
+  "rows": 630,
+  "columns": 44,
+  "malicious_rows": 90,
+  "validation": "passed",
+  "free_gib": 225.99124145507812
+}

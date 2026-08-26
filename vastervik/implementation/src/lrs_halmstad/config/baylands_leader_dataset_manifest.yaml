@@ -1,0 +1,46 @@
+world: baylands
+output_dir: datasets/baylands_leader_routes
+
+capture:
+  uav_name: dji0
+  hz: 0.25
+  save_overlay: true
+  target_pose_topic: /a201_0000/ground_truth/odom
+
+startup:
+  warmup_s: 6.0
+
+scenarios:
+  - name: rotundan
+    waypoint: rotundan_0
+    nav2_goals: rotundan
+  - name: road_to_west
+    waypoint: road_to_west_0
+    nav2_goals: road_to_west
+  - name: parkinglot_west
+    waypoint: parkinglot_west_0
+    nav2_goals: parkinglot_west
+  - name: road_to_spawn
+    waypoint: road_to_spawn_0
+    nav2_goals: road_to_spawn
+  - name: spawn
+    waypoint: spawn_0
+    nav2_goals: spawn
+  - name: road_to_east
+    waypoint: road_to_east_0
+    nav2_goals: road_to_east
+  - name: parkinglot_east
+    waypoint: parkinglot_east_0
+    nav2_goals: parkinglot_east
+  - name: road_to_strip
+    waypoint: road_to_strip_0
+    nav2_goals: road_to_strip
+  - name: strip
+    waypoint: strip_0
+    nav2_goals: strip
+  - name: playground
+    waypoint: playground_0
+    nav2_goals: playground1
+  - name: art
+    waypoint: art_0
+    nav2_goals: art

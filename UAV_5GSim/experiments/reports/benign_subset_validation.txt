@@ -1,0 +1,4 @@
+RESULT: PASSED (4560 rows, 44 columns)
+
+All 4560 rows are normal-label rows from eight completed mission runs.
+Future machine-learning partitions must use complete mission_id groups and must not randomly split rows.

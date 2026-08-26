@@ -60,9 +60,10 @@ navigation or command motion by itself.
 
 ## Network boundary
 
-The network overlay contains exactly one UGV, one UAV and one INET 802.11 Wi-Fi
-flow. It uses copied local mobility/scheduler/metrics sources. It does not use
-Simu5G, FLORA or 5G components.
+The network overlay contains one UGV, three UAVs and three independently
+measured INET 802.11 Wi-Fi links. It uses copied local
+mobility/scheduler/metrics sources. It does not use Simu5G, FLORA or 5G
+components.
 
 OMNeT++ ground-truth distance is used only inside propagation modelling. The
 ROS layer consumes RSSI, SNIR, PER, PDR and available timing metrics.
@@ -108,8 +109,8 @@ owns PX4 control. Nothing in the integration overlay arms a vehicle.
 
 - UGV odometry: `/odom`
 - UAV odometry from the accepted controller: `/uav/px4_odom`
-- OMNeT++ pose server: TCP 5555 (`ugv`, `uav`)
-- OMNeT++ metrics server: TCP 5556 (`uav`)
+- OMNeT++ pose server: TCP 5555 (`ugv`, `uav0`, `uav1`, `uav2`)
+- OMNeT++ metrics servers: TCP 5556–5558 (`uav0`–`uav2`)
 - Shared observations: `/coord/swarm/semantic_observations`
 - Local role: `/coord/swarm/uav/role`
 - Advisory consensus: `/coord/swarm/uav/consensus`
@@ -119,7 +120,7 @@ owns PX4 control. Nothing in the integration overlay arms a vehicle.
 
 - Integration control is disabled by default.
 - The accepted vehicle controller remains the only PX4 controller.
-- YOLO is advisory with one observer.
+- YOLO is advisory with three independent observers.
 - Stale roles, anchors, observations and commands are rejected.
 - Coordinate conversions and setpoint bounds are unit-tested.
 - The UGV costmap and UAV onboard sensing retain collision-safety authority.
@@ -136,8 +137,16 @@ Automated checks cover protocol validation, safety bounds, role calculation,
 launcher contracts, copied asset presence, one-vehicle defaults and forbidden
 references to the original projects. A GUI flight run remains an operator test.
 
-Current automated status (9 August 2026): 59 pytest checks pass; both local ROS
+Current automated status (12 August 2026): 76 pytest checks pass; both local ROS
 packages build; the copied-source OMNeT++ executable builds and its NED files
 validate; the copied OBB model loads as class `ugv` on the isolated CPU runtime;
 and the control-disabled YOLO overlay starts and shuts down cleanly. The
 accepted GUI vehicle run is intentionally not automated.
+
+The 11 August permanent-loss evidence run proved the complete
+UAV0→UAV1→UAV2→UGV/Nav2 role sequence and reached the final goal. All three
+aircraft returned within 0.21 m of their bay centres, but PX4 disarm
+confirmation timed out. The landing handshake now retries normal disarm and
+uses a strictly touchdown-gated force-disarm fallback after nine seconds.
+That correction, plus the YOLO clock-domain and camera-projection corrections,
+still requires one final graphical validation run.

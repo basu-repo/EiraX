@@ -1,0 +1,359 @@
+routes:
+  rotundan:
+    pc2ls_min_height: -0.1
+    pc2ls_max_height: 0.5
+  road_to_west: # Needs adjustment
+    pc2ls_min_height: -0.26
+    pc2ls_max_height: 0.5
+  parkinglot_west:
+    pc2ls_min_height: -0.675
+    pc2ls_max_height: 0.25
+  road_to_spawn:
+    pc2ls_min_height: -0.55
+    pc2ls_max_height: 1.2
+  road_to_east:
+    pc2ls_min_height: -0.34
+    pc2ls_max_height: 0.4
+  road_to_strip:
+    pc2ls_min_height: -0.4
+    pc2ls_max_height: 0.4
+  spawn:
+    pc2ls_min_height: -0.64
+    pc2ls_max_height: 0.0
+  strip:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.5
+  playground:
+    pc2ls_min_height: -0.55
+    pc2ls_max_height: 5.0
+  art:
+    pc2ls_min_height: -0.5
+    pc2ls_max_height: 0.0
+waypoints:
+  rotundan_0:
+    pc2ls_min_height: -0.1
+    pc2ls_max_height: 0.5
+  rotundan_1:
+    pc2ls_min_height: -0.17
+    pc2ls_max_height: 0.4
+  rotundan_2:
+    pc2ls_min_height: -0.12
+    pc2ls_max_height: 0.46
+  rotundan_3:
+    pc2ls_min_height: -0.25
+    pc2ls_max_height: 0.5
+  rotundan_4:
+    pc2ls_min_height: -0.48
+    pc2ls_max_height: 0.5
+  rotundan_5:
+    pc2ls_min_height: -0.15
+    pc2ls_max_height: 0.7
+  rotundan_6:
+    pc2ls_min_height: -0.5
+    pc2ls_max_height: 0.7
+  rotundan_7:
+    pc2ls_min_height: -0.47
+    pc2ls_max_height: 0.5
+  rotundan_8:
+    pc2ls_min_height: 0.32
+    pc2ls_max_height: 0.8
+  road_to_west_0:
+    pc2ls_min_height: -0.25
+    pc2ls_max_height: 0.5
+  road_to_west_1:
+    pc2ls_min_height: 0.3
+    pc2ls_max_height: 1.0
+  road_to_west_2:
+    pc2ls_min_height: -0.2
+    pc2ls_max_height: 1.0
+  road_to_west_3:
+    pc2ls_min_height: 0.0
+    pc2ls_max_height: 0.8
+  road_to_west_4:
+    pc2ls_min_height: -0.1
+    pc2ls_max_height: 0.7
+  road_to_west_5:
+    pc2ls_min_height: -0.0
+    pc2ls_max_height: 1.6
+  road_to_west_6:
+    pc2ls_min_height: 0.0
+    pc2ls_max_height: 1.0
+  road_to_west_7:
+    pc2ls_min_height: -0.4
+    pc2ls_max_height: 0.4
+  road_to_west_8:
+    pc2ls_min_height: -0.66
+    pc2ls_max_height: -0.24
+  parkinglot_west_0:
+    pc2ls_min_height: -0.64
+    pc2ls_max_height: 0.0
+  parkinglot_west_1:
+    pc2ls_min_height: -0.64
+    pc2ls_max_height: 0.0
+  parkinglot_west_2:
+    pc2ls_min_height: -0.65
+    pc2ls_max_height: 0.26
+  parkinglot_west_3:
+    pc2ls_min_height: -0.65
+    pc2ls_max_height: 0.26
+  parkinglot_west_4:
+    pc2ls_min_height: -0.65
+    pc2ls_max_height: 0.26
+  parkinglot_west_5:
+    pc2ls_min_height: -0.65
+    pc2ls_max_height: 0.26
+  parkinglot_west_7:
+    pc2ls_min_height: -0.67
+    pc2ls_max_height: 0.2
+  parkinglot_west_10:
+    pc2ls_min_height: -0.66
+    pc2ls_max_height: 0.25
+  parkinglot_west_12:
+    pc2ls_min_height: -0.65
+    pc2ls_max_height: 0.26
+  parkinglot_west_14:
+    pc2ls_min_height: -0.65
+    pc2ls_max_height: 0.26
+  parkinglot_west_15:
+    pc2ls_min_height: -0.65
+    pc2ls_max_height: 0.26
+  parkinglot_west_16:
+    pc2ls_min_height: -0.65
+    pc2ls_max_height: 0.26
+  parkinglot_west_20:
+    pc2ls_min_height: -0.65
+    pc2ls_max_height: 0.26
+  parkinglot_west_21:
+    pc2ls_min_height: -0.65
+    pc2ls_max_height: 0.26
+  road_to_spawn_0:
+    pc2ls_min_height: -0.59
+    pc2ls_max_height: 0.1
+  road_to_spawn_1:
+    pc2ls_min_height: -0.55
+    pc2ls_max_height: 0.3
+  road_to_spawn_2:
+    pc2ls_min_height: -0.54
+    pc2ls_max_height: 0.1
+  road_to_spawn_3:
+    pc2ls_min_height: -0.54
+    pc2ls_max_height: 0.5
+  road_to_spawn_4:
+    pc2ls_min_height: -0.59
+    pc2ls_max_height: 1.5
+  road_to_spawn_5:
+    pc2ls_min_height: -0.5
+    pc2ls_max_height: 0.0
+  road_to_spawn_6:
+    pc2ls_min_height: -0.4
+    pc2ls_max_height: -0.1
+  road_to_spawn_7:
+    pc2ls_min_height: -0.46
+    pc2ls_max_height: 0.0
+  road_to_spawn_8:
+    pc2ls_min_height: -0.62
+    pc2ls_max_height: 0.5
+  road_to_spawn_9:
+    pc2ls_min_height: -0.51
+    pc2ls_max_height: 0.5
+  road_to_spawn_10:
+    pc2ls_min_height: -0.67
+    pc2ls_max_height: 0.0
+  spawn_0:
+    pc2ls_min_height: -0.68
+    pc2ls_max_height: 0.0
+  spawn_1:
+    pc2ls_min_height: -0.64
+    pc2ls_max_height: 0.0
+  spawn_2:
+    pc2ls_min_height: -0.64
+    pc2ls_max_height: 0.0
+  spawn_3:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 1.0
+  spawn_4:
+    pc2ls_min_height: -0.55
+    pc2ls_max_height: -0.1
+  spawn_5:
+    pc2ls_min_height: -0.4
+    pc2ls_max_height: -0.25
+  spawn_6:
+    pc2ls_min_height: -0.57
+    pc2ls_max_height: -0.4
+  spawn_7:
+    pc2ls_min_height: -0.54
+    pc2ls_max_height: 0.0
+  spawn_8:
+    pc2ls_min_height: -0.54
+    pc2ls_max_height: 0.0
+  road_to_east_0:
+    pc2ls_min_height: -0.64
+    pc2ls_max_height: 0.1
+  road_to_east_1:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.1
+  road_to_east_2:
+    pc2ls_min_height: -0.5
+    pc2ls_max_height: 0.1
+  road_to_east_3:
+    pc2ls_min_height: -0.57
+    pc2ls_max_height: 0.1
+  road_to_east_4:
+    pc2ls_min_height: -0.58
+    pc2ls_max_height: 0.0
+  road_to_east_5:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.5
+  road_to_east_6:
+    pc2ls_min_height: -0.59
+    pc2ls_max_height: 0.5
+  road_to_east_7:
+    pc2ls_min_height: -0.59
+    pc2ls_max_height: -0.4
+  road_to_east_8:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.0
+  road_to_east_9:
+    pc2ls_min_height: -0.56
+    pc2ls_max_height: 0.6
+  road_to_east_10:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 1.3
+  road_to_east_11:
+    pc2ls_min_height: -0.63
+    pc2ls_max_height: 0.4
+  parkinglot_east_0:
+    pc2ls_min_height: -0.645
+    pc2ls_max_height: 0.4
+  parkinglot_east_1:
+    pc2ls_min_height: -0.645
+    pc2ls_max_height: 0.4
+  parkinglot_east_2:
+    pc2ls_min_height: -0.645
+    pc2ls_max_height: 0.4
+  parkinglot_east_3:
+    pc2ls_min_height: -0.65
+    pc2ls_max_height: 0.4
+  parkinglot_east_4:
+    pc2ls_min_height: -0.645
+    pc2ls_max_height: 0.4
+  parkinglot_east_5:
+    pc2ls_min_height: -0.645
+    pc2ls_max_height: 0.4
+  parkinglot_east_6:
+    pc2ls_min_height: -0.645
+    pc2ls_max_height: 0.4
+  parkinglot_east_7:
+    pc2ls_min_height: -0.645
+    pc2ls_max_height: 0.4
+  parkinglot_east_8:
+    pc2ls_min_height: -0.645
+    pc2ls_max_height: 0.4
+  parkinglot_east_9:
+    pc2ls_min_height: -0.645
+    pc2ls_max_height: 0.4
+  road_to_strip_0:
+    pc2ls_min_height: -0.58
+    pc2ls_max_height: 0.4
+  road_to_strip_1:
+    pc2ls_min_height: -0.25
+    pc2ls_max_height: 0.5
+  road_to_strip_2:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: -0.51
+  road_to_strip_3:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: -0.5
+  road_to_strip_4:
+    pc2ls_min_height: -0.61
+    pc2ls_max_height: 0.5
+  road_to_strip_5:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 2.0
+  road_to_strip_6:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 2.0
+  road_to_strip_7:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 2.0
+  road_to_strip_8:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 2.0
+  road_to_strip_9:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 2.0
+  strip_0:
+    pc2ls_min_height: -0.59
+    pc2ls_max_height: 0.5
+  strip_1:
+    pc2ls_min_height: -0.66
+    pc2ls_max_height: 0.5
+  strip_2:
+    pc2ls_min_height: -0.63
+    pc2ls_max_height: 0.5
+  strip_3:
+    pc2ls_min_height: -0.54
+    pc2ls_max_height: 0.5
+  strip_4:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.5
+  strip_5:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.5
+  strip_6:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.5
+  strip_7:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.5
+  strip_8:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.5
+  strip_9:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.5
+  strip_10:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.5
+  strip_11:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.5
+  strip_12:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.5
+  strip_13:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.5
+  strip_14:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.5
+  strip_15:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.5
+  strip_16:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.5
+  art_0:
+    pc2ls_min_height: -0.35
+    pc2ls_max_height: 0.0
+  art_1:
+    pc2ls_min_height: -0.35
+    pc2ls_max_height: 0.0
+  art_2:
+    pc2ls_min_height: -0.35
+    pc2ls_max_height: 0.0
+  art_3:
+    pc2ls_min_height: -0.5
+    pc2ls_max_height: 0.0
+  art_4:
+    pc2ls_min_height: -0.55
+    pc2ls_max_height: 0.0
+  art_5:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.0
+  art_6:
+    pc2ls_min_height: -0.6
+    pc2ls_max_height: 0.0
+  art_7:
+    pc2ls_min_height: -0.35
+    pc2ls_max_height: 0.0

@@ -21,3 +21,8 @@ report reproducible for a specific run.
 
 The notebook writes plots, extracted detection payloads, and the final evidence
 table into that run's `analysis_output/` directory. It does not modify the bag.
+
+For new runs, the bag also records all three `/swarm/uav*/ground_truth/pose`
+streams, estimator status/fault topics, decentralized roles and per-link network
+metrics. These topics distinguish missing camera geometry, stale inputs and
+range rejection directly in the evidence report.

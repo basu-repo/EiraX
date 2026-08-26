@@ -1,0 +1,10 @@
+{
+  "run_id": "B1_BASE_002",
+  "source": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B1_BASE_002/ros_pose_trace.csv",
+  "takeoff_bag_sec": 14.855585144,
+  "duration_sec": 300,
+  "resample_hz": 10,
+  "samples": 3001,
+  "maximum_altitude_m": 29.55611371351789,
+  "final_altitude_m": -0.8264844417572021
+}

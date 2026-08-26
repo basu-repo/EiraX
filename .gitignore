@@ -54,6 +54,10 @@
 **/install/
 **/log/
 **/logs/
+**/build_*/
+**/install_*/
+**/log_*/
+**/.cmdenv-log
 **/CMakeFiles/
 **/CMakeCache.txt
 
@@ -79,3 +83,26 @@
 **/*.tmp
 **/*.swp
 **/*~
+
+# Generated experiment runs and local runtime state
+**/datasets/run_*/
+**/datasets/tmp_datasets/
+**/notebook_runs/
+**/runtime_logs/
+**/results/run_*/
+**/third_party/python/
+/.vscode/browse.vc.db*
+
+# Vastervik is the self-contained deployable integration. Its authoritative
+# copied simulation and DJI/YOLO assets are required after cloning.
+!/vastervik/implementation/simulation/models/
+!/vastervik/implementation/simulation/models/**/
+!/vastervik/implementation/simulation/models/**
+!/vastervik/implementation/src/lrs_halmstad/models/
+!/vastervik/implementation/src/lrs_halmstad/models/**/
+!/vastervik/implementation/src/lrs_halmstad/models/**
+
+# Keep local model-editing backups out of Git even though the authoritative
+# Vastervik model trees above are included.
+/vastervik/implementation/simulation/models/**/*.backup*
+/vastervik/implementation/simulation/models/**/*.bak*

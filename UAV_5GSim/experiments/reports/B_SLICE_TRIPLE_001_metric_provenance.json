@@ -1,0 +1,13 @@
+{
+  "run_id": "B_SLICE_TRIPLE_001",
+  "physical_and_network_source": {
+    "physical_source_run": "B2_HOVER_VIDEO_001",
+    "network_vector_source_run": "B2_HOVER_VIDEO_001",
+    "storage": "hard-linked",
+    "controlled_variable": "logical application-flow slice mapping",
+    "native_5gc_slicing": false,
+    "reason": "installed Simu5G source tree has no native network-slice module"
+  },
+  "slice_mapping": "flow contract metadata applied before assembly",
+  "packet_metrics": "unchanged measured Simu5G vectors from B2 hover/video"
+}

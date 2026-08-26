@@ -20,11 +20,17 @@ def bridge() -> list[str]:
         "/wheel/odom@nav_msgs/msg/Odometry[gz.msgs.Odometry",
         "/model/husky/imu@sensor_msgs/msg/Imu[gz.msgs.IMU",
         "/husky/gps@sensor_msgs/msg/NavSatFix[gz.msgs.NavSat",
+        "/world/baylands_editable/model/husky/link/base_link/sensor/camera_front/image@sensor_msgs/msg/Image[gz.msgs.Image",
+        "/world/baylands_editable/model/husky/link/base_link/sensor/camera_front/depth_image@sensor_msgs/msg/Image[gz.msgs.Image",
+        "/world/baylands_editable/model/husky/link/base_link/sensor/camera_front/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo",
         "/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist",
         "--ros-args",
         "-r", "/clock:=/gazebo_clock",
         "-r", "/model/husky/imu:=/imu",
         "-r", "/model/husky/pose:=/ground_truth/pose",
+        "-r", "/world/baylands_editable/model/husky/link/base_link/sensor/camera_front/image:=/husky/camera_front/image_raw",
+        "-r", "/world/baylands_editable/model/husky/link/base_link/sensor/camera_front/depth_image:=/husky/camera_front/depth",
+        "-r", "/world/baylands_editable/model/husky/link/base_link/sensor/camera_front/camera_info:=/husky/camera_front/camera_info",
     ]
 
 
@@ -227,12 +233,17 @@ def nav2(params_file: Path) -> list[str]:
     ]
 
 
-def waypoint_mission(world: Path, events: Path, targets: list[str]) -> list[str]:
-    return [
+def waypoint_mission(
+    world: Path,
+    events: Path,
+    targets: list[str],
+) -> list[str]:
+    command = [
         "python3", "-m", "baseline.mission.waypoint_mission",
         "--world", str(world), "--events", str(events),
         "--targets", *targets,
     ]
+    return command
 
 
 def recorder(output: Path, topics: list[str]) -> list[str]:

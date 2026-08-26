@@ -1,0 +1,20 @@
+{
+  "run_id": "B1_BASE_003",
+  "route": [
+    "spawn",
+    "waypoint_1",
+    "waypoint_2",
+    "goal"
+  ],
+  "evidence": [
+    "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B1_BASE_003/scenario_manifest.yaml",
+    "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B1_BASE_003/rosbag/metadata.yaml",
+    "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B1_BASE_003/ros_pose_trace.csv",
+    "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B1_BASE_003/simu5g_mobility.txt",
+    "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B1_BASE_003/topic_measurements.csv",
+    "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B1_BASE_003/gazebo.log",
+    "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B1_BASE_003/px4.log",
+    "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B1_BASE_003/mavros.log"
+  ],
+  "status": "physical_pilot_passed"
+}

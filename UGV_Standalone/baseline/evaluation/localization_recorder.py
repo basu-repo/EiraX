@@ -146,6 +146,8 @@ def main() -> None:
     node = LocalizationRecorder(args.output)
     try:
         rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
     finally:
         node.destroy_node()
         if rclpy.ok():

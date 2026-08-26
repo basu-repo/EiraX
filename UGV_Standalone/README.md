@@ -33,6 +33,17 @@ Useful switches:
 ./UGV_Standalone/run_UGV_simulation.py --no-motion
 ```
 
+## Navigation baseline
+
+Nav2 is the preserved reference implementation and remains the only component
+allowed to publish mission motion to `/cmd_vel`. The discontinued hand-built
+RGB-D traversability controller and its command-line modes have been removed.
+
+The front camera bridge remains available for the next learned-traversability
+implementation. Previous RGB-D datasets and the workspace-level
+[historical analysis notebook](../UGV_Standalone_Visual_Navigation_Analysis.ipynb)
+are retained only as experimental evidence; they are not part of the runtime.
+
 ## Verified interface
 
 - `/husky/lidar3d/points`: three-dimensional LiDAR point cloud
@@ -42,6 +53,7 @@ Useful switches:
 - `/tf`, `/tf_static`: robot and sensor transforms
 - `/imu`: inertial measurements (`sensor_msgs/msg/Imu`)
 - `/cmd_vel`: velocity commands (`geometry_msgs/msg/Twist`)
+- `/husky/camera_front/image_raw`: front colour image (`sensor_msgs/msg/Image`)
 - `/rtabmap3d/cloud_map`: online three-dimensional SLAM point-cloud map
 - `/map`: projected occupancy map used by navigation
 

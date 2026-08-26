@@ -1,0 +1,14 @@
+{
+  "run_id": "B_WINDOW_0P5_001",
+  "controlled_variable": "aggregation_window_sec",
+  "aggregation_window_sec": 0.5,
+  "source_run": "B1_BASE_003",
+  "rows": 1200,
+  "columns": 44,
+  "validation": "passed",
+  "mean_latency_ms": 0.00027759999999990033,
+  "mean_jitter_ms": 1.8070036208091742e-22,
+  "mean_packet_loss_rate": 0.003,
+  "handovers": 0,
+  "free_gib": 228.37842178344727
+}

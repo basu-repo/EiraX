@@ -1,0 +1,19 @@
+# Fixed-altitude XY planning profile for initial simulation validation.
+uav_navigation:
+  ros__parameters:
+    planning_mode: fixed_altitude_xy
+    cruise_altitude_m: 7.0
+    horizontal_safety_radius_m: 1.0
+    max_horizontal_speed_mps: 2.0
+    goal_tolerance_xy_m: 0.5
+
+local_costmap:
+  local_costmap:
+    ros__parameters:
+      global_frame: odom
+      robot_base_frame: base_link
+      rolling_window: true
+      width: 20.0
+      height: 20.0
+      resolution: 0.10
+      robot_radius: 1.0

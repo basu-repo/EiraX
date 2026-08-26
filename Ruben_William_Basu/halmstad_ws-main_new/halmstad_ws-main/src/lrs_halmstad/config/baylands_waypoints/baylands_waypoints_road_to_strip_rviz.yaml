@@ -1,0 +1,122 @@
+waypoints:
+  waypoint0:
+    name: road_to_strip_0
+    pose:
+    - 6.413105961603299
+    - -30.512237869362803
+    - 0.0
+    orientation:
+    - 0.9962916600677059
+    - 0.0
+    - 0.0
+    - 0.08604027010379979
+    group: road_to_strip
+  waypoint1:
+    name: road_to_strip_1
+    pose:
+    - 12.95340623973713
+    - -29.18940376723236
+    - 0.0
+    orientation:
+    - 0.9955818854461516
+    - 0.0
+    - 0.0
+    - -0.0938973342086231
+    group: road_to_strip
+  waypoint2:
+    name: road_to_strip_2
+    pose:
+    - 19.325023743221482
+    - -31.412006678720342
+    - 0.0
+    orientation:
+    - 0.6906438125080001
+    - 0.0
+    - 0.0
+    - -0.7231950803513629
+    group: road_to_strip
+  waypoint3:
+    name: road_to_strip_3
+    pose:
+    - 19.939823472226493
+    - -41.11586960415111
+    - 0.0
+    orientation:
+    - 0.7109069392705152
+    - 0.0
+    - 0.0
+    - -0.7032860895091186
+    group: road_to_strip
+  waypoint4:
+    name: road_to_strip_4
+    pose:
+    - 20.197289283059042
+    - -56.62567518750564
+    - 0.0
+    orientation:
+    - 0.7318164858178381
+    - 0.0
+    - 0.0
+    - -0.6815017469421704
+    group: road_to_strip
+  waypoint5:
+    name: road_to_strip_5
+    pose:
+    - 21.091251876597752
+    - -66.04257985670607
+    - 0.0
+    orientation:
+    - 0.7143398520258109
+    - 0.0
+    - 0.0
+    - -0.6997989538487055
+    group: road_to_strip
+  waypoint6:
+    name: road_to_strip_6
+    pose:
+    - 22.452363804961212
+    - -96.011217185322
+    - 0.0
+    orientation:
+    - 0.7758380657797148
+    - 0.0
+    - 0.0
+    - -0.6309320848452636
+    group: road_to_strip
+  waypoint7:
+    name: road_to_strip_7
+    pose:
+    - 26.390738302050796
+    - -114.9868055242067
+    - 0.0
+    orientation:
+    - 0.8430119397659079
+    - 0.0
+    - 0.0
+    - -0.537894849772817
+    group: road_to_strip
+  waypoint8:
+    name: road_to_strip_8
+    pose:
+    - 30.85001890274344
+    - -127.0718294840333
+    - 0.0
+    orientation:
+    - 0.8634892105128681
+    - 0.0
+    - 0.0
+    - -0.5043673099318232
+    group: road_to_strip
+  waypoint9:
+    name: road_to_strip_9
+    pose:
+    - 39.39396060319916
+    - -141.90739959514437
+    - 0.0
+    orientation:
+    - 0.8489205308847305
+    - 0.0
+    - 0.0
+    - -0.528520512603236
+    group: road_to_strip
+group: road_to_strip

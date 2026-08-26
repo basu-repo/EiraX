@@ -74,8 +74,9 @@ def test_each_x500_instance_has_a_scoped_low_load_rgbd_yolo_camera():
     assert 'if start_yolo:' in launch
     assert "predict_hz=0.5" in launch
     assert 'estimator["est_hz"] = 2.0' in launch
-    assert "camera_x_offset_m=0.153" in launch
-    assert "camera_z_offset_m=-0.043" in launch
+    assert "cam_x_offset_m=0.153" in launch
+    assert "cam_pitch_offset_deg=-45.0" in launch
+    assert "cam_z_offset_m=-0.043" in launch
     assert "evidence_positive_interval_s=2.0" in launch
     assert "evidence_negative_interval_s=20.0" in launch
     assert "evidence_max_positive=500" in launch
@@ -127,6 +128,66 @@ def test_default_complete_launcher_runs_all_legs_with_safe_return():
     assert "command_and_wait(connection, mavutil.mavlink.MAV_CMD_NAV_LAND)" not in follower
     assert "landing_horizontal_error <= 0.60" in follower
     assert "[UAV LANDED VERIFIED]" in follower
+
+
+def test_recording_includes_geometry_and_failover_diagnostics_for_every_uav():
+    runner = (
+        launcher.PROJECT_ROOT / "vehicle_stack/run_cooperative_simulation.py"
+    ).read_text(encoding="utf-8")
+    assert 'f"/swarm/{uav_id}/ground_truth/pose"' in runner
+    assert 'f"/coord/support/{uav_id}/leader_estimate_status"' in runner
+    assert 'f"/coord/support/{uav_id}/leader_estimate_fault"' in runner
+    assert 'f"/coord/swarm/{uav_id}/role"' in runner
+    assert 'f"/coord/swarm/{uav_id}/network/metrics"' in runner
+
+
+def test_px4_models_are_serialized_until_gazebo_finishes_each_insertion():
+    runner = (
+        launcher.PROJECT_ROOT / "vehicle_stack/run_cooperative_simulation.py"
+    ).read_text(encoding="utf-8")
+    assert "def wait_for_gazebo_model_ready(" in runner
+    assert 'model_name = f"x500_mapping_{instance}"' in runner
+    assert '"baylands_editable", model_name, px4_instance.process' in runner
+    assert "[UAV SPAWN VERIFIED]" in runner
+
+
+def test_uavs_get_attached_color_markers_and_terminal_role_events():
+    runner = (
+        launcher.PROJECT_ROOT / "vehicle_stack/run_cooperative_simulation.py"
+    ).read_text(encoding="utf-8")
+    everything = (
+        launcher.PROJECT_ROOT / "scripts/run_everything.py"
+    ).read_text(encoding="utf-8")
+    assert "def color_uav_body_marker(" in runner
+    model = (
+        launcher.PROJECT_ROOT / "simulation/models/x500_mapping_base/model.sdf"
+    ).read_text(encoding="utf-8")
+    assert 'visual name="eirax_uav_id_plate"' in model
+    assert '<box><size>0.080 0.055 0.012</size></box>' in model
+    assert '<pose>-0.055 0 0.064 0 0 0</pose>' in model
+    assert '"eirax_uav_id_plate"' in runner
+    assert '"eirax_rgbd_camera_housing"' in runner
+    assert 'UAV0 blue' in runner and 'UAV1 green' in runner and 'UAV2 orange' in runner
+    assert "[LEADER CHANGE]" in runner
+    assert "[DISCONNECTED]" in runner
+    assert "[RECOVERY PENDING]" in runner
+    assert "def complete_reconnect_if_due()" in runner
+    assert runner.count("complete_reconnect_if_due()") >= 4
+    assert "Followers: UAV0, UAV2" in runner
+    assert "TERMINAL_EVENT_PREFIXES" in everything
+    assert "relay_vehicle_events" in everything
+    assert 'log_path.open("rb")' in everything
+    assert "print_swarm_status(active_run)" in everything
+    assert "[SWARM STATUS] Current leader/scout:" in everything
+
+
+def test_all_uav_spawn_origins_are_raised_half_a_meter_consistently():
+    runner = (
+        launcher.PROJECT_ROOT / "vehicle_stack/run_cooperative_simulation.py"
+    ).read_text(encoding="utf-8")
+    assert "UAV_SPAWN_Z_OFFSET_M = 0.52" in runner
+    assert runner.count("uav_pad[2] + UAV_SPAWN_Z_OFFSET_M") >= 2
+    assert "uav_pad[2] + 0.02" not in runner
 
 
 def test_reserve_uavs_never_read_scout_only_survey_metrics():

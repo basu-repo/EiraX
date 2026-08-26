@@ -1,0 +1,10 @@
+{
+  "run_id": "B2_HOVER_VIDEO_001",
+  "physical_source": {
+    "physical_source_run": "B1_BASE_003",
+    "construction": "measured takeoff and landing profiles with a constant measured hover pose",
+    "status": "measured-profile counterfactual; not a separate physical hover flight"
+  },
+  "video_stream_activity": "derived from received Simu5G video-flow packets",
+  "features": "standalone assemble.py; measured vectors before labels"
+}

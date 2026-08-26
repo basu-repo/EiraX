@@ -1,0 +1,1693 @@
+waypoints:
+  waypoint0:
+    name: rotundan_0
+    pose:
+    - 66.88222902882593
+    - 237.15084904414442
+    - 0.0
+    orientation:
+    - 0.23511821959298004
+    - 0.0
+    - 0.0
+    - 0.9719667807160012
+    group: rotundan
+  waypoint1:
+    name: rotundan_1
+    pose:
+    - 61.98302186238938
+    - 238.28776276470325
+    - 0.0
+    orientation:
+    - 0.30141695136974983
+    - 0.0
+    - 0.0
+    - 0.9534924338593179
+    group: rotundan
+  waypoint2:
+    name: rotundan_2
+    pose:
+    - 58.56347768828148
+    - 248.3315058816306
+    - 0.0
+    orientation:
+    - 0.48626780921572066
+    - 0.0
+    - 0.0
+    - 0.8738098292652375
+    group: rotundan
+  waypoint3:
+    name: rotundan_3
+    pose:
+    - 51.84449325644657
+    - 256.44669997701624
+    - 0.0
+    orientation:
+    - 0.7982260792059623
+    - 0.0
+    - 0.0
+    - 0.6023579720361281
+    group: rotundan
+  waypoint4:
+    name: rotundan_4
+    pose:
+    - 67.18577055028935
+    - 261.10498842955104
+    - 0.0
+    orientation:
+    - 0.7953172957380803
+    - 0.0
+    - 0.0
+    - -0.6061933677465193
+    group: rotundan
+  waypoint5:
+    name: rotundan_5
+    pose:
+    - 66.48372095125183
+    - 255.15226755588841
+    - 0.0
+    orientation:
+    - 0.9991836721667436
+    - 0.0
+    - 0.0
+    - -0.04039788701629437
+    group: rotundan
+  waypoint6:
+    name: rotundan_6
+    pose:
+    - 71.45019986139545
+    - 253.31061602701132
+    - 0.0
+    orientation:
+    - 0.9804688771074646
+    - 0.0
+    - 0.0
+    - -0.19667430188925958
+    group: rotundan
+  waypoint7:
+    name: rotundan_7
+    pose:
+    - 74.41272132996201
+    - 245.92375851746542
+    - 0.0
+    orientation:
+    - 0.02117326965072305
+    - 0.0
+    - 0.0
+    - -0.9997758211980813
+    group: rotundan
+  waypoint8:
+    name: rotundan_8
+    pose:
+    - 66.93650768549499
+    - 246.6706162052185
+    - 0.0
+    orientation:
+    - 0.739040740516183
+    - 0.0
+    - 0.0
+    - -0.6736607334981696
+    group: rotundan
+  waypoint9:
+    name: road_to_west_0
+    pose:
+    - 67.53548198672482
+    - 227.78398304970628
+    - 0.0
+    orientation:
+    - 0.6733685548006948
+    - 0.0
+    - 0.0
+    - -0.7393069656141646
+    group: road_to_west
+  waypoint10:
+    name: road_to_west_1
+    pose:
+    - 67.19167052697985
+    - 223.6788007777229
+    - 0.0
+    orientation:
+    - 0.6932704497345689
+    - 0.0
+    - 0.0
+    - -0.7206775170107838
+    group: road_to_west
+  waypoint11:
+    name: road_to_west_2
+    pose:
+    - 66.657121339049
+    - 216.29241643850077
+    - 0.0
+    orientation:
+    - 0.6438846069912477
+    - 0.0
+    - 0.0
+    - -0.7651226129711018
+    group: road_to_west
+  waypoint12:
+    name: road_to_west_3
+    pose:
+    - 65.56055516278978
+    - 211.60136278200164
+    - 0.0
+    orientation:
+    - 0.5264491069424703
+    - 0.0
+    - 0.0
+    - -0.8502066441750943
+    group: road_to_west
+  waypoint13:
+    name: road_to_west_4
+    pose:
+    - 61.14308352660519
+    - 207.8156530657084
+    - 0.0
+    orientation:
+    - 0.0243623508808834
+    - 0.0
+    - 0.0
+    - -0.9997031938828428
+    group: road_to_west
+  waypoint14:
+    name: road_to_west_5
+    pose:
+    - 43.22675582926255
+    - 209.02000341375125
+    - 0.0
+    orientation:
+    - 0.0636436738998728
+    - 0.0
+    - 0.0
+    - -0.9979726863860187
+    group: road_to_west
+  waypoint15:
+    name: road_to_west_6
+    pose:
+    - 24.367434465726564
+    - 206.77526401040882
+    - 0.0
+    orientation:
+    - 0.1184201631469446
+    - 0.0
+    - 0.0
+    - -0.9929635768547863
+    group: road_to_west
+  waypoint16:
+    name: road_to_west_7
+    pose:
+    - 17.584446049063324
+    - 201.69912372961946
+    - 0.0
+    orientation:
+    - 0.6228537343914083
+    - 0.0
+    - 0.0
+    - -0.7823383063321628
+    group: road_to_west
+  waypoint17:
+    name: road_to_west_8
+    pose:
+    - 9.075881521856946
+    - 200.61431382486512
+    - 0.0
+    orientation:
+    - 0.0007276522494475486
+    - 0.0
+    - 0.0
+    - 0.9999997352610669
+    group: road_to_west
+  waypoint18:
+    name: parkinglot_west_0
+    pose:
+    - 2.0495544215928767
+    - 206.75101149159295
+    - 0.0
+    orientation:
+    - 0.013084469539560373
+    - 0.0
+    - 0.0
+    - -0.9999143946642974
+    group: parkinglot_west
+  waypoint19:
+    name: parkinglot_west_1
+    pose:
+    - -71.39979517989994
+    - 205.6352521524901
+    - 0.0
+    orientation:
+    - 0.691917811997939
+    - 0.0
+    - 0.0
+    - -0.7219762748456384
+    group: parkinglot_west
+  waypoint20:
+    name: parkinglot_west_2
+    pose:
+    - -72.53159610937462
+    - 185.3861158209806
+    - 0.0
+    orientation:
+    - 0.9999945229598499
+    - 0.0
+    - 0.0
+    - 0.0033096903634858166
+    group: parkinglot_west
+  waypoint21:
+    name: parkinglot_west_3
+    pose:
+    - -26.183331149381626
+    - 186.411873638503
+    - 0.0
+    orientation:
+    - 0.9998665946902545
+    - 0.0
+    - 0.0
+    - -0.016333793879998858
+    group: parkinglot_west
+  waypoint22:
+    name: parkinglot_west_4
+    pose:
+    - -72.53159610937462
+    - 185.3861158209806
+    - 0.0
+    orientation:
+    - 0.9999945229598499
+    - 0.0
+    - 0.0
+    - -0.0033096903634858166
+    group: parkinglot_west
+  waypoint23:
+    name: parkinglot_west_5
+    pose:
+    - -70.81746955391576
+    - 164.71214440181592
+    - 0.0
+    orientation:
+    - 0.9992889953666609
+    - 0.0
+    - 0.0
+    - -0.03770283462936889
+    group: parkinglot_west
+  waypoint24:
+    name: parkinglot_west_6
+    pose:
+    - -52.99527355391446
+    - 165.2954741962787
+    - 0.0
+    orientation:
+    - 0.9997753096526951
+    - 0.0
+    - 0.0
+    - 0.02119741042810784
+    group: parkinglot_west
+  waypoint25:
+    name: parkinglot_west_7
+    pose:
+    - -50.95369451163398
+    - 155.80939876736275
+    - 0.0
+    orientation:
+    - 0.8723006865096613
+    - 0.0
+    - 0.0
+    - -0.4889698480630207
+    group: parkinglot_west
+  waypoint26:
+    name: parkinglot_west_8
+    pose:
+    - -43.70940654650033
+    - 155.23458802313573
+    - 0.0
+    orientation:
+    - 0.9998484192222536
+    - 0.0
+    - 0.0
+    - 0.01741087530138679
+    group: parkinglot_west
+  waypoint27:
+    name: parkinglot_west_9
+    pose:
+    - -51.32248494065045
+    - 145.59872492147508
+    - 0.0
+    orientation:
+    - 0.03137541443011862
+    - 0.0
+    - 0.0
+    - 0.9995076704904962
+    group: parkinglot_west
+  waypoint28:
+    name: parkinglot_west_10
+    pose:
+    - -71.01606513497649
+    - 144.44100795629583
+    - 0.0
+    orientation:
+    - 0.6747725860242092
+    - 0.0
+    - 0.0
+    - -0.7380257157783875
+    group: parkinglot_west
+  waypoint29:
+    name: parkinglot_west_11
+    pose:
+    - -71.0406623604704
+    - 135.34511535056026
+    - 0.0
+    orientation:
+    - 0.6167747912336659
+    - 0.0
+    - 0.0
+    - -0.7871396679742851
+    group: parkinglot_west
+  waypoint30:
+    name: parkinglot_west_12
+    pose:
+    - -71.34031380996655
+    - 128.21164135490082
+    - 0.0
+    orientation:
+    - 0.9214026497901563
+    - 0.0
+    - 0.0
+    - -0.3886092600024844
+    group: parkinglot_west
+  waypoint31:
+    name: parkinglot_west_13
+    pose:
+    - -61.227368161897964
+    - 125.74418886038903
+    - 0.0
+    orientation:
+    - 0.7186629202679944
+    - 0.0
+    - 0.0
+    - -0.6953586175721692
+    group: parkinglot_west
+  waypoint32:
+    name: parkinglot_west_14
+    pose:
+    - -60.251454150100436
+    - 121.14724335504245
+    - 0.0
+    orientation:
+    - 0.7201047310126335
+    - 0.0
+    - 0.0
+    - -0.6938653877901843
+    group: parkinglot_west
+  waypoint33:
+    name: parkinglot_west_15
+    pose:
+    - -45.29777336803457
+    - 120.25821291239008
+    - 0.0
+    orientation:
+    - 0.9999987696013779
+    - 0.0
+    - 0.0
+    - -0.0015686923631779257
+    group: parkinglot_west
+  waypoint34:
+    name: parkinglot_west_16
+    pose:
+    - -31.059981061695197
+    - 121.25986768718958
+    - 0.0
+    orientation:
+    - 0.999978121357629
+    - 0.0
+    - 0.0
+    - -0.00661489274795959
+    group: parkinglot_west
+  waypoint35:
+    name: parkinglot_west_17
+    pose:
+    - -26.043369106952277
+    - 125.08260845021046
+    - 0.0
+    orientation:
+    - 0.9995620909696078
+    - 0.0
+    - 0.0
+    - -0.029590983364287265
+    group: parkinglot_west
+  waypoint36:
+    name: parkinglot_west_18
+    pose:
+    - -20.9811905723525
+    - 128.6436340936916
+    - 0.0
+    orientation:
+    - 0.9786782233347145
+    - 0.0
+    - 0.0
+    - 0.20539945270230514
+    group: parkinglot_west
+  waypoint37:
+    name: parkinglot_west_19
+    pose:
+    - -12.476407539919636
+    - 143.3109446367199
+    - 0.0
+    orientation:
+    - 0.7045383249243102
+    - 0.0
+    - 0.0
+    - 0.7096659416322916
+    group: parkinglot_west
+  waypoint38:
+    name: parkinglot_west_20
+    pose:
+    - -1.250103134698326
+    - 147.71999419726887
+    - 0.0
+    orientation:
+    - 0.9992470849457539
+    - 0.0
+    - 0.0
+    - -0.03879772193587442
+    group: parkinglot_west
+  waypoint39:
+    name: parkinglot_west_21
+    pose:
+    - 8.936898088632104
+    - 148.17701101825065
+    - 0.0
+    orientation:
+    - 0.9986245722648899
+    - 0.0
+    - 0.0
+    - 0.052430560446801
+    group: parkinglot_west
+  waypoint40:
+    name: art_0
+    pose:
+    - 84.98445101752255
+    - 145.63697973109865
+    - 0.0
+    orientation:
+    - 0.8137816825465185
+    - 0.0
+    - 0.0
+    - 0.5811706919242895
+    group: art
+  waypoint41:
+    name: art_1
+    pose:
+    - 79.3159041200096
+    - 157.18151260976703
+    - 0.0
+    orientation:
+    - 0.20409175696096454
+    - 0.0
+    - 0.0
+    - -0.978951763234832
+    group: art
+  waypoint42:
+    name: art_2
+    pose:
+    - 70.27035044538135
+    - 151.32327969823245
+    - 0.0
+    orientation:
+    - 0.6555703174525846
+    - 0.0
+    - 0.0
+    - -0.7551341330353948
+    group: art
+  waypoint43:
+    name: art_3
+    pose:
+    - 71.17692011088212
+    - 143.8874121592052
+    - 0.0
+    orientation:
+    - 0.23447356806676858
+    - 0.0
+    - 0.0
+    - -0.9721224953050096
+    group: art
+  waypoint44:
+    name: art_4
+    pose:
+    - 51.86684871461309
+    - 134.37692504499316
+    - 0.0
+    orientation:
+    - 0.29019232878119144
+    - 0.0
+    - 0.0
+    - -0.9569683444694234
+    group: art
+  waypoint45:
+    name: art_5
+    pose:
+    - 34.62655308146899
+    - 124.35576614787298
+    - 0.0
+    orientation:
+    - 0.23281848515039197
+    - 0.0
+    - 0.0
+    - -0.9725202069737557
+    group: art
+  waypoint46:
+    name: art_6
+    pose:
+    - 42.100201738640855
+    - 128.80258028328916
+    - 0.0
+    orientation:
+    - 0.9628056362974925
+    - 0.0
+    - 0.0
+    - 0.2701949420581009
+    group: art
+  waypoint47:
+    name: art_7
+    pose:
+    - 75.4772158156898
+    - 145.136278664251
+    - 0.0
+    orientation:
+    - 0.9914757573942815
+    - 0.0
+    - 0.0
+    - 0.13029129863285502
+    group: art
+  waypoint48:
+    name: road_to_spawn_0
+    pose:
+    - 9.428172873535662
+    - 149.4595670663099
+    - 0.0
+    orientation:
+    - 0.9901248282919962
+    - 0.0
+    - 0.0
+    - -0.14018853162703757
+    group: road_to_spawn
+  waypoint49:
+    name: road_to_spawn_1
+    pose:
+    - 13.532981654638203
+    - 145.11714080694995
+    - 0.0
+    orientation:
+    - 0.849781630709908
+    - 0.0
+    - 0.0
+    - -0.5271348784779941
+    group: road_to_spawn
+  waypoint50:
+    name: road_to_spawn_2
+    pose:
+    - 18.84999844884136
+    - 133.03637540643146
+    - 0.0
+    orientation:
+    - 0.708417035712297
+    - 0.0
+    - 0.0
+    - -0.7057940942743869
+    group: road_to_spawn
+  waypoint51:
+    name: road_to_spawn_3
+    pose:
+    - 17.808634936110696
+    - 133.02514212498272
+    - 0.0
+    orientation:
+    - 0.7455771746770219
+    - 0.0
+    - 0.0
+    - -0.6664192948892084
+    group: road_to_spawn
+  waypoint52:
+    name: road_to_spawn_4
+    pose:
+    - 22.095118593359594
+    - 111.74663854648358
+    - 0.0
+    orientation:
+    - 0.6683476586868528
+    - 0.0
+    - 0.0
+    - -0.7438490486165874
+    group: road_to_spawn
+  waypoint53:
+    name: road_to_spawn_5
+    pose:
+    - 19.58414836429272
+    - 100.28654835360597
+    - 0.0
+    orientation:
+    - 0.7055821305062496
+    - 0.0
+    - 0.0
+    - -0.7086281515084352
+    group: road_to_spawn
+  waypoint54:
+    name: road_to_spawn_6
+    pose:
+    - 14.487131205296475
+    - 87.4110272360745
+    - 0.0
+    orientation:
+    - 0.6299240674948353
+    - 0.0
+    - 0.0
+    - -0.7766567254526044
+    group: road_to_spawn
+  waypoint55:
+    name: road_to_spawn_7
+    pose:
+    - 16.530532256755123
+    - 78.26182206313752
+    - 0.0
+    orientation:
+    - 0.6369943861909874
+    - 0.0
+    - 0.0
+    - -0.7708684401122978
+    group: road_to_spawn
+  waypoint56:
+    name: road_to_spawn_8
+    pose:
+    - 9.14636043686826
+    - 80.03207378057515
+    - 0.0
+    orientation:
+    - 0.0012164643734155162
+    - 0.0
+    - 0.0
+    - -0.9999992601069404
+    group: road_to_spawn
+  waypoint57:
+    name: road_to_spawn_9
+    pose:
+    - 8.355824674768337
+    - 88.23711225673567
+    - 0.0
+    orientation:
+    - 0.6151377428659008
+    - 0.0
+    - 0.0
+    - 0.7884196581147916
+    group: road_to_spawn
+  waypoint58:
+    name: road_to_spawn_10
+    pose:
+    - 4.362795445194915
+    - 91.10918873865954
+    - 0.0
+    orientation:
+    - 0.04722113699782993
+    - 0.0
+    - 0.0
+    - -0.9988844598954537
+    group: road_to_spawn
+  waypoint59:
+    name: spawn_0
+    pose:
+    - -34.82005668567761
+    - 89.47610095712658
+    - 0.0
+    orientation:
+    - 0.02434590969496246
+    - 0.0
+    - 0.0
+    - -0.9997035944124262
+    group: spawn
+  waypoint60:
+    name: spawn_1
+    pose:
+    - -50.512042631399346
+    - 90.99140449462338
+    - 0.0
+    orientation:
+    - 0.003824483455503461
+    - 0.0
+    - 0.0
+    - -0.9999926866364066
+    group: spawn
+  waypoint61:
+    name: spawn_2
+    pose:
+    - -81.45712444299538
+    - 88.21992385329355
+    - 0.0
+    orientation:
+    - 0.603254002224681
+    - 0.0
+    - 0.0
+    - -0.797549126261138
+    group: spawn
+  waypoint62:
+    name: spawn_3
+    pose:
+    - -81.28979917615347
+    - 82.47198715909556
+    - 0.0
+    orientation:
+    - 0.9590800441130565
+    - 0.0
+    - 0.0
+    - -0.28313507197819476
+    group: spawn
+  waypoint63:
+    name: spawn_4
+    pose:
+    - -66.30992270969116
+    - 80.22797995010362
+    - 0.0
+    orientation:
+    - 0.9999992939327994
+    - 0.0
+    - 0.0
+    - 0.0011883324041021492
+    group: spawn
+  waypoint64:
+    name: spawn_5
+    pose:
+    - -40.43089821129553
+    - 81.87909636832745
+    - 0.0
+    orientation:
+    - 0.9778209853737394
+    - 0.0
+    - 0.0
+    - 0.20944240392702076
+    group: spawn
+  waypoint65:
+    name: spawn_6
+    pose:
+    - -30.99815017562288
+    - 80.1148130045156
+    - 0.0
+    orientation:
+    - 0.999859392992429
+    - 0.0
+    - 0.0
+    - 0.01676884745030104
+    group: spawn
+  waypoint66:
+    name: spawn_7
+    pose:
+    - -28.590951449671284
+    - 80.04100764688687
+    - 0.0
+    orientation:
+    - 0.9861223380529617
+    - 0.0
+    - 0.0
+    - 0.1660202830769796
+    group: spawn
+  waypoint67:
+    name: spawn_8
+    pose:
+    - -23.774757520604425
+    - 79.73367051465895
+    - 0.0
+    orientation:
+    - 0.7968145226676817
+    - 0.0
+    - 0.0
+    - -0.6042239787246734
+    group: spawn
+  waypoint68:
+    name: road_to_east_0
+    pose:
+    - -20.664766452853563
+    - 80.81424648919473
+    - 0.0
+    orientation:
+    - 0.9993323875408819
+    - 0.0
+    - 0.0
+    - 0.036534630309345416
+    group: road_to_east
+  waypoint69:
+    name: road_to_east_1
+    pose:
+    - -14.409648466811039
+    - 81.2289177006953
+    - 0.0
+    orientation:
+    - 0.9959057868601129
+    - 0.0
+    - 0.0
+    - -0.09039725492811881
+    group: road_to_east
+  waypoint70:
+    name: road_to_east_2
+    pose:
+    - 1.1487261156175907
+    - 80.64850484118163
+    - 0.0
+    orientation:
+    - 0.9999938211052822
+    - 0.0
+    - 0.0
+    - 0.003515359335387126
+    group: road_to_east
+  waypoint71:
+    name: road_to_east_3
+    pose:
+    - 10.351148370256112
+    - 77.14566895595308
+    - 0.0
+    orientation:
+    - 0.9597471387181685
+    - 0.0
+    - 0.0
+    - -0.2808655011251625
+    group: road_to_east
+  waypoint72:
+    name: road_to_east_4
+    pose:
+    - 14.738099826385904
+    - 73.67979907075606
+    - 0.0
+    orientation:
+    - 0.8702736014762107
+    - 0.0
+    - 0.0
+    - -0.49256863336354023
+    group: road_to_east
+  waypoint73:
+    name: road_to_east_5
+    pose:
+    - 17.298173025556903
+    - 68.58736094721966
+    - 0.0
+    orientation:
+    - 0.7079071479034295
+    - 0.0
+    - 0.0
+    - -0.7063055075158567
+    group: road_to_east
+  waypoint74:
+    name: road_to_east_6
+    pose:
+    - 18.85910594218279
+    - 67.58620185454996
+    - 0.0
+    orientation:
+    - 0.7002898234919183
+    - 0.0
+    - 0.0
+    - -0.7138586436498882
+    group: road_to_east
+  waypoint75:
+    name: road_to_east_7
+    pose:
+    - 17.141700536485292
+    - 62.670317722706116
+    - 0.0
+    orientation:
+    - 0.7352936061681059
+    - 0.0
+    - 0.0
+    - -0.6777487091306795
+    group: road_to_east
+  waypoint76:
+    name: road_to_east_8
+    pose:
+    - 18.42035381949718
+    - 44.66836276009699
+    - 0.0
+    orientation:
+    - 0.7307108715323709
+    - 0.0
+    - 0.0
+    - -0.6826870602438594
+    group: road_to_east
+  waypoint77:
+    name: road_to_east_9
+    pose:
+    - 12.306966122707314
+    - 40.46836358446414
+    - 0.0
+    orientation:
+    - 0.8685047212052722
+    - 0.0
+    - 0.0
+    - -0.49568089457245806
+    group: road_to_east
+  waypoint78:
+    name: road_to_east_10
+    pose:
+    - 18.219428199458672
+    - 36.45688192658348
+    - 0.0
+    orientation:
+    - 0.7154570816377378
+    - 0.0
+    - 0.0
+    - -0.698656685600597
+    group: road_to_east
+  waypoint79:
+    name: road_to_east_11
+    pose:
+    - 11.450725180037256
+    - 28.00409002005811
+    - 0.0
+    orientation:
+    - 0.034334254647242185
+    - 0.0
+    - 0.0
+    - -0.9994104056681711
+    group: road_to_east
+  waypoint80:
+    name: parkinglot_east_0
+    pose:
+    - 5.780418606410491
+    - 25.652684192147635
+    - 0.0
+    orientation:
+    - 0.0038420208005258485
+    - 0.0
+    - 0.0
+    - 0.9999926194108476
+    group: parkinglot_east
+  waypoint81:
+    name: parkinglot_east_1
+    pose:
+    - -12.068900323492986
+    - 25.824049909155775
+    - 0.0
+    orientation:
+    - 0.008222201018403262
+    - 0.0
+    - 0.0
+    - 0.9999661971338896
+    group: parkinglot_east
+  waypoint82:
+    name: parkinglot_east_2
+    pose:
+    - -12.00210837544538
+    - 47.46583432121265
+    - 0.0
+    orientation:
+    - 0.002183875421243229
+    - 0.0
+    - 0.0
+    - 0.999997615341229
+    group: parkinglot_east
+  waypoint83:
+    name: parkinglot_east_3
+    pose:
+    - -67.35584635053164
+    - 47.12103188489071
+    - 0.0
+    orientation:
+    - 0.7177991287923647
+    - 0.0
+    - 0.0
+    - -0.6962502500573499
+    group: parkinglot_east
+  waypoint84:
+    name: parkinglot_east_4
+    pose:
+    - -67.36256639830252
+    - 27.438354076234784
+    - 0.0
+    orientation:
+    - 0.7135561234486697
+    - 0.0
+    - 0.0
+    - -0.7005980721418714
+    group: parkinglot_east
+  waypoint85:
+    name: parkinglot_east_5
+    pose:
+    - -67.62804505515899
+    - 6.1592128471032135
+    - 0.0
+    orientation:
+    - 0.6973179661798089
+    - 0.0
+    - 0.0
+    - -0.7167619228466694
+    group: parkinglot_east
+  waypoint86:
+    name: parkinglot_east_6
+    pose:
+    - -66.1857804178504
+    - -14.070832087282326
+    - 0.0
+    orientation:
+    - 0.9999572871427334
+    - 0.0
+    - 0.0
+    - 0.009242504538552607
+    group: parkinglot_east
+  waypoint87:
+    name: parkinglot_east_7
+    pose:
+    - -66.1857804178504
+    - -14.070832087282326
+    - 0.0
+    orientation:
+    - 0.9999572871427334
+    - 0.0
+    - 0.0
+    - 0.009242504538552607
+    group: parkinglot_east
+  waypoint88:
+    name: parkinglot_east
+    pose:
+    - -43.62540693361591
+    - -12.821200616536547
+    - 0.0
+    orientation:
+    - 0.9990878531620835
+    - 0.0
+    - 0.0
+    - 0.042702010069539297
+    group: parkinglot_east
+  waypoint89:
+    name: parkinglot_east_8
+    pose:
+    - -37.16559441004349
+    - -31.085700107950867
+    - 0.0
+    orientation:
+    - 0.999541513660304
+    - 0.0
+    - 0.0
+    - 0.03027808563413998
+    group: parkinglot_east
+  waypoint90:
+    name: parkinglot_east_9
+    pose:
+    - 7.7277267747785245
+    - -30.69202554007372
+    - 0.0
+    orientation:
+    - 0.9998393139989397
+    - 0.0
+    - 0.0
+    - 0.017926131264992654
+    group: parkinglot_east
+  waypoint91:
+    name: road_to_strip_0
+    pose:
+    - 6.413105961603299
+    - -30.512237869362803
+    - 0.0
+    orientation:
+    - 0.9962916600677059
+    - 0.0
+    - 0.0
+    - 0.08604027010379979
+    group: road_to_strip
+  waypoint92:
+    name: road_to_strip_1
+    pose:
+    - 12.95340623973713
+    - -29.18940376723236
+    - 0.0
+    orientation:
+    - 0.9955818854461516
+    - 0.0
+    - 0.0
+    - -0.0938973342086231
+    group: road_to_strip
+  waypoint93:
+    name: road_to_strip_2
+    pose:
+    - 19.325023743221482
+    - -31.412006678720342
+    - 0.0
+    orientation:
+    - 0.6906438125080001
+    - 0.0
+    - 0.0
+    - -0.7231950803513629
+    group: road_to_strip
+  waypoint94:
+    name: road_to_strip_3
+    pose:
+    - 19.939823472226493
+    - -41.11586960415111
+    - 0.0
+    orientation:
+    - 0.7109069392705152
+    - 0.0
+    - 0.0
+    - -0.7032860895091186
+    group: road_to_strip
+  waypoint95:
+    name: road_to_strip_4
+    pose:
+    - 20.197289283059042
+    - -56.62567518750564
+    - 0.0
+    orientation:
+    - 0.7318164858178381
+    - 0.0
+    - 0.0
+    - -0.6815017469421704
+    group: road_to_strip
+  waypoint96:
+    name: road_to_strip_5
+    pose:
+    - 21.091251876597752
+    - -66.04257985670607
+    - 0.0
+    orientation:
+    - 0.7143398520258109
+    - 0.0
+    - 0.0
+    - -0.6997989538487055
+    group: road_to_strip
+  waypoint97:
+    name: road_to_strip_6
+    pose:
+    - 22.452363804961212
+    - -96.011217185322
+    - 0.0
+    orientation:
+    - 0.7758380657797148
+    - 0.0
+    - 0.0
+    - -0.6309320848452636
+    group: road_to_strip
+  waypoint98:
+    name: road_to_strip_7
+    pose:
+    - 26.390738302050796
+    - -114.9868055242067
+    - 0.0
+    orientation:
+    - 0.8430119397659079
+    - 0.0
+    - 0.0
+    - -0.537894849772817
+    group: road_to_strip
+  waypoint99:
+    name: road_to_strip_8
+    pose:
+    - 30.85001890274344
+    - -127.0718294840333
+    - 0.0
+    orientation:
+    - 0.8634892105128681
+    - 0.0
+    - 0.0
+    - -0.5043673099318232
+    group: road_to_strip
+  waypoint100:
+    name: road_to_strip_9
+    pose:
+    - 39.39396060319916
+    - -141.90739959514437
+    - 0.0
+    orientation:
+    - 0.8489205308847305
+    - 0.0
+    - 0.0
+    - -0.528520512603236
+    group: road_to_strip
+  waypoint101:
+    name: strip_0
+    pose:
+    - 53.040291361783815
+    - -160.61434108337062
+    - 0.0
+    orientation:
+    - 0.9216645350136091
+    - 0.0
+    - 0.0
+    - -0.38798773807705284
+    group: strip
+  waypoint102:
+    name: strip_1
+    pose:
+    - 86.56390128205739
+    - -184.53264211820905
+    - 0.0
+    orientation:
+    - 0.975229538551991
+    - 0.0
+    - 0.0
+    - -0.22119526924342342
+    group: strip
+  waypoint103:
+    name: strip_2
+    pose:
+    - 112.91271393040911
+    - -194.6534437798201
+    - 0.0
+    orientation:
+    - 0.9981899926437564
+    - 0.0
+    - 0.0
+    - -0.06013932644998195
+    group: strip
+  waypoint104:
+    name: strip_3
+    pose:
+    - 139.96881828831047
+    - -200.79787125248416
+    - 0.0
+    orientation:
+    - 0.9998247756802459
+    - 0.0
+    - 0.0
+    - 0.018719453409384478
+    group: strip
+  waypoint105:
+    name: strip_4
+    pose:
+    - 176.24736796931572
+    - -203.0556108258387
+    - 0.0
+    orientation:
+    - 0.9976304593093231
+    - 0.0
+    - 0.0
+    - -0.06880019373714623
+    group: strip
+  waypoint106:
+    name: strip_5
+    pose:
+    - 213.141326204223
+    - -205.38876006278483
+    - 0.0
+    orientation:
+    - 0.9992117656448747
+    - 0.0
+    - 0.0
+    - -0.039696944427146254
+    group: strip
+  waypoint107:
+    name: strip_6
+    pose:
+    - 218.3512145012023
+    - -205.0777300430647
+    - 0.0
+    orientation:
+    - 0.996893796099438
+    - 0.0
+    - 0.0
+    - -0.07875759835376069
+    group: strip
+  waypoint108:
+    name: strip_7
+    pose:
+    - 254.52493154611312
+    - -214.68186112510037
+    - 0.0
+    orientation:
+    - 0.966717924896101
+    - 0.0
+    - 0.0
+    - -0.25584458892963996
+    group: strip
+  waypoint109:
+    name: strip_8
+    pose:
+    - 271.20210699841806
+    - -220.65423010060144
+    - 0.0
+    orientation:
+    - 0.9730196213580107
+    - 0.0
+    - 0.0
+    - -0.230722379608727
+    group: strip
+  waypoint110:
+    name: strip_9
+    pose:
+    - 286.03710561864534
+    - -228.48143668318667
+    - 0.0
+    orientation:
+    - 0.9891948062333966
+    - 0.0
+    - 0.0
+    - -0.14660707800400707
+    group: strip
+  waypoint111:
+    name: strip_10
+    pose:
+    - 310.3933747310024
+    - -241.4439593613417
+    - 0.0
+    orientation:
+    - 0.9729623512683849
+    - 0.0
+    - 0.0
+    - -0.23096376991704998
+    group: strip
+  waypoint112:
+    name: strip_11
+    pose:
+    - 326.00936794376986
+    - -252.19078676712707
+    - 0.0
+    orientation:
+    - 0.963178398789431
+    - 0.0
+    - 0.0
+    - -0.26886311034693444
+    group: strip
+  waypoint113:
+    name: strip_12
+    pose:
+    - 345.6449106430986
+    - -263.93658080963775
+    - 0.0
+    orientation:
+    - 0.9660125205206204
+    - 0.0
+    - 0.0
+    - -0.2584952808029538
+    group: strip
+  waypoint114:
+    name: strip_13
+    pose:
+    - 363.32228443571273
+    - -276.43834429496275
+    - 0.0
+    orientation:
+    - 0.955635010327649
+    - 0.0
+    - 0.0
+    - -0.29455343663938865
+    group: strip
+  waypoint115:
+    name: strip_14
+    pose:
+    - 376.91834963699336
+    - -285.37215567601424
+    - 0.0
+    orientation:
+    - 0.954812609082512
+    - 0.0
+    - 0.0
+    - -0.29720848160348023
+    group: strip
+  waypoint116:
+    name: strip_15
+    pose:
+    - 393.06450885301416
+    - -294.1912736017791
+    - 0.0
+    orientation:
+    - 0.9695149119592249
+    - 0.0
+    - 0.0
+    - -0.2450323151927037
+    group: strip
+  waypoint117:
+    name: strip_16
+    pose:
+    - 421.57801073473433
+    - -308.4693217103457
+    - 0.0
+    orientation:
+    - 0.9349329634832919
+    - 0.0
+    - 0.0
+    - -0.3548243985302441
+    group: strip
+  waypoint118:
+    name: playground_0
+    pose:
+    - 141.45934853163197
+    - 1.6903764981326466
+    - 0.0
+    orientation:
+    - 0.19664436929091034
+    - 0.0
+    - 0.0
+    - 0.9804748808746607
+    group: playground
+  waypoint119:
+    name: playground_1
+    pose:
+    - 136.3763696371555
+    - 10.024536227894139
+    - 0.0
+    orientation:
+    - 0.5162471371580902
+    - 0.0
+    - 0.0
+    - 0.8564396612582091
+    group: playground
+  waypoint120:
+    name: playground_2
+    pose:
+    - 133.47225015362054
+    - 15.298181007810925
+    - 0.0
+    orientation:
+    - 0.584416754834301
+    - 0.0
+    - 0.0
+    - 0.8114536688369488
+    group: playground
+  waypoint121:
+    name: playground_3
+    pose:
+    - 130.7322777645212
+    - 17.991278406953157
+    - 0.0
+    orientation:
+    - 0.684421236897267
+    - 0.0
+    - 0.0
+    - 0.7290868058633451
+    group: playground
+  waypoint122:
+    name: playground_4
+    pose:
+    - 131.76762412864224
+    - 25.671043631436476
+    - 0.0
+    orientation:
+    - 0.7760704590476193
+    - 0.0
+    - 0.0
+    - 0.630646210322093
+    group: playground
+  waypoint123:
+    name: playground_5
+    pose:
+    - 133.29921446547996
+    - 28.521607491799863
+    - 0.0
+    orientation:
+    - 0.30436628554739603
+    - 0.0
+    - 0.0
+    - 0.9525550714904
+    group: playground
+  waypoint124:
+    name: playground_6
+    pose:
+    - 128.48498476010423
+    - 32.068640902227
+    - 0.0
+    orientation:
+    - 0.7816037327488501
+    - 0.0
+    - 0.0
+    - 0.6237752840190641
+    group: playground
+  waypoint125:
+    name: playground_7
+    pose:
+    - 132.5953767234123
+    - 34.37393226232746
+    - 0.0
+    orientation:
+    - 0.9998863905514908
+    - 0.0
+    - 0.0
+    - -0.015073353638517414
+    group: playground
+  waypoint126:
+    name: playground_8
+    pose:
+    - 134.02462685701917
+    - 36.50409412838074
+    - 0.0
+    orientation:
+    - 0.6734074713450654
+    - 0.0
+    - 0.0
+    - 0.7392715181424515
+    group: playground
+  waypoint127:
+    name: playground_9
+    pose:
+    - 136.37789124655188
+    - 36.962889374121616
+    - 0.0
+    orientation:
+    - 0.9977886231490238
+    - 0.0
+    - 0.0
+    - -0.06646701072242693
+    group: playground
+  waypoint128:
+    name: playground_10
+    pose:
+    - 139.2514195903388
+    - 38.73492164803346
+    - 0.0
+    orientation:
+    - 0.9992959117600171
+    - 0.0
+    - 0.0
+    - 0.037519071679828424
+    group: playground
+  waypoint129:
+    name: playground_11
+    pose:
+    - 142.2115029394931
+    - 37.47144160431688
+    - 0.0
+    orientation:
+    - 0.9465222692592173
+    - 0.0
+    - 0.0
+    - -0.3226384877790956
+    group: playground
+  waypoint130:
+    name: playground_12
+    pose:
+    - 144.54581024262885
+    - 29.730520470601107
+    - 0.0
+    orientation:
+    - 0.9630385887724711
+    - 0.0
+    - 0.0
+    - 0.26936346547950313
+    group: playground
+  waypoint131:
+    name: playground_13
+    pose:
+    - 147.88367373132314
+    - 33.723409691936496
+    - 0.0
+    orientation:
+    - 0.9256570282888568
+    - 0.0
+    - 0.0
+    - 0.3783636689475387
+    group: playground
+  waypoint132:
+    name: playground_20
+    pose:
+    - 155.93829280695118
+    - -1.1435093299234709
+    - 0.0
+    orientation:
+    - 0.9373391979162429
+    - 0.0
+    - 0.0
+    - -0.3484181798496378
+    group: playground
+  waypoint133:
+    name: playground_21
+    pose:
+    - 162.6546878273443
+    - -0.893808683421917
+    - 0.0
+    orientation:
+    - 0.9817031389037943
+    - 0.0
+    - 0.0
+    - 0.1904178223445415
+    group: playground
+  waypoint134:
+    name: playground_22
+    pose:
+    - 171.9001854691543
+    - 5.478950243906721
+    - 0.0
+    orientation:
+    - 0.8837442054570606
+    - 0.0
+    - 0.0
+    - 0.46797027610850317
+    group: playground
+  waypoint135:
+    name: playground_23
+    pose:
+    - 178.67434518944245
+    - 9.744806992639
+    - 0.0
+    orientation:
+    - 0.9255095655600007
+    - 0.0
+    - 0.0
+    - 0.3787242322019263
+    group: playground
+  waypoint136:
+    name: playground_24
+    pose:
+    - 180.99263886820552
+    - 18.62414366878875
+    - 0.0
+    orientation:
+    - 0.7589627047916342
+    - 0.0
+    - 0.0
+    - 0.6511340973527394
+    group: playground
+  waypoint137:
+    name: playground_25
+    pose:
+    - 181.39544289439527
+    - 24.554138649369115
+    - 0.0
+    orientation:
+    - 0.6852406818929528
+    - 0.0
+    - 0.0
+    - 0.728316694768753
+    group: playground
+  waypoint138:
+    name: playground_26
+    pose:
+    - 173.63521243580925
+    - 39.66613706834087
+    - 0.0
+    orientation:
+    - 0.35485763114868984
+    - 0.0
+    - 0.0
+    - 0.934920350412558
+    group: playground
+  waypoint139:
+    name: playground_27
+    pose:
+    - 163.5978919759883
+    - 44.957183879163345
+    - 0.0
+    orientation:
+    - 0.0637519388711375
+    - 0.0
+    - 0.0
+    - 0.9979657761116715
+    group: playground
+  waypoint140:
+    name: playground_28
+    pose:
+    - 153.83825570593953
+    - 45.56384804012675
+    - 0.0
+    orientation:
+    - 0.16297610707856314
+    - 0.0
+    - 0.0
+    - -0.9866300160250127
+    group: playground

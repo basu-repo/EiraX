@@ -1,0 +1,16 @@
+scenario:
+  name: baylands_smoke_test
+  world: baylands
+  robots: [husky, dji_m100]
+
+checks:
+  - clock_available
+  - husky_spawned
+  - husky_manual_stop_verified
+  - husky_lidar_available
+  - dji_spawned
+  - dji_camera_available
+  - dji_command_contract_available
+
+autonomy:
+  enabled: false

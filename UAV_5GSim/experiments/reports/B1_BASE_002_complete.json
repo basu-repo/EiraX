@@ -1,0 +1,11 @@
+{
+  "run_id": "B1_BASE_002",
+  "physical": "passed",
+  "simu5g": "passed",
+  "bridge": "passed",
+  "validation": "passed",
+  "rows": 600,
+  "columns": 44,
+  "normal_rows": 600,
+  "free_gib": 234.26
+}

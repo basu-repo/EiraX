@@ -1,0 +1,25 @@
+{
+  "run_id": "S3_API_RETRY_002",
+  "family": "suspicious",
+  "scenario": "api_retry_storm",
+  "intensity": "high",
+  "physical": "passed",
+  "simu5g": "passed",
+  "bridge": "passed",
+  "validation": "passed",
+  "rows": 620,
+  "columns": 44,
+  "label_distribution": {
+    "normal": 560,
+    "suspicious": 60
+  },
+  "measured_event_packet_count": 7034,
+  "measured_event_failed_connections": 5996,
+  "measured_event_api_requests": 5996,
+  "measured_event_command_activity": 20,
+  "session_reuse_rows": 0,
+  "unusual_destination_rows": 0,
+  "traffic_burst_rows": 20,
+  "telemetry_inactive_rows": 40,
+  "free_gib": 231.85064697265625
+}

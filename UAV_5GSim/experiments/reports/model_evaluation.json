@@ -1,0 +1,3927 @@
+{
+  "target": "incident_label",
+  "classes": [
+    "normal",
+    "suspicious",
+    "malicious"
+  ],
+  "split_policy": "complete mission_id groups; measured low-intensity conditions train and high-intensity counterparts test",
+  "excluded_fields": [
+    "attack_stage",
+    "attack_type",
+    "destination_ip",
+    "destination_port",
+    "domain",
+    "drone_id",
+    "fleet_id",
+    "incident_label",
+    "mission_id",
+    "mission_type",
+    "organization_id",
+    "recommended_response",
+    "session_id",
+    "severity",
+    "source_ip",
+    "source_port",
+    "timestamp"
+  ],
+  "class_balance_policy": "balanced class weights during fitting; raw evidence retained without row fabrication or deletion",
+  "simulation_derived": {
+    "rows": 17720,
+    "missions": 28,
+    "train_rows": 9940,
+    "test_rows": 7780,
+    "train_missions": [
+      "B1_BASE_001",
+      "B1_BASE_002",
+      "B1_PILOT_001",
+      "B_LOAD_LOW_001",
+      "B_LOAD_MEDIUM_001",
+      "B_SPEED_SLOW_001",
+      "M_API_LOW_001",
+      "M_CONTROL_LOW_001",
+      "M_DOS_LOW_001",
+      "M_IDENTITY_LOW_001",
+      "M_LATERAL_LOW_001",
+      "M_SESSION_LOW_001",
+      "S1_HANDOVER_LOSS_001",
+      "S2_AUTH_001",
+      "S3_API_RETRY_001",
+      "S4_DROPOUT_001"
+    ],
+    "test_missions": [
+      "B1_BASE_003",
+      "B_LOAD_HIGH_001",
+      "M_API_HIGH_001",
+      "M_CONTROL_HIGH_001",
+      "M_DOS_HIGH_001",
+      "M_IDENTITY_HIGH_001",
+      "M_LATERAL_HIGH_001",
+      "M_SESSION_HIGH_001",
+      "S1_HANDOVER_LOSS_002",
+      "S2_AUTH_002",
+      "S3_API_RETRY_002",
+      "S4_DROPOUT_002"
+    ],
+    "class_distribution": {
+      "normal": 14062,
+      "malicious": 2520,
+      "suspicious": 1138
+    },
+    "feature_groups": {
+      "raw_network": {
+        "logistic_regression": {
+          "accuracy": 0.5602827763496144,
+          "macro_f1": 0.4965984257013509,
+          "false_alarm_rate": 0.4236859838274933,
+          "confusion_matrix": [
+            [
+              3421,
+              2515,
+              0
+            ],
+            [
+              166,
+              398,
+              20
+            ],
+            [
+              541,
+              179,
+              540
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.8287306201550387,
+              "recall": 0.5763140161725068,
+              "f1-score": 0.6798489666136724,
+              "support": 5936.0
+            },
+            "suspicious": {
+              "precision": 0.12871927554980594,
+              "recall": 0.6815068493150684,
+              "f1-score": 0.21653971708378672,
+              "support": 584.0
+            },
+            "malicious": {
+              "precision": 0.9642857142857143,
+              "recall": 0.42857142857142855,
+              "f1-score": 0.5934065934065934,
+              "support": 1260.0
+            },
+            "accuracy": 0.5602827763496144,
+            "macro avg": {
+              "precision": 0.6405785366635196,
+              "recall": 0.5621307646863346,
+              "f1-score": 0.4965984257013509,
+              "support": 7780.0
+            },
+            "weighted avg": {
+              "precision": 0.7981384342109764,
+              "recall": 0.5602827763496144,
+              "f1-score": 0.6310713326848327,
+              "support": 7780.0
+            }
+          }
+        },
+        "random_forest": {
+          "accuracy": 0.8596401028277635,
+          "macro_f1": 0.7618578241578441,
+          "false_alarm_rate": 0.14184636118598382,
+          "confusion_matrix": [
+            [
+              5094,
+              419,
+              423
+            ],
+            [
+              102,
+              407,
+              75
+            ],
+            [
+              51,
+              22,
+              1187
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.9708404802744426,
+              "recall": 0.8581536388140162,
+              "f1-score": 0.9110256639542162,
+              "support": 5936.0
+            },
+            "suspicious": {
+              "precision": 0.47995283018867924,
+              "recall": 0.696917808219178,
+              "f1-score": 0.5684357541899442,
+              "support": 584.0
+            },
+            "malicious": {
+              "precision": 0.7044510385756677,
+              "recall": 0.942063492063492,
+              "f1-score": 0.8061120543293718,
+              "support": 1260.0
+            },
+            "accuracy": 0.8596401028277635,
+            "macro avg": {
+              "precision": 0.7184147830129298,
+              "recall": 0.8323783130322289,
+              "f1-score": 0.7618578241578441,
+              "support": 7780.0
+            },
+            "weighted avg": {
+              "precision": 0.8908495954170463,
+              "recall": 0.8596401028277635,
+              "f1-score": 0.8683182532306123,
+              "support": 7780.0
+            }
+          },
+          "feature_importance": [
+            {
+              "feature": "numeric__connection_duration_sec",
+              "importance": 0.7214082957839532
+            },
+            {
+              "feature": "numeric__latency_ms",
+              "importance": 0.11173076638827445
+            },
+            {
+              "feature": "numeric__packets_per_second",
+              "importance": 0.037599445403353554
+            },
+            {
+              "feature": "numeric__packet_count",
+              "importance": 0.03591068027602518
+            },
+            {
+              "feature": "numeric__throughput_kbps",
+              "importance": 0.02687720299861291
+            },
+            {
+              "feature": "numeric__byte_count",
+              "importance": 0.021593854955321224
+            },
+            {
+              "feature": "numeric__retransmission_rate",
+              "importance": 0.018668290266041485
+            },
+            {
+              "feature": "numeric__jitter_ms",
+              "importance": 0.016864953283705693
+            },
+            {
+              "feature": "numeric__packet_loss_rate",
+              "importance": 0.009346510644712381
+            }
+          ]
+        }
+      },
+      "raw_plus_5g_context": {
+        "logistic_regression": {
+          "accuracy": 0.6557840616966581,
+          "macro_f1": 0.5417393450729883,
+          "false_alarm_rate": 0.3566374663072776,
+          "confusion_matrix": [
+            [
+              3819,
+              1092,
+              1025
+            ],
+            [
+              96,
+              339,
+              149
+            ],
+            [
+              2,
+              314,
+              944
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.9749808526933877,
+              "recall": 0.6433625336927223,
+              "f1-score": 0.7751953719679285,
+              "support": 5936.0
+            },
+            "suspicious": {
+              "precision": 0.19426934097421203,
+              "recall": 0.5804794520547946,
+              "f1-score": 0.2911120652640618,
+              "support": 584.0
+            },
+            "malicious": {
+              "precision": 0.4457034938621341,
+              "recall": 0.7492063492063492,
+              "f1-score": 0.5589105979869745,
+              "support": 1260.0
+            },
+            "accuracy": 0.6557840616966581,
+            "macro avg": {
+              "precision": 0.5383178958432446,
+              "recall": 0.6576827783179554,
+              "f1-score": 0.5417393450729883,
+              "support": 7780.0
+            },
+            "weighted avg": {
+              "precision": 0.8306588739052929,
+              "recall": 0.6557840616966581,
+              "f1-score": 0.7038298878636791,
+              "support": 7780.0
+            }
+          }
+        },
+        "random_forest": {
+          "accuracy": 0.9038560411311054,
+          "macro_f1": 0.7477289002578433,
+          "false_alarm_rate": 0.01853099730458221,
+          "confusion_matrix": [
+            [
+              5826,
+              45,
+              65
+            ],
+            [
+              321,
+              203,
+              60
+            ],
+            [
+              195,
+              62,
+              1003
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.9186376537369915,
+              "recall": 0.9814690026954178,
+              "f1-score": 0.9490144974751589,
+              "support": 5936.0
+            },
+            "suspicious": {
+              "precision": 0.6548387096774193,
+              "recall": 0.3476027397260274,
+              "f1-score": 0.4541387024608501,
+              "support": 584.0
+            },
+            "malicious": {
+              "precision": 0.8891843971631206,
+              "recall": 0.796031746031746,
+              "f1-score": 0.8400335008375209,
+              "support": 1260.0
+            },
+            "accuracy": 0.9038560411311054,
+            "macro avg": {
+              "precision": 0.8208869201925104,
+              "recall": 0.708367829484397,
+              "f1-score": 0.7477289002578433,
+              "support": 7780.0
+            },
+            "weighted avg": {
+              "precision": 0.8940657145835381,
+              "recall": 0.9038560411311054,
+              "f1-score": 0.8942171298592488,
+              "support": 7780.0
+            }
+          },
+          "feature_importance": [
+            {
+              "feature": "numeric__connection_duration_sec",
+              "importance": 0.41273840483703156
+            },
+            {
+              "feature": "numeric__signal_quality_dbm",
+              "importance": 0.23346877707257369
+            },
+            {
+              "feature": "numeric__latency_ms",
+              "importance": 0.09277420003070902
+            },
+            {
+              "feature": "numeric__handover_event",
+              "importance": 0.08092547423775442
+            },
+            {
+              "feature": "numeric__packet_count",
+              "importance": 0.03308574614138313
+            },
+            {
+              "feature": "numeric__packets_per_second",
+              "importance": 0.031991586227549204
+            },
+            {
+              "feature": "numeric__throughput_kbps",
+              "importance": 0.023445782042290732
+            },
+            {
+              "feature": "numeric__handover_count",
+              "importance": 0.020518824786715344
+            },
+            {
+              "feature": "numeric__byte_count",
+              "importance": 0.019916490271590943
+            },
+            {
+              "feature": "categorical__cell_id_gnb_1",
+              "importance": 0.015369053142565222
+            },
+            {
+              "feature": "numeric__jitter_ms",
+              "importance": 0.013728169511481715
+            },
+            {
+              "feature": "categorical__cell_id_gnb_2",
+              "importance": 0.013466423230721704
+            },
+            {
+              "feature": "categorical__network_slice_id_slice_1",
+              "importance": 0.0027869221467286113
+            },
+            {
+              "feature": "numeric__packet_loss_rate",
+              "importance": 0.002198884915772213
+            },
+            {
+              "feature": "categorical__network_slice_id_slice_4",
+              "importance": 0.0018805798981184315
+            },
+            {
+              "feature": "numeric__retransmission_rate",
+              "importance": 0.0017046815070139833
+            }
+          ]
+        }
+      },
+      "security_indicators": {
+        "logistic_regression": {
+          "accuracy": 0.8323907455012853,
+          "macro_f1": 0.5424442312515316,
+          "false_alarm_rate": 0.0,
+          "confusion_matrix": [
+            [
+              5936,
+              0,
+              0
+            ],
+            [
+              524,
+              60,
+              0
+            ],
+            [
+              720,
+              60,
+              480
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.826740947075209,
+              "recall": 1.0,
+              "f1-score": 0.905154010369015,
+              "support": 5936.0
+            },
+            "suspicious": {
+              "precision": 0.5,
+              "recall": 0.10273972602739725,
+              "f1-score": 0.17045454545454544,
+              "support": 584.0
+            },
+            "malicious": {
+              "precision": 1.0,
+              "recall": 0.38095238095238093,
+              "f1-score": 0.5517241379310345,
+              "support": 1260.0
+            },
+            "accuracy": 0.8323907455012853,
+            "macro avg": {
+              "precision": 0.7755803156917364,
+              "recall": 0.49456403565992607,
+              "f1-score": 0.5424442312515316,
+              "support": 7780.0
+            },
+            "weighted avg": {
+              "precision": 0.8302743267144524,
+              "recall": 0.8323907455012853,
+              "f1-score": 0.7927650480577162,
+              "support": 7780.0
+            }
+          }
+        },
+        "random_forest": {
+          "accuracy": 0.8209511568123393,
+          "macro_f1": 0.5391248722307123,
+          "false_alarm_rate": 0.02358490566037736,
+          "confusion_matrix": [
+            [
+              5796,
+              140,
+              0
+            ],
+            [
+              513,
+              51,
+              20
+            ],
+            [
+              702,
+              18,
+              540
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.8267008985879333,
+              "recall": 0.9764150943396226,
+              "f1-score": 0.8953425503977755,
+              "support": 5936.0
+            },
+            "suspicious": {
+              "precision": 0.24401913875598086,
+              "recall": 0.08732876712328767,
+              "f1-score": 0.12862547288776796,
+              "support": 584.0
+            },
+            "malicious": {
+              "precision": 0.9642857142857143,
+              "recall": 0.42857142857142855,
+              "f1-score": 0.5934065934065934,
+              "support": 1260.0
+            },
+            "accuracy": 0.8209511568123393,
+            "macro avg": {
+              "precision": 0.6783352505432094,
+              "recall": 0.4974384300114463,
+              "f1-score": 0.5391248722307123,
+              "support": 7780.0
+            },
+            "weighted avg": {
+              "precision": 0.8052446929372062,
+              "recall": 0.8209511568123393,
+              "f1-score": 0.7888898410051363,
+              "support": 7780.0
+            }
+          },
+          "feature_importance": [
+            {
+              "feature": "numeric__anomaly_score",
+              "importance": 0.3485195985812811
+            },
+            {
+              "feature": "numeric__unusual_destination_flag",
+              "importance": 0.25402172752655966
+            },
+            {
+              "feature": "numeric__failed_connection_attempts",
+              "importance": 0.16595280076086083
+            },
+            {
+              "feature": "numeric__traffic_burst_flag",
+              "importance": 0.07320864016483383
+            },
+            {
+              "feature": "numeric__command_channel_activity",
+              "importance": 0.06524603033257272
+            },
+            {
+              "feature": "numeric__session_reuse_flag",
+              "importance": 0.02328217529234089
+            },
+            {
+              "feature": "numeric__api_request_count",
+              "importance": 0.022072522062948893
+            },
+            {
+              "feature": "categorical__authentication_status_failed",
+              "importance": 0.017656054283273274
+            },
+            {
+              "feature": "numeric__telemetry_stream_activity",
+              "importance": 0.016321266094738204
+            },
+            {
+              "feature": "categorical__authentication_status_success",
+              "importance": 0.013719184900590549
+            },
+            {
+              "feature": "numeric__video_stream_activity",
+              "importance": 0.0
+            }
+          ]
+        }
+      },
+      "complete": {
+        "logistic_regression": {
+          "accuracy": 0.653598971722365,
+          "macro_f1": 0.53590428801464,
+          "false_alarm_rate": 0.35141509433962265,
+          "confusion_matrix": [
+            [
+              3850,
+              1051,
+              1035
+            ],
+            [
+              113,
+              332,
+              139
+            ],
+            [
+              61,
+              296,
+              903
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.9567594433399602,
+              "recall": 0.6485849056603774,
+              "f1-score": 0.7730923694779116,
+              "support": 5936.0
+            },
+            "suspicious": {
+              "precision": 0.197736748064324,
+              "recall": 0.5684931506849316,
+              "f1-score": 0.29341581970835173,
+              "support": 584.0
+            },
+            "malicious": {
+              "precision": 0.43476167549350025,
+              "recall": 0.7166666666666667,
+              "f1-score": 0.5412046748576566,
+              "support": 1260.0
+            },
+            "accuracy": 0.653598971722365,
+            "macro avg": {
+              "precision": 0.5297526222992615,
+              "recall": 0.6445815743373252,
+              "f1-score": 0.53590428801464,
+              "support": 7780.0
+            },
+            "weighted avg": {
+              "precision": 0.8152444765626451,
+              "recall": 0.6535989717223651,
+              "f1-score": 0.6995307241968133,
+              "support": 7780.0
+            }
+          }
+        },
+        "random_forest": {
+          "accuracy": 0.9137532133676093,
+          "macro_f1": 0.7843001782715735,
+          "false_alarm_rate": 0.018362533692722373,
+          "confusion_matrix": [
+            [
+              5827,
+              44,
+              65
+            ],
+            [
+              286,
+              259,
+              39
+            ],
+            [
+              168,
+              69,
+              1023
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.9277185161598471,
+              "recall": 0.9816374663072777,
+              "f1-score": 0.953916673487763,
+              "support": 5936.0
+            },
+            "suspicious": {
+              "precision": 0.696236559139785,
+              "recall": 0.4434931506849315,
+              "f1-score": 0.5418410041841004,
+              "support": 584.0
+            },
+            "malicious": {
+              "precision": 0.9077196095829636,
+              "recall": 0.8119047619047619,
+              "f1-score": 0.8571428571428571,
+              "support": 1260.0
+            },
+            "accuracy": 0.9137532133676093,
+            "macro avg": {
+              "precision": 0.8438915616275319,
+              "recall": 0.7456784596323237,
+              "f1-score": 0.7843001782715735,
+              "support": 7780.0
+            },
+            "weighted avg": {
+              "precision": 0.9071035951847072,
+              "recall": 0.9137532133676093,
+              "f1-score": 0.9073116349957424,
+              "support": 7780.0
+            }
+          },
+          "feature_importance": [
+            {
+              "feature": "numeric__connection_duration_sec",
+              "importance": 0.38976449748223324
+            },
+            {
+              "feature": "numeric__signal_quality_dbm",
+              "importance": 0.2083734107578984
+            },
+            {
+              "feature": "numeric__handover_event",
+              "importance": 0.0840610417989947
+            },
+            {
+              "feature": "numeric__anomaly_score",
+              "importance": 0.0399846152912656
+            },
+            {
+              "feature": "numeric__latency_ms",
+              "importance": 0.03857384483363355
+            },
+            {
+              "feature": "numeric__handover_count",
+              "importance": 0.022688626168749164
+            },
+            {
+              "feature": "numeric__unusual_destination_flag",
+              "importance": 0.022486746788164452
+            },
+            {
+              "feature": "categorical__cell_id_gnb_1",
+              "importance": 0.02087562872122748
+            },
+            {
+              "feature": "categorical__cell_id_gnb_2",
+              "importance": 0.019401684177616008
+            },
+            {
+              "feature": "numeric__packets_per_second",
+              "importance": 0.019247545648769505
+            },
+            {
+              "feature": "categorical__source_component_external_host",
+              "importance": 0.018569948943509947
+            },
+            {
+              "feature": "categorical__source_component_drone",
+              "importance": 0.017035211344221864
+            },
+            {
+              "feature": "numeric__packet_count",
+              "importance": 0.015670481138999163
+            },
+            {
+              "feature": "numeric__failed_connection_attempts",
+              "importance": 0.014214740700138707
+            },
+            {
+              "feature": "numeric__byte_count",
+              "importance": 0.013873916957382463
+            },
+            {
+              "feature": "numeric__throughput_kbps",
+              "importance": 0.012099330200488296
+            },
+            {
+              "feature": "categorical__protocol_HTTPS",
+              "importance": 0.009147541519597258
+            },
+            {
+              "feature": "numeric__jitter_ms",
+              "importance": 0.007257194368291966
+            },
+            {
+              "feature": "categorical__protocol_TCP",
+              "importance": 0.005153783159400007
+            },
+            {
+              "feature": "numeric__command_channel_activity",
+              "importance": 0.004574083356918651
+            }
+          ]
+        }
+      }
+    },
+    "rule_baseline": {
+      "accuracy": 0.3226221079691517,
+      "macro_f1": 0.3832733668126698,
+      "false_alarm_rate": 0.7579177897574124,
+      "confusion_matrix": [
+        [
+          1437,
+          4499,
+          0
+        ],
+        [
+          31,
+          533,
+          20
+        ],
+        [
+          0,
+          720,
+          540
+        ]
+      ],
+      "classification_report": {
+        "normal": {
+          "precision": 0.978882833787466,
+          "recall": 0.2420822102425876,
+          "f1-score": 0.3881685575364668,
+          "support": 5936.0
+        },
+        "suspicious": {
+          "precision": 0.092663421418637,
+          "recall": 0.9126712328767124,
+          "f1-score": 0.1682449494949495,
+          "support": 584.0
+        },
+        "malicious": {
+          "precision": 0.9642857142857143,
+          "recall": 0.42857142857142855,
+          "f1-score": 0.5934065934065934,
+          "support": 1260.0
+        },
+        "accuracy": 0.3226221079691517,
+        "macro avg": {
+          "precision": 0.6786106564972725,
+          "recall": 0.5277749572302429,
+          "f1-score": 0.3832733668126698,
+          "support": 7780.0
+        },
+        "weighted avg": {
+          "precision": 0.9099953649705504,
+          "recall": 0.3226221079691517,
+          "f1-score": 0.4048992179606459,
+          "support": 7780.0
+        }
+      }
+    },
+    "best_model": "complete/random_forest",
+    "best_model_metrics": {
+      "accuracy": 0.9137532133676093,
+      "macro_f1": 0.7843001782715735,
+      "false_alarm_rate": 0.018362533692722373,
+      "confusion_matrix": [
+        [
+          5827,
+          44,
+          65
+        ],
+        [
+          286,
+          259,
+          39
+        ],
+        [
+          168,
+          69,
+          1023
+        ]
+      ],
+      "classification_report": {
+        "normal": {
+          "precision": 0.9277185161598471,
+          "recall": 0.9816374663072777,
+          "f1-score": 0.953916673487763,
+          "support": 5936.0
+        },
+        "suspicious": {
+          "precision": 0.696236559139785,
+          "recall": 0.4434931506849315,
+          "f1-score": 0.5418410041841004,
+          "support": 584.0
+        },
+        "malicious": {
+          "precision": 0.9077196095829636,
+          "recall": 0.8119047619047619,
+          "f1-score": 0.8571428571428571,
+          "support": 1260.0
+        },
+        "accuracy": 0.9137532133676093,
+        "macro avg": {
+          "precision": 0.8438915616275319,
+          "recall": 0.7456784596323237,
+          "f1-score": 0.7843001782715735,
+          "support": 7780.0
+        },
+        "weighted avg": {
+          "precision": 0.9071035951847072,
+          "recall": 0.9137532133676093,
+          "f1-score": 0.9073116349957424,
+          "support": 7780.0
+        }
+      },
+      "feature_importance": [
+        {
+          "feature": "numeric__connection_duration_sec",
+          "importance": 0.38976449748223324
+        },
+        {
+          "feature": "numeric__signal_quality_dbm",
+          "importance": 0.2083734107578984
+        },
+        {
+          "feature": "numeric__handover_event",
+          "importance": 0.0840610417989947
+        },
+        {
+          "feature": "numeric__anomaly_score",
+          "importance": 0.0399846152912656
+        },
+        {
+          "feature": "numeric__latency_ms",
+          "importance": 0.03857384483363355
+        },
+        {
+          "feature": "numeric__handover_count",
+          "importance": 0.022688626168749164
+        },
+        {
+          "feature": "numeric__unusual_destination_flag",
+          "importance": 0.022486746788164452
+        },
+        {
+          "feature": "categorical__cell_id_gnb_1",
+          "importance": 0.02087562872122748
+        },
+        {
+          "feature": "categorical__cell_id_gnb_2",
+          "importance": 0.019401684177616008
+        },
+        {
+          "feature": "numeric__packets_per_second",
+          "importance": 0.019247545648769505
+        },
+        {
+          "feature": "categorical__source_component_external_host",
+          "importance": 0.018569948943509947
+        },
+        {
+          "feature": "categorical__source_component_drone",
+          "importance": 0.017035211344221864
+        },
+        {
+          "feature": "numeric__packet_count",
+          "importance": 0.015670481138999163
+        },
+        {
+          "feature": "numeric__failed_connection_attempts",
+          "importance": 0.014214740700138707
+        },
+        {
+          "feature": "numeric__byte_count",
+          "importance": 0.013873916957382463
+        },
+        {
+          "feature": "numeric__throughput_kbps",
+          "importance": 0.012099330200488296
+        },
+        {
+          "feature": "categorical__protocol_HTTPS",
+          "importance": 0.009147541519597258
+        },
+        {
+          "feature": "numeric__jitter_ms",
+          "importance": 0.007257194368291966
+        },
+        {
+          "feature": "categorical__protocol_TCP",
+          "importance": 0.005153783159400007
+        },
+        {
+          "feature": "numeric__command_channel_activity",
+          "importance": 0.004574083356918651
+        }
+      ]
+    },
+    "detection_delay": {
+      "missions": [
+        {
+          "mission_id": "M_API_HIGH_001",
+          "onset": "2026-01-01T00:02:00+00:00",
+          "detected": "2026-01-01T00:02:00+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "M_CONTROL_HIGH_001",
+          "onset": "2026-01-01T00:02:00+00:00",
+          "detected": "2026-01-01T00:02:00+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "M_DOS_HIGH_001",
+          "onset": "2026-01-01T00:02:00+00:00",
+          "detected": "2026-01-01T00:02:00+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "M_IDENTITY_HIGH_001",
+          "onset": "2026-01-01T00:02:00+00:00",
+          "detected": "2026-01-01T00:02:00+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "M_LATERAL_HIGH_001",
+          "onset": "2026-01-01T00:02:00+00:00",
+          "detected": "2026-01-01T00:02:00+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "M_SESSION_HIGH_001",
+          "onset": "2026-01-01T00:02:00+00:00",
+          "detected": "2026-01-01T00:02:00+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "S1_HANDOVER_LOSS_002",
+          "onset": "2026-01-01T00:00:46+00:00",
+          "detected": "2026-01-01T00:01:03+00:00",
+          "delay_sec": 17.0
+        },
+        {
+          "mission_id": "S2_AUTH_002",
+          "onset": "2026-01-01T00:02:00+00:00",
+          "detected": "2026-01-01T00:02:00+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "S3_API_RETRY_002",
+          "onset": "2026-01-01T00:02:00+00:00",
+          "detected": "2026-01-01T00:02:00+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "S4_DROPOUT_002",
+          "onset": "2026-01-01T00:02:00+00:00",
+          "detected": "2026-01-01T00:02:00+00:00",
+          "delay_sec": 0.0
+        }
+      ],
+      "detected_missions": 10,
+      "total_non_normal_missions": 10,
+      "mean_sec": 1.7,
+      "median_sec": 0.0,
+      "p95_sec": 9.349999999999982
+    }
+  },
+  "synthetic_reference": {
+    "rows": 10000,
+    "missions": 800,
+    "train_rows": 7483,
+    "test_rows": 2517,
+    "train_missions": [
+      "MSN-00001",
+      "MSN-00004",
+      "MSN-00005",
+      "MSN-00006",
+      "MSN-00007",
+      "MSN-00008",
+      "MSN-00010",
+      "MSN-00012",
+      "MSN-00014",
+      "MSN-00016",
+      "MSN-00017",
+      "MSN-00020",
+      "MSN-00021",
+      "MSN-00022",
+      "MSN-00023",
+      "MSN-00024",
+      "MSN-00025",
+      "MSN-00026",
+      "MSN-00027",
+      "MSN-00029",
+      "MSN-00030",
+      "MSN-00031",
+      "MSN-00033",
+      "MSN-00034",
+      "MSN-00036",
+      "MSN-00037",
+      "MSN-00039",
+      "MSN-00042",
+      "MSN-00043",
+      "MSN-00044",
+      "MSN-00045",
+      "MSN-00046",
+      "MSN-00047",
+      "MSN-00048",
+      "MSN-00052",
+      "MSN-00054",
+      "MSN-00055",
+      "MSN-00057",
+      "MSN-00058",
+      "MSN-00059",
+      "MSN-00060",
+      "MSN-00061",
+      "MSN-00062",
+      "MSN-00063",
+      "MSN-00064",
+      "MSN-00066",
+      "MSN-00067",
+      "MSN-00068",
+      "MSN-00070",
+      "MSN-00071",
+      "MSN-00073",
+      "MSN-00074",
+      "MSN-00075",
+      "MSN-00078",
+      "MSN-00079",
+      "MSN-00081",
+      "MSN-00082",
+      "MSN-00083",
+      "MSN-00084",
+      "MSN-00085",
+      "MSN-00087",
+      "MSN-00088",
+      "MSN-00089",
+      "MSN-00090",
+      "MSN-00091",
+      "MSN-00092",
+      "MSN-00093",
+      "MSN-00094",
+      "MSN-00095",
+      "MSN-00096",
+      "MSN-00097",
+      "MSN-00099",
+      "MSN-00100",
+      "MSN-00101",
+      "MSN-00102",
+      "MSN-00103",
+      "MSN-00105",
+      "MSN-00106",
+      "MSN-00107",
+      "MSN-00108",
+      "MSN-00109",
+      "MSN-00110",
+      "MSN-00111",
+      "MSN-00112",
+      "MSN-00113",
+      "MSN-00115",
+      "MSN-00116",
+      "MSN-00118",
+      "MSN-00120",
+      "MSN-00121",
+      "MSN-00122",
+      "MSN-00124",
+      "MSN-00125",
+      "MSN-00126",
+      "MSN-00127",
+      "MSN-00128",
+      "MSN-00129",
+      "MSN-00130",
+      "MSN-00131",
+      "MSN-00132",
+      "MSN-00133",
+      "MSN-00134",
+      "MSN-00135",
+      "MSN-00136",
+      "MSN-00137",
+      "MSN-00138",
+      "MSN-00139",
+      "MSN-00140",
+      "MSN-00141",
+      "MSN-00142",
+      "MSN-00144",
+      "MSN-00145",
+      "MSN-00147",
+      "MSN-00148",
+      "MSN-00149",
+      "MSN-00150",
+      "MSN-00152",
+      "MSN-00153",
+      "MSN-00154",
+      "MSN-00155",
+      "MSN-00156",
+      "MSN-00159",
+      "MSN-00160",
+      "MSN-00161",
+      "MSN-00162",
+      "MSN-00164",
+      "MSN-00165",
+      "MSN-00166",
+      "MSN-00167",
+      "MSN-00168",
+      "MSN-00169",
+      "MSN-00170",
+      "MSN-00171",
+      "MSN-00172",
+      "MSN-00174",
+      "MSN-00175",
+      "MSN-00177",
+      "MSN-00178",
+      "MSN-00179",
+      "MSN-00180",
+      "MSN-00181",
+      "MSN-00183",
+      "MSN-00184",
+      "MSN-00185",
+      "MSN-00186",
+      "MSN-00187",
+      "MSN-00188",
+      "MSN-00189",
+      "MSN-00190",
+      "MSN-00191",
+      "MSN-00192",
+      "MSN-00193",
+      "MSN-00195",
+      "MSN-00196",
+      "MSN-00198",
+      "MSN-00199",
+      "MSN-00200",
+      "MSN-00202",
+      "MSN-00204",
+      "MSN-00206",
+      "MSN-00207",
+      "MSN-00208",
+      "MSN-00209",
+      "MSN-00210",
+      "MSN-00212",
+      "MSN-00213",
+      "MSN-00214",
+      "MSN-00215",
+      "MSN-00217",
+      "MSN-00218",
+      "MSN-00219",
+      "MSN-00220",
+      "MSN-00221",
+      "MSN-00222",
+      "MSN-00224",
+      "MSN-00225",
+      "MSN-00226",
+      "MSN-00227",
+      "MSN-00228",
+      "MSN-00229",
+      "MSN-00230",
+      "MSN-00233",
+      "MSN-00234",
+      "MSN-00235",
+      "MSN-00238",
+      "MSN-00239",
+      "MSN-00242",
+      "MSN-00245",
+      "MSN-00246",
+      "MSN-00247",
+      "MSN-00249",
+      "MSN-00255",
+      "MSN-00256",
+      "MSN-00257",
+      "MSN-00258",
+      "MSN-00260",
+      "MSN-00261",
+      "MSN-00263",
+      "MSN-00265",
+      "MSN-00266",
+      "MSN-00269",
+      "MSN-00270",
+      "MSN-00271",
+      "MSN-00272",
+      "MSN-00273",
+      "MSN-00274",
+      "MSN-00275",
+      "MSN-00276",
+      "MSN-00277",
+      "MSN-00278",
+      "MSN-00281",
+      "MSN-00282",
+      "MSN-00283",
+      "MSN-00285",
+      "MSN-00286",
+      "MSN-00287",
+      "MSN-00288",
+      "MSN-00289",
+      "MSN-00290",
+      "MSN-00291",
+      "MSN-00292",
+      "MSN-00293",
+      "MSN-00294",
+      "MSN-00295",
+      "MSN-00296",
+      "MSN-00297",
+      "MSN-00298",
+      "MSN-00299",
+      "MSN-00301",
+      "MSN-00303",
+      "MSN-00305",
+      "MSN-00306",
+      "MSN-00307",
+      "MSN-00308",
+      "MSN-00309",
+      "MSN-00310",
+      "MSN-00312",
+      "MSN-00314",
+      "MSN-00315",
+      "MSN-00316",
+      "MSN-00318",
+      "MSN-00319",
+      "MSN-00320",
+      "MSN-00322",
+      "MSN-00323",
+      "MSN-00324",
+      "MSN-00325",
+      "MSN-00326",
+      "MSN-00327",
+      "MSN-00328",
+      "MSN-00329",
+      "MSN-00330",
+      "MSN-00331",
+      "MSN-00333",
+      "MSN-00336",
+      "MSN-00337",
+      "MSN-00340",
+      "MSN-00341",
+      "MSN-00342",
+      "MSN-00343",
+      "MSN-00344",
+      "MSN-00346",
+      "MSN-00348",
+      "MSN-00349",
+      "MSN-00350",
+      "MSN-00352",
+      "MSN-00353",
+      "MSN-00354",
+      "MSN-00355",
+      "MSN-00356",
+      "MSN-00357",
+      "MSN-00358",
+      "MSN-00360",
+      "MSN-00361",
+      "MSN-00362",
+      "MSN-00366",
+      "MSN-00367",
+      "MSN-00368",
+      "MSN-00369",
+      "MSN-00370",
+      "MSN-00371",
+      "MSN-00372",
+      "MSN-00374",
+      "MSN-00375",
+      "MSN-00376",
+      "MSN-00377",
+      "MSN-00378",
+      "MSN-00379",
+      "MSN-00381",
+      "MSN-00382",
+      "MSN-00383",
+      "MSN-00384",
+      "MSN-00385",
+      "MSN-00386",
+      "MSN-00388",
+      "MSN-00389",
+      "MSN-00392",
+      "MSN-00393",
+      "MSN-00394",
+      "MSN-00395",
+      "MSN-00396",
+      "MSN-00397",
+      "MSN-00398",
+      "MSN-00399",
+      "MSN-00401",
+      "MSN-00405",
+      "MSN-00406",
+      "MSN-00408",
+      "MSN-00410",
+      "MSN-00411",
+      "MSN-00412",
+      "MSN-00413",
+      "MSN-00415",
+      "MSN-00417",
+      "MSN-00418",
+      "MSN-00421",
+      "MSN-00422",
+      "MSN-00423",
+      "MSN-00424",
+      "MSN-00426",
+      "MSN-00427",
+      "MSN-00428",
+      "MSN-00429",
+      "MSN-00430",
+      "MSN-00431",
+      "MSN-00432",
+      "MSN-00434",
+      "MSN-00435",
+      "MSN-00438",
+      "MSN-00439",
+      "MSN-00440",
+      "MSN-00443",
+      "MSN-00444",
+      "MSN-00445",
+      "MSN-00446",
+      "MSN-00447",
+      "MSN-00449",
+      "MSN-00450",
+      "MSN-00451",
+      "MSN-00456",
+      "MSN-00457",
+      "MSN-00460",
+      "MSN-00462",
+      "MSN-00463",
+      "MSN-00464",
+      "MSN-00465",
+      "MSN-00467",
+      "MSN-00468",
+      "MSN-00470",
+      "MSN-00471",
+      "MSN-00472",
+      "MSN-00473",
+      "MSN-00475",
+      "MSN-00478",
+      "MSN-00480",
+      "MSN-00481",
+      "MSN-00482",
+      "MSN-00483",
+      "MSN-00484",
+      "MSN-00485",
+      "MSN-00486",
+      "MSN-00487",
+      "MSN-00488",
+      "MSN-00489",
+      "MSN-00490",
+      "MSN-00492",
+      "MSN-00493",
+      "MSN-00495",
+      "MSN-00497",
+      "MSN-00498",
+      "MSN-00499",
+      "MSN-00502",
+      "MSN-00504",
+      "MSN-00505",
+      "MSN-00506",
+      "MSN-00507",
+      "MSN-00508",
+      "MSN-00509",
+      "MSN-00510",
+      "MSN-00511",
+      "MSN-00512",
+      "MSN-00513",
+      "MSN-00515",
+      "MSN-00516",
+      "MSN-00517",
+      "MSN-00518",
+      "MSN-00520",
+      "MSN-00523",
+      "MSN-00524",
+      "MSN-00525",
+      "MSN-00526",
+      "MSN-00527",
+      "MSN-00529",
+      "MSN-00530",
+      "MSN-00532",
+      "MSN-00533",
+      "MSN-00534",
+      "MSN-00535",
+      "MSN-00536",
+      "MSN-00538",
+      "MSN-00539",
+      "MSN-00540",
+      "MSN-00541",
+      "MSN-00542",
+      "MSN-00543",
+      "MSN-00544",
+      "MSN-00545",
+      "MSN-00546",
+      "MSN-00547",
+      "MSN-00548",
+      "MSN-00549",
+      "MSN-00551",
+      "MSN-00552",
+      "MSN-00553",
+      "MSN-00554",
+      "MSN-00555",
+      "MSN-00556",
+      "MSN-00557",
+      "MSN-00558",
+      "MSN-00559",
+      "MSN-00560",
+      "MSN-00561",
+      "MSN-00562",
+      "MSN-00563",
+      "MSN-00564",
+      "MSN-00565",
+      "MSN-00566",
+      "MSN-00567",
+      "MSN-00568",
+      "MSN-00569",
+      "MSN-00570",
+      "MSN-00572",
+      "MSN-00575",
+      "MSN-00576",
+      "MSN-00577",
+      "MSN-00580",
+      "MSN-00582",
+      "MSN-00584",
+      "MSN-00585",
+      "MSN-00586",
+      "MSN-00587",
+      "MSN-00588",
+      "MSN-00589",
+      "MSN-00590",
+      "MSN-00592",
+      "MSN-00594",
+      "MSN-00595",
+      "MSN-00596",
+      "MSN-00597",
+      "MSN-00598",
+      "MSN-00599",
+      "MSN-00600",
+      "MSN-00601",
+      "MSN-00602",
+      "MSN-00603",
+      "MSN-00604",
+      "MSN-00607",
+      "MSN-00608",
+      "MSN-00609",
+      "MSN-00611",
+      "MSN-00612",
+      "MSN-00613",
+      "MSN-00615",
+      "MSN-00616",
+      "MSN-00617",
+      "MSN-00618",
+      "MSN-00619",
+      "MSN-00621",
+      "MSN-00622",
+      "MSN-00624",
+      "MSN-00626",
+      "MSN-00628",
+      "MSN-00629",
+      "MSN-00630",
+      "MSN-00631",
+      "MSN-00632",
+      "MSN-00633",
+      "MSN-00634",
+      "MSN-00636",
+      "MSN-00637",
+      "MSN-00638",
+      "MSN-00639",
+      "MSN-00640",
+      "MSN-00641",
+      "MSN-00642",
+      "MSN-00644",
+      "MSN-00645",
+      "MSN-00646",
+      "MSN-00647",
+      "MSN-00649",
+      "MSN-00650",
+      "MSN-00654",
+      "MSN-00656",
+      "MSN-00657",
+      "MSN-00658",
+      "MSN-00659",
+      "MSN-00660",
+      "MSN-00661",
+      "MSN-00662",
+      "MSN-00663",
+      "MSN-00664",
+      "MSN-00665",
+      "MSN-00666",
+      "MSN-00667",
+      "MSN-00669",
+      "MSN-00671",
+      "MSN-00672",
+      "MSN-00673",
+      "MSN-00674",
+      "MSN-00675",
+      "MSN-00676",
+      "MSN-00677",
+      "MSN-00678",
+      "MSN-00679",
+      "MSN-00680",
+      "MSN-00681",
+      "MSN-00682",
+      "MSN-00684",
+      "MSN-00685",
+      "MSN-00687",
+      "MSN-00690",
+      "MSN-00691",
+      "MSN-00694",
+      "MSN-00695",
+      "MSN-00697",
+      "MSN-00698",
+      "MSN-00699",
+      "MSN-00700",
+      "MSN-00703",
+      "MSN-00705",
+      "MSN-00706",
+      "MSN-00707",
+      "MSN-00708",
+      "MSN-00709",
+      "MSN-00710",
+      "MSN-00711",
+      "MSN-00713",
+      "MSN-00714",
+      "MSN-00715",
+      "MSN-00716",
+      "MSN-00717",
+      "MSN-00719",
+      "MSN-00720",
+      "MSN-00721",
+      "MSN-00722",
+      "MSN-00723",
+      "MSN-00724",
+      "MSN-00726",
+      "MSN-00727",
+      "MSN-00728",
+      "MSN-00730",
+      "MSN-00731",
+      "MSN-00732",
+      "MSN-00733",
+      "MSN-00734",
+      "MSN-00735",
+      "MSN-00736",
+      "MSN-00738",
+      "MSN-00739",
+      "MSN-00741",
+      "MSN-00743",
+      "MSN-00744",
+      "MSN-00745",
+      "MSN-00747",
+      "MSN-00748",
+      "MSN-00749",
+      "MSN-00750",
+      "MSN-00752",
+      "MSN-00753",
+      "MSN-00754",
+      "MSN-00755",
+      "MSN-00756",
+      "MSN-00757",
+      "MSN-00758",
+      "MSN-00759",
+      "MSN-00760",
+      "MSN-00761",
+      "MSN-00762",
+      "MSN-00763",
+      "MSN-00764",
+      "MSN-00765",
+      "MSN-00770",
+      "MSN-00771",
+      "MSN-00772",
+      "MSN-00773",
+      "MSN-00774",
+      "MSN-00775",
+      "MSN-00776",
+      "MSN-00778",
+      "MSN-00779",
+      "MSN-00780",
+      "MSN-00783",
+      "MSN-00784",
+      "MSN-00785",
+      "MSN-00786",
+      "MSN-00788",
+      "MSN-00790",
+      "MSN-00796",
+      "MSN-00799",
+      "MSN-00800"
+    ],
+    "test_missions": [
+      "MSN-00002",
+      "MSN-00003",
+      "MSN-00009",
+      "MSN-00011",
+      "MSN-00013",
+      "MSN-00015",
+      "MSN-00018",
+      "MSN-00019",
+      "MSN-00028",
+      "MSN-00032",
+      "MSN-00035",
+      "MSN-00038",
+      "MSN-00040",
+      "MSN-00041",
+      "MSN-00049",
+      "MSN-00050",
+      "MSN-00051",
+      "MSN-00053",
+      "MSN-00056",
+      "MSN-00065",
+      "MSN-00069",
+      "MSN-00072",
+      "MSN-00076",
+      "MSN-00077",
+      "MSN-00080",
+      "MSN-00086",
+      "MSN-00098",
+      "MSN-00104",
+      "MSN-00114",
+      "MSN-00117",
+      "MSN-00119",
+      "MSN-00123",
+      "MSN-00143",
+      "MSN-00146",
+      "MSN-00151",
+      "MSN-00157",
+      "MSN-00158",
+      "MSN-00163",
+      "MSN-00173",
+      "MSN-00176",
+      "MSN-00182",
+      "MSN-00194",
+      "MSN-00197",
+      "MSN-00201",
+      "MSN-00203",
+      "MSN-00205",
+      "MSN-00211",
+      "MSN-00216",
+      "MSN-00223",
+      "MSN-00231",
+      "MSN-00232",
+      "MSN-00236",
+      "MSN-00237",
+      "MSN-00240",
+      "MSN-00241",
+      "MSN-00243",
+      "MSN-00244",
+      "MSN-00248",
+      "MSN-00250",
+      "MSN-00251",
+      "MSN-00252",
+      "MSN-00253",
+      "MSN-00254",
+      "MSN-00259",
+      "MSN-00262",
+      "MSN-00264",
+      "MSN-00267",
+      "MSN-00268",
+      "MSN-00279",
+      "MSN-00280",
+      "MSN-00284",
+      "MSN-00300",
+      "MSN-00302",
+      "MSN-00304",
+      "MSN-00311",
+      "MSN-00313",
+      "MSN-00317",
+      "MSN-00321",
+      "MSN-00332",
+      "MSN-00334",
+      "MSN-00335",
+      "MSN-00338",
+      "MSN-00339",
+      "MSN-00345",
+      "MSN-00347",
+      "MSN-00351",
+      "MSN-00359",
+      "MSN-00363",
+      "MSN-00364",
+      "MSN-00365",
+      "MSN-00373",
+      "MSN-00380",
+      "MSN-00387",
+      "MSN-00390",
+      "MSN-00391",
+      "MSN-00400",
+      "MSN-00402",
+      "MSN-00403",
+      "MSN-00404",
+      "MSN-00407",
+      "MSN-00409",
+      "MSN-00414",
+      "MSN-00416",
+      "MSN-00419",
+      "MSN-00420",
+      "MSN-00425",
+      "MSN-00433",
+      "MSN-00436",
+      "MSN-00437",
+      "MSN-00441",
+      "MSN-00442",
+      "MSN-00448",
+      "MSN-00452",
+      "MSN-00453",
+      "MSN-00454",
+      "MSN-00455",
+      "MSN-00458",
+      "MSN-00459",
+      "MSN-00461",
+      "MSN-00466",
+      "MSN-00469",
+      "MSN-00474",
+      "MSN-00476",
+      "MSN-00477",
+      "MSN-00479",
+      "MSN-00491",
+      "MSN-00494",
+      "MSN-00496",
+      "MSN-00500",
+      "MSN-00501",
+      "MSN-00503",
+      "MSN-00514",
+      "MSN-00519",
+      "MSN-00521",
+      "MSN-00522",
+      "MSN-00528",
+      "MSN-00531",
+      "MSN-00537",
+      "MSN-00550",
+      "MSN-00571",
+      "MSN-00573",
+      "MSN-00574",
+      "MSN-00578",
+      "MSN-00579",
+      "MSN-00581",
+      "MSN-00583",
+      "MSN-00591",
+      "MSN-00593",
+      "MSN-00605",
+      "MSN-00606",
+      "MSN-00610",
+      "MSN-00614",
+      "MSN-00620",
+      "MSN-00623",
+      "MSN-00625",
+      "MSN-00627",
+      "MSN-00635",
+      "MSN-00643",
+      "MSN-00648",
+      "MSN-00651",
+      "MSN-00652",
+      "MSN-00653",
+      "MSN-00655",
+      "MSN-00668",
+      "MSN-00670",
+      "MSN-00683",
+      "MSN-00686",
+      "MSN-00688",
+      "MSN-00689",
+      "MSN-00692",
+      "MSN-00693",
+      "MSN-00696",
+      "MSN-00701",
+      "MSN-00702",
+      "MSN-00704",
+      "MSN-00712",
+      "MSN-00718",
+      "MSN-00725",
+      "MSN-00729",
+      "MSN-00737",
+      "MSN-00740",
+      "MSN-00742",
+      "MSN-00746",
+      "MSN-00751",
+      "MSN-00766",
+      "MSN-00767",
+      "MSN-00768",
+      "MSN-00769",
+      "MSN-00777",
+      "MSN-00781",
+      "MSN-00782",
+      "MSN-00787",
+      "MSN-00789",
+      "MSN-00791",
+      "MSN-00792",
+      "MSN-00793",
+      "MSN-00794",
+      "MSN-00795",
+      "MSN-00797",
+      "MSN-00798"
+    ],
+    "class_distribution": {
+      "normal": 6108,
+      "malicious": 1962,
+      "suspicious": 1930
+    },
+    "feature_groups": {
+      "raw_network": {
+        "logistic_regression": {
+          "accuracy": 0.8927294398092968,
+          "macro_f1": 0.8670563891391415,
+          "false_alarm_rate": 0.07770700636942675,
+          "confusion_matrix": [
+            [
+              1448,
+              23,
+              99
+            ],
+            [
+              3,
+              403,
+              39
+            ],
+            [
+              86,
+              20,
+              396
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.9420949902407287,
+              "recall": 0.9222929936305733,
+              "f1-score": 0.9320888316704217,
+              "support": 1570.0
+            },
+            "suspicious": {
+              "precision": 0.9035874439461884,
+              "recall": 0.9056179775280899,
+              "f1-score": 0.9046015712682379,
+              "support": 445.0
+            },
+            "malicious": {
+              "precision": 0.7415730337078652,
+              "recall": 0.7888446215139442,
+              "f1-score": 0.7644787644787645,
+              "support": 502.0
+            },
+            "accuracy": 0.8927294398092968,
+            "macro avg": {
+              "precision": 0.8624184892982608,
+              "recall": 0.8722518642242024,
+              "f1-score": 0.8670563891391415,
+              "support": 2517.0
+            },
+            "weighted avg": {
+              "precision": 0.8952940842889735,
+              "recall": 0.8927294398092968,
+              "f1-score": 0.893800359437929,
+              "support": 2517.0
+            }
+          }
+        },
+        "random_forest": {
+          "accuracy": 0.9423917361938816,
+          "macro_f1": 0.9324211787255473,
+          "false_alarm_rate": 0.03375796178343949,
+          "confusion_matrix": [
+            [
+              1517,
+              5,
+              48
+            ],
+            [
+              3,
+              440,
+              2
+            ],
+            [
+              81,
+              6,
+              415
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.9475327920049968,
+              "recall": 0.9662420382165605,
+              "f1-score": 0.9567959634184799,
+              "support": 1570.0
+            },
+            "suspicious": {
+              "precision": 0.975609756097561,
+              "recall": 0.9887640449438202,
+              "f1-score": 0.9821428571428571,
+              "support": 445.0
+            },
+            "malicious": {
+              "precision": 0.8924731182795699,
+              "recall": 0.8266932270916335,
+              "f1-score": 0.8583247156153051,
+              "support": 502.0
+            },
+            "accuracy": 0.9423917361938816,
+            "macro avg": {
+              "precision": 0.9385385554607093,
+              "recall": 0.9272331034173381,
+              "f1-score": 0.9324211787255473,
+              "support": 2517.0
+            },
+            "weighted avg": {
+              "precision": 0.9415154272100135,
+              "recall": 0.9423917361938816,
+              "f1-score": 0.9416377597276393,
+              "support": 2517.0
+            }
+          },
+          "feature_importance": [
+            {
+              "feature": "numeric__latency_ms",
+              "importance": 0.27316869294569773
+            },
+            {
+              "feature": "numeric__packet_loss_rate",
+              "importance": 0.25376732090617615
+            },
+            {
+              "feature": "numeric__jitter_ms",
+              "importance": 0.19531948346647984
+            },
+            {
+              "feature": "numeric__packets_per_second",
+              "importance": 0.11431282001471621
+            },
+            {
+              "feature": "numeric__throughput_kbps",
+              "importance": 0.06587634357351527
+            },
+            {
+              "feature": "numeric__packet_count",
+              "importance": 0.039802567005285526
+            },
+            {
+              "feature": "numeric__byte_count",
+              "importance": 0.02554405630253435
+            },
+            {
+              "feature": "numeric__retransmission_rate",
+              "importance": 0.016249956442743393
+            },
+            {
+              "feature": "numeric__connection_duration_sec",
+              "importance": 0.015958759342851417
+            }
+          ]
+        }
+      },
+      "raw_plus_5g_context": {
+        "logistic_regression": {
+          "accuracy": 0.8899483512117601,
+          "macro_f1": 0.864612538696191,
+          "false_alarm_rate": 0.08471337579617834,
+          "confusion_matrix": [
+            [
+              1437,
+              19,
+              114
+            ],
+            [
+              3,
+              402,
+              40
+            ],
+            [
+              78,
+              23,
+              401
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.9466403162055336,
+              "recall": 0.9152866242038217,
+              "f1-score": 0.930699481865285,
+              "support": 1570.0
+            },
+            "suspicious": {
+              "precision": 0.9054054054054054,
+              "recall": 0.903370786516854,
+              "f1-score": 0.9043869516310461,
+              "support": 445.0
+            },
+            "malicious": {
+              "precision": 0.7225225225225225,
+              "recall": 0.798804780876494,
+              "f1-score": 0.7587511825922422,
+              "support": 502.0
+            },
+            "accuracy": 0.8899483512117601,
+            "macro avg": {
+              "precision": 0.8581894147111537,
+              "recall": 0.8724873971990567,
+              "f1-score": 0.864612538696191,
+              "support": 2517.0
+            },
+            "weighted avg": {
+              "precision": 0.8946511752699243,
+              "recall": 0.8899483512117601,
+              "f1-score": 0.89175346589814,
+              "support": 2517.0
+            }
+          }
+        },
+        "random_forest": {
+          "accuracy": 0.9400079459674215,
+          "macro_f1": 0.9288138905106615,
+          "false_alarm_rate": 0.034394904458598725,
+          "confusion_matrix": [
+            [
+              1516,
+              5,
+              49
+            ],
+            [
+              2,
+              440,
+              3
+            ],
+            [
+              84,
+              8,
+              410
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.9463171036204744,
+              "recall": 0.9656050955414013,
+              "f1-score": 0.9558638083228247,
+              "support": 1570.0
+            },
+            "suspicious": {
+              "precision": 0.9713024282560706,
+              "recall": 0.9887640449438202,
+              "f1-score": 0.9799554565701559,
+              "support": 445.0
+            },
+            "malicious": {
+              "precision": 0.8874458874458875,
+              "recall": 0.8167330677290837,
+              "f1-score": 0.8506224066390041,
+              "support": 502.0
+            },
+            "accuracy": 0.9400079459674215,
+            "macro avg": {
+              "precision": 0.9350218064408109,
+              "recall": 0.9237007360714351,
+              "f1-score": 0.9288138905106615,
+              "support": 2517.0
+            },
+            "weighted avg": {
+              "precision": 0.9389929554056146,
+              "recall": 0.9400079459674215,
+              "f1-score": 0.9391334149278245,
+              "support": 2517.0
+            }
+          },
+          "feature_importance": [
+            {
+              "feature": "numeric__latency_ms",
+              "importance": 0.23854612998336594
+            },
+            {
+              "feature": "numeric__packet_loss_rate",
+              "importance": 0.2327560704837902
+            },
+            {
+              "feature": "numeric__jitter_ms",
+              "importance": 0.20369889507863526
+            },
+            {
+              "feature": "numeric__packets_per_second",
+              "importance": 0.08842231017584917
+            },
+            {
+              "feature": "numeric__packet_count",
+              "importance": 0.049678914450976004
+            },
+            {
+              "feature": "numeric__throughput_kbps",
+              "importance": 0.047568609368634406
+            },
+            {
+              "feature": "numeric__byte_count",
+              "importance": 0.03968085173451699
+            },
+            {
+              "feature": "numeric__connection_duration_sec",
+              "importance": 0.01778740796461861
+            },
+            {
+              "feature": "numeric__retransmission_rate",
+              "importance": 0.017661234648568586
+            },
+            {
+              "feature": "numeric__signal_quality_dbm",
+              "importance": 0.017332626501292955
+            },
+            {
+              "feature": "numeric__handover_count",
+              "importance": 0.0026590541511076903
+            },
+            {
+              "feature": "categorical__network_slice_id_slice_3",
+              "importance": 0.002221562772187747
+            },
+            {
+              "feature": "categorical__network_slice_id_slice_4",
+              "importance": 0.0021440687778719715
+            },
+            {
+              "feature": "categorical__network_slice_id_slice_2",
+              "importance": 0.002139942989616233
+            },
+            {
+              "feature": "categorical__network_slice_id_slice_1",
+              "importance": 0.0020509597243150175
+            },
+            {
+              "feature": "categorical__network_slice_id_slice_6",
+              "importance": 0.0020421906134899526
+            },
+            {
+              "feature": "categorical__network_slice_id_slice_5",
+              "importance": 0.0019848300983937492
+            },
+            {
+              "feature": "numeric__handover_event",
+              "importance": 0.0017656841051557931
+            },
+            {
+              "feature": "categorical__cell_id_cell_014",
+              "importance": 0.000960240915023679
+            },
+            {
+              "feature": "categorical__cell_id_cell_030",
+              "importance": 0.00090898201047501
+            }
+          ]
+        }
+      },
+      "security_indicators": {
+        "logistic_regression": {
+          "accuracy": 0.9924513309495431,
+          "macro_f1": 0.9900002668453869,
+          "false_alarm_rate": 0.0031847133757961785,
+          "confusion_matrix": [
+            [
+              1565,
+              5,
+              0
+            ],
+            [
+              9,
+              436,
+              0
+            ],
+            [
+              1,
+              4,
+              497
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.9936507936507937,
+              "recall": 0.9968152866242038,
+              "f1-score": 0.9952305246422893,
+              "support": 1570.0
+            },
+            "suspicious": {
+              "precision": 0.9797752808988764,
+              "recall": 0.9797752808988764,
+              "f1-score": 0.9797752808988764,
+              "support": 445.0
+            },
+            "malicious": {
+              "precision": 1.0,
+              "recall": 0.9900398406374502,
+              "f1-score": 0.994994994994995,
+              "support": 502.0
+            },
+            "accuracy": 0.9924513309495431,
+            "macro avg": {
+              "precision": 0.9911420248498901,
+              "recall": 0.9888768027201769,
+              "f1-score": 0.9900002668453869,
+              "support": 2517.0
+            },
+            "weighted avg": {
+              "precision": 0.9924639435962439,
+              "recall": 0.9924513309495431,
+              "f1-score": 0.9924510970106801,
+              "support": 2517.0
+            }
+          }
+        },
+        "random_forest": {
+          "accuracy": 0.9964243146603099,
+          "macro_f1": 0.9954444899635192,
+          "false_alarm_rate": 0.0025477707006369425,
+          "confusion_matrix": [
+            [
+              1566,
+              4,
+              0
+            ],
+            [
+              4,
+              440,
+              1
+            ],
+            [
+              0,
+              0,
+              502
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.9974522292993631,
+              "recall": 0.9974522292993631,
+              "f1-score": 0.9974522292993631,
+              "support": 1570.0
+            },
+            "suspicious": {
+              "precision": 0.990990990990991,
+              "recall": 0.9887640449438202,
+              "f1-score": 0.9898762654668166,
+              "support": 445.0
+            },
+            "malicious": {
+              "precision": 0.9980119284294234,
+              "recall": 1.0,
+              "f1-score": 0.9990049751243781,
+              "support": 502.0
+            },
+            "accuracy": 0.9964243146603099,
+            "macro avg": {
+              "precision": 0.9954850495732592,
+              "recall": 0.9954054247477279,
+              "f1-score": 0.9954444899635192,
+              "support": 2517.0
+            },
+            "weighted avg": {
+              "precision": 0.9964215252533022,
+              "recall": 0.9964243146603099,
+              "f1-score": 0.9964225012495714,
+              "support": 2517.0
+            }
+          },
+          "feature_importance": [
+            {
+              "feature": "numeric__anomaly_score",
+              "importance": 0.3846671879114163
+            },
+            {
+              "feature": "numeric__failed_connection_attempts",
+              "importance": 0.3083649317435406
+            },
+            {
+              "feature": "numeric__command_channel_activity",
+              "importance": 0.098309409092652
+            },
+            {
+              "feature": "numeric__unusual_destination_flag",
+              "importance": 0.07735351061325903
+            },
+            {
+              "feature": "numeric__api_request_count",
+              "importance": 0.053520690158215097
+            },
+            {
+              "feature": "numeric__session_reuse_flag",
+              "importance": 0.03199260193635313
+            },
+            {
+              "feature": "numeric__traffic_burst_flag",
+              "importance": 0.022701220010893485
+            },
+            {
+              "feature": "categorical__authentication_status_failed",
+              "importance": 0.00931279349334059
+            },
+            {
+              "feature": "categorical__authentication_status_unknown",
+              "importance": 0.006514841980148341
+            },
+            {
+              "feature": "categorical__authentication_status_expired",
+              "importance": 0.0029810923815018486
+            },
+            {
+              "feature": "categorical__authentication_status_success",
+              "importance": 0.002945737414441395
+            },
+            {
+              "feature": "numeric__video_stream_activity",
+              "importance": 0.000883212982333861
+            },
+            {
+              "feature": "numeric__telemetry_stream_activity",
+              "importance": 0.0004527702819043611
+            }
+          ]
+        }
+      },
+      "complete": {
+        "logistic_regression": {
+          "accuracy": 0.9968216130313866,
+          "macro_f1": 0.9961482806804258,
+          "false_alarm_rate": 0.001910828025477707,
+          "confusion_matrix": [
+            [
+              1567,
+              3,
+              0
+            ],
+            [
+              5,
+              440,
+              0
+            ],
+            [
+              0,
+              0,
+              502
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.9968193384223919,
+              "recall": 0.9980891719745223,
+              "f1-score": 0.9974538510502864,
+              "support": 1570.0
+            },
+            "suspicious": {
+              "precision": 0.9932279909706546,
+              "recall": 0.9887640449438202,
+              "f1-score": 0.990990990990991,
+              "support": 445.0
+            },
+            "malicious": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 502.0
+            },
+            "accuracy": 0.9968216130313866,
+            "macro avg": {
+              "precision": 0.9966824431310156,
+              "recall": 0.9956177389727808,
+              "f1-score": 0.9961482806804258,
+              "support": 2517.0
+            },
+            "weighted avg": {
+              "precision": 0.9968187593584016,
+              "recall": 0.9968216130313866,
+              "f1-score": 0.9968190453476125,
+              "support": 2517.0
+            }
+          }
+        },
+        "random_forest": {
+          "accuracy": 0.99880810488677,
+          "macro_f1": 0.9985567706615469,
+          "false_alarm_rate": 0.0006369426751592356,
+          "confusion_matrix": [
+            [
+              1569,
+              1,
+              0
+            ],
+            [
+              2,
+              443,
+              0
+            ],
+            [
+              0,
+              0,
+              502
+            ]
+          ],
+          "classification_report": {
+            "normal": {
+              "precision": 0.9987269255251432,
+              "recall": 0.9993630573248408,
+              "f1-score": 0.9990448901623686,
+              "support": 1570.0
+            },
+            "suspicious": {
+              "precision": 0.9977477477477478,
+              "recall": 0.9955056179775281,
+              "f1-score": 0.9966254218222722,
+              "support": 445.0
+            },
+            "malicious": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 502.0
+            },
+            "accuracy": 0.99880810488677,
+            "macro avg": {
+              "precision": 0.9988248910909636,
+              "recall": 0.998289558434123,
+              "f1-score": 0.9985567706615469,
+              "support": 2517.0
+            },
+            "weighted avg": {
+              "precision": 0.998807715861034,
+              "recall": 0.99880810488677,
+              "f1-score": 0.9988076242613547,
+              "support": 2517.0
+            }
+          },
+          "feature_importance": [
+            {
+              "feature": "numeric__anomaly_score",
+              "importance": 0.20885359624616875
+            },
+            {
+              "feature": "numeric__failed_connection_attempts",
+              "importance": 0.14215467646284186
+            },
+            {
+              "feature": "numeric__packet_loss_rate",
+              "importance": 0.14052234895180293
+            },
+            {
+              "feature": "numeric__jitter_ms",
+              "importance": 0.1115384221483732
+            },
+            {
+              "feature": "numeric__latency_ms",
+              "importance": 0.0896691096889943
+            },
+            {
+              "feature": "numeric__unusual_destination_flag",
+              "importance": 0.07072240591879794
+            },
+            {
+              "feature": "numeric__command_channel_activity",
+              "importance": 0.05974033594633243
+            },
+            {
+              "feature": "numeric__api_request_count",
+              "importance": 0.039872971573392396
+            },
+            {
+              "feature": "numeric__packets_per_second",
+              "importance": 0.02576907932801972
+            },
+            {
+              "feature": "numeric__session_reuse_flag",
+              "importance": 0.020044636155769582
+            },
+            {
+              "feature": "numeric__packet_count",
+              "importance": 0.014321967996827422
+            },
+            {
+              "feature": "numeric__throughput_kbps",
+              "importance": 0.014215415524021825
+            },
+            {
+              "feature": "numeric__byte_count",
+              "importance": 0.011452342246583692
+            },
+            {
+              "feature": "numeric__traffic_burst_flag",
+              "importance": 0.010189963070437166
+            },
+            {
+              "feature": "categorical__source_component_external_host",
+              "importance": 0.01015858760870069
+            },
+            {
+              "feature": "categorical__authentication_status_failed",
+              "importance": 0.004923819337423589
+            },
+            {
+              "feature": "categorical__authentication_status_unknown",
+              "importance": 0.004612323835525607
+            },
+            {
+              "feature": "numeric__connection_duration_sec",
+              "importance": 0.0023039594678059467
+            },
+            {
+              "feature": "numeric__signal_quality_dbm",
+              "importance": 0.0022433589080513012
+            },
+            {
+              "feature": "numeric__retransmission_rate",
+              "importance": 0.0021353398187091495
+            }
+          ]
+        }
+      }
+    },
+    "rule_baseline": {
+      "accuracy": 0.521652761223679,
+      "macro_f1": 0.5415743716037363,
+      "false_alarm_rate": 0.5955414012738853,
+      "confusion_matrix": [
+        [
+          635,
+          935,
+          0
+        ],
+        [
+          0,
+          238,
+          207
+        ],
+        [
+          5,
+          57,
+          440
+        ]
+      ],
+      "classification_report": {
+        "normal": {
+          "precision": 0.9921875,
+          "recall": 0.40445859872611467,
+          "f1-score": 0.5746606334841629,
+          "support": 1570.0
+        },
+        "suspicious": {
+          "precision": 0.19349593495934958,
+          "recall": 0.5348314606741573,
+          "f1-score": 0.28417910447761197,
+          "support": 445.0
+        },
+        "malicious": {
+          "precision": 0.6800618238021638,
+          "recall": 0.8764940239043825,
+          "f1-score": 0.7658833768494343,
+          "support": 502.0
+        },
+        "accuracy": 0.521652761223679,
+        "macro avg": {
+          "precision": 0.6219150862538377,
+          "recall": 0.6052613611015515,
+          "f1-score": 0.5415743716037363,
+          "support": 2517.0
+        },
+        "weighted avg": {
+          "precision": 0.7887290828786637,
+          "recall": 0.521652761223679,
+          "f1-score": 0.5614423326345209,
+          "support": 2517.0
+        }
+      }
+    },
+    "best_model": "complete/random_forest",
+    "best_model_metrics": {
+      "accuracy": 0.99880810488677,
+      "macro_f1": 0.9985567706615469,
+      "false_alarm_rate": 0.0006369426751592356,
+      "confusion_matrix": [
+        [
+          1569,
+          1,
+          0
+        ],
+        [
+          2,
+          443,
+          0
+        ],
+        [
+          0,
+          0,
+          502
+        ]
+      ],
+      "classification_report": {
+        "normal": {
+          "precision": 0.9987269255251432,
+          "recall": 0.9993630573248408,
+          "f1-score": 0.9990448901623686,
+          "support": 1570.0
+        },
+        "suspicious": {
+          "precision": 0.9977477477477478,
+          "recall": 0.9955056179775281,
+          "f1-score": 0.9966254218222722,
+          "support": 445.0
+        },
+        "malicious": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 502.0
+        },
+        "accuracy": 0.99880810488677,
+        "macro avg": {
+          "precision": 0.9988248910909636,
+          "recall": 0.998289558434123,
+          "f1-score": 0.9985567706615469,
+          "support": 2517.0
+        },
+        "weighted avg": {
+          "precision": 0.998807715861034,
+          "recall": 0.99880810488677,
+          "f1-score": 0.9988076242613547,
+          "support": 2517.0
+        }
+      },
+      "feature_importance": [
+        {
+          "feature": "numeric__anomaly_score",
+          "importance": 0.20885359624616875
+        },
+        {
+          "feature": "numeric__failed_connection_attempts",
+          "importance": 0.14215467646284186
+        },
+        {
+          "feature": "numeric__packet_loss_rate",
+          "importance": 0.14052234895180293
+        },
+        {
+          "feature": "numeric__jitter_ms",
+          "importance": 0.1115384221483732
+        },
+        {
+          "feature": "numeric__latency_ms",
+          "importance": 0.0896691096889943
+        },
+        {
+          "feature": "numeric__unusual_destination_flag",
+          "importance": 0.07072240591879794
+        },
+        {
+          "feature": "numeric__command_channel_activity",
+          "importance": 0.05974033594633243
+        },
+        {
+          "feature": "numeric__api_request_count",
+          "importance": 0.039872971573392396
+        },
+        {
+          "feature": "numeric__packets_per_second",
+          "importance": 0.02576907932801972
+        },
+        {
+          "feature": "numeric__session_reuse_flag",
+          "importance": 0.020044636155769582
+        },
+        {
+          "feature": "numeric__packet_count",
+          "importance": 0.014321967996827422
+        },
+        {
+          "feature": "numeric__throughput_kbps",
+          "importance": 0.014215415524021825
+        },
+        {
+          "feature": "numeric__byte_count",
+          "importance": 0.011452342246583692
+        },
+        {
+          "feature": "numeric__traffic_burst_flag",
+          "importance": 0.010189963070437166
+        },
+        {
+          "feature": "categorical__source_component_external_host",
+          "importance": 0.01015858760870069
+        },
+        {
+          "feature": "categorical__authentication_status_failed",
+          "importance": 0.004923819337423589
+        },
+        {
+          "feature": "categorical__authentication_status_unknown",
+          "importance": 0.004612323835525607
+        },
+        {
+          "feature": "numeric__connection_duration_sec",
+          "importance": 0.0023039594678059467
+        },
+        {
+          "feature": "numeric__signal_quality_dbm",
+          "importance": 0.0022433589080513012
+        },
+        {
+          "feature": "numeric__retransmission_rate",
+          "importance": 0.0021353398187091495
+        }
+      ]
+    },
+    "detection_delay": {
+      "missions": [
+        {
+          "mission_id": "MSN-00002",
+          "onset": "2026-01-01T03:50:13+00:00",
+          "detected": "2026-01-01T03:50:13+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00003",
+          "onset": "2026-01-01T00:01:03+00:00",
+          "detected": "2026-01-01T00:01:03+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00009",
+          "onset": "2026-01-01T08:20:14+00:00",
+          "detected": "2026-01-01T08:20:14+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00011",
+          "onset": "2026-01-01T00:29:50+00:00",
+          "detected": "2026-01-01T00:29:50+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00013",
+          "onset": "2026-01-01T00:03:12+00:00",
+          "detected": "2026-01-01T00:03:12+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00015",
+          "onset": "2026-01-01T01:52:21+00:00",
+          "detected": "2026-01-01T01:52:21+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00018",
+          "onset": "2026-01-01T01:03:36+00:00",
+          "detected": "2026-01-01T01:03:36+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00019",
+          "onset": "2026-01-01T03:19:52+00:00",
+          "detected": "2026-01-01T03:19:52+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00032",
+          "onset": "2026-01-01T00:05:10+00:00",
+          "detected": "2026-01-01T00:05:10+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00035",
+          "onset": "2026-01-01T01:27:23+00:00",
+          "detected": "2026-01-01T01:27:23+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00038",
+          "onset": "2026-01-01T01:11:06+00:00",
+          "detected": "2026-01-01T01:11:06+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00040",
+          "onset": "2026-01-01T02:20:26+00:00",
+          "detected": "2026-01-01T02:20:26+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00041",
+          "onset": "2026-01-01T00:27:07+00:00",
+          "detected": "2026-01-01T00:27:07+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00049",
+          "onset": "2026-01-01T05:41:41+00:00",
+          "detected": "2026-01-01T05:41:41+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00050",
+          "onset": "2026-01-01T03:34:00+00:00",
+          "detected": "2026-01-01T03:34:00+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00051",
+          "onset": "2026-01-01T03:39:58+00:00",
+          "detected": "2026-01-01T03:39:58+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00053",
+          "onset": "2026-01-01T01:06:34+00:00",
+          "detected": "2026-01-01T01:06:34+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00056",
+          "onset": "2026-01-01T02:16:49+00:00",
+          "detected": "2026-01-01T02:16:49+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00065",
+          "onset": "2026-01-01T13:44:26+00:00",
+          "detected": "2026-01-01T13:44:26+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00069",
+          "onset": "2026-01-01T01:51:29+00:00",
+          "detected": "2026-01-01T01:51:29+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00072",
+          "onset": "2026-01-01T05:18:30+00:00",
+          "detected": "2026-01-01T05:18:30+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00076",
+          "onset": "2026-01-01T05:35:14+00:00",
+          "detected": "2026-01-01T05:35:14+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00077",
+          "onset": "2026-01-01T00:56:44+00:00",
+          "detected": "2026-01-01T00:56:44+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00080",
+          "onset": "2026-01-01T01:48:43+00:00",
+          "detected": "2026-01-01T01:48:43+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00086",
+          "onset": "2026-01-01T04:31:02+00:00",
+          "detected": "2026-01-01T04:31:02+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00098",
+          "onset": "2026-01-01T03:26:29+00:00",
+          "detected": "2026-01-01T03:26:29+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00104",
+          "onset": "2026-01-01T04:05:05+00:00",
+          "detected": "2026-01-01T04:05:05+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00114",
+          "onset": "2026-01-01T00:23:07+00:00",
+          "detected": "2026-01-01T00:23:07+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00117",
+          "onset": "2026-01-01T01:18:59+00:00",
+          "detected": "2026-01-01T01:18:59+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00119",
+          "onset": "2026-01-01T01:35:29+00:00",
+          "detected": "2026-01-01T01:35:29+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00123",
+          "onset": "2026-01-01T01:43:48+00:00",
+          "detected": "2026-01-01T01:43:48+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00143",
+          "onset": "2026-01-01T00:53:47+00:00",
+          "detected": "2026-01-01T00:53:47+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00146",
+          "onset": "2026-01-01T04:30:23+00:00",
+          "detected": "2026-01-01T04:30:23+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00151",
+          "onset": "2026-01-01T08:12:17+00:00",
+          "detected": "2026-01-01T08:12:17+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00157",
+          "onset": "2026-01-01T00:16:39+00:00",
+          "detected": "2026-01-01T00:16:39+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00163",
+          "onset": "2026-01-01T01:19:00+00:00",
+          "detected": "2026-01-01T01:19:00+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00173",
+          "onset": "2026-01-01T02:25:12+00:00",
+          "detected": "2026-01-01T02:25:12+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00176",
+          "onset": "2026-01-01T01:16:59+00:00",
+          "detected": "2026-01-01T01:16:59+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00182",
+          "onset": "2026-01-01T01:02:21+00:00",
+          "detected": "2026-01-01T01:02:21+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00194",
+          "onset": "2026-01-01T03:38:24+00:00",
+          "detected": "2026-01-01T03:38:24+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00197",
+          "onset": "2026-01-01T10:38:51+00:00",
+          "detected": "2026-01-01T10:38:51+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00201",
+          "onset": "2026-01-01T02:47:05+00:00",
+          "detected": "2026-01-01T02:47:05+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00203",
+          "onset": "2026-01-01T02:40:02+00:00",
+          "detected": "2026-01-01T02:40:02+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00205",
+          "onset": "2026-01-01T01:10:58+00:00",
+          "detected": "2026-01-01T01:10:58+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00211",
+          "onset": "2026-01-01T00:34:50+00:00",
+          "detected": "2026-01-01T00:34:50+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00216",
+          "onset": "2026-01-01T05:08:24+00:00",
+          "detected": "2026-01-01T05:08:24+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00223",
+          "onset": "2026-01-01T03:26:39+00:00",
+          "detected": "2026-01-01T03:26:39+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00231",
+          "onset": "2026-01-01T03:49:05+00:00",
+          "detected": "2026-01-01T03:49:05+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00232",
+          "onset": "2026-01-01T02:58:21+00:00",
+          "detected": "2026-01-01T02:58:21+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00236",
+          "onset": "2026-01-01T00:00:47+00:00",
+          "detected": "2026-01-01T00:00:47+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00237",
+          "onset": "2026-01-01T03:09:51+00:00",
+          "detected": "2026-01-01T03:09:51+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00240",
+          "onset": "2026-01-01T00:13:47+00:00",
+          "detected": "2026-01-01T00:13:47+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00241",
+          "onset": "2026-01-01T01:58:15+00:00",
+          "detected": "2026-01-01T01:58:15+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00243",
+          "onset": "2026-01-01T03:18:23+00:00",
+          "detected": "2026-01-01T03:18:23+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00244",
+          "onset": "2026-01-01T02:51:18+00:00",
+          "detected": "2026-01-01T02:51:18+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00248",
+          "onset": "2026-01-01T02:12:01+00:00",
+          "detected": "2026-01-01T02:12:01+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00250",
+          "onset": "2026-01-01T02:00:11+00:00",
+          "detected": "2026-01-01T02:00:11+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00251",
+          "onset": "2026-01-01T01:27:53+00:00",
+          "detected": "2026-01-01T01:27:53+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00252",
+          "onset": "2026-01-01T00:02:54+00:00",
+          "detected": "2026-01-01T00:02:54+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00253",
+          "onset": "2026-01-01T03:01:16+00:00",
+          "detected": "2026-01-01T03:01:16+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00254",
+          "onset": "2026-01-01T03:15:04+00:00",
+          "detected": "2026-01-01T03:15:04+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00259",
+          "onset": "2026-01-01T02:14:13+00:00",
+          "detected": "2026-01-01T02:14:13+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00262",
+          "onset": "2026-01-01T02:22:25+00:00",
+          "detected": "2026-01-01T02:22:25+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00264",
+          "onset": "2026-01-01T06:23:03+00:00",
+          "detected": "2026-01-01T06:23:03+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00267",
+          "onset": "2026-01-01T01:07:07+00:00",
+          "detected": "2026-01-01T01:07:07+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00268",
+          "onset": "2026-01-01T00:33:35+00:00",
+          "detected": "2026-01-01T00:33:35+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00279",
+          "onset": "2026-01-01T02:09:28+00:00",
+          "detected": "2026-01-01T02:09:28+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00280",
+          "onset": "2026-01-01T00:04:39+00:00",
+          "detected": "2026-01-01T00:04:39+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00284",
+          "onset": "2026-01-01T04:00:56+00:00",
+          "detected": "2026-01-01T04:00:56+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00300",
+          "onset": "2026-01-01T01:13:05+00:00",
+          "detected": "2026-01-01T01:13:05+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00302",
+          "onset": "2026-01-01T00:26:12+00:00",
+          "detected": "2026-01-01T00:26:12+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00304",
+          "onset": "2026-01-01T02:01:02+00:00",
+          "detected": "2026-01-01T02:01:02+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00311",
+          "onset": "2026-01-01T04:51:36+00:00",
+          "detected": "2026-01-01T04:51:36+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00313",
+          "onset": "2026-01-01T04:24:46+00:00",
+          "detected": "2026-01-01T04:24:46+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00317",
+          "onset": "2026-01-01T02:56:26+00:00",
+          "detected": "2026-01-01T02:56:26+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00321",
+          "onset": "2026-01-01T01:23:50+00:00",
+          "detected": "2026-01-01T01:23:50+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00332",
+          "onset": "2026-01-01T04:47:54+00:00",
+          "detected": "2026-01-01T04:47:54+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00334",
+          "onset": "2026-01-01T00:20:36+00:00",
+          "detected": "2026-01-01T00:20:36+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00335",
+          "onset": "2026-01-01T01:07:54+00:00",
+          "detected": "2026-01-01T01:07:54+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00338",
+          "onset": "2026-01-01T03:52:39+00:00",
+          "detected": "2026-01-01T03:52:39+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00339",
+          "onset": "2026-01-01T03:18:26+00:00",
+          "detected": "2026-01-01T03:18:26+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00345",
+          "onset": "2026-01-01T00:42:04+00:00",
+          "detected": "2026-01-01T00:42:04+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00347",
+          "onset": "2026-01-01T01:37:38+00:00",
+          "detected": "2026-01-01T01:37:38+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00351",
+          "onset": "2026-01-01T00:16:58+00:00",
+          "detected": "2026-01-01T00:16:58+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00359",
+          "onset": "2026-01-01T01:38:22+00:00",
+          "detected": "2026-01-01T01:38:22+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00363",
+          "onset": "2026-01-01T04:22:34+00:00",
+          "detected": "2026-01-01T04:22:34+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00364",
+          "onset": "2026-01-01T04:40:28+00:00",
+          "detected": "2026-01-01T04:40:28+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00365",
+          "onset": "2026-01-01T03:20:42+00:00",
+          "detected": "2026-01-01T03:20:42+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00373",
+          "onset": "2026-01-01T01:36:58+00:00",
+          "detected": "2026-01-01T01:36:58+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00380",
+          "onset": "2026-01-01T02:02:20+00:00",
+          "detected": "2026-01-01T02:02:20+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00387",
+          "onset": "2026-01-01T03:13:32+00:00",
+          "detected": "2026-01-01T03:13:32+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00390",
+          "onset": "2026-01-01T04:17:04+00:00",
+          "detected": "2026-01-01T04:17:04+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00391",
+          "onset": "2026-01-01T00:29:18+00:00",
+          "detected": "2026-01-01T00:29:18+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00400",
+          "onset": "2026-01-01T08:34:25+00:00",
+          "detected": "2026-01-01T08:34:25+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00402",
+          "onset": "2026-01-01T00:19:04+00:00",
+          "detected": "2026-01-01T00:19:04+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00403",
+          "onset": "2026-01-01T00:09:42+00:00",
+          "detected": "2026-01-01T00:09:42+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00404",
+          "onset": "2026-01-01T12:46:44+00:00",
+          "detected": "2026-01-01T12:46:44+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00407",
+          "onset": "2026-01-01T11:47:56+00:00",
+          "detected": "2026-01-01T11:47:56+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00409",
+          "onset": "2026-01-01T05:36:43+00:00",
+          "detected": "2026-01-01T05:36:43+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00414",
+          "onset": "2026-01-01T04:04:01+00:00",
+          "detected": "2026-01-01T04:04:01+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00416",
+          "onset": "2026-01-01T00:25:29+00:00",
+          "detected": "2026-01-01T00:25:29+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00419",
+          "onset": "2026-01-01T02:40:23+00:00",
+          "detected": "2026-01-01T02:40:23+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00420",
+          "onset": "2026-01-01T01:30:00+00:00",
+          "detected": "2026-01-01T01:30:00+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00425",
+          "onset": "2026-01-01T03:41:20+00:00",
+          "detected": "2026-01-01T03:41:20+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00433",
+          "onset": "2026-01-01T03:03:47+00:00",
+          "detected": "2026-01-01T03:03:47+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00436",
+          "onset": "2026-01-01T00:12:10+00:00",
+          "detected": "2026-01-01T00:12:10+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00437",
+          "onset": "2026-01-01T04:20:29+00:00",
+          "detected": "2026-01-01T04:20:29+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00441",
+          "onset": "2026-01-01T02:19:23+00:00",
+          "detected": "2026-01-01T02:19:23+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00442",
+          "onset": "2026-01-01T01:29:34+00:00",
+          "detected": "2026-01-01T01:29:34+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00448",
+          "onset": "2026-01-01T00:14:32+00:00",
+          "detected": "2026-01-01T00:14:32+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00452",
+          "onset": "2026-01-01T01:28:49+00:00",
+          "detected": "2026-01-01T01:28:49+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00453",
+          "onset": "2026-01-01T00:32:28+00:00",
+          "detected": "2026-01-01T00:32:28+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00454",
+          "onset": "2026-01-01T02:24:17+00:00",
+          "detected": "2026-01-01T02:24:17+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00455",
+          "onset": "2026-01-01T01:52:30+00:00",
+          "detected": "2026-01-01T01:52:30+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00458",
+          "onset": "2026-01-01T00:07:23+00:00",
+          "detected": "2026-01-01T00:07:23+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00459",
+          "onset": "2026-01-01T03:08:55+00:00",
+          "detected": "2026-01-01T03:08:55+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00461",
+          "onset": "2026-01-01T00:30:30+00:00",
+          "detected": "2026-01-01T00:30:30+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00466",
+          "onset": "2026-01-01T04:18:29+00:00",
+          "detected": "2026-01-01T04:18:29+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00469",
+          "onset": "2026-01-01T02:18:57+00:00",
+          "detected": "2026-01-01T02:18:57+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00474",
+          "onset": "2026-01-01T00:31:59+00:00",
+          "detected": "2026-01-01T00:31:59+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00476",
+          "onset": "2026-01-01T01:51:12+00:00",
+          "detected": "2026-01-01T01:51:12+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00477",
+          "onset": "2026-01-01T04:35:07+00:00",
+          "detected": "2026-01-01T04:35:07+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00479",
+          "onset": "2026-01-01T01:39:29+00:00",
+          "detected": "2026-01-01T01:39:29+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00491",
+          "onset": "2026-01-01T01:32:03+00:00",
+          "detected": "2026-01-01T01:32:03+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00494",
+          "onset": "2026-01-01T01:30:23+00:00",
+          "detected": "2026-01-01T01:30:23+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00496",
+          "onset": "2026-01-01T00:45:35+00:00",
+          "detected": "2026-01-01T00:45:35+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00500",
+          "onset": "2026-01-01T03:19:00+00:00",
+          "detected": "2026-01-01T03:19:00+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00501",
+          "onset": "2026-01-01T01:38:32+00:00",
+          "detected": "2026-01-01T01:38:32+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00503",
+          "onset": "2026-01-01T03:26:19+00:00",
+          "detected": "2026-01-01T03:26:19+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00514",
+          "onset": "2026-01-01T00:23:22+00:00",
+          "detected": "2026-01-01T00:23:22+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00519",
+          "onset": "2026-01-01T03:14:26+00:00",
+          "detected": "2026-01-01T03:14:26+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00521",
+          "onset": "2026-01-01T03:51:57+00:00",
+          "detected": "2026-01-01T03:51:57+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00522",
+          "onset": "2026-01-01T04:27:17+00:00",
+          "detected": "2026-01-01T04:27:17+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00528",
+          "onset": "2026-01-01T03:16:03+00:00",
+          "detected": "2026-01-01T03:16:03+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00531",
+          "onset": "2026-01-01T07:09:23+00:00",
+          "detected": "2026-01-01T07:09:23+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00537",
+          "onset": "2026-01-01T05:18:11+00:00",
+          "detected": "2026-01-01T05:18:11+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00550",
+          "onset": "2026-01-01T05:42:24+00:00",
+          "detected": "2026-01-01T05:42:24+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00571",
+          "onset": "2026-01-01T00:19:53+00:00",
+          "detected": "2026-01-01T00:19:53+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00573",
+          "onset": "2026-01-01T02:04:33+00:00",
+          "detected": "2026-01-01T02:04:33+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00574",
+          "onset": "2026-01-01T04:25:47+00:00",
+          "detected": "2026-01-01T04:25:47+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00578",
+          "onset": "2026-01-01T03:21:53+00:00",
+          "detected": "2026-01-01T03:21:53+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00579",
+          "onset": "2026-01-01T08:29:59+00:00",
+          "detected": "2026-01-01T08:29:59+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00581",
+          "onset": "2026-01-01T05:08:37+00:00",
+          "detected": "2026-01-01T05:08:37+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00583",
+          "onset": "2026-01-01T07:22:41+00:00",
+          "detected": "2026-01-01T07:22:41+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00591",
+          "onset": "2026-01-01T00:38:44+00:00",
+          "detected": "2026-01-01T00:38:44+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00593",
+          "onset": "2026-01-01T00:24:24+00:00",
+          "detected": "2026-01-01T00:24:24+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00605",
+          "onset": "2026-01-01T01:02:08+00:00",
+          "detected": "2026-01-01T01:02:08+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00606",
+          "onset": "2026-01-01T01:51:08+00:00",
+          "detected": "2026-01-01T01:51:08+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00610",
+          "onset": "2026-01-01T01:45:42+00:00",
+          "detected": "2026-01-01T01:45:42+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00614",
+          "onset": "2026-01-01T00:05:47+00:00",
+          "detected": "2026-01-01T00:05:47+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00620",
+          "onset": "2026-01-01T00:42:12+00:00",
+          "detected": "2026-01-01T00:42:12+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00623",
+          "onset": "2026-01-01T01:44:11+00:00",
+          "detected": "2026-01-01T01:44:11+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00625",
+          "onset": "2026-01-01T00:26:08+00:00",
+          "detected": "2026-01-01T00:26:08+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00627",
+          "onset": "2026-01-01T00:08:41+00:00",
+          "detected": "2026-01-01T00:08:41+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00635",
+          "onset": "2026-01-01T01:39:51+00:00",
+          "detected": "2026-01-01T01:39:51+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00643",
+          "onset": "2026-01-01T00:44:09+00:00",
+          "detected": "2026-01-01T00:44:09+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00648",
+          "onset": "2026-01-01T02:58:48+00:00",
+          "detected": "2026-01-01T02:58:48+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00651",
+          "onset": "2026-01-01T03:07:46+00:00",
+          "detected": "2026-01-01T03:07:46+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00652",
+          "onset": "2026-01-01T03:31:34+00:00",
+          "detected": "2026-01-01T03:31:34+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00653",
+          "onset": "2026-01-01T01:17:22+00:00",
+          "detected": "2026-01-01T01:17:22+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00655",
+          "onset": "2026-01-01T08:12:42+00:00",
+          "detected": "2026-01-01T08:12:42+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00668",
+          "onset": "2026-01-01T01:26:56+00:00",
+          "detected": "2026-01-01T01:26:56+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00670",
+          "onset": "2026-01-01T00:14:54+00:00",
+          "detected": "2026-01-01T00:14:54+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00683",
+          "onset": "2026-01-01T04:55:08+00:00",
+          "detected": "2026-01-01T04:55:08+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00686",
+          "onset": "2026-01-01T00:08:55+00:00",
+          "detected": "2026-01-01T00:08:55+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00688",
+          "onset": "2026-01-01T00:10:05+00:00",
+          "detected": "2026-01-01T00:10:05+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00689",
+          "onset": "2026-01-01T03:20:50+00:00",
+          "detected": "2026-01-01T03:20:50+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00692",
+          "onset": "2026-01-01T03:44:54+00:00",
+          "detected": "2026-01-01T03:44:54+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00693",
+          "onset": "2026-01-01T04:25:58+00:00",
+          "detected": "2026-01-01T04:25:58+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00696",
+          "onset": "2026-01-01T00:47:24+00:00",
+          "detected": "2026-01-01T00:47:24+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00701",
+          "onset": "2026-01-01T03:52:23+00:00",
+          "detected": "2026-01-01T03:52:23+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00702",
+          "onset": "2026-01-01T00:47:48+00:00",
+          "detected": "2026-01-01T00:47:48+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00704",
+          "onset": "2026-01-01T01:16:53+00:00",
+          "detected": "2026-01-01T01:16:53+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00712",
+          "onset": "2026-01-01T03:42:33+00:00",
+          "detected": "2026-01-01T03:42:33+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00718",
+          "onset": "2026-01-01T00:09:35+00:00",
+          "detected": "2026-01-01T00:09:35+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00725",
+          "onset": "2026-01-01T05:13:18+00:00",
+          "detected": "2026-01-01T05:13:18+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00729",
+          "onset": "2026-01-01T02:01:16+00:00",
+          "detected": "2026-01-01T02:01:16+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00737",
+          "onset": "2026-01-01T03:33:25+00:00",
+          "detected": "2026-01-01T03:33:25+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00740",
+          "onset": "2026-01-01T00:41:32+00:00",
+          "detected": "2026-01-01T00:41:32+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00742",
+          "onset": "2026-01-01T00:31:23+00:00",
+          "detected": "2026-01-01T00:31:23+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00746",
+          "onset": "2026-01-01T03:24:45+00:00",
+          "detected": "2026-01-01T03:24:45+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00751",
+          "onset": "2026-01-01T05:15:19+00:00",
+          "detected": "2026-01-01T05:15:19+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00766",
+          "onset": "2026-01-01T03:07:54+00:00",
+          "detected": "2026-01-01T03:07:54+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00767",
+          "onset": "2026-01-01T01:50:36+00:00",
+          "detected": "2026-01-01T01:50:36+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00768",
+          "onset": "2026-01-01T00:39:16+00:00",
+          "detected": "2026-01-01T00:39:16+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00769",
+          "onset": "2026-01-01T04:07:07+00:00",
+          "detected": "2026-01-01T04:07:07+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00777",
+          "onset": "2026-01-01T03:25:21+00:00",
+          "detected": "2026-01-01T03:25:21+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00781",
+          "onset": "2026-01-01T02:18:42+00:00",
+          "detected": "2026-01-01T02:18:42+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00782",
+          "onset": "2026-01-01T01:54:36+00:00",
+          "detected": "2026-01-01T01:54:36+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00787",
+          "onset": "2026-01-01T09:46:41+00:00",
+          "detected": "2026-01-01T09:46:41+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00789",
+          "onset": "2026-01-01T10:10:18+00:00",
+          "detected": "2026-01-01T10:10:18+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00791",
+          "onset": "2026-01-01T07:50:53+00:00",
+          "detected": "2026-01-01T07:50:53+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00792",
+          "onset": "2026-01-01T01:24:17+00:00",
+          "detected": "2026-01-01T01:24:17+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00793",
+          "onset": "2026-01-01T01:20:59+00:00",
+          "detected": "2026-01-01T01:20:59+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00794",
+          "onset": "2026-01-01T02:34:27+00:00",
+          "detected": "2026-01-01T02:34:27+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00795",
+          "onset": "2026-01-01T03:06:58+00:00",
+          "detected": "2026-01-01T03:06:58+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00797",
+          "onset": "2026-01-01T00:55:56+00:00",
+          "detected": "2026-01-01T00:55:56+00:00",
+          "delay_sec": 0.0
+        },
+        {
+          "mission_id": "MSN-00798",
+          "onset": "2026-01-01T00:00:36+00:00",
+          "detected": "2026-01-01T00:00:36+00:00",
+          "delay_sec": 0.0
+        }
+      ],
+      "detected_missions": 198,
+      "total_non_normal_missions": 198,
+      "mean_sec": 0.0,
+      "median_sec": 0.0,
+      "p95_sec": 0.0
+    }
+  }
+}

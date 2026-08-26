@@ -1,0 +1,30 @@
+{
+  "run_id": "B1_BASE_001",
+  "label_fields_excluded_from_feature_derivation": [
+    "attack_stage",
+    "attack_type",
+    "incident_label",
+    "recommended_response",
+    "severity"
+  ],
+  "behavioral_flag_inputs": {
+    "traffic_burst_flag": [
+      "packets_per_second",
+      "benign flow rate"
+    ],
+    "unusual_destination_flag": [
+      "destination_ip",
+      "allowed_destinations"
+    ],
+    "session_reuse_flag": [
+      "session_id",
+      "source_ip",
+      "session history"
+    ],
+    "anomaly_score": [
+      "packet_loss_rate",
+      "traffic_burst_flag"
+    ]
+  },
+  "passed": true
+}

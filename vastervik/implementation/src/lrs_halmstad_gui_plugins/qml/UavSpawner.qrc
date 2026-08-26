@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="/UavSpawner">
+    <file>UavSpawner.qml</file>
+  </qresource>
+</RCC>

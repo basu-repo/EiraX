@@ -1,0 +1,20 @@
+version: 1
+
+# Deterministic baseline used before OMNeT++ / Simu5G supplies measured radio
+# propagation. Distances are horizontal separation in the shared local frame.
+range_model: fixed
+max_range_m: 50.0
+warning_range_m: 40.0
+reconnect_range_m: 45.0
+
+# The UAV normally stays far inside the radio boundary. It progressively maps
+# this distance ahead of the UGV instead of flying to a distant waypoint first.
+desired_lead_m: 20.0
+survey_settle_sec: 4.0
+
+status_rate_hz: 5.0
+message_stale_timeout_sec: 2.0
+
+# Metadata reserved for the later radio model. Changing frequency here does
+# not fabricate signal strength in the deterministic fixed-range baseline.
+carrier_frequency_mhz: 2400.0

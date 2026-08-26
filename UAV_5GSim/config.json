@@ -1,0 +1,18 @@
+{
+  "world_name": "baylands_editable",
+  "world_file": "worlds/baylands_uav_goal.world",
+  "uav_model": "gz_x500_mapping",
+  "uav_entity": "x500_mapping_0",
+  "uav_spawn": {
+    "x": 211.12966918945318,
+    "y": -256.3474426269531,
+    "z": 2.935702896118163,
+    "yaw": 0.0
+  },
+  "goal": {
+    "x": -29.546520233154297,
+    "y": -286.43212890625,
+    "z": 1.6005200147628784,
+    "yaw": -1.2665100444806725
+  }
+}

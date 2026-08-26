@@ -1,0 +1,10 @@
+robot:
+  name: husky
+  serial_number: CHANGE_ME
+  ros_namespace: husky
+  ros_domain_id: 30
+  frame_prefix: husky
+
+runtime:
+  mode: physical  # physical | simulation
+  use_sim_time: false

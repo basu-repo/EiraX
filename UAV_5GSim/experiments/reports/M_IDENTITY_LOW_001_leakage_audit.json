@@ -1,0 +1,17 @@
+{
+  "label_fields_excluded_from_feature_derivation": [
+    "attack_stage",
+    "attack_type",
+    "incident_label",
+    "recommended_response",
+    "severity"
+  ],
+  "measured_features_derived_before_labels": true,
+  "flags_from_behavior_contract": {
+    "traffic_burst_flag": "measured pps > 3x benign telemetry median",
+    "unusual_destination_flag": "destination outside known manifest destinations",
+    "session_reuse_flag": "known session observed from unexpected source",
+    "failed_connection_attempts": "measured packets rejected by configured endpoint or timeout"
+  },
+  "passed": true
+}

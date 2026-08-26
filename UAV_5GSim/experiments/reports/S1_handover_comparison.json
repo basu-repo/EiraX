@@ -1,0 +1,46 @@
+{
+  "scenario": "S1 short handover loss spike",
+  "scenario_family": "suspicious",
+  "malicious_source": false,
+  "response": "increase_monitoring",
+  "repetitions": 2,
+  "label_window_selection": "Predeclared from the geometric equal-distance boundary between two gNodeBs before Simu5G execution",
+  "feature_derivation": "Network metrics and behavioral flags were derived before manifest labels were applied",
+  "results": [
+    {
+      "run_id": "S1_HANDOVER_LOSS_001",
+      "physical_source_run": "B1_BASE_002",
+      "simu5g_seed": 21,
+      "predeclared_window_sec": [47, 78],
+      "measured_handover_sec": 63,
+      "normal_rows": 536,
+      "suspicious_rows": 64,
+      "suspicious_packet_loss_max": 0.0208333333333333,
+      "suspicious_nonzero_loss_windows": 5,
+      "normal_signal_mean_dbm": -19.876557545689113,
+      "suspicious_signal_mean_dbm": -54.19859324932743
+    },
+    {
+      "run_id": "S1_HANDOVER_LOSS_002",
+      "physical_source_run": "B1_BASE_003",
+      "simu5g_seed": 22,
+      "predeclared_window_sec": [46, 77],
+      "measured_handover_sec": 62,
+      "normal_rows": 536,
+      "suspicious_rows": 64,
+      "suspicious_packet_loss_max": 0.02,
+      "suspicious_nonzero_loss_windows": 4,
+      "normal_signal_mean_dbm": -26.4723570667117,
+      "suspicious_signal_mean_dbm": -61.069780561112
+    }
+  ],
+  "security_indicators": {
+    "session_reuse_rows": 0,
+    "unusual_destination_rows": 0
+  },
+  "validation": {
+    "schema_columns": 44,
+    "all_runs_passed": true,
+    "leakage_audits_passed": true
+  }
+}

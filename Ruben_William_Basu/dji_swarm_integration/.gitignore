@@ -1,0 +1,32 @@
+# Generated ROS/colcon output
+build/
+install/
+log/
+build_combined/
+install_combined/
+log_combined/
+
+# Runtime evidence and generated network output
+datasets/
+runtime_logs/
+.runtime/
+omnet_team/results/
+omnet_team/out/
+omnet_team/.cmdenv-log
+
+# Python/editor caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+.idea/
+third_party/
+
+# Large training artifacts are source material, not Git payload
+dji_stack/models/obb/runs/
+dji_stack/models/obb/experiments/
+*.bag
+*.db3
+*.mcap

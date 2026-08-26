@@ -1,0 +1,625 @@
+# UAV 5G simulation and cyber-incident telemetry
+
+`UAV_5GSim` is the isolated one-UAV Gazebo/PX4 and trace-driven 5G experiment
+inside EiraX. It implements the two supplied UAS documents:
+
+1. the UAS co-simulation setup workflow; and
+2. the simulation-derived 5G/UAS cyber-incident telemetry experiment.
+
+The folder contains a live UAV mission workflow, measured ROS 2 flight
+evidence, OMNeT++/INET/Simu5G network evidence, scenario manifests, a
+leakage-controlled 44-column dataset, validation reports, and machine-learning
+comparison results.
+
+## 1. Verified status
+
+The following state was verified in this workspace:
+
+| Item | Result |
+|---|---:|
+| Experiment manifests | 46 |
+| Per-run datasets passing `validate_dataset.py` | 46/46 |
+| Unique measured Gazebo/PX4 flight recordings | 5 |
+| Canonical dataset rows | 25,490 |
+| Canonical dataset columns | 44 |
+| Canonical dataset mission identifiers | 37 |
+| Normal rows | 21,282 |
+| Suspicious rows | 1,238 |
+| Malicious rows | 2,970 |
+| Experiment notebook code cells | 12/12 executed |
+| Notebook execution errors | 0 |
+
+The canonical output is:
+
+```text
+experiments/data/drone_network_telemetry_cosim.csv
+```
+
+Its expected SHA-256 checksum is recorded in
+`experiments/reports/final_dataset_manifest.json`.
+
+## 2. What each notebook does
+
+### `UAV_5GSim.ipynb` — setup document and live mission
+
+This is the first-document workflow. It can:
+
+- start the isolated Baylands world;
+- attach PX4 Software-in-the-Loop to the x500 UAV;
+- start MAVROS;
+- record the required ROS 2 topics;
+- fly from the saved spawn to the saved goal and land;
+- export the measured pose trace;
+- construct the one-UAV 5G scenario;
+- assemble and validate the initial 44-column dataset; and
+- verify the Document 1 deliverables.
+
+This notebook is interactive. Do not use **Run All** without supervision. After
+the launch cell, wait for the models to load, click **Play** in Gazebo, and then
+continue to the mission cell.
+
+### `UAV_5GSim_Experiments.ipynb` — experiment document
+
+This is the simplified second-document notebook. Its 12 steps are:
+
+1. environment and folder checks;
+2. exact 44-column contract check;
+3. manifest and run-matrix validation;
+4. Gazebo/PX4/ROS evidence validation;
+5. pose and Simu5G mobility validation;
+6. Simu5G output validation;
+7. bridge and 46 per-run validator checks;
+8. scenario and parameter coverage checks;
+9. canonical dataset concatenation;
+10. schema, response, provenance, and leakage checks;
+11. machine-learning and synthetic-baseline comparison; and
+12. final deliverables gate.
+
+This notebook does **not** fly 46 new Gazebo missions. It reuses completed
+measured flight evidence, rebuilds the canonical dataset from validated per-run
+CSVs, and verifies all experiment deliverables.
+
+## 3. End-to-end data flow
+
+```text
+Gazebo Baylands + PX4 SITL
+            |
+            v
+MAVROS ROS 2 topics and ROS bag
+            |
+            v
+Measured x/y/z pose trace
+            |
+            v
+Simu5G mobility + scenario manifest
+            |
+            v
+OMNeT++ / INET / Simu5G scalar and vector measurements
+            |
+            v
+sim/bridge/assemble.py
+  one row per flow per aggregation window
+            |
+            v
+Per-run 44-column CSV + provenance + leakage audit
+            |
+            v
+sim/bridge/concat.py
+            |
+            v
+experiments/data/drone_network_telemetry_cosim.csv
+            |
+            +----> validate_dataset.py
+            |
+            +----> mission-separated ML and synthetic comparison
+```
+
+Scenario labels and label windows come from YAML manifests. Traffic metrics and
+behavioral flags come from ROS/Simu5G observations or documented bridge
+calculations. Label fields are not used to derive model input features.
+
+## 4. Required environment
+
+The verified local environment is:
+
+| Component | Verified setup |
+|---|---|
+| Operating system | Ubuntu 24.04 |
+| ROS | ROS 2 Jazzy |
+| Gazebo | Gazebo Sim 8.11.0 / Harmonic generation |
+| PX4 | Local prebuilt Software-in-the-Loop runtime |
+| MAVROS | ROS 2 Jazzy package |
+| OMNeT++ | 6.0.1 |
+| INET | 4.5.x local installation |
+| Simu5G | Local verified Simu5G checkout |
+| Python environment | Conda environment `eirax`, Python 3.10 |
+
+The notebooks use `pandas`, `numpy`, `PyYAML`, `scikit-learn`, `matplotlib`,
+`nbformat`, Jupyter, and the ROS/PX4 Python modules required by their cells.
+
+The current code expects these local paths:
+
+```text
+/opt/ros/jazzy/
+/home/basudeo/omnetpp-6.0.1/
+/home/basudeo/inet/
+/home/basudeo/Documents/EiraX/UGV_UAV/px4_runtime/
+/home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G/
+/home/basudeo/Documents/EiraX/simulation/models/
+```
+
+The simulation models, meshes, materials, PX4 model packages, generated logs,
+and Simu5G source/results are intentionally excluded from Git. Restore them as
+described in the repository root `README.md` before using a fresh clone.
+
+## 5. Quick start
+
+### 5.1 Open the notebooks
+
+```bash
+cd /home/basudeo/Documents/EiraX/UAV_5GSim
+conda activate eirax
+source /opt/ros/jazzy/setup.bash
+jupyter lab
+```
+
+Select the `eirax` kernel in Jupyter.
+
+- For a new live flight and the setup workflow, open `UAV_5GSim.ipynb` and run
+  one cell at a time.
+- To revalidate completed experiments, open `UAV_5GSim_Experiments.ipynb` and
+  run it from top to bottom.
+
+### 5.2 Execute the experiment notebook from the terminal
+
+This command does not launch a new Gazebo flight:
+
+```bash
+cd /home/basudeo/Documents/EiraX/UAV_5GSim
+conda activate eirax
+
+jupyter nbconvert \
+  --to notebook \
+  --execute \
+  --inplace UAV_5GSim_Experiments.ipynb \
+  --ExecutePreprocessor.timeout=-1
+```
+
+The final cell should print:
+
+```text
+[DOCUMENT EXPERIMENT COMPLETE]
+```
+
+### 5.3 Validate the final dataset directly
+
+```bash
+cd /home/basudeo/Documents/EiraX/UAV_5GSim
+conda activate eirax
+
+python validate_dataset.py \
+  experiments/data/drone_network_telemetry_cosim.csv \
+  schema_reference.json
+```
+
+Expected result:
+
+```text
+RESULT: PASSED (25490 rows, 44 columns)
+```
+
+## 6. Run the isolated UAV mission without Jupyter
+
+First close every existing Gazebo server. The visible mission starts Gazebo
+paused:
+
+```bash
+cd /home/basudeo/Documents/EiraX/UAV_5GSim
+conda activate eirax
+./run_uav_gazebo.py
+```
+
+Wait for the world and UAV to load, then click **Play**. The default mission:
+
+- climbs to 30 m above spawn;
+- flies toward the saved goal with a 5 m/s PX4 horizontal speed limit;
+- approaches and lands at the goal; and
+- leaves visible Gazebo open until `Ctrl+C`.
+
+Useful options:
+
+```bash
+# Headless mission; physics starts immediately
+./run_uav_gazebo.py --headless
+
+# Open the UAV and world without arming or flying
+./run_uav_gazebo.py --no-mission
+
+# Override flight settings
+./run_uav_gazebo.py --altitude 20 --speed 3 --mission-timeout 420
+
+# Short startup smoke test
+./run_uav_gazebo.py --headless --smoke-seconds 10 --no-mission
+```
+
+Standalone run logs are written under `logs/run_<timestamp>/`. A completed
+mission also writes `mission_trajectory.csv` and `mission_summary.json`.
+
+This launcher does not create the full Document 2 scenario dataset. Use it to
+test the isolated UAV and goal mission.
+
+## 7. Worlds and saved coordinates
+
+`config.json` is the authoritative standalone configuration. It selects:
+
+```text
+worlds/baylands_uav_goal.world
+```
+
+The current isolated worlds are:
+
+| World | Contents and purpose |
+|---|---|
+| `baylands_uav_goal.world` | Baylands terrain and obstacles, one goal, no Husky, no waypoint markers; used by `run_uav_gazebo.py` |
+| `baylands_uav_experiment.world` | Baylands, goal, waypoint 1 and waypoint 2; retained for the measured experiment workflow |
+
+`prepare_world.py` rebuilds `baylands_uav_goal.world` from the shared editable
+world and removes `husky`, `waypoint_1`, `waypoint_2`, and `waypoint_3`:
+
+```bash
+cd /home/basudeo/Documents/EiraX/UAV_5GSim
+./prepare_world.py
+```
+
+This overwrites the isolated goal world. It never edits the shared source
+world, but do not run it if you want to retain manual changes made only to the
+isolated copy.
+
+## 8. Folder reference
+
+```text
+UAV_5GSim/
+├── README.md
+├── UAV_5GSim.ipynb
+├── UAV_5GSim_Experiments.ipynb
+├── config.json
+├── mission.py
+├── prepare_world.py
+├── run_uav_gazebo.py
+├── schema_reference.json
+├── validate_dataset.py
+├── data_ref/
+│   └── drone_network_telemetry_dataset.csv
+├── worlds/
+│   ├── baylands_uav_goal.world
+│   └── baylands_uav_experiment.world
+├── sim/bridge/
+│   ├── assemble.py
+│   └── concat.py
+└── experiments/
+    ├── data/
+    ├── logs/
+    ├── manifests/
+    ├── reports/
+    └── trace/
+```
+
+| Path | Responsibility |
+|---|---|
+| `mission.py` | MAVLink connection, PX4 arming, offboard setpoints, trajectory recording, landing, and disarming |
+| `run_uav_gazebo.py` | Standalone Gazebo/PX4 launcher and process cleanup |
+| `prepare_world.py` | Creates the isolated UAV-and-goal world copy |
+| `schema_reference.json` | Authoritative 44-column order, vocabularies, ranges, and response mapping |
+| `validate_dataset.py` | Validates schema, types, ranges, vocabulary, IP addresses, ports, and response mapping |
+| `sim/bridge/assemble.py` | Builds a per-run dataset from a manifest, ROS evidence, and network metrics |
+| `sim/bridge/concat.py` | Concatenates complete per-run datasets and validates the result |
+| `experiments/manifests/` | One YAML scenario definition per network experiment run |
+| `experiments/logs/<run_id>/` | Physical evidence, mobility, Simu5G input/output, bridge result, and per-run CSV |
+| `experiments/trace/` | Simu5G-compatible mobility traces |
+| `experiments/reports/` | Validators, provenance, leakage audits, model results, plots, and completion summaries |
+
+The supplied document uses `~/uas_lab` as an example root. The exact project
+path mapping is recorded in `experiments/reports/document_delivery_mapping.md`.
+
+## 9. Per-run evidence layout
+
+A typical completed run contains:
+
+```text
+experiments/logs/<run_id>/
+├── scenario_manifest.yaml
+├── gazebo.log
+├── px4.log
+├── mavros.log
+├── rosbag/
+│   ├── metadata.yaml
+│   └── *.mcap
+├── ros_pose_trace.csv
+├── simu5g_mobility.txt
+├── topic_measurements.csv
+├── physical_source.json        # present for reused physical evidence
+└── network/
+    ├── input/
+    │   ├── scenario_manifest.yaml
+    │   ├── flow_contract.json
+    │   └── OMNeT++/Simu5G configuration
+    ├── raw/
+    │   ├── *.sca
+    │   ├── *.vec or *.vec.gz
+    │   └── network_metrics.csv or network_metrics.csv.gz
+    ├── data/
+    │   └── <run_id>_cosim.csv
+    ├── bridge_log.json
+    └── simu5g.log
+```
+
+Large completed vector and raw-metric files are gzip-compressed to control disk
+usage. The experiment notebook recognizes compressed evidence. If a standalone
+tool requires an uncompressed raw CSV, create a temporary copy with `gzip -dk`
+instead of deleting the archive.
+
+## 10. Scenario coverage
+
+### Benign and sensitivity conditions
+
+The experiment includes:
+
+- nominal baseline and pilot missions;
+- three benign baseline repetitions;
+- hover with telemetry and video activity;
+- slow, nominal, and approximately 8 m/s fast mobility;
+- 5-, 10-, and 20-minute duration conditions;
+- 1-, 3-, and 5-UAV network-load conditions;
+- 1-, 2-, and 3-cell conditions;
+- low, medium, and high background traffic;
+- good, moderate, and edge wireless conditions;
+- 0.5-, 1-, and 5-second aggregation windows; and
+- single, dual, and triple logical application-flow profiles.
+
+### Suspicious non-attack conditions
+
+| Scenario | Meaning | Repetitions |
+|---|---|---:|
+| `S1_HANDOVER_LOSS` | Short loss/degradation around handover | 2 |
+| `S2_AUTH` | Failed authentication burst from a known/misconfigured client | 2 |
+| `S3_API_RETRY` | Non-malicious API retry storm | 2 |
+| `S4_DROPOUT` | Temporary telemetry dropout and recovery | 2 |
+
+### Malicious conditions
+
+| Attack type | Main expected indicator | Required response |
+|---|---|---|
+| Denial of service | Traffic burst, delay/loss/load effects | `rate_limit_and_block_flow` |
+| Session hijacking | Session reuse from a changed source | `revoke_session_force_reauth` |
+| Identity theft | Identity/address/context mismatch | `suspend_identity_quarantine_device` |
+| Control-protocol attack | Abnormal MAVLink-like command activity | `block_command_channel_safe_mode` |
+| Lateral movement | Internal scans and unusual destinations | `segment_slice_isolate_component` |
+| Network-application attack | API request/failure burst | `rate_limit_api_alert_security_team` |
+
+Every malicious class has low- and high-intensity runs. Denial-of-service also
+has 30-second, 90-second, and repeated multi-source burst variants. Malicious
+attacks are simulated as controlled network scenarios; they do not alter a live
+aircraft during flight.
+
+## 11. Dataset reference
+
+| File | Purpose |
+|---|---|
+| `drone_network_telemetry_cosim.csv` | Canonical document-complete dataset: 25,490 rows, 37 missions |
+| `drone_network_telemetry_cosim_core.csv` | Preserved earlier core benchmark: 17,720 rows, 28 missions |
+| `drone_network_telemetry_cosim_document_complete.csv` | Provenance alias synchronized with the canonical dataset |
+| `drone_network_telemetry_sensitivity.csv` | Separate nine-mission sensitivity dataset; not mixed into core model training |
+| `drone_network_telemetry_benign_subset.csv` | Intermediate benign-only checkpoint |
+| `drone_network_telemetry_stage_s1.csv` | Intermediate checkpoint through suspicious S1 |
+
+The 44 fields cover identity/session metadata, flow endpoints, packet and byte
+counts, rate and throughput, latency and jitter, loss and retransmission,
+connection duration, authentication, cell and handover state, signal quality,
+command/video/telemetry/API activity, failed attempts, behavioral flags,
+anomaly score, attack stage/severity/response, and the incident label.
+
+The schema provenance is recorded in `schema_reference.json`. The original
+schema file referenced by the supplied documents was unavailable, so the local
+contract was reconstructed from the primary documents, supplied reference
+dataset, generator, and label map. The validator treats this version as
+authoritative for this experiment.
+
+## 12. Bridge commands
+
+Build one per-run dataset:
+
+```bash
+python sim/bridge/assemble.py \
+  --window 1.0 \
+  --ros-log experiments/logs/<run_id> \
+  --net-csv /path/to/uncompressed/network_metrics.csv \
+  --manifest experiments/manifests/<run_id>.yaml \
+  --flow-contract experiments/logs/<run_id>/network/input/flow_contract.json \
+  --bridge-log experiments/logs/<run_id>/network/bridge_log.json \
+  --schema schema_reference.json \
+  --out experiments/logs/<run_id>/network/data/<run_id>_cosim.csv
+```
+
+Concatenate selected complete runs:
+
+```bash
+python sim/bridge/concat.py \
+  experiments/logs/<run_1>/network/data/<run_1>_cosim.csv \
+  experiments/logs/<run_2>/network/data/<run_2>_cosim.csv \
+  --schema schema_reference.json \
+  --out experiments/data/drone_network_telemetry_cosim.csv
+```
+
+The experiment notebook already records the authoritative 37-run source order
+in `experiments/reports/final_dataset_manifest.json`. Running a wildcard over
+all 46 per-run CSVs would also include sensitivity-only derivatives and would
+not reproduce the canonical dataset.
+
+## 13. Machine-learning result
+
+The document-complete evaluation uses complete mission identifiers for the
+training/test boundary. Source-derived mission variants are kept out of the
+training partition to reduce leakage.
+
+The recorded complete-feature random-forest result is:
+
+| Metric | Simulation-derived dataset | Synthetic reference |
+|---|---:|---:|
+| Accuracy | 0.9278 | 0.9988 |
+| Macro-F1 | 0.7384 | 0.9986 |
+| False-alarm rate | 0.0122 | 0.0006 |
+
+The performance gap is expected: the supplied synthetic reference is easier to
+separate than the simulation-derived telemetry. Detailed per-class metrics,
+confusion matrices, feature importances, train/test mission lists, and
+distribution comparisons are stored under `experiments/reports/`.
+
+Start with:
+
+- `document_completion_metrics.md`;
+- `document_complete_model_evaluation.json`;
+- `document_complete_vs_synthetic_distributions.csv`;
+- `plots/document_complete_confusion_matrix.png`; and
+- `plots/document_complete_feature_importance.png`.
+
+## 14. Methodological boundaries
+
+These are explicit scope limits, not hidden missing work:
+
+1. **Measured-flight reuse:** the 46 network scenarios use five unique measured
+   Gazebo/PX4 flight recordings. Controlled scenarios reuse those recordings to
+   keep motion fixed while changing network/security parameters. Reuse is
+   recorded in `physical_source.json` and provenance reports.
+2. **Logical slice profiles:** single, dual, and triple profiles separate
+   mission/video/telemetry/backend application flows. They are not native,
+   scheduler-enforced 5G-core slices.
+3. **Baseline reconstruction:** the original synthetic baseline notebook was
+   unavailable. A schema-compatible reconstructed baseline was executed against
+   the preserved synthetic reference without changing the 44-column contract.
+4. **Trace-driven attacks:** attacks affect the Simu5G/network evidence and
+   resulting telemetry. They do not currently influence live PX4 flight
+   behavior.
+5. **Simulation-to-real work:** physical 5G modems, native network slicing,
+   hardware-in-the-loop, and real UAV validation are outside these two
+   simulation-only documents.
+
+The formal explanation is in
+`experiments/reports/document_delivery_mapping.md` and
+`experiments/reports/document_compliance_audit.md`.
+
+## 15. Troubleshooting
+
+### Another Gazebo server is running
+
+The launcher refuses to start when `/server_control` already exists:
+
+```bash
+gz service -l | rg '^/server_control$'
+```
+
+Close the existing Gazebo window and rerun the command. Avoid starting two
+notebook or launcher sessions simultaneously.
+
+### Gazebo opens blank or models are missing
+
+Confirm that both local model sources exist:
+
+```bash
+ls /home/basudeo/Documents/EiraX/simulation/models
+ls /home/basudeo/Documents/EiraX/UGV_UAV/px4_runtime/models
+```
+
+The launcher adds these paths to `GZ_SIM_RESOURCE_PATH`. A fresh Git clone does
+not contain the model packages.
+
+### PX4 does not arm
+
+- Make sure Gazebo physics is playing.
+- Wait for the PX4 position and heading message.
+- Check the newest `px4.log` and `gazebo.log` under `logs/run_<timestamp>/`.
+- Confirm no older PX4 process or simulator session is holding the UDP ports.
+
+### MAVROS fails in the notebook
+
+Verify the package and ROS environment:
+
+```bash
+source /opt/ros/jazzy/setup.bash
+ros2 pkg prefix mavros
+```
+
+The notebook uses `fcu_url:=udp://:14550@127.0.0.1:18570` for its MAVROS
+connection.
+
+### Wrong Jupyter kernel or missing Python module
+
+```bash
+conda activate eirax
+python --version
+python -c "import pandas, numpy, yaml, sklearn, nbformat"
+jupyter kernelspec list
+```
+
+Select `eirax` in the notebook interface.
+
+### Experiment notebook reports missing evidence
+
+The second notebook expects the local `experiments/logs/` tree and its 46
+scenario directories. These large files are ignored by Git. Restore the
+experiment evidence before running the notebook on another machine.
+
+### Raw Simu5G CSV is compressed
+
+Completed raw results may contain `network_metrics.csv.gz`. To produce a
+temporary uncompressed copy without deleting the archive:
+
+```bash
+gzip -dk experiments/logs/<run_id>/network/raw/network_metrics.csv.gz
+```
+
+Remove only the temporary uncompressed copy after assembly if storage is
+limited.
+
+## 16. Storage and preservation
+
+Current approximate local storage use is:
+
+| Content | Size |
+|---|---:|
+| `experiments/logs/` | 2.4 GiB |
+| `experiments/data/` | 27 MiB |
+| `experiments/trace/` | 17 MiB |
+| `notebook_runs/` | 319 MiB |
+
+Large Simu5G `.vec` and raw network CSV files are compressed. ROS bags are
+hard-linked across derived scenarios where the same measured flight is reused.
+
+Do not delete these if the experiment notebook must remain independently
+verifiable:
+
+- `experiments/manifests/`;
+- `experiments/logs/<run_id>/network/data/`;
+- ROS bag metadata and measured pose traces;
+- `experiments/reports/*_validation.txt`;
+- provenance and leakage audits;
+- `schema_reference.json`; and
+- the canonical dataset and its manifest.
+
+Before deleting generated evidence, verify free space and preserve the final
+dataset, manifests, reports, and checksums in a separate archive.
+
+## 17. Primary completion references
+
+- `experiments/reports/document_only_notebook_summary.json`
+- `experiments/reports/final_dataset_manifest.json`
+- `experiments/reports/document_compliance_audit.md`
+- `experiments/reports/document_delivery_mapping.md`
+- `experiments/reports/experiment_completion.md`
+- `experiments/reports/document_completion_metrics.md`
+- `experiments/reports/document_complete_leakage_audit.json`
+- `experiments/reports/storage_audit.json`
+
+For the supplied two simulation documents, the documented experiment stage is
+complete. Further work—live attack response, native slicing, physical radios,
+hardware-in-the-loop, and physical UAV validation—belongs to a later research
+stage.

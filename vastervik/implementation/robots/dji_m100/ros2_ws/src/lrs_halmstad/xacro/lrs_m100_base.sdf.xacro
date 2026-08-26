@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="lrs_m100_macro" params="base_link_name base_link_kinematic:=false">
+
+<frame name="lidar_frame" attached_to="${base_link_name}">
+    <pose>0.0 0 0.5 0 0 0</pose>
+</frame>    
+
+      <link name="${base_link_name}">
+             <pose rotation_format="euler_rpy" degrees="true">0 0 0 0 0 0</pose>        
+            <gravity>false</gravity>
+            <kinematic>${base_link_kinematic}</kinematic>
+            <visual name="visual">
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+	          <mesh>
+                    <!-- The supplied DAE references a Git-LFS pointer instead
+                         of a real texture. Use the identical local STL shape
+                         so the aircraft always renders on deployed systems. -->
+                    <uri>model://matrice_100/meshes/lrs_m100.stl</uri>
+                    <scale>1.0 1.0 1.0</scale>
+                  </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.65 0.67 0.70 1.0</ambient>
+                    <diffuse>0.78 0.80 0.83 1.0</diffuse>
+                    <specular>0.20 0.20 0.20 1.0</specular>
+                </material>
+            </visual>
+
+            <collision name="collision">
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+	          <mesh>
+                    <uri>model://matrice_100/meshes/lrs_m100.stl</uri>
+                    <scale>1.0 1.0 1.0</scale>
+                  </mesh>
+                </geometry>
+            </collision>
+        </link>
+        
+    </xacro:macro>
+</robot>

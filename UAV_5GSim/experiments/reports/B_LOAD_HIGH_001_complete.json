@@ -1,0 +1,19 @@
+{
+  "physical": "passed",
+  "simu5g": "passed",
+  "bridge": "passed",
+  "validation": "passed",
+  "rows": 600,
+  "columns": 44,
+  "free_gib": 232.62700271606445,
+  "run_id": "B_LOAD_HIGH_001",
+  "normal_rows": 600,
+  "background_ues": 4,
+  "background_rate_pps_per_ue": 400.0,
+  "background_packet_size_bytes": 1200,
+  "serving_cells": [
+    "gnb_1",
+    "gnb_2"
+  ],
+  "final_handover_count": 3
+}

@@ -1,0 +1,31 @@
+platform:
+  model: husky_a200  # Confirm against the physical nameplate.
+  drive: skid_steer
+  # Match the physical Halmstad Clearpath platform controller limits.
+  command_timeout_s: 5.0
+  max_forward_speed_mps: 2.0
+  max_reverse_speed_mps: 1.5
+  max_linear_acceleration_mps2: 1.2
+  max_yaw_rate_radps: 1.0
+  max_yaw_acceleration_radps2: 0.6
+  max_yaw_deceleration_radps2: 0.8
+
+sensors:
+  lidar_2d:
+    enabled: true
+    driver: CHANGE_ME
+    address: CHANGE_ME
+  lidar_3d:
+    enabled: false
+    driver: CHANGE_ME
+    address: CHANGE_ME
+  camera:
+    enabled: false
+    driver: CHANGE_ME
+    serial: CHANGE_ME
+  imu:
+    enabled: true
+    driver: platform
+  gps:
+    enabled: false
+    driver: CHANGE_ME

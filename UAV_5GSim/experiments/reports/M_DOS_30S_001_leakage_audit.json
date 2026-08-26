@@ -1,0 +1,6 @@
+{
+  "run_id": "M_DOS_30S_001",
+  "traffic_burst_from_measured_packet_rate": true,
+  "features_derived_before_labels": true,
+  "passed": true
+}

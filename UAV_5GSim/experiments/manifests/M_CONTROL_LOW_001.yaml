@@ -1,0 +1,68 @@
+organization_id: eirax
+fleet_id: fleet_1
+drone_id: uav_1
+mission_id: M_CONTROL_LOW_001
+domain: public_safety
+mission_type: surveillance
+scenario_id: M_CONTROL_LOW_001
+scenario_family: malicious
+simulation:
+  drone_count: 1
+  mission_speed_mps: 3.0
+  duration_sec: 300
+  aggregation_window_sec: 1.0
+  cells: 2
+  background_traffic: low
+  network_slice_profile: single_mission_slice
+  route:
+  - spawn
+  - waypoint_1
+  - waypoint_2
+  - goal
+  physical_source_run: B1_BASE_001
+  controlled_variable: control_protocol_attack
+attack:
+  enabled: true
+  attack_type: control_protocol_attack
+  injection_point: Simu5G controlled flow
+  start_sec: 120
+  end_sec: 180
+  intensity: low
+label_windows:
+- start_sec: 0
+  end_sec: 120
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+- start_sec: 120
+  end_sec: 180
+  attack_type: control_protocol_attack
+  attack_stage: execution
+  severity: low
+  incident_label: malicious
+  recommended_response: block_command_channel_safe_mode
+- start_sec: 180
+  end_sec: 210
+  attack_type: unknown_anomaly
+  attack_stage: recovery
+  severity: low
+  incident_label: suspicious
+  recommended_response: increase_monitoring
+- start_sec: 210
+  end_sec: 300
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+allowed_destinations:
+- 10.0.0.2
+expected_effects:
+- features measured from Simu5G receiver and radio vectors
+- label fields applied only after feature derivation
+- one controlled scenario per run
+recovery:
+  start_sec: 180
+  end_sec: 210
