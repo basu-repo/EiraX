@@ -1,0 +1,221 @@
+[INFO] [1787774362.162290398] [mavros_node]: Starting mavros_node container
+[INFO] [1787774362.162375317] [mavros_node]: FCU URL: udp://:14550@127.0.0.1:18570
+[INFO] [1787774362.162385767] [mavros_node]: GCS URL: 
+[INFO] [1787774362.162392384] [mavros_node]: UAS Prefix: /uas1
+[INFO] [1787774362.162398016] [mavros_node]: Starting mavros router node
+[INFO] [1787774362.167783428] [mavros_router]: Built-in SIMD instructions: SSE, SSE2
+[INFO] [1787774362.167814365] [mavros_router]: Built-in MAVLink package version: 2026.3.3
+[INFO] [1787774362.167825908] [mavros_router]: Known MAVLink dialects: common ardupilotmega ASLUAV AVSSUAS all csAirLink cubepilot development icarous loweheiser marsh matrixpilot paparazzi standard stemstudios storm32 uAvionix ualberta
+[INFO] [1787774362.167834569] [mavros_router]: MAVROS Router started
+[INFO] [1787774362.167929521] [mavros_node]: Starting mavros uas node
+[INFO] [1787774362.189053127] [mavros_router]: Requested to add endpoint: type: 0, url: udp://:14550@127.0.0.1:18570
+[INFO] [1787774362.189100742] [mavros_router]: Endpoint link[1000] created
+[INFO] [1787774362.189432094] [mavros_router]: link[1000] opened successfully
+[INFO] [1787774362.189455928] [mavros_router]: Requested to add endpoint: type: 2, url: /uas1
+[INFO] [1787774362.189473410] [mavros_router]: Endpoint link[1001] created
+[INFO] [1787774362.190352888] [mavros_router]: link[1000] detected remote address 1.1
+[INFO] [1787774362.192248651] [mavros_router]: link[1001] opened successfully
+[INFO] [1787774362.199105900] [mavros]: UAS Executor started, threads: 12
+[INFO] [1787774362.211266762] [mavros]: Plugin actuator_control created
+[INFO] [1787774362.211324049] [mavros]: Plugin actuator_control initialized
+[INFO] [1787774362.226402998] [mavros]: Plugin adsb created
+[INFO] [1787774362.226450750] [mavros]: Plugin adsb initialized
+[INFO] [1787774362.229909405] [mavros]: Plugin altitude created
+[INFO] [1787774362.229941671] [mavros]: Plugin altitude initialized
+[INFO] [1787774362.234108112] [mavros]: Plugin cam_imu_sync created
+[INFO] [1787774362.234139474] [mavros]: Plugin cam_imu_sync initialized
+[INFO] [1787774362.237974635] [mavros]: Plugin camera created
+[INFO] [1787774362.238010486] [mavros]: Plugin camera initialized
+[INFO] [1787774362.242117258] [mavros]: Plugin cellular_status created
+[INFO] [1787774362.242152935] [mavros]: Plugin cellular_status initialized
+[INFO] [1787774362.249774581] [mavros]: Plugin command created
+[INFO] [1787774362.249820392] [mavros]: Plugin command initialized
+[INFO] [1787774362.254267093] [mavros]: Plugin companion_process_status created
+[INFO] [1787774362.254296766] [mavros]: Plugin companion_process_status initialized
+[INFO] [1787774362.259985173] [mavros]: Plugin debug_value created
+[INFO] [1787774362.260031249] [mavros]: Plugin debug_value initialized
+[INFO] [1787774362.264709961] [mavros.distance_sensor]: DS: Plugin not configured!
+[INFO] [1787774362.264802911] [mavros]: Plugin distance_sensor created
+[INFO] [1787774362.264827317] [mavros]: Plugin distance_sensor initialized
+[INFO] [1787774362.270278925] [mavros]: Plugin esc_status created
+[INFO] [1787774362.270322945] [mavros]: Plugin esc_status initialized
+[INFO] [1787774362.275788580] [mavros]: Plugin esc_telemetry created
+[INFO] [1787774362.275835455] [mavros]: Plugin esc_telemetry initialized
+[INFO] [1787774362.282427942] [mavros]: Plugin fake_gps created
+[INFO] [1787774362.282474667] [mavros]: Plugin fake_gps initialized
+[INFO] [1787774362.293563424] [mavros]: Plugin ftp created
+[INFO] [1787774362.293605997] [mavros]: Plugin ftp initialized
+[INFO] [1787774362.301231477] [mavros]: Plugin geofence created
+[INFO] [1787774362.301276672] [mavros]: Plugin geofence initialized
+[INFO] [1787774362.312867983] [mavros]: Plugin gimbal_control created
+[INFO] [1787774362.312917391] [mavros]: Plugin gimbal_control initialized
+[INFO] [1787774362.326924435] [mavros]: Plugin global_position created
+[INFO] [1787774362.326968448] [mavros]: Plugin global_position initialized
+[INFO] [1787774362.334299209] [mavros]: Plugin gps_input created
+[INFO] [1787774362.334341893] [mavros]: Plugin gps_input initialized
+[INFO] [1787774362.343801180] [mavros]: Plugin gps_rtk created
+[INFO] [1787774362.343843195] [mavros]: Plugin gps_rtk initialized
+[INFO] [1787774362.352467734] [mavros]: Plugin gps_status created
+[INFO] [1787774362.352512996] [mavros]: Plugin gps_status initialized
+[INFO] [1787774362.360971542] [mavros]: Plugin guided_target created
+[INFO] [1787774362.361029504] [mavros]: Plugin guided_target initialized
+[INFO] [1787774362.372512353] [mavros]: Plugin hil created
+[INFO] [1787774362.372563689] [mavros]: Plugin hil initialized
+[INFO] [1787774362.381814947] [mavros]: Plugin home_position created
+[INFO] [1787774362.381859516] [mavros]: Plugin home_position initialized
+[INFO] [1787774362.393152566] [mavros]: Plugin imu created
+[INFO] [1787774362.393199769] [mavros]: Plugin imu initialized
+[INFO] [1787774362.404189417] [mavros]: Plugin landing_target created
+[INFO] [1787774362.404229854] [mavros]: Plugin landing_target initialized
+[INFO] [1787774362.416747071] [mavros]: Plugin local_position created
+[INFO] [1787774362.416798184] [mavros]: Plugin local_position initialized
+[INFO] [1787774362.429793768] [mavros]: Plugin log_transfer created
+[INFO] [1787774362.429859686] [mavros]: Plugin log_transfer initialized
+[INFO] [1787774362.440735216] [mavros]: Plugin mag_calibration_status created
+[INFO] [1787774362.440779231] [mavros]: Plugin mag_calibration_status initialized
+[INFO] [1787774362.453290774] [mavros]: Plugin manual_control created
+[INFO] [1787774362.453334723] [mavros]: Plugin manual_control initialized
+[INFO] [1787774362.465256303] [mavros]: Plugin mocap_pose_estimate created
+[INFO] [1787774362.465295093] [mavros]: Plugin mocap_pose_estimate initialized
+[INFO] [1787774362.480986802] [mavros]: Plugin mount_control created
+[INFO] [1787774362.481043150] [mavros]: Plugin mount_control initialized
+[INFO] [1787774362.494284005] [mavros]: Plugin nav_controller_output created
+[INFO] [1787774362.494320280] [mavros]: Plugin nav_controller_output initialized
+[INFO] [1787774362.508127918] [mavros]: Plugin obstacle_distance created
+[INFO] [1787774362.508164473] [mavros]: Plugin obstacle_distance initialized
+[INFO] [1787774362.522687836] [mavros]: Plugin obstacle_distance_3d created
+[INFO] [1787774362.522724847] [mavros]: Plugin obstacle_distance_3d initialized
+[INFO] [1787774362.538130481] [mavros]: Plugin odometry created
+[INFO] [1787774362.538182884] [mavros]: Plugin odometry initialized
+[INFO] [1787774362.553165169] [mavros]: Plugin onboard_computer_status created
+[INFO] [1787774362.553202142] [mavros]: Plugin onboard_computer_status initialized
+[INFO] [1787774362.570548087] [mavros]: Plugin open_drone_id created
+[INFO] [1787774362.570589011] [mavros]: Plugin open_drone_id initialized
+[INFO] [1787774362.586100226] [mavros]: Plugin optical_flow created
+[INFO] [1787774362.586152698] [mavros]: Plugin optical_flow initialized
+[INFO] [1787774362.600117065] [mavros]: Plugin param created
+[INFO] [1787774362.600165858] [mavros]: Plugin param initialized
+[INFO] [1787774362.614326272] [mavros]: Plugin play_tune created
+[INFO] [1787774362.614369968] [mavros]: Plugin play_tune initialized
+[INFO] [1787774362.631811359] [mavros]: Plugin px4flow created
+[INFO] [1787774362.631856422] [mavros]: Plugin px4flow initialized
+[INFO] [1787774362.650190792] [mavros]: Plugin rallypoint created
+[INFO] [1787774362.650242606] [mavros]: Plugin rallypoint initialized
+[INFO] [1787774362.665033063] [mavros]: Plugin rangefinder created
+[INFO] [1787774362.665097502] [mavros]: Plugin rangefinder initialized
+[INFO] [1787774362.682977971] [mavros]: Plugin rc_io created
+[INFO] [1787774362.683051509] [mavros]: Plugin rc_io initialized
+[INFO] [1787774362.699232432] [mavros]: Plugin setpoint_accel created
+[INFO] [1787774362.699265242] [mavros]: Plugin setpoint_accel initialized
+[INFO] [1787774362.717160568] [mavros]: Plugin setpoint_attitude created
+[INFO] [1787774362.717203414] [mavros]: Plugin setpoint_attitude initialized
+[INFO] [1787774362.737601388] [mavros]: Plugin setpoint_position created
+[INFO] [1787774362.737650940] [mavros]: Plugin setpoint_position initialized
+[INFO] [1787774362.758625384] [mavros]: Plugin setpoint_raw created
+[INFO] [1787774362.758673980] [mavros]: Plugin setpoint_raw initialized
+[INFO] [1787774362.782137897] [mavros]: Plugin setpoint_trajectory created
+[INFO] [1787774362.782174659] [mavros]: Plugin setpoint_trajectory initialized
+[INFO] [1787774362.801067403] [mavros]: Plugin setpoint_velocity created
+[INFO] [1787774362.801107685] [mavros]: Plugin setpoint_velocity initialized
+[INFO] [1787774362.821505003] [mavros]: Plugin sim_state created
+[INFO] [1787774362.821560663] [mavros]: Plugin sim_state initialized
+[INFO] [1787774362.853189274] [mavros]: Plugin sys_status created
+[INFO] [1787774362.853246897] [mavros]: Plugin sys_status initialized
+[INFO] [1787774362.873407491] [mavros.time]: TM: Timesync mode: MAVLINK
+[INFO] [1787774362.877059105] [mavros]: Plugin sys_time created
+[INFO] [1787774362.877102785] [mavros]: Plugin sys_time initialized
+[INFO] [1787774362.898153562] [mavros]: Plugin tdr_radio created
+[INFO] [1787774362.898212729] [mavros]: Plugin tdr_radio initialized
+[INFO] [1787774362.920173952] [mavros]: Plugin terrain created
+[INFO] [1787774362.920219377] [mavros]: Plugin terrain initialized
+[INFO] [1787774362.942572075] [mavros]: Plugin trajectory created
+[INFO] [1787774362.942612580] [mavros]: Plugin trajectory initialized
+[INFO] [1787774362.966781143] [mavros]: Plugin tunnel created
+[INFO] [1787774362.966829297] [mavros]: Plugin tunnel initialized
+[INFO] [1787774362.991109345] [mavros]: Plugin vfr_hud created
+[INFO] [1787774362.991163134] [mavros]: Plugin vfr_hud initialized
+[INFO] [1787774363.015547629] [mavros]: Plugin vibration created
+[INFO] [1787774363.015591752] [mavros]: Plugin vibration initialized
+[INFO] [1787774363.043685744] [mavros]: Plugin vision_pose created
+[INFO] [1787774363.043721794] [mavros]: Plugin vision_pose initialized
+[INFO] [1787774363.068133124] [mavros]: Plugin vision_speed created
+[INFO] [1787774363.068173857] [mavros]: Plugin vision_speed initialized
+[INFO] [1787774363.102908449] [mavros]: Plugin waypoint created
+[INFO] [1787774363.102965999] [mavros]: Plugin waypoint initialized
+[INFO] [1787774363.129967578] [mavros]: Plugin wheel_odometry created
+[INFO] [1787774363.130018662] [mavros]: Plugin wheel_odometry initialized
+[INFO] [1787774363.155313330] [mavros]: Plugin wind_estimation created
+[INFO] [1787774363.155373652] [mavros]: Plugin wind_estimation initialized
+[INFO] [1787774363.157429683] [mavros]: Built-in SIMD instructions: SSE, SSE2
+[INFO] [1787774363.157466359] [mavros]: Built-in MAVLink package version: 2026.3.3
+[INFO] [1787774363.157472628] [mavros]: Known MAVLink dialects: common ardupilotmega ASLUAV AVSSUAS all csAirLink cubepilot development icarous loweheiser marsh matrixpilot paparazzi standard stemstudios storm32 uAvionix ualberta
+[INFO] [1787774363.157478616] [mavros]: MAVROS UAS via /uas1 started. MY ID 1.191, TARGET ID 1.1
+[INFO] [1787774363.166558321] [mavros.imu]: IMU: Attitude quaternion IMU detected!
+[INFO] [1787774363.842812829] [mavros_router]: link[1001] detected remote address 1.191
+[WARN] [1787774363.862484452] [mavros.cmd]: CMD: Unexpected command 520, result 3
+[INFO] [1787774363.968473321] [mavros]: CON: Got HEARTBEAT, connected. FCU: PX4 Autopilot
+[INFO] [1787774363.968678392] [mavros.mission]: WP: detected enable_partial_push: 0
+[INFO] [1787774363.986519515] [mavros.imu]: IMU: Attitude quaternion IMU detected!
+[WARN] [1787774365.975504728] [mavros.sys]: VER: broadcast request timeout, retries left 4
+[WARN] [1787774366.975772492] [mavros.sys]: VER: broadcast request timeout, retries left 3
+[ERROR] [1787774367.980606102] [mavros.sys]: VER: command plugin service call failed!
+[WARN] [1787774367.980663648] [mavros.sys]: VER: unicast request timeout, retries left 2
+[ERROR] [1787774368.980164895] [mavros.sys]: VER: command plugin service call failed!
+[WARN] [1787774368.980215552] [mavros.sys]: VER: unicast request timeout, retries left 1
+[ERROR] [1787774369.981327380] [mavros.sys]: VER: command plugin service call failed!
+[WARN] [1787774369.981369824] [mavros.sys]: VER: unicast request timeout, retries left 0
+[ERROR] [1787774370.981509137] [mavros.sys]: VER: command plugin service call failed!
+[WARN] [1787774370.981577484] [mavros.sys]: VER: your FCU don't support AUTOPILOT_VERSION, switched to default capabilities
+[INFO] [1787774371.119780941] [mavros_router]: link[1000] detected remote address 250.0
+[WARN] [1787774371.127809093] [mavros.sys]: FCU: UNK(8): EVENT 11047904 with args -0-0-0-0-0-128-0-0-0-176-122-127-128-176-122-127-128-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[INFO] [1787774371.127881223] [mavros.sys]: FCU: EVENT 377561 with args -8-0-0-0-20-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[WARN] [1787774371.127968183] [mavros.sys]: FCU: EVENT 453929 with args -255-255-255-255-7-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[WARN] [1787774371.128005005] [mavros.sys]: FCU: UNK(8): EVENT 1914663 with args -0-10-29-2-56-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[INFO] [1787774373.127914220] [mavros.sys]: FCU: EVENT 9489139 with args -4-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[INFO] [1787774374.859096761] [mavros.sys]: FCU: EVENT 4277609 with args -0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[INFO] [1787774378.970259135] [mavros.mission]: WP: mission received
+[INFO] [1787774383.969169897] [mavros.rallypoint]: RP: mission received
+[INFO] [1787774388.975268772] [mavros.geofence]: GF: mission received
+[INFO] [1787774674.126627628] [mavros.sys]: FCU: EVENT 3322590 with args -0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[WARN] [1787774674.136590371] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774675.136617309] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774676.136658512] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774677.136596150] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774678.136590633] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774679.136599423] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774680.136637973] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774681.136612185] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774682.136599855] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774683.136609793] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774684.136610824] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774685.136642009] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774686.136594295] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774687.136607903] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774688.136582542] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774689.167590359] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774690.167644249] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774691.167616631] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774692.167609797] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774693.167606677] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774694.167599590] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774695.167663341] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774696.167604847] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774697.167590641] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774698.167608706] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774699.167585842] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774700.167619429] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774701.167605136] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774702.167593021] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774703.167578963] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[INFO] [1787774703.679668571] [mavros.sys]: FCU: EVENT 9844908 with args -0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[WARN] [1787774704.167651684] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[WARN] [1787774705.167595216] [mavros.guided_target]: PositionTargetGlobal failed because no origin
+[INFO] [1787774705.679645760] [mavros.sys]: FCU: EVENT 16017271 with args -6-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[WARN] [1787774707.479719934] [mavros.sys]: FCU: UNK(8): EVENT 11047904 with args -0-0-0-16-0-128-0-0-0-176-58-127-128-176-58-127-128-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[ERROR] [1787774707.479791694] [mavros.sys]: FCU: EVENT 11464574 with args -0-64-0-0-20-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[INFO] [1787774707.479886154] [mavros.sys]: FCU: EVENT 377561 with args -8-0-0-0-20-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[WARN] [1787774707.479923415] [mavros.sys]: FCU: EVENT 453929 with args -255-255-255-255-7-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[WARN] [1787774707.479993588] [mavros.sys]: FCU: UNK(8): EVENT 1914663 with args -0-10-29-2-56-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[WARN] [1787774707.487697212] [mavros.sys]: FCU: EVENT 13277401 with args -0-0-6-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[INFO] [1787774707.532257423] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[WARN] [1787774707.533412839] [mavros]: UAS Executor terminated

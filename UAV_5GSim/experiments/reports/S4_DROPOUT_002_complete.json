@@ -1,0 +1,25 @@
+{
+  "run_id": "S4_DROPOUT_002",
+  "family": "suspicious",
+  "scenario": "telemetry_dropout",
+  "intensity": "high",
+  "physical": "passed",
+  "simu5g": "passed",
+  "bridge": "passed",
+  "validation": "passed",
+  "rows": 600,
+  "columns": 44,
+  "label_distribution": {
+    "normal": 560,
+    "suspicious": 40
+  },
+  "measured_event_packet_count": 40,
+  "measured_event_failed_connections": 0,
+  "measured_event_api_requests": 0,
+  "measured_event_command_activity": 20,
+  "session_reuse_rows": 0,
+  "unusual_destination_rows": 0,
+  "traffic_burst_rows": 0,
+  "telemetry_inactive_rows": 40,
+  "free_gib": 231.59461212158203
+}

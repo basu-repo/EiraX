@@ -1,0 +1,25 @@
+# Initial conservative physical-Husky values. Complete after sensor/topic audit.
+controller_server:
+  ros__parameters:
+    controller_frequency: 10.0
+    min_x_velocity_threshold: 0.02
+    min_theta_velocity_threshold: 0.02
+
+local_costmap:
+  local_costmap:
+    ros__parameters:
+      global_frame: odom
+      robot_base_frame: base_link
+      rolling_window: true
+      width: 8.0
+      height: 8.0
+      resolution: 0.05
+      robot_radius: 0.50  # Replace with verified footprint polygon.
+
+global_costmap:
+  global_costmap:
+    ros__parameters:
+      global_frame: map
+      robot_base_frame: base_link
+      resolution: 0.05
+      robot_radius: 0.50

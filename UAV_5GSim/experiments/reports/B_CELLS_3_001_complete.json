@@ -1,0 +1,22 @@
+{
+  "run_id": "B_CELLS_3_001",
+  "type": "cells3",
+  "configuration": {
+    "type": "cells3",
+    "seed": 91
+  },
+  "rows": 600,
+  "columns": 44,
+  "validation": "passed",
+  "mean_latency_ms": 0.0002775999999999,
+  "mean_loss": 0.0030000000000000005,
+  "mean_signal_dbm": -38.925573305469364,
+  "mean_retransmission": 0.0,
+  "handovers": 2,
+  "serving_cells": [
+    "gnb_1",
+    "gnb_2",
+    "gnb_3"
+  ],
+  "free_gib": 228.37890625
+}

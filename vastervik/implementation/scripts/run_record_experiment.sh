@@ -1,0 +1,324 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+WS_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+STATE_DIR="/tmp/halmstad_ws"
+SIM_WORLD_FILE="$STATE_DIR/gazebo_sim.world"
+WORLD="baylands"
+MODE="follow"
+UAV_NAME="dji0"
+PROFILE="default"
+TAG=""
+RUN_DIR=""
+DRY_RUN=false
+OMNET=false
+RECORD_IGNORE_REGEX='.*/controller_manager/(statistics|introspection_data)/.*'
+
+usage() {
+  cat <<'EOF'
+Usage:
+  ./run.sh record_experiment [world] [options...]
+
+Record the standard experiment bag and write metadata/topics beside it.
+
+Common options:
+  mode:=follow|yolo
+  uav_name:=dji0
+  profile:=default|step2_light|vision|manual
+  tag:=name
+  out:=bags/experiments/...      Output run directory; bag goes under out/bag
+  omnet:=true|false
+  ignore_regex:=REGEX          Extra rosbag --exclude-regex. Default excludes controller_manager stats/introspection.
+  ignore_regex:=none           Disable recorder exclude regex.
+  dry_run:=true|false
+
+Examples:
+  ./run.sh record_experiment baylands mode:=yolo tag:=rotundan omnet:=true
+  ./run.sh record_experiment baylands profile:=manual out:=bags/replay_sources/rotundan_manual dry_run:=true
+EOF
+}
+
+for arg in "$@"; do
+  case "$arg" in
+    help|-h|--help)
+      usage
+      exit 0
+      ;;
+  esac
+done
+
+if [ -f "$SIM_WORLD_FILE" ]; then
+  sim_world="$(cat "$SIM_WORLD_FILE" 2>/dev/null || true)"
+  if [ -n "$sim_world" ]; then
+    WORLD="$sim_world"
+  fi
+fi
+
+if [ "$#" -gt 0 ] && [[ "$1" != *":="* ]] && [[ "$1" != *=* ]]; then
+  WORLD="$1"
+  shift
+fi
+
+for arg in "$@"; do
+  case "$arg" in
+    mode:=*)
+      MODE="${arg#mode:=}"
+      ;;
+    uav_name:=*)
+      UAV_NAME="${arg#uav_name:=}"
+      ;;
+    profile:=*)
+      PROFILE="${arg#profile:=}"
+      ;;
+    tag:=*)
+      TAG="${arg#tag:=}"
+      ;;
+    out:=*)
+      RUN_DIR="${arg#out:=}"
+      ;;
+      dry_run:=*)
+      DRY_RUN="${arg#dry_run:=}"
+      ;;
+    omnet:=*)
+      OMNET="${arg#omnet:=}"
+      ;;
+    ignore_regex:=*)
+      RECORD_IGNORE_REGEX="${arg#ignore_regex:=}"
+      ;;
+    *)
+      echo "Unknown argument: $arg" >&2
+      usage >&2
+      exit 2
+      ;;
+  esac
+done
+
+case "$MODE" in
+  follow|yolo)
+    ;;
+  *)
+    echo "Invalid mode: $MODE" >&2
+    exit 2
+    ;;
+esac
+
+case "$PROFILE" in
+  default|step2_light|vision|manual)
+    ;;
+  *)
+    echo "Invalid profile: $PROFILE" >&2
+    exit 2
+    ;;
+esac
+
+case "$DRY_RUN" in
+  true|false)
+    ;;
+  *)
+    echo "Invalid dry_run option: $DRY_RUN" >&2
+    exit 2
+    ;;
+esac
+
+case "$OMNET" in
+  true|false)
+    ;;
+  *)
+    echo "Invalid omnet option: $OMNET" >&2
+    echo "Use omnet:=true or omnet:=false" >&2
+    exit 2
+    ;;
+esac
+
+timestamp="$(date +%m%d-%H%M%S)"
+safe_tag="$(printf '%s' "$TAG" | tr -c 'A-Za-z0-9_.-' '_')"
+run_name="${MODE}_${timestamp}"
+if [ -n "$safe_tag" ]; then
+  run_name="${safe_tag}_${run_name}"
+fi
+
+if [ -n "$RUN_DIR" ]; then
+  case "$RUN_DIR" in
+    /*)
+      RUN_DIR_ABS="$RUN_DIR"
+      ;;
+    *)
+      RUN_DIR_ABS="$WS_ROOT/$RUN_DIR"
+      ;;
+  esac
+else
+  RUN_DIR_ABS="$WS_ROOT/bags/experiments/$WORLD/$run_name"
+fi
+
+BAG_DIR="$RUN_DIR_ABS/bag"
+TOPICS_FILE="$RUN_DIR_ABS/topics.txt"
+METADATA_FILE="$RUN_DIR_ABS/metadata.json"
+
+TOPICS=(
+  "/$UAV_NAME/pose"
+)
+
+if [ "$PROFILE" != "step2_light" ] && [ "$PROFILE" != "manual" ]; then
+  TOPICS+=(
+    "/clock"
+    "/coord/events"
+    "/a201_0000/amcl_pose_odom"
+    "/$UAV_NAME/update_pan"
+    "/$UAV_NAME/update_tilt"
+  )
+fi
+
+if [[ "$WORLD" == baylands* ]]; then
+  TOPICS+=("/a201_0000/ground_truth/odom")
+fi
+
+if [ "$PROFILE" = "manual" ]; then
+  TOPICS+=(
+    "/clock"
+    "/a201_0000/platform/cmd_vel"
+  )
+fi
+
+if [ "$MODE" = "yolo" ]; then
+  TOPICS+=(
+    "/coord/leader_estimate"
+    "/coord/leader_estimate_status"
+    "/coord/leader_detection_status"
+    "/$UAV_NAME/psdk_ros2/flight_control_setpoint_ENUposition_yaw"
+  )
+  if [ "$PROFILE" != "step2_light" ]; then
+    TOPICS+=(
+      "/coord/leader_estimate_error"
+#      "/coord/leader_follow_point"
+#      "/coord/leader_follow_point_status"
+#      "/coord/leader_planned_target"
+#      "/coord/leader_planned_target_status"
+#      "/coord/leader_visual_control"
+#      "/coord/leader_visual_control_status"
+#      "/coord/leader_visual_actuation_bridge_status"
+#      "/coord/leader_selected_target"
+#      "/coord/leader_selected_target_filtered"
+#      "/coord/leader_selected_target_filtered_status"
+#      "/coord/leader_visual_target_estimate"
+#      "/coord/leader_visual_target_estimate_status"
+      #"/$UAV_NAME/follow/actual/tilt_deg"
+    )
+  fi
+fi
+
+if [ "$OMNET" = true ]; then
+  TOPICS+=(
+    "/omnet/sim_time"
+    "/omnet/rssi_dbm"
+    "/omnet/snir_db"
+    "/omnet/packet_error_rate"
+    "/omnet/packet_delivery_ratio"
+    "/omnet/latency_s"
+    "/omnet/jitter_s"
+    "/omnet/radio_distance"
+  )
+fi
+
+if [ "$PROFILE" = "vision" ]; then
+  TOPICS+=(
+    "/$UAV_NAME/camera0/image_raw"
+    "/$UAV_NAME/camera0/camera_info"
+  )
+fi
+
+shell_join() {
+  local out=""
+  local part=""
+  for part in "$@"; do
+    printf -v out '%s%q ' "$out" "$part"
+  done
+  printf '%s' "${out% }"
+}
+
+json_escape() {
+  local value="$1"
+  value="${value//\\/\\\\}"
+  value="${value//\"/\\\"}"
+  value="${value//$'\n'/\\n}"
+  value="${value//$'\r'/\\r}"
+  value="${value//$'\t'/\\t}"
+  printf '%s' "$value"
+}
+
+git_branch="$(git -C "$WS_ROOT" branch --show-current 2>/dev/null || true)"
+git_head="$(git -C "$WS_ROOT" rev-parse --short HEAD 2>/dev/null || true)"
+if [ -n "$(git -C "$WS_ROOT" status --porcelain=v1 2>/dev/null || true)" ]; then
+  git_dirty=true
+else
+  git_dirty=false
+fi
+
+invocation="$(shell_join "$0" "$WORLD" "mode:=$MODE" "uav_name:=$UAV_NAME" "profile:=$PROFILE" "$@")"
+RECORD_ARGS=(ros2 bag record -o "$BAG_DIR")
+if [ -n "$RECORD_IGNORE_REGEX" ] && [ "$RECORD_IGNORE_REGEX" != "none" ]; then
+  RECORD_ARGS+=(--exclude-regex "$RECORD_IGNORE_REGEX")
+fi
+RECORD_ARGS+=("${TOPICS[@]}")
+bag_command="$(shell_join "${RECORD_ARGS[@]}")"
+hostname_value="$(hostname 2>/dev/null || true)"
+started_at="$(date -Is)"
+
+if [ "$DRY_RUN" = true ]; then
+  echo "Run dir: $RUN_DIR_ABS"
+  echo "Bag dir: $BAG_DIR"
+  echo "Profile: $PROFILE"
+  echo "Ignore regex: $RECORD_IGNORE_REGEX"
+  echo "Command: $bag_command"
+  echo "Topics: ${#TOPICS[@]}"
+  printf '%s\n' "${TOPICS[@]}"
+  exit 0
+fi
+
+mkdir -p "$RUN_DIR_ABS"
+printf '%s\n' "${TOPICS[@]}" > "$TOPICS_FILE"
+
+{
+  printf '{\n'
+  printf '  "started_at": "%s",\n' "$(json_escape "$started_at")"
+  printf '  "world": "%s",\n' "$(json_escape "$WORLD")"
+  printf '  "mode": "%s",\n' "$(json_escape "$MODE")"
+  printf '  "profile": "%s",\n' "$(json_escape "$PROFILE")"
+  printf '  "omnet": %s,\n' "$OMNET"
+  printf '  "uav_name": "%s",\n' "$(json_escape "$UAV_NAME")"
+  printf '  "tag": "%s",\n' "$(json_escape "$TAG")"
+  printf '  "run_name": "%s",\n' "$(json_escape "$run_name")"
+  printf '  "run_dir": "%s",\n' "$(json_escape "$RUN_DIR_ABS")"
+  printf '  "bag_dir": "%s",\n' "$(json_escape "$BAG_DIR")"
+  printf '  "topics_file": "%s",\n' "$(json_escape "$TOPICS_FILE")"
+  printf '  "workspace_root": "%s",\n' "$(json_escape "$WS_ROOT")"
+  printf '  "hostname": "%s",\n' "$(json_escape "$hostname_value")"
+  printf '  "git_branch": "%s",\n' "$(json_escape "$git_branch")"
+  printf '  "git_head": "%s",\n' "$(json_escape "$git_head")"
+  printf '  "git_dirty": %s,\n' "$git_dirty"
+  printf '  "invocation": "%s",\n' "$(json_escape "$invocation")"
+  printf '  "bag_command": "%s",\n' "$(json_escape "$bag_command")"
+  printf '  "record_ignore_regex": "%s",\n' "$(json_escape "$RECORD_IGNORE_REGEX")"
+  printf '  "topic_count": %s,\n' "${#TOPICS[@]}"
+  printf '  "topics": [\n'
+  for i in "${!TOPICS[@]}"; do
+    suffix=","
+    if [ "$i" -eq "$(( ${#TOPICS[@]} - 1 ))" ]; then
+      suffix=""
+    fi
+    printf '    "%s"%s\n' "$(json_escape "${TOPICS[$i]}")" "$suffix"
+  done
+  printf '  ]\n'
+  printf '}\n'
+} > "$METADATA_FILE"
+
+set +u
+source /opt/ros/jazzy/setup.bash
+source "$WS_ROOT/install/setup.bash"
+set -u
+
+echo "[run_record_experiment] Recording profile=$PROFILE mode=$MODE topics=${#TOPICS[@]} bag_dir=$BAG_DIR"
+if [ -n "$RECORD_IGNORE_REGEX" ] && [ "$RECORD_IGNORE_REGEX" != "none" ]; then
+  echo "[run_record_experiment] Excluding regex: $RECORD_IGNORE_REGEX"
+fi
+exec "${RECORD_ARGS[@]}"

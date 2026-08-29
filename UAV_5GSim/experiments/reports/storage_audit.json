@@ -1,0 +1,15 @@
+{
+  "runs_checked": 46,
+  "missing_required_evidence": 0,
+  "raw_evidence_policy": "Preserved: ROS bags, Simu5G scalar/vector evidence, exported network metrics, bridge logs, run datasets and audits. Large completed Simu5G vector and raw metric files are gzip-compressed; the pilot input remains directly readable.",
+  "experiment_logs_gib": 2.4,
+  "free_gib": 172.9,
+  "compressed_vector_files": 39,
+  "compressed_network_metric_files": 39,
+  "notebook_cells_executed": 31,
+  "additional_live_duration_runs": 3,
+  "live_duration_seconds": [300, 600, 1200],
+  "notebook_execution_errors": 0,
+  "temporary_scripts_removed": true,
+  "passed": true
+}

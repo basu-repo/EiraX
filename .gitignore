@@ -54,6 +54,10 @@
 **/install/
 **/log/
 **/logs/
+**/build_*/
+**/install_*/
+**/log_*/
+**/.cmdenv-log
 **/CMakeFiles/
 **/CMakeCache.txt
 
@@ -75,7 +79,39 @@
 **/px4_runtime/rootfs/eeprom/
 **/px4_runtime/rootfs/mavlink/
 
+# Raw OMNeT++/Simu5G vector output and compressed metric dumps. These are
+# regenerable from the scenario manifests and run to hundreds of megabytes per
+# batch. Scalars (.sca), the assembled cosim datasets, pose traces, manifests
+# and summaries stay in Git as the experiment evidence.
+**/network/raw/*.vec
+**/network/raw/*.vec.gz
+**/network/raw/*.vci
+**/network/raw/*.csv.gz
+
 # Temporary files
 **/*.tmp
 **/*.swp
 **/*~
+
+# Generated experiment runs and local runtime state
+**/datasets/run_*/
+**/datasets/tmp_datasets/
+**/notebook_runs/
+**/runtime_logs/
+**/results/run_*/
+**/third_party/python/
+/.vscode/browse.vc.db*
+
+# Vastervik is the self-contained deployable integration. Its authoritative
+# copied simulation and DJI/YOLO assets are required after cloning.
+!/vastervik/implementation/simulation/models/
+!/vastervik/implementation/simulation/models/**/
+!/vastervik/implementation/simulation/models/**
+!/vastervik/implementation/src/lrs_halmstad/models/
+!/vastervik/implementation/src/lrs_halmstad/models/**/
+!/vastervik/implementation/src/lrs_halmstad/models/**
+
+# Keep local model-editing backups out of Git even though the authoritative
+# Vastervik model trees above are included.
+/vastervik/implementation/simulation/models/**/*.backup*
+/vastervik/implementation/simulation/models/**/*.bak*

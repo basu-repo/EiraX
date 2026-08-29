@@ -1,0 +1,4 @@
+run_id,background_ues,rate_pps_per_ue,packet_size_bytes,telemetry_latency_mean_ms,telemetry_packet_loss_mean,telemetry_throughput_mean_kbps,telemetry_signal_quality_mean_dbm,telemetry_retransmission_rate_mean,handover_events
+B_LOAD_LOW_001,0,0,0,0.0002776,0.003,30.3088,-46.8148903897,0.000062893081761,1
+B_LOAD_MEDIUM_001,2,100,1000,0.0002776,0.003,30.3088,-47.8168866828,0.000062893081761,1
+B_LOAD_HIGH_001,4,400,1200,0.0002776,0.003,30.3088,-54.9487322923,0.000437922198928,3

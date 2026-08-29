@@ -1,0 +1,652 @@
+{
+  "dataset": "experiments/data/drone_network_telemetry_cosim_document_complete.csv",
+  "rows": 25490,
+  "missions": 37,
+  "split_policy": "complete mission IDs; every measured-source derivative kept in held-out test",
+  "train_missions": [
+    "B1_BASE_001",
+    "B1_BASE_002",
+    "B1_PILOT_001",
+    "B_LOAD_LOW_001",
+    "B_LOAD_MEDIUM_001",
+    "B_SPEED_SLOW_001",
+    "M_API_LOW_001",
+    "M_CONTROL_LOW_001",
+    "M_DOS_LOW_001",
+    "M_IDENTITY_LOW_001",
+    "M_LATERAL_LOW_001",
+    "M_SESSION_LOW_001",
+    "S1_HANDOVER_LOSS_001",
+    "S2_AUTH_001",
+    "S3_API_RETRY_001",
+    "S4_DROPOUT_001"
+  ],
+  "test_missions": [
+    "B1_BASE_003",
+    "B2_HOVER_VIDEO_001",
+    "B_DURATION_10_001",
+    "B_DURATION_20_001",
+    "B_DURATION_5_001",
+    "B_LOAD_HIGH_001",
+    "B_SLICE_DUAL_001",
+    "B_SLICE_TRIPLE_001",
+    "M_API_HIGH_001",
+    "M_CONTROL_HIGH_001",
+    "M_DOS_30S_001",
+    "M_DOS_90S_001",
+    "M_DOS_HIGH_001",
+    "M_DOS_REPEATED_001",
+    "M_IDENTITY_HIGH_001",
+    "M_LATERAL_HIGH_001",
+    "M_SESSION_HIGH_001",
+    "S1_HANDOVER_LOSS_002",
+    "S2_AUTH_002",
+    "S3_API_RETRY_002",
+    "S4_DROPOUT_002"
+  ],
+  "feature_groups": {
+    "raw_network": {
+      "logistic_regression": {
+        "accuracy": 0.47787781350482317,
+        "macro_f1": 0.3995147096508693,
+        "confusion_matrix": [
+          [
+            6293,
+            6323,
+            540
+          ],
+          [
+            216,
+            448,
+            20
+          ],
+          [
+            761,
+            259,
+            690
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.8656121045392022,
+            "recall": 0.47833688051079354,
+            "f1": 0.6161754626456477,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.06372688477951635,
+            "recall": 0.6549707602339181,
+            "f1": 0.1161524500907441,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.552,
+            "recall": 0.40350877192982454,
+            "f1": 0.46621621621621623,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.5216631194892064
+      },
+      "random_forest": {
+        "accuracy": 0.8315755627009647,
+        "macro_f1": 0.6612340906924643,
+        "confusion_matrix": [
+          [
+            10959,
+            843,
+            1354
+          ],
+          [
+            122,
+            447,
+            115
+          ],
+          [
+            103,
+            82,
+            1525
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.9798819742489271,
+            "recall": 0.8330039525691699,
+            "f1": 0.900493015612161,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.32580174927113703,
+            "recall": 0.6535087719298246,
+            "f1": 0.4348249027237354,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.5093520374081496,
+            "recall": 0.8918128654970761,
+            "f1": 0.6483843537414966,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.16699604743083005
+      }
+    },
+    "raw_plus_5g_context": {
+      "logistic_regression": {
+        "accuracy": 0.7633440514469454,
+        "macro_f1": 0.5409857023425139,
+        "confusion_matrix": [
+          [
+            10437,
+            1144,
+            1575
+          ],
+          [
+            196,
+            339,
+            149
+          ],
+          [
+            302,
+            314,
+            1094
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.9544581618655693,
+            "recall": 0.7933262389784129,
+            "f1": 0.8664646548503591,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.18864774624373956,
+            "recall": 0.4956140350877193,
+            "f1": 0.27327690447400244,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.38821859474804826,
+            "recall": 0.639766081871345,
+            "f1": 0.4832155477031802,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.2066737610215871
+      },
+      "random_forest": {
+        "accuracy": 0.9210932475884245,
+        "macro_f1": 0.7026678658670916,
+        "confusion_matrix": [
+          [
+            12992,
+            99,
+            65
+          ],
+          [
+            421,
+            203,
+            60
+          ],
+          [
+            520,
+            62,
+            1128
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.9324624991028494,
+            "recall": 0.9875342049255093,
+            "f1": 0.9592085348296356,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.5576923076923077,
+            "recall": 0.29678362573099415,
+            "f1": 0.38740458015267176,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.9002394253790902,
+            "recall": 0.6596491228070176,
+            "f1": 0.7613904826189672,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.012465795074490726
+      }
+    },
+    "security_indicators": {
+      "logistic_regression": {
+        "accuracy": 0.8509324758842444,
+        "macro_f1": 0.5135014005104287,
+        "confusion_matrix": [
+          [
+            12542,
+            614,
+            0
+          ],
+          [
+            624,
+            60,
+            0
+          ],
+          [
+            1020,
+            60,
+            630
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.8841110954462146,
+            "recall": 0.9533292794162359,
+            "f1": 0.9174164289371662,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.08174386920980926,
+            "recall": 0.08771929824561403,
+            "f1": 0.0846262341325811,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 1.0,
+            "recall": 0.3684210526315789,
+            "f1": 0.5384615384615384,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.046670720583764064
+      },
+      "random_forest": {
+        "accuracy": 0.6448231511254019,
+        "macro_f1": 0.3746004524137201,
+        "confusion_matrix": [
+          [
+            9136,
+            680,
+            3340
+          ],
+          [
+            563,
+            51,
+            70
+          ],
+          [
+            852,
+            18,
+            840
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.865889489147948,
+            "recall": 0.6944359987838249,
+            "f1": 0.7707428185767916,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.06809078771695594,
+            "recall": 0.07456140350877193,
+            "f1": 0.07117934403349616,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.1976470588235294,
+            "recall": 0.49122807017543857,
+            "f1": 0.28187919463087246,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.3055640012161751
+      }
+    },
+    "complete": {
+      "logistic_regression": {
+        "accuracy": 0.7638585209003216,
+        "macro_f1": 0.542185878852309,
+        "confusion_matrix": [
+          [
+            10493,
+            1618,
+            1045
+          ],
+          [
+            213,
+            332,
+            139
+          ],
+          [
+            361,
+            296,
+            1053
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.948134092346616,
+            "recall": 0.797582851930678,
+            "f1": 0.8663666762993849,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.14781834372217276,
+            "recall": 0.4853801169590643,
+            "f1": 0.22662116040955632,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.4707197139025481,
+            "recall": 0.6157894736842106,
+            "f1": 0.5335697998479858,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.20241714806932198
+      },
+      "random_forest": {
+        "accuracy": 0.9277813504823151,
+        "macro_f1": 0.738442269259299,
+        "confusion_matrix": [
+          [
+            12995,
+            96,
+            65
+          ],
+          [
+            386,
+            259,
+            39
+          ],
+          [
+            468,
+            69,
+            1173
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.9383348978265579,
+            "recall": 0.9877622377622378,
+            "f1": 0.9624143677096834,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.6108490566037735,
+            "recall": 0.3786549707602339,
+            "f1": 0.4675090252707581,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.9185591229444009,
+            "recall": 0.6859649122807018,
+            "f1": 0.7854034147974557,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.012237762237762238
+      }
+    }
+  },
+  "feature_importance": [
+    {
+      "feature": "numeric__connection_duration_sec",
+      "importance": 0.38976449748223324
+    },
+    {
+      "feature": "numeric__signal_quality_dbm",
+      "importance": 0.2083734107578984
+    },
+    {
+      "feature": "numeric__handover_event",
+      "importance": 0.0840610417989947
+    },
+    {
+      "feature": "numeric__anomaly_score",
+      "importance": 0.0399846152912656
+    },
+    {
+      "feature": "numeric__latency_ms",
+      "importance": 0.03857384483363355
+    },
+    {
+      "feature": "numeric__handover_count",
+      "importance": 0.022688626168749164
+    },
+    {
+      "feature": "numeric__unusual_destination_flag",
+      "importance": 0.022486746788164452
+    },
+    {
+      "feature": "categorical__cell_id_gnb_1",
+      "importance": 0.02087562872122748
+    },
+    {
+      "feature": "categorical__cell_id_gnb_2",
+      "importance": 0.019401684177616008
+    },
+    {
+      "feature": "numeric__packets_per_second",
+      "importance": 0.019247545648769505
+    },
+    {
+      "feature": "categorical__source_component_external_host",
+      "importance": 0.018569948943509947
+    },
+    {
+      "feature": "categorical__source_component_drone",
+      "importance": 0.017035211344221864
+    },
+    {
+      "feature": "numeric__packet_count",
+      "importance": 0.015670481138999163
+    },
+    {
+      "feature": "numeric__failed_connection_attempts",
+      "importance": 0.014214740700138707
+    },
+    {
+      "feature": "numeric__byte_count",
+      "importance": 0.013873916957382463
+    },
+    {
+      "feature": "numeric__throughput_kbps",
+      "importance": 0.012099330200488296
+    },
+    {
+      "feature": "categorical__protocol_HTTPS",
+      "importance": 0.009147541519597258
+    },
+    {
+      "feature": "numeric__jitter_ms",
+      "importance": 0.007257194368291966
+    },
+    {
+      "feature": "categorical__protocol_TCP",
+      "importance": 0.005153783159400007
+    },
+    {
+      "feature": "numeric__command_channel_activity",
+      "importance": 0.004574083356918651
+    },
+    {
+      "feature": "numeric__retransmission_rate",
+      "importance": 0.002669835750821272
+    },
+    {
+      "feature": "categorical__authentication_status_success",
+      "importance": 0.002250158422213427
+    },
+    {
+      "feature": "categorical__authentication_status_failed",
+      "importance": 0.0018789968233096784
+    },
+    {
+      "feature": "numeric__api_request_count",
+      "importance": 0.0017565588236040366
+    },
+    {
+      "feature": "numeric__packet_loss_rate",
+      "importance": 0.0016038076903393764
+    },
+    {
+      "feature": "numeric__traffic_burst_flag",
+      "importance": 0.0012066673774645317
+    },
+    {
+      "feature": "categorical__protocol_MAVLink-like",
+      "importance": 0.0011914739676412776
+    },
+    {
+      "feature": "categorical__network_slice_id_slice_4",
+      "importance": 0.0010292404282667125
+    },
+    {
+      "feature": "categorical__protocol_UDP",
+      "importance": 0.0009086675369115101
+    },
+    {
+      "feature": "numeric__telemetry_stream_activity",
+      "importance": 0.0008273483375268984
+    }
+  ],
+  "synthetic_reference_best": {
+    "accuracy": 0.99880810488677,
+    "macro_f1": 0.9985567706615469,
+    "false_alarm_rate": 0.0006369426751592356,
+    "confusion_matrix": [
+      [
+        1569,
+        1,
+        0
+      ],
+      [
+        2,
+        443,
+        0
+      ],
+      [
+        0,
+        0,
+        502
+      ]
+    ],
+    "classification_report": {
+      "normal": {
+        "precision": 0.9987269255251432,
+        "recall": 0.9993630573248408,
+        "f1-score": 0.9990448901623686,
+        "support": 1570.0
+      },
+      "suspicious": {
+        "precision": 0.9977477477477478,
+        "recall": 0.9955056179775281,
+        "f1-score": 0.9966254218222722,
+        "support": 445.0
+      },
+      "malicious": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 502.0
+      },
+      "accuracy": 0.99880810488677,
+      "macro avg": {
+        "precision": 0.9988248910909636,
+        "recall": 0.998289558434123,
+        "f1-score": 0.9985567706615469,
+        "support": 2517.0
+      },
+      "weighted avg": {
+        "precision": 0.998807715861034,
+        "recall": 0.99880810488677,
+        "f1-score": 0.9988076242613547,
+        "support": 2517.0
+      }
+    },
+    "feature_importance": [
+      {
+        "feature": "numeric__anomaly_score",
+        "importance": 0.20885359624616875
+      },
+      {
+        "feature": "numeric__failed_connection_attempts",
+        "importance": 0.14215467646284186
+      },
+      {
+        "feature": "numeric__packet_loss_rate",
+        "importance": 0.14052234895180293
+      },
+      {
+        "feature": "numeric__jitter_ms",
+        "importance": 0.1115384221483732
+      },
+      {
+        "feature": "numeric__latency_ms",
+        "importance": 0.0896691096889943
+      },
+      {
+        "feature": "numeric__unusual_destination_flag",
+        "importance": 0.07072240591879794
+      },
+      {
+        "feature": "numeric__command_channel_activity",
+        "importance": 0.05974033594633243
+      },
+      {
+        "feature": "numeric__api_request_count",
+        "importance": 0.039872971573392396
+      },
+      {
+        "feature": "numeric__packets_per_second",
+        "importance": 0.02576907932801972
+      },
+      {
+        "feature": "numeric__session_reuse_flag",
+        "importance": 0.020044636155769582
+      },
+      {
+        "feature": "numeric__packet_count",
+        "importance": 0.014321967996827422
+      },
+      {
+        "feature": "numeric__throughput_kbps",
+        "importance": 0.014215415524021825
+      },
+      {
+        "feature": "numeric__byte_count",
+        "importance": 0.011452342246583692
+      },
+      {
+        "feature": "numeric__traffic_burst_flag",
+        "importance": 0.010189963070437166
+      },
+      {
+        "feature": "categorical__source_component_external_host",
+        "importance": 0.01015858760870069
+      },
+      {
+        "feature": "categorical__authentication_status_failed",
+        "importance": 0.004923819337423589
+      },
+      {
+        "feature": "categorical__authentication_status_unknown",
+        "importance": 0.004612323835525607
+      },
+      {
+        "feature": "numeric__connection_duration_sec",
+        "importance": 0.0023039594678059467
+      },
+      {
+        "feature": "numeric__signal_quality_dbm",
+        "importance": 0.0022433589080513012
+      },
+      {
+        "feature": "numeric__retransmission_rate",
+        "importance": 0.0021353398187091495
+      }
+    ]
+  }
+}

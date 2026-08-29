@@ -1,0 +1,23 @@
+{
+  "dataset": "experiments/data/drone_network_telemetry_benign_subset.csv",
+  "schema": "schema_reference.json",
+  "schema_columns": 44,
+  "rows": 4560,
+  "sha256": "da99ad50a45d73fe4f9da07011d22414218146901f81d09f68bf9be626ae562e",
+  "incident_label_distribution": {
+    "normal": 4560
+  },
+  "source_runs": {
+    "B1_PILOT_001": 360,
+    "B1_BASE_001": 600,
+    "B1_BASE_002": 600,
+    "B1_BASE_003": 600,
+    "B_SPEED_SLOW_001": 600,
+    "B_LOAD_LOW_001": 600,
+    "B_LOAD_MEDIUM_001": 600,
+    "B_LOAD_HIGH_001": 600
+  },
+  "split_policy": "Future training, validation, and test partitions must split by complete mission_id. Random row splitting is prohibited.",
+  "validation": "passed",
+  "scope": "Completed benign subset only; suspicious and malicious runs are not yet included."
+}

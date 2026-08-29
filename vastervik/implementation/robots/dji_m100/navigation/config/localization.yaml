@@ -1,0 +1,7 @@
+localization:
+  mode: visual_inertial_gnss
+  map_frame: map
+  odom_frame: odom
+  base_frame: base_link
+  pose_topic: CHANGE_ME
+  require_altitude_source: true

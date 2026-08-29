@@ -1,0 +1,26 @@
+{
+  "dataset": "experiments/data/drone_network_telemetry_sensitivity.csv",
+  "schema": "schema_reference.json",
+  "purpose": "benign controlled-variable sensitivity evidence; kept separate from detector training",
+  "rows": 5520,
+  "columns": 44,
+  "missions": 9,
+  "sha256": "854d7fe58bf0629414632f92beab9599231b9175d48e836d2c00eccb1744d523",
+  "source_runs": {
+    "B_SPEED_FAST_001": 600,
+    "B_WIRELESS_GOOD_001": 600,
+    "B_WIRELESS_MODERATE_001": 600,
+    "B_WIRELESS_EDGE_001": 600,
+    "B_DRONES_3_001": 600,
+    "B_DRONES_5_001": 600,
+    "B_CELLS_3_001": 600,
+    "B_WINDOW_0P5_001": 1200,
+    "B_WINDOW_5_001": 120
+  },
+  "incident_label_distribution": {
+    "normal": 5520
+  },
+  "validation": "passed",
+  "leakage_policy": "all metrics measured/derived before normal manifest labels; no label-derived flags",
+  "training_policy": "do not mix time-resampled duplicates of B1_BASE_003 into the core mission-split ML benchmark"
+}

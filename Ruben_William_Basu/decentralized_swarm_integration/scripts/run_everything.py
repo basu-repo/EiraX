@@ -4,12 +4,14 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 from pathlib import Path
 import signal
 import socket
 import subprocess
 import sys
+import threading
 import time
 
 
@@ -18,6 +20,54 @@ VEHICLE_LAUNCHER = ROOT / "scripts/run_baylands_swarm.py"
 ROS_SETUP = ROOT / "install_combined/setup.bash"
 OMNET_SETUP = Path("/home/basudeo/omnetpp-6.0.1/setenv")
 OMNET_EXECUTABLE = ROOT / "omnet/out/gcc-release/omnet"
+
+TERMINAL_EVENT_PREFIXES = (
+    "[UAV SPAWN VERIFIED]", "[UAV ID MARKER]", "[UAV ID MARKER WARNING]",
+    "[UAV READY]", "[LEADER]", "[LEADER CHANGE]", "[DISCONNECTED]",
+    "[RECOVERY]", "[RECOVERY PENDING]", "[RETURN TO BASE]",
+    "[NAV2 FALLBACK]", "[SURVEY]", "[UGV LEG", "[LEG COMPLETE]",
+    "[NAV2 RECOVERY]",
+    "[REVERSE RECOVERY]",
+    "[UAV LANDED VERIFIED]", "[MISSION FINISHED]", "[FAILED]",
+    "[SWARM STATUS]",
+)
+
+
+def relay_vehicle_events(log_path: Path, process: subprocess.Popen, stop_requested) -> None:
+    """Echo important child events while retaining the complete file log."""
+    position = 0
+    while not stop_requested() and (process.poll() is None or log_path.exists()):
+        if log_path.exists():
+            # Binary readline keeps byte offsets reliable while another
+            # process appends. Text iteration followed by tell() can raise
+            # "telling position disabled by next() call" and silently kill
+            # this daemon thread.
+            with log_path.open("rb") as stream:
+                stream.seek(position)
+                while line := stream.readline():
+                    text = line.decode("utf-8", errors="replace").rstrip()
+                    if text.startswith(TERMINAL_EVENT_PREFIXES):
+                        print(text, flush=True)
+                position = stream.tell()
+        if process.poll() is not None:
+            break
+        time.sleep(0.25)
+
+
+def print_swarm_status(active_run: Path) -> None:
+    """Print the current elected scout from the authoritative role file."""
+    state_file = active_run / "cooperative/swarm_role_state.json"
+    try:
+        state = json.loads(state_file.read_text(encoding="utf-8"))
+        scout = state.get("active_scout")
+        states = state.get("states", {})
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        print("[SWARM STATUS] Leader/scout state is not available yet.", flush=True)
+        return
+    leader = scout.upper() if scout else "UGV NAV2"
+    followers = [name.upper() for name, role in states.items() if role == "follower"]
+    suffix = f" | Followers: {', '.join(followers)}" if followers else ""
+    print(f"[SWARM STATUS] Current leader/scout: {leader}{suffix}", flush=True)
 
 
 def sourced_environment(scripts: list[Path]) -> dict[str, str]:
@@ -145,7 +195,7 @@ def main() -> int:
         # UAV survey readiness before each UGV leg and returns all aircraft to
         # their individual launch bays after the final goal.
         vehicle_args = [
-            sys.executable, str(VEHICLE_LAUNCHER), "--uav-count", "3",
+            sys.executable, "-u", str(VEHICLE_LAUNCHER), "--uav-count", "3",
         ]
         for enabled, option in (
             (args.headless, "--headless"),
@@ -164,6 +214,11 @@ def main() -> int:
             stderr=subprocess.STDOUT, start_new_session=True, text=True,
         )
         processes.append(("vehicles", vehicle))
+        threading.Thread(
+            target=relay_vehicle_events,
+            args=(Path(vehicle_log.name), vehicle, lambda: stopping),
+            daemon=True,
+        ).start()
         print("[STARTED] Baylands + Husky + PX4 x500_mapping_0/1/2", flush=True)
         if args.no_motion:
             # Diagnostic mode never creates airborne-ready markers.
@@ -180,6 +235,7 @@ def main() -> int:
             if active_run is None:
                 return 0
             print(f"[READY] Three-UAV takeoff verified: {active_run}", flush=True)
+            print_swarm_status(active_run)
 
         ros_command = [
             "ros2", "launch", "decentralized_swarm_integration", "full_swarm.launch.py",

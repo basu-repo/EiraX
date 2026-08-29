@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="lrs_m100_macro" params="base_link_name base_link_kinematic:=false">
+
+<frame name="lidar_frame" attached_to="${base_link_name}">
+    <pose>0.0 0 0.5 0 0 0</pose>
+</frame>    
+
+      <link name="${base_link_name}">
+             <pose rotation_format="euler_rpy" degrees="true">0 0 0 0 0 0</pose>        
+            <gravity>false</gravity>
+            <kinematic>${base_link_kinematic}</kinematic>
+            <!-- Lightweight Matrice silhouette.  Primitive geometry avoids an
+                 Ogre2 crash in the textured DAE and remains visible on Mesa. -->
+            <visual name="body_visual">
+              <pose>0 0 0 0 0 0</pose>
+              <geometry><box><size>0.48 0.34 0.13</size></box></geometry>
+              <material><ambient>0.10 0.10 0.11 1</ambient><diffuse>0.25 0.25 0.28 1</diffuse></material>
+            </visual>
+            <visual name="arm_front_left"><pose>0.27 0.22 0 0 0 0.70</pose><geometry><box><size>0.52 0.045 0.045</size></box></geometry><material><ambient>0.08 0.08 0.08 1</ambient><diffuse>0.16 0.16 0.16 1</diffuse></material></visual>
+            <visual name="arm_front_right"><pose>0.27 -0.22 0 0 0 -0.70</pose><geometry><box><size>0.52 0.045 0.045</size></box></geometry><material><ambient>0.08 0.08 0.08 1</ambient><diffuse>0.16 0.16 0.16 1</diffuse></material></visual>
+            <visual name="arm_rear_left"><pose>-0.27 0.22 0 0 0 -0.70</pose><geometry><box><size>0.52 0.045 0.045</size></box></geometry><material><ambient>0.08 0.08 0.08 1</ambient><diffuse>0.16 0.16 0.16 1</diffuse></material></visual>
+            <visual name="arm_rear_right"><pose>-0.27 -0.22 0 0 0 0.70</pose><geometry><box><size>0.52 0.045 0.045</size></box></geometry><material><ambient>0.08 0.08 0.08 1</ambient><diffuse>0.16 0.16 0.16 1</diffuse></material></visual>
+            <visual name="rotor_front_left"><pose>0.48 0.40 0.04 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>0.018</length></cylinder></geometry><material><ambient>0.03 0.03 0.03 1</ambient><diffuse>0.08 0.08 0.08 1</diffuse></material></visual>
+            <visual name="rotor_front_right"><pose>0.48 -0.40 0.04 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>0.018</length></cylinder></geometry><material><ambient>0.03 0.03 0.03 1</ambient><diffuse>0.08 0.08 0.08 1</diffuse></material></visual>
+            <visual name="rotor_rear_left"><pose>-0.48 0.40 0.04 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>0.018</length></cylinder></geometry><material><ambient>0.03 0.03 0.03 1</ambient><diffuse>0.08 0.08 0.08 1</diffuse></material></visual>
+            <visual name="rotor_rear_right"><pose>-0.48 -0.40 0.04 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>0.018</length></cylinder></geometry><material><ambient>0.03 0.03 0.03 1</ambient><diffuse>0.08 0.08 0.08 1</diffuse></material></visual>
+
+            <collision name="collision">
+              <pose>0 0 0 0 0 0</pose>
+              <geometry><box><size>0.95 0.82 0.18</size></box></geometry>
+            </collision>
+        </link>
+        
+    </xacro:macro>
+</robot>

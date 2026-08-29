@@ -227,10 +227,12 @@ def _build(context):
                 camera_info_topic=camera_info_topic,
                 depth_topic=depth_topic,
                 uav_pose_topic=perception_pose_template.replace("{uav}", uav),
-                camera_x_offset_m=0.153,
-                camera_y_offset_m=0.0,
-                camera_z_offset_m=-0.043,
-                camera_mount_pitch_deg=45.0,
+                cam_x_offset_m=0.153,
+                cam_y_offset_m=0.0,
+                cam_z_offset_m=-0.043,
+                # Gazebo uses +45 degrees for the physical nose-down mount;
+                # LeaderEstimator's documented convention is negative down.
+                cam_pitch_offset_deg=-45.0,
                 external_detection_topic=detection_topic,
                 external_detection_status_topic=detection_status_topic,
                 radio_range_topic=f"/coord/swarm/{uav}/network/radio_distance_m",

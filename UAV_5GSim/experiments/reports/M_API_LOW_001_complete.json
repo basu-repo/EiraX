@@ -1,0 +1,26 @@
+{
+  "run_id": "M_API_LOW_001",
+  "family": "malicious",
+  "scenario": "network_application_attack",
+  "intensity": "low",
+  "physical": "passed",
+  "simu5g": "passed",
+  "bridge": "passed",
+  "validation": "passed",
+  "rows": 660,
+  "columns": 44,
+  "label_distribution": {
+    "normal": 420,
+    "malicious": 180,
+    "suspicious": 60
+  },
+  "measured_event_packet_count": 14989,
+  "measured_event_failed_connections": 11998,
+  "measured_event_api_requests": 11998,
+  "measured_event_command_activity": 60,
+  "session_reuse_rows": 0,
+  "unusual_destination_rows": 60,
+  "traffic_burst_rows": 60,
+  "telemetry_inactive_rows": 120,
+  "free_gib": 229.92571640014648
+}

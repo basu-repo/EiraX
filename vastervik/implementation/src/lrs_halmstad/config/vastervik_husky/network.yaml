@@ -1,0 +1,11 @@
+network:
+  interface: CHANGE_ME
+  bind_address: 0.0.0.0
+  uav_address: CHANGE_ME
+  discovery: ros2_dds
+  heartbeat_hz: 2.0
+  peer_timeout_s: 5.0
+
+policy:
+  continue_without_uav: true
+  require_ground_station: false

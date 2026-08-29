@@ -2,6 +2,7 @@
 *.so filter=lfs diff=lfs merge=lfs -text
 
 /UGV_UAV/px4_runtime/bin/px4 filter=lfs diff=lfs merge=lfs -text
+/vastervik/implementation/simulation/models/baylands/media/*.DAE filter=lfs diff=lfs merge=lfs -text
 
 # Preserve scripts and configuration files with Unix line endings.
 *.py text eol=lf

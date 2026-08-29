@@ -1,0 +1,10 @@
+robot:
+  name: dji_m100
+  serial_number: CHANGE_ME
+  ros_namespace: dji0
+  ros_domain_id: 30
+  frame_prefix: dji0
+
+runtime:
+  mode: physical  # physical | simulation
+  use_sim_time: false

@@ -614,7 +614,7 @@ def main() -> int:
                     "[NO MOTION] UAV follower and aerial obstacle planner are "
                     "intentionally not started."
                 )
-            if not args.headless:
+            if args.view_3d_slam and not args.headless:
                 manager.start(
                     "uav_slam_viewer",
                     uav_mapping_commands.rtabmap_viewer(

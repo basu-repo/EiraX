@@ -1,0 +1,154 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+WS_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+# Runtime state shared with run_gazebo_sim/run_nav2. This is not a config source.
+STATE_DIR="/tmp/halmstad_ws"
+SIM_WORLD_FILE="$STATE_DIR/gazebo_sim.world"
+CONFIG_ROOT="$WS_ROOT/src/lrs_halmstad/config"
+RVIZ_CONFIG_DIR="$CONFIG_ROOT/rviz_configs"
+BASE_RVIZ_CONFIG="$RVIZ_CONFIG_DIR/waypoints_testing.rviz"
+RVIZ_CONFIG_OVERRIDE=""
+RVIZ_SOFTWARE_RENDERING="${RVIZ_SOFTWARE_RENDERING:-auto}"
+RVIZ_QT_PLATFORM="${RVIZ_QT_PLATFORM:-auto}"
+
+source "$SCRIPT_DIR/lidar_mode_common.sh"
+
+lidar_mode_parse_args 3d "$@"
+
+if [ "$LIDAR_MODE" = "3d" ] && [ "$LIDAR_SCAN_TOPIC" = "$(lidar_mode_scan_topic 3d)" ]; then
+  echo "[run_nav2_rviz] 3D lidar mode: using direct pc2ls topic $LIDAR_SCAN_TOPIC" >&2
+elif [ -f "$SIM_WORLD_FILE" ] && [[ "$(cat "$SIM_WORLD_FILE" 2>/dev/null || true)" == baylands* ]] && [ "$LIDAR_MODE" = "2d" ] && [ "$LIDAR_SCAN_TOPIC" = "$(lidar_mode_scan_topic 2d)" ]; then
+  LIDAR_SCAN_TOPIC="${LIDAR_SCAN_TOPIC}_relay"
+  echo "[run_nav2_rviz] Baylands 2D lidar mode: using localization-owned relay topic $LIDAR_SCAN_TOPIC" >&2
+fi
+
+RVIZ_PASSTHROUGH_ARGS=()
+for arg in "${LIDAR_REMAINING_ARGS[@]}"; do
+  case "$arg" in
+    rviz_config:=*)
+      RVIZ_CONFIG_OVERRIDE="${arg#rviz_config:=}"
+      ;;
+    config:=*)
+      RVIZ_CONFIG_OVERRIDE="${arg#config:=}"
+      ;;
+    rviz_software_rendering:=*|software_rendering:=*)
+      RVIZ_SOFTWARE_RENDERING="${arg#*:=}"
+      ;;
+    rviz_qt_platform:=*|qt_platform:=*)
+      RVIZ_QT_PLATFORM="${arg#*:=}"
+      ;;
+    *)
+      RVIZ_PASSTHROUGH_ARGS+=("$arg")
+      ;;
+  esac
+done
+LIDAR_REMAINING_ARGS=("${RVIZ_PASSTHROUGH_ARGS[@]}")
+
+if [ -n "$RVIZ_CONFIG_OVERRIDE" ]; then
+  RVIZ_CONFIG_CANDIDATES=()
+
+  add_rviz_config_candidate() {
+    local candidate="$1"
+    local existing
+
+    [ -n "$candidate" ] || return 0
+    for existing in "${RVIZ_CONFIG_CANDIDATES[@]}"; do
+      [ "$existing" = "$candidate" ] && return 0
+    done
+    RVIZ_CONFIG_CANDIDATES+=("$candidate")
+  }
+
+  add_rviz_config_variants() {
+    local base="$1"
+
+    add_rviz_config_candidate "$base"
+    if [[ "$base" != *.rviz ]]; then
+      add_rviz_config_candidate "$base.rviz"
+    fi
+  }
+
+  case "$RVIZ_CONFIG_OVERRIDE" in
+    "~")
+      RVIZ_CONFIG_OVERRIDE="$HOME"
+      ;;
+    "~/"*)
+      RVIZ_CONFIG_OVERRIDE="$HOME/${RVIZ_CONFIG_OVERRIDE#~/}"
+      ;;
+  esac
+
+  if [[ "$RVIZ_CONFIG_OVERRIDE" = /* ]]; then
+    add_rviz_config_variants "$RVIZ_CONFIG_OVERRIDE"
+  else
+    add_rviz_config_variants "$RVIZ_CONFIG_DIR/$RVIZ_CONFIG_OVERRIDE"
+    add_rviz_config_variants "$CONFIG_ROOT/$RVIZ_CONFIG_OVERRIDE"
+    add_rviz_config_variants "$WS_ROOT/$RVIZ_CONFIG_OVERRIDE"
+    add_rviz_config_variants "$PWD/$RVIZ_CONFIG_OVERRIDE"
+    add_rviz_config_variants "$RVIZ_CONFIG_OVERRIDE"
+  fi
+
+  for candidate in "${RVIZ_CONFIG_CANDIDATES[@]}"; do
+    if [ -f "$candidate" ]; then
+      if [[ "$candidate" != *.rviz ]]; then
+        echo "[run_nav2_rviz] Found file, but RViz display configs must be .rviz files: $candidate" >&2
+        exit 2
+      fi
+      BASE_RVIZ_CONFIG="$candidate"
+      break
+    fi
+  done
+
+  if [ ! -f "$BASE_RVIZ_CONFIG" ]; then
+    echo "[run_nav2_rviz] RViz config not found: $RVIZ_CONFIG_OVERRIDE" >&2
+    echo "[run_nav2_rviz] Checked:" >&2
+    printf '  - %s\n' "${RVIZ_CONFIG_CANDIDATES[@]}" >&2
+    exit 2
+  fi
+fi
+
+set +u
+source /opt/ros/jazzy/setup.bash
+source "$WS_ROOT/install/setup.bash"
+set -u
+
+# Use the saved workspace config directly. Do not write generated RViz configs
+# into /tmp; that makes it unclear which config is actually being edited.
+RVIZ_CONFIG="$BASE_RVIZ_CONFIG"
+
+if [ -n "${WSL_INTEROP:-}" ] || grep -qi microsoft /proc/version 2>/dev/null; then
+  if [ "$RVIZ_QT_PLATFORM" != "auto" ]; then
+    export QT_QPA_PLATFORM="$RVIZ_QT_PLATFORM"
+    if [ "$RVIZ_QT_PLATFORM" = "xcb" ]; then
+      unset WAYLAND_DISPLAY
+    fi
+    echo "[run_nav2_rviz] WSL detected: using QT_QPA_PLATFORM=$QT_QPA_PLATFORM"
+  elif command -v xdpyinfo >/dev/null 2>&1 && xdpyinfo -display "${DISPLAY:-:0}" >/dev/null 2>&1; then
+    export QT_QPA_PLATFORM=xcb
+    unset WAYLAND_DISPLAY
+    echo "[run_nav2_rviz] WSL detected: using QT_QPA_PLATFORM=xcb"
+  elif [ -n "${WAYLAND_DISPLAY:-}" ]; then
+    export QT_QPA_PLATFORM=wayland
+    echo "[run_nav2_rviz] WSL detected: using QT_QPA_PLATFORM=wayland"
+  else
+    echo "[run_nav2_rviz] Warning: no reachable WSL GUI display found. WSLg may need a reset with 'wsl --shutdown'." >&2
+  fi
+fi
+
+cd "$CONFIG_ROOT"
+echo "[run_nav2_rviz] Using RViz config: $RVIZ_CONFIG"
+
+if [ "${#LIDAR_REMAINING_ARGS[@]}" -gt 0 ]; then
+  echo "[run_nav2_rviz] Warning: ignoring unsupported direct RViz args: ${LIDAR_REMAINING_ARGS[*]}" >&2
+fi
+
+ros2 run rviz2 rviz2 -d "$RVIZ_CONFIG" \
+  --ros-args \
+  -r __ns:=/a201_0000 \
+  -p use_sim_time:=true \
+  -r /map:=map \
+  -r /tf:=tf \
+  -r /tf_static:=tf_static \
+  -r /goal_pose:=goal_pose \
+  -r /clicked_point:=clicked_point \
+  -r /initialpose:=initialpose

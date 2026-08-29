@@ -1,0 +1,101 @@
+{
+  "notebook": "/home/basudeo/Documents/EiraX/UAV_5GSim/UAV_5GSim_Experiments.ipynb",
+  "backup": "/tmp/UAV_5GSim_Experiments_before_cleanup.ipynb",
+  "original_cell_count": 68,
+  "retained_cell_count": 53,
+  "removed_cell_count": 15,
+  "removed": [
+    {
+      "original_index": 18,
+      "reason": "manual B1_BASE_002 recovery selector",
+      "first_line": "SELECTED_RUN_ID = 'B1_BASE_002'"
+    },
+    {
+      "original_index": 20,
+      "reason": "obsolete remaining-stage list",
+      "first_line": "## Remaining Document 2 stages"
+    },
+    {
+      "original_index": 21,
+      "reason": "obsolete unchecked final checklist",
+      "first_line": "## Document 2 final checklist"
+    },
+    {
+      "original_index": 28,
+      "reason": "obsolete B1_BASE_001 selector heading",
+      "first_line": "## Prepare the next physical run: `B1_BASE_001`"
+    },
+    {
+      "original_index": 29,
+      "reason": "failed B1_BASE_001 selector code",
+      "first_line": "NEXT_RUN_ID='B1_BASE_001'"
+    },
+    {
+      "original_index": 30,
+      "reason": "obsolete B1_BASE_002 selector heading",
+      "first_line": "## Fresh physical run: `B1_BASE_002`"
+    },
+    {
+      "original_index": 31,
+      "reason": "obsolete B1_BASE_002 selector code",
+      "first_line": "NEXT_RUN_ID='B1_BASE_002'"
+    },
+    {
+      "original_index": 34,
+      "reason": "obsolete B1_BASE_003 selector heading",
+      "first_line": "## Next physical baseline: `B1_BASE_003`"
+    },
+    {
+      "original_index": 35,
+      "reason": "obsolete B1_BASE_003 selector code",
+      "first_line": "NEXT_RUN_ID='B1_BASE_003'"
+    },
+    {
+      "original_index": 36,
+      "reason": "obsolete slow-run selector heading",
+      "first_line": "## Slow mobility variation: `B_SPEED_SLOW_001`"
+    },
+    {
+      "original_index": 37,
+      "reason": "obsolete slow-run selector code",
+      "first_line": "NEXT_RUN_ID='B_SPEED_SLOW_001'"
+    },
+    {
+      "original_index": 42,
+      "reason": "superseded benign-only intermediate heading",
+      "first_line": "## Validated benign subset"
+    },
+    {
+      "original_index": 43,
+      "reason": "superseded benign-only intermediate validation",
+      "first_line": "benign_path=EXP/'data/drone_network_telemetry_benign_subset.csv';benign=pd.read_csv(benign_path)"
+    },
+    {
+      "original_index": 46,
+      "reason": "superseded through-S1 intermediate heading",
+      "first_line": "## Intermediate dataset through S1"
+    },
+    {
+      "original_index": 47,
+      "reason": "superseded through-S1 intermediate validation",
+      "first_line": "stage_s1_path=EXP/'data/drone_network_telemetry_stage_s1.csv';stage_s1=pd.read_csv(stage_s1_path)"
+    }
+  ],
+  "retained_error_outputs": 0,
+  "completed_manifest_inventory": 46,
+  "all_code_cells_compile": true,
+  "live_capture_default": false,
+  "validated_outputs": {
+    "drone_network_telemetry_cosim.csv": "17720 rows, 44 columns, passed",
+    "drone_network_telemetry_sensitivity.csv": "5520 rows, 44 columns, passed",
+    "drone_network_telemetry_cosim_document_complete.csv": "25490 rows, 44 columns, passed"
+  },
+  "free_storage_gib_after_cleanup": 231.54,
+  "full_notebook_rerun": {
+    "code_cells": 26,
+    "sequential_execution": true,
+    "errors": 0,
+    "environment": "eirax"
+  },
+  "policy": "flight capture, Simu5G assembly, required scenarios, validation, ML, sensitivity, and document-completion cells retained"
+}

@@ -1,0 +1,1 @@
+"""Husky-owned navigation configuration."""

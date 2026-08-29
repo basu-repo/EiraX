@@ -13,6 +13,7 @@ from typing import Optional
 
 @dataclass
 class FrameTiming:
+    CLOCK_DOMAIN_TOLERANCE_NS = 60_000_000_000
     source_stamp_ns: int
     frame_recv_ros_ns: int
     frame_recv_perf_ns: int
@@ -54,9 +55,26 @@ class FrameTiming:
 
     @property
     def camera_to_publish_latency_ms(self) -> float:
-        if self.source_stamp_ns <= 0 or self.publish_ros_ns <= 0:
+        if self.publish_ros_ns <= 0:
             return math.nan
-        return max(0.0, (self.publish_ros_ns - self.source_stamp_ns) * 1e-6)
+        # Gazebo sensor headers can remain in simulation time while an
+        # intentionally wall-clock ROS overlay performs inference. Comparing
+        # those epochs creates a multi-year latency and rejects every valid
+        # detection. Fall back to callback-receive time when the epochs are
+        # demonstrably incompatible; monotonic receive-to-publish remains the
+        # authoritative processing-latency metric.
+        source_ns = self.source_stamp_ns
+        if not self.source_clock_compatible:
+            source_ns = self.frame_recv_ros_ns
+        if source_ns <= 0:
+            return math.nan
+        return max(0.0, (self.publish_ros_ns - source_ns) * 1e-6)
+
+    @property
+    def source_clock_compatible(self) -> bool:
+        if self.source_stamp_ns <= 0 or self.frame_recv_ros_ns <= 0:
+            return False
+        return abs(self.frame_recv_ros_ns - self.source_stamp_ns) <= self.CLOCK_DOMAIN_TOLERANCE_NS
 
     def metadata(self) -> dict[str, object]:
         return {
@@ -64,6 +82,7 @@ class FrameTiming:
             "backend": str(self.backend),
             "provider": str(self.provider),
             "frame_recv_ros_ns": int(self.frame_recv_ros_ns),
+            "source_clock_compatible": bool(self.source_clock_compatible),
             "infer_start_ros_ns": int(self.infer_start_ros_ns),
             "infer_end_ros_ns": int(self.infer_end_ros_ns),
             "postprocess_end_ros_ns": int(self.postprocess_end_ros_ns),
@@ -129,6 +148,7 @@ class CsvBenchmarkLogger:
         "backend",
         "provider",
         "frame_recv_ros_ns",
+        "source_clock_compatible",
         "infer_start_ros_ns",
         "infer_end_ros_ns",
         "postprocess_end_ros_ns",

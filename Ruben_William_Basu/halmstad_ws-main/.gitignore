@@ -1,0 +1,86 @@
+# --- ROS 2 / colcon workspace ---
+build/
+install/
+.history/*
+log/*
+.colcon/
+*.log
+
+# --- Runtime output / experiment artifacts ---
+#runs/
+bags/
+*.mcap
+*.db3
+*.sqlite3
+*.bag
+*.bag.active
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+.pytest_cache/
+.mypy_cache/
+
+# --- VSCode ---
+.vscode/
+.agents/
+.codex/
+
+# --- OS / misc ---
+.DS_Store
+Thumbs.db
+
+# --- OMNeT++ / INET (do NOT store full installs in repo) ---
+omnet-workspace/
+opt/omnetpp-*/
+*.sca
+*.vec
+*.out
+*.elog
+*.anf
+*.vci
+*.qtenvrc
+*.cmdenv-log
+
+# --- Editor / local history ---
+.history/
+
+# --- Windows download metadata ---
+*:Zone.Identifier
+
+# --- Local archives ---
+*.zip
+
+# --- Local ML weights and datasets ---
+/models/obb/yolo*
+/models/detection
+/models/detection
+/models/results
+/models/obb/mymodels/warehouse*.pt
+/models/sam*
+/models
+/datasets/*
+/merge
+/merge/*
+/descriptions/
+*_MATH.md
+
+# --- Local debug helpers ---
+/run_follow_yaw_debug.py
+/run_pose_source_debug.py
+/run_analyze_pose_source.py
+/run_record_pose_alignment.sh
+
+# --- Local Baylands map experiments ---
+/maps/baylands_merged.pgm
+/maps/baylands_merged.yaml
+/maps/backups/*.pgm
+/maps/backups/*.yaml
+/maps/*backup.csv
+
+/scripts/hh_*.sh

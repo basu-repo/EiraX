@@ -79,6 +79,13 @@ Gazebo and Nav2. Detection, status and estimate topics are included in the bag.
 YOLO remains semantic/advisory; LiDAR and costmaps retain geometric collision
 authority.
 
+The ROS overlay intentionally uses wall-clock timers even though Gazebo camera
+headers use simulation time. The detector recognizes this clock-domain
+difference and measures freshness from callback receipt, preventing valid YOLO
+detections from being rejected as years old. Each estimator uses the physical
+camera offsets and the estimator's `-45°` nose-down convention to project depth
+measurements into the world frame.
+
 In a graphical run, the launcher opens one `rqt_image_view` selector. Use its
 topic drop-down to switch between:
 
@@ -140,3 +147,7 @@ after 30 seconds, and rejoins as UAV1's follower. The permanent threshold is
 60 seconds. These two scenario options are mutually exclusive. The isolated
 UGV forward-speed ceiling is 1.0 m/s; Nav2 can still command less while
 turning, approaching a goal, or avoiding an obstacle.
+
+The latest recorded permanent-loss run already proved all role transfers and
+the final Nav2 fallback. The next operator run is specifically the acceptance
+test for the corrected PX4 disarm handshake and non-zero YOLO 3D estimates.

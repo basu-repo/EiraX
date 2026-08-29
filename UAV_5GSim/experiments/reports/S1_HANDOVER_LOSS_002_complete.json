@@ -1,0 +1,29 @@
+{
+  "physical": "passed",
+  "simu5g": "passed",
+  "bridge": "passed",
+  "validation": "passed",
+  "run_id": "S1_HANDOVER_LOSS_002",
+  "rows": 600,
+  "columns": 44,
+  "normal_rows": 536,
+  "suspicious_rows": 64,
+  "malicious_rows": 0,
+  "physical_source_run": "B1_BASE_003",
+  "simu5g_seed": 22,
+  "expected_boundary_crossing_sec": 56.7,
+  "predeclared_label_window_sec": [
+    46,
+    77
+  ],
+  "measured_handover_seconds": [
+    62
+  ],
+  "normal_packet_loss_mean": 0.0030597014925373136,
+  "suspicious_packet_loss_mean": 0.0025,
+  "normal_signal_quality_mean_dbm": -26.4723570667117,
+  "suspicious_signal_quality_mean_dbm": -61.069780561112,
+  "session_reuse_rows": 0,
+  "unusual_destination_rows": 0,
+  "free_gib": 232.38074493408203
+}

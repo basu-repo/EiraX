@@ -1,0 +1,24 @@
+aircraft:
+  model: dji_m100
+  flight_adapter: CHANGE_ME
+  command_frame: ENU
+  max_horizontal_speed_mps: 2.0
+  max_vertical_speed_mps: 0.5
+  max_altitude_m: 10.0
+  min_operating_altitude_m: 1.5
+  geofence_radius_m: 50.0
+
+failsafe:
+  command_timeout_s: 1.0
+  link_loss_action: hover_then_land
+  low_battery_action: return_then_land
+  require_local_operator: true
+
+sensors:
+  camera:
+    enabled: true
+    driver: CHANGE_ME
+    device: CHANGE_ME
+  rangefinder:
+    enabled: false
+    driver: CHANGE_ME

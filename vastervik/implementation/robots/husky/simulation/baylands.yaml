@@ -1,0 +1,14 @@
+runtime:
+  mode: simulation
+  use_sim_time: true
+
+world:
+  name: baylands
+
+platform:
+  driver: gazebo
+
+sensors:
+  lidar_2d_driver: ros_gz_bridge
+  lidar_3d_driver: ros_gz_bridge
+  camera_driver: ros_gz_bridge

@@ -1,0 +1,33 @@
+# Build outputs
+/UAV_UGV
+/out/
+
+# Runtime results and plots
+/results/
+/3d/
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# OMNeT / IDE local state
+.settings/
+.qtenvrc
+.project
+.cproject
+.pydevproject
+.nedfolders
+.nedexclusions
+.oppbuildspec
+.oppfeaturestate
+/Communication.anf
+
+# Windows / editor noise
+*:Zone.Identifier
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store

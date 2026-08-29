@@ -1,0 +1,57 @@
+{
+  "run_id": "LIVE_DURATION_05MIN_20260826_215903",
+  "requested_duration_sec": 300,
+  "status": "passed",
+  "completed_utc": "2026-08-26T20:06:25.291944+00:00",
+  "run_directory": "experiments/live_duration_validation/LIVE_DURATION_05MIN_20260826_215903",
+  "flight": {
+    "requested_duration_sec": 300,
+    "active_duration_sec": 300.0047625219995,
+    "speed_mps": 3.0,
+    "altitude_m": 30.0,
+    "route": [
+      "takeoff",
+      "waypoint_1",
+      "waypoint_2",
+      "goal",
+      "land_at_goal"
+    ],
+    "reached": [
+      "takeoff",
+      "waypoint_1",
+      "waypoint_2",
+      "goal"
+    ],
+    "landed_and_disarmed": true,
+    "final_goal_horizontal_error_m": 0.030353382182553325,
+    "trajectory_rows": 8991
+  },
+  "ros_topics": {
+    "/mavros/global_position/raw/fix": {
+      "message_count": 1687,
+      "duration_sec": 337.571641602,
+      "frequency_hz": 4.997457701109231
+    },
+    "/mavros/local_position/pose": {
+      "message_count": 16869,
+      "duration_sec": 337.731104102,
+      "frequency_hz": 49.94802017081998
+    },
+    "/mavros/state": {
+      "message_count": 344,
+      "duration_sec": 337.476318158,
+      "frequency_hz": 1.0193307840905912
+    }
+  },
+  "network": {
+    "simulated_duration_sec": 300,
+    "simu5g_end_confirmed": true,
+    "dataset": "experiments/live_duration_validation/LIVE_DURATION_05MIN_20260826_215903/network/data/LIVE_DURATION_05MIN_20260826_215903_cosim.csv",
+    "dataset_rows": 600,
+    "dataset_columns": 44,
+    "dataset_validation": "RESULT: PASSED (600 rows, 44 columns)"
+  },
+  "free_gib_after": 173.41844940185547,
+  "resumed_from_preserved_flight": true,
+  "free_gib_after_compression": 173.49181365966797
+}

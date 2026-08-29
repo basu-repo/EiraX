@@ -1,0 +1,17 @@
+{
+  "label_fields_excluded_from_feature_derivation": [
+    "attack_stage",
+    "attack_type",
+    "incident_label",
+    "recommended_response",
+    "severity"
+  ],
+  "traffic_burst_rule": "packets_per_second > 3 * benign flow rate",
+  "unusual_destination_rule": "destination outside manifest allowed_destinations",
+  "session_reuse_rule": "same session from different observed source",
+  "anomaly_score_inputs": [
+    "packet_loss_rate",
+    "traffic_burst_flag"
+  ],
+  "passed": true
+}

@@ -1,0 +1,6 @@
+{
+  "run_id": "B_SLICE_TRIPLE_001",
+  "slice_mapping_independent_of_labels": true,
+  "features_derived_before_labels": true,
+  "passed": true
+}

@@ -1,0 +1,22 @@
+{
+  "requested_duration_sec": 600,
+  "active_duration_sec": 600.0033533880014,
+  "speed_mps": 3.0,
+  "altitude_m": 30.0,
+  "route": [
+    "takeoff",
+    "waypoint_1",
+    "waypoint_2",
+    "goal",
+    "land_at_goal"
+  ],
+  "reached": [
+    "takeoff",
+    "waypoint_1",
+    "waypoint_2",
+    "goal"
+  ],
+  "landed_and_disarmed": true,
+  "final_goal_horizontal_error_m": 0.07189689675948104,
+  "trajectory_rows": 17986
+}
