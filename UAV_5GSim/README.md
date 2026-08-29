@@ -26,8 +26,10 @@ The following state was verified in this workspace:
 | Normal rows | 21,282 |
 | Suspicious rows | 1,238 |
 | Malicious rows | 2,970 |
-| Experiment notebook code cells | 12/12 executed |
+| Experiment notebook code cells | 17/17 executed |
 | Notebook execution errors | 0 |
+| Additional literal live duration tests | 5, 10 and 20 minutes: 3/3 passed |
+| Additional live ROS pose messages | 110,598 |
 
 The canonical output is:
 
@@ -208,6 +210,24 @@ Expected result:
 RESULT: PASSED (25490 rows, 44 columns)
 ```
 
+### 5.4 Repeat the literal live duration validation
+
+This unattended command runs fresh headless 5-, 10-, and 20-minute tests. Each
+test starts Gazebo, PX4 and MAVROS, records a ROS 2 bag, visits both experiment
+waypoints and the goal, lands and disarms, processes the measured pose through
+Simu5G, builds a 44-column dataset, validates it, and compresses large raw files:
+
+```bash
+cd /home/basudeo/Documents/EiraX/UAV_5GSim
+conda activate eirax
+./automate_live_duration_tests.py
+```
+
+Allow approximately 40 minutes. Do not run Gazebo, PX4, MAVROS, or another copy
+of this automation simultaneously. Results are written under
+`experiments/live_duration_validation/` and displayed in Step 13 of
+`UAV_5GSim_Experiments.ipynb`.
+
 ## 6. Run the isolated UAV mission without Jupyter
 
 First close every existing Gazebo server. The visible mission starts Gazebo
@@ -283,6 +303,7 @@ UAV_5GSim/
 ├── UAV_5GSim.ipynb
 ├── UAV_5GSim_Experiments.ipynb
 ├── config.json
+├── automate_live_duration_tests.py
 ├── mission.py
 ├── prepare_world.py
 ├── run_uav_gazebo.py
@@ -307,6 +328,7 @@ UAV_5GSim/
 | Path | Responsibility |
 |---|---|
 | `mission.py` | MAVLink connection, PX4 arming, offboard setpoints, trajectory recording, landing, and disarming |
+| `automate_live_duration_tests.py` | Unattended live 5-/10-/20-minute Gazebo, PX4, ROS 2, Simu5G, assembly, validation, and compression workflow |
 | `run_uav_gazebo.py` | Standalone Gazebo/PX4 launcher and process cleanup |
 | `prepare_world.py` | Creates the isolated UAV-and-goal world copy |
 | `schema_reference.json` | Authoritative 44-column order, vocabularies, ranges, and response mapping |
@@ -375,6 +397,14 @@ The experiment includes:
 - good, moderate, and edge wireless conditions;
 - 0.5-, 1-, and 5-second aggregation windows; and
 - single, dual, and triple logical application-flow profiles.
+
+In addition to the original trace-controlled duration sensitivity, fresh live
+headless missions now validate all three required durations. Their active flight
+times were 300.005, 600.003 and 1200.011 seconds. All visited the two waypoints
+and goal, landed and disarmed, and produced validated 600-, 1,200- and 2,400-row
+datasets respectively. The duration tests use the plain PX4 x500 because 3D
+mapping is not the controlled variable; the original mapping-UAV evidence is
+preserved separately.
 
 ### Suspicious non-attack conditions
 

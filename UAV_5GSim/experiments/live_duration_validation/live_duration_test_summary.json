@@ -1,0 +1,184 @@
+{
+  "generated_utc": "2026-08-26T20:43:25.036441+00:00",
+  "document_duration_requirements_sec": [
+    300,
+    600,
+    1200
+  ],
+  "all_passed": true,
+  "tests": [
+    {
+      "run_id": "LIVE_DURATION_05MIN_20260826_215903",
+      "requested_duration_sec": 300,
+      "status": "passed",
+      "completed_utc": "2026-08-26T20:06:25.291944+00:00",
+      "run_directory": "experiments/live_duration_validation/LIVE_DURATION_05MIN_20260826_215903",
+      "flight": {
+        "requested_duration_sec": 300,
+        "active_duration_sec": 300.0047625219995,
+        "speed_mps": 3.0,
+        "altitude_m": 30.0,
+        "route": [
+          "takeoff",
+          "waypoint_1",
+          "waypoint_2",
+          "goal",
+          "land_at_goal"
+        ],
+        "reached": [
+          "takeoff",
+          "waypoint_1",
+          "waypoint_2",
+          "goal"
+        ],
+        "landed_and_disarmed": true,
+        "final_goal_horizontal_error_m": 0.030353382182553325,
+        "trajectory_rows": 8991
+      },
+      "ros_topics": {
+        "/mavros/global_position/raw/fix": {
+          "message_count": 1687,
+          "duration_sec": 337.571641602,
+          "frequency_hz": 4.997457701109231
+        },
+        "/mavros/local_position/pose": {
+          "message_count": 16869,
+          "duration_sec": 337.731104102,
+          "frequency_hz": 49.94802017081998
+        },
+        "/mavros/state": {
+          "message_count": 344,
+          "duration_sec": 337.476318158,
+          "frequency_hz": 1.0193307840905912
+        }
+      },
+      "network": {
+        "simulated_duration_sec": 300,
+        "simu5g_end_confirmed": true,
+        "dataset": "experiments/live_duration_validation/LIVE_DURATION_05MIN_20260826_215903/network/data/LIVE_DURATION_05MIN_20260826_215903_cosim.csv",
+        "dataset_rows": 600,
+        "dataset_columns": 44,
+        "dataset_validation": "RESULT: PASSED (600 rows, 44 columns)"
+      },
+      "free_gib_after": 173.41844940185547,
+      "resumed_from_preserved_flight": true,
+      "free_gib_after_compression": 173.49181365966797
+    },
+    {
+      "run_id": "LIVE_DURATION_10MIN_20260826_220656",
+      "requested_duration_sec": 600,
+      "status": "passed",
+      "started_utc": "2026-08-26T20:06:56.083742+00:00",
+      "run_directory": "experiments/live_duration_validation/LIVE_DURATION_10MIN_20260826_220656",
+      "completed_utc": "2026-08-26T20:18:59.724788+00:00",
+      "flight": {
+        "requested_duration_sec": 600,
+        "active_duration_sec": 600.0033533880014,
+        "speed_mps": 3.0,
+        "altitude_m": 30.0,
+        "route": [
+          "takeoff",
+          "waypoint_1",
+          "waypoint_2",
+          "goal",
+          "land_at_goal"
+        ],
+        "reached": [
+          "takeoff",
+          "waypoint_1",
+          "waypoint_2",
+          "goal"
+        ],
+        "landed_and_disarmed": true,
+        "final_goal_horizontal_error_m": 0.07189689675948104,
+        "trajectory_rows": 17986
+      },
+      "ros_topics": {
+        "/mavros/global_position/raw/fix": {
+          "message_count": 3189,
+          "duration_sec": 638.118409661,
+          "frequency_hz": 4.9975050895243
+        },
+        "/mavros/local_position/pose": {
+          "message_count": 31889,
+          "duration_sec": 638.277914915,
+          "frequency_hz": 49.96099544545057
+        },
+        "/mavros/state": {
+          "message_count": 645,
+          "duration_sec": 638.022698934,
+          "frequency_hz": 1.0109358194898983
+        }
+      },
+      "network": {
+        "simulated_duration_sec": 600,
+        "simu5g_end_confirmed": true,
+        "dataset": "experiments/live_duration_validation/LIVE_DURATION_10MIN_20260826_220656/network/data/LIVE_DURATION_10MIN_20260826_220656_cosim.csv",
+        "dataset_rows": 1200,
+        "dataset_columns": 44,
+        "dataset_validation": "RESULT: PASSED (1200 rows, 44 columns)"
+      },
+      "free_gib_after": 173.13221740722656,
+      "free_gib_after_compression": 173.2880630493164
+    },
+    {
+      "run_id": "LIVE_DURATION_20MIN_20260826_221941",
+      "requested_duration_sec": 1200,
+      "status": "passed",
+      "started_utc": "2026-08-26T20:19:41.159420+00:00",
+      "run_directory": "experiments/live_duration_validation/LIVE_DURATION_20MIN_20260826_221941",
+      "completed_utc": "2026-08-26T20:43:06.820758+00:00",
+      "flight": {
+        "requested_duration_sec": 1200,
+        "active_duration_sec": 1200.0112831530023,
+        "speed_mps": 3.0,
+        "altitude_m": 30.0,
+        "route": [
+          "takeoff",
+          "waypoint_1",
+          "waypoint_2",
+          "goal",
+          "land_at_goal"
+        ],
+        "reached": [
+          "takeoff",
+          "waypoint_1",
+          "waypoint_2",
+          "goal"
+        ],
+        "landed_and_disarmed": true,
+        "final_goal_horizontal_error_m": 0.05387052637070794,
+        "trajectory_rows": 35979
+      },
+      "ros_topics": {
+        "/mavros/global_position/raw/fix": {
+          "message_count": 6184,
+          "duration_sec": 1238.312533157,
+          "frequency_hz": 4.993892764885679
+        },
+        "/mavros/local_position/pose": {
+          "message_count": 61840,
+          "duration_sec": 1238.492260735,
+          "frequency_hz": 49.93168060921125
+        },
+        "/mavros/state": {
+          "message_count": 1244,
+          "duration_sec": 1238.248371038,
+          "frequency_hz": 1.0046449719592028
+        }
+      },
+      "network": {
+        "simulated_duration_sec": 1200,
+        "simu5g_end_confirmed": true,
+        "dataset": "experiments/live_duration_validation/LIVE_DURATION_20MIN_20260826_221941/network/data/LIVE_DURATION_20MIN_20260826_221941_cosim.csv",
+        "dataset_rows": 2400,
+        "dataset_columns": 44,
+        "dataset_validation": "RESULT: PASSED (2400 rows, 44 columns)"
+      },
+      "free_gib_after": 172.58009719848633,
+      "free_gib_after_compression": 172.88830947875977
+    }
+  ],
+  "canonical_dataset_unchanged": true,
+  "free_gib": 172.88830947875977
+}

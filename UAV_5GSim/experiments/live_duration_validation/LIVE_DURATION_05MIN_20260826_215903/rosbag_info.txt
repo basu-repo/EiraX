@@ -1,0 +1,14 @@
+
+Files:             rosbag_0.mcap
+Bag size:          2.3 MiB
+Storage id:        mcap
+ROS Distro:        jazzy
+Duration:          337.731104102s
+Start:             Aug 26 2026 21:59:28.752566680 (1787774368.752566680)
+End:               Aug 26 2026 22:05:06.483670782 (1787774706.483670782)
+Messages:          18900
+Topic information: Topic: /mavros/global_position/raw/fix | Type: sensor_msgs/msg/NavSatFix | Count: 1687 | Serialization Format: cdr
+                   Topic: /mavros/local_position/pose | Type: geometry_msgs/msg/PoseStamped | Count: 16869 | Serialization Format: cdr
+                   Topic: /mavros/state | Type: mavros_msgs/msg/State | Count: 344 | Serialization Format: cdr
+Service:           0
+Service information: 

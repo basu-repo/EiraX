@@ -1,0 +1,22 @@
+{
+  "aggregation_window_sec": 1.0,
+  "inputs": {
+    "ros_log": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/live_duration_validation/LIVE_DURATION_20MIN_20260826_221941",
+    "network_csv": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/live_duration_validation/LIVE_DURATION_20MIN_20260826_221941/network/raw/network_metrics.csv",
+    "manifest": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/live_duration_validation/LIVE_DURATION_20MIN_20260826_221941/scenario_manifest.yaml",
+    "flow_contract": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/live_duration_validation/LIVE_DURATION_20MIN_20260826_221941/network/input/flow_contract.json"
+  },
+  "output": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/live_duration_validation/LIVE_DURATION_20MIN_20260826_221941/network/data/LIVE_DURATION_20MIN_20260826_221941_cosim.csv",
+  "rows": 2400,
+  "columns": 44,
+  "feature_order": "features derived before manifest labels",
+  "derivations": {
+    "packet_metrics": "Simu5G receiver vectors",
+    "jitter_ms": "population standard deviation of delay samples",
+    "packet_loss_rate": "expected packets from configured rate minus received packets",
+    "retransmission_rate": "Simu5G uplink HARQ error vector",
+    "signal_quality_dbm": "measured uplink SINR plus documented -97 dBm reference",
+    "handover": "cumulative servingCell changes",
+    "flags": "flow behavior and benign thresholds only"
+  }
+}

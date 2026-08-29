@@ -1,0 +1,7 @@
+{
+  "run_id": "LIVE_DURATION_20MIN_20260826_221941",
+  "requested_duration_sec": 1200,
+  "status": "started",
+  "started_utc": "2026-08-26T20:19:41.159420+00:00",
+  "run_directory": "experiments/live_duration_validation/LIVE_DURATION_20MIN_20260826_221941"
+}
