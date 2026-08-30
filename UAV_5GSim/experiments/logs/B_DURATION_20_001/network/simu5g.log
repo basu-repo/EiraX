@@ -1,0 +1,153 @@
+/home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G added to PATH
+OMNeT++ Discrete Event Simulation  (C) 1992-2022 Andras Varga, OpenSim Ltd.
+Version: 6.0.1, build: 220831-e4f07d04b8, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G/simulations:  20
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G/emulation:  7
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G/src:  93
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/inet4.5/src:  1187
+Loading NED files from /home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_DURATION_20_001/network/input:  1
+
+Preparing for running configuration General, run #0...
+Assigned runID=General-0-20260807-22:38:46-16885
+Setting up network "EiraXExperiment"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 8e-06s (0m 00s)  0% completed  (0% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 141   present: 137   in FES: 24
+** Event #462336   t=55.941000474   Elapsed: 2.00076s (0m 02s)  4% completed  (4% total)
+     Speed:     ev/sec=231081   simsec/sec=27.96   ev/simsec=8264.73
+     Messages:  created: 210940   present: 132   in FES: 13
+** Event #861696   t=104.236000474   Elapsed: 4.00088s (0m 04s)  8% completed  (8% total)
+     Speed:     ev/sec=199668   simsec/sec=24.146   ev/simsec=8269.18
+     Messages:  created: 393026   present: 130   in FES: 12
+** Event #1272832   t=153.959   Elapsed: 6.00198s (0m 06s)  12% completed  (12% total)
+     Speed:     ev/sec=205455   simsec/sec=24.8478   ev/simsec=8268.53
+     Messages:  created: 580481   present: 125   in FES: 11
+** Event #1714688   t=207.378   Elapsed: 8.00255s (0m 08s)  17% completed  (17% total)
+     Speed:     ev/sec=220865   simsec/sec=26.7019   ev/simsec=8271.51
+     Messages:  created: 781998   present: 130   in FES: 12
+** Event #2122496   t=256.682   Elapsed: 10.0035s (0m 10s)  21% completed  (21% total)
+     Speed:     ev/sec=203807   simsec/sec=24.6403   ev/simsec=8271.3
+     Messages:  created: 967966   present: 124   in FES: 10
+** Event #2525696   t=305.447   Elapsed: 12.004s (0m 12s)  25% completed  (25% total)
+     Speed:     ev/sec=201552   simsec/sec=24.3767   ev/simsec=8268.23
+     Messages:  created: 1151794   present: 128   in FES: 12
+** Event #2962176   t=358.198   Elapsed: 14.0042s (0m 14s)  29% completed  (29% total)
+     Speed:     ev/sec=218221   simsec/sec=26.3732   ev/simsec=8274.35
+     Messages:  created: 1350894   present: 129   in FES: 11
+** Event #3374336   t=408.042   Elapsed: 16.0043s (0m 16s)  34% completed  (34% total)
+     Speed:     ev/sec=206062   simsec/sec=24.9198   ev/simsec=8269
+     Messages:  created: 1538824   present: 125   in FES: 11
+** Event #3785472   t=457.752594404   Elapsed: 18.0047s (0m 18s)  38% completed  (38% total)
+     Speed:     ev/sec=205526   simsec/sec=24.8503   ev/simsec=8270.59
+     Messages:  created: 1726309   present: 131   in FES: 13
+** Event #4225536   t=510.96   Elapsed: 20.005s (0m 20s)  42% completed  (42% total)
+     Speed:     ev/sec=220000   simsec/sec=26.5998   ev/simsec=8270.73
+     Messages:  created: 1926990   present: 131   in FES: 13
+** Event #4640512   t=561.133289355   Elapsed: 22.0054s (0m 22s)  46% completed  (46% total)
+     Speed:     ev/sec=207451   simsec/sec=25.0822   ev/simsec=8270.85
+     Messages:  created: 2116220   present: 127   in FES: 12
+** Event #5047040   t=610.296   Elapsed: 24.0063s (0m 24s)  50% completed  (50% total)
+     Speed:     ev/sec=203169   simsec/sec=24.5698   ev/simsec=8269.03
+     Messages:  created: 2301585   present: 130   in FES: 12
+** Event #5500928   t=665.183   Elapsed: 26.007s (0m 26s)  55% completed  (55% total)
+     Speed:     ev/sec=226866   simsec/sec=27.434   ev/simsec=8269.5
+     Messages:  created: 2508541   present: 129   in FES: 13
+** Event #5914624   t=715.208   Elapsed: 28.0074s (0m 28s)  59% completed  (59% total)
+     Speed:     ev/sec=206811   simsec/sec=25.008   ev/simsec=8269.79
+     Messages:  created: 2697185   present: 133   in FES: 14
+** Event #6312960   t=763.377   Elapsed: 30.0082s (0m 30s)  63% completed  (63% total)
+     Speed:     ev/sec=199083   simsec/sec=24.0742   ev/simsec=8269.55
+     Messages:  created: 2878821   present: 128   in FES: 12
+** Event #6766848   t=818.2693586118   Elapsed: 32.0083s (0m 32s)  68% completed  (68% total)
+     Speed:     ev/sec=226935   simsec/sec=27.4451   ev/simsec=8268.69
+     Messages:  created: 3085766   present: 134   in FES: 14
+** Event #7181568   t=868.423   Elapsed: 34.009s (0m 34s)  72% completed  (72% total)
+     Speed:     ev/sec=207290   simsec/sec=25.0683   ev/simsec=8268.99
+     Messages:  created: 3274861   present: 127   in FES: 12
+** Event #7578624   t=916.416   Elapsed: 36.0096s (0m 36s)  76% completed  (76% total)
+     Speed:     ev/sec=198472   simsec/sec=23.9897   ev/simsec=8273.21
+     Messages:  created: 3455953   present: 125   in FES: 11
+** Event #8028160   t=970.768   Elapsed: 38.0096s (0m 38s)  80% completed  (80% total)
+     Speed:     ev/sec=224759   simsec/sec=27.1749   ev/simsec=8270.83
+     Messages:  created: 3660940   present: 127   in FES: 11
+** Event #8429568   t=1019.298   Elapsed: 40.011s (0m 40s)  84% completed  (84% total)
+     Speed:     ev/sec=200569   simsec/sec=24.2487   ev/simsec=8271.34
+     Messages:  created: 3844000   present: 126   in FES: 12
+** Event #8827136   t=1067.34   Elapsed: 42.0117s (0m 42s)  88% completed  (88% total)
+     Speed:     ev/sec=198712   simsec/sec=24.0124   ev/simsec=8275.43
+     Messages:  created: 4025358   present: 129   in FES: 13
+** Event #9262080   t=1119.941290337   Elapsed: 44.0124s (0m 44s)  93% completed  (93% total)
+     Speed:     ev/sec=217401   simsec/sec=26.292   ev/simsec=8268.69
+     Messages:  created: 4223618   present: 125   in FES: 10
+** Event #9652480   t=1167.12   Elapsed: 46.0125s (0m 46s)  97% completed  (97% total)
+     Speed:     ev/sec=195183   simsec/sec=23.5873   ev/simsec=8274.92
+     Messages:  created: 4401686   present: 130   in FES: 12
+** Event #9924144   t=1200   Elapsed: 47.2521s (0m 47s)  100% completed  (100% total)
+     Speed:     ev/sec=219157   simsec/sec=26.5251   ev/simsec=8262.26
+     Messages:  created: 4525550   present: 125   in FES: 8
+
+<!> Simulation time limit reached -- at t=1200s, event #9924144
+
+Calling finish() at end of Run #0...
+[INFO]	EiraXExperiment.missionBackend.tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.edgeNode.tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.gnb.tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.gnb.sctp: finishing SCTP with 0 connections open.
+[INFO]	EiraXExperiment.ue[0].tcp: finishing with 0 connections open.
+[INFO]	** Signal at T=1200 to EiraXExperiment.router.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.router.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.missionBackend.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.missionBackend.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=1200 to EiraXExperiment.router.ipv4.routingTable: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.router.ipv4.configurator: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.edgeNode.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.edgeNode.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=1200 to EiraXExperiment.upf.ipv4.routingTable: interfaceStateChanged pppIf ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.upf.ipv4.configurator: interfaceStateChanged pppIf ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.router.ipv4.routingTable: interfaceStateChanged ppp2 ID:103 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.router.ipv4.configurator: interfaceStateChanged ppp2 ID:103 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.iUpf.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.iUpf.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.upf.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.upf.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=1200 to EiraXExperiment.gnb.ipv4.routingTable: interfaceStateChanged pppIf ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.gnb.ipv4.configurator: interfaceStateChanged pppIf ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.iUpf.ipv4.routingTable: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.iUpf.ipv4.configurator: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+
+End.
+Exported 1012 scalars, 2039 parameters, 165 vectors, 48 histograms
+

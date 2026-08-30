@@ -1,0 +1,1068 @@
+/home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G added to PATH
+OMNeT++ Discrete Event Simulation  (C) 1992-2022 Andras Varga, OpenSim Ltd.
+Version: 6.0.1, build: 220831-e4f07d04b8, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G/simulations:  20
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G/emulation:  7
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G/src:  93
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/inet4.5/src:  1187
+Loading NED files from /home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_LOAD_HIGH_001/network/input:  1
+
+Preparing for running configuration General, run #0...
+Assigned runID=General-0-20260806-21:47:03-62717
+Setting up network "EiraXExperiment"...
+[INFO]	sockstate=NOT_BOUND  assocId=15
+[INFO]	sockstate=NOT_BOUND  assocId=19
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 9e-06s (0m 00s)  0% completed  (0% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 289   present: 271   in FES: 63
+** Event #340736   t=3.905   Elapsed: 2.00126s (0m 02s)  1% completed  (1% total)
+     Speed:     ev/sec=170261   simsec/sec=1.95127   ev/simsec=87256.6
+     Messages:  created: 171692   present: 447   in FES: 65
+** Event #642304   t=7.286003218   Elapsed: 4.00258s (0m 04s)  2% completed  (2% total)
+     Speed:     ev/sec=150685   simsec/sec=1.68939   ev/simsec=89194.8
+     Messages:  created: 323404   present: 476   in FES: 74
+** Event #958720   t=10.835   Elapsed: 6.00432s (0m 06s)  3% completed  (3% total)
+     Speed:     ev/sec=158071   simsec/sec=1.77296   ev/simsec=89156.5
+     Messages:  created: 482505   present: 446   in FES: 67
+** Event #1258752   t=14.195012294   Elapsed: 8.00487s (0m 08s)  4% completed  (4% total)
+     Speed:     ev/sec=149974   simsec/sec=1.67954   ev/simsec=89294.9
+     Messages:  created: 633444   present: 452   in FES: 65
+** Event #1571840   t=17.71   Elapsed: 10.0066s (0m 10s)  5% completed  (5% total)
+     Speed:     ev/sec=156408   simsec/sec=1.75597   ev/simsec=89072.3
+     Messages:  created: 790900   present: 447   in FES: 66
+** Event #1888768   t=21.264   Elapsed: 12.0089s (0m 12s)  7% completed  (7% total)
+     Speed:     ev/sec=158285   simsec/sec=1.77499   ev/simsec=89175
+     Messages:  created: 950342   present: 449   in FES: 70
+** Event #2191104   t=24.655   Elapsed: 14.0099s (0m 14s)  8% completed  (8% total)
+     Speed:     ev/sec=151093   simsec/sec=1.69466   ev/simsec=89158.4
+     Messages:  created: 1102423   present: 476   in FES: 75
+** Event #2498304   t=28.0980103104   Elapsed: 16.0108s (0m 16s)  9% completed  (9% total)
+     Speed:     ev/sec=153525   simsec/sec=1.72067   ev/simsec=89224.2
+     Messages:  created: 1256903   present: 470   in FES: 74
+** Event #2780160   t=31.2560041384   Elapsed: 18.012s (0m 18s)  10% completed  (10% total)
+     Speed:     ev/sec=140846   simsec/sec=1.57808   ev/simsec=89251.6
+     Messages:  created: 1398692   present: 458   in FES: 65
+** Event #3066880   t=34.47   Elapsed: 20.0646s (0m 20s)  11% completed  (11% total)
+     Speed:     ev/sec=139686   simsec/sec=1.56582   ev/simsec=89209.8
+     Messages:  created: 1542936   present: 449   in FES: 66
+** Event #3397120   t=38.1740072176   Elapsed: 22.0658s (0m 22s)  12% completed  (12% total)
+     Speed:     ev/sec=165018   simsec/sec=1.85086   ev/simsec=89157.5
+     Messages:  created: 1709066   present: 461   in FES: 63
+** Event #3678208   t=41.325   Elapsed: 24.0665s (0m 24s)  13% completed  (13% total)
+     Speed:     ev/sec=140500   simsec/sec=1.57501   ev/simsec=89206.2
+     Messages:  created: 1850424   present: 446   in FES: 50
+** Event #3973888   t=44.6420082556   Elapsed: 26.0676s (0m 26s)  14% completed  (14% total)
+     Speed:     ev/sec=147754   simsec/sec=1.65754   ev/simsec=89140.6
+     Messages:  created: 1999147   present: 463   in FES: 57
+** Event #4277760   t=48.051   Elapsed: 28.0693s (0m 28s)  16% completed  (16% total)
+     Speed:     ev/sec=151806   simsec/sec=1.70303   ev/simsec=89138.4
+     Messages:  created: 2152016   present: 457   in FES: 52
+** Event #4565504   t=51.275010268   Elapsed: 30.0695s (0m 30s)  17% completed  (17% total)
+     Speed:     ev/sec=143863   simsec/sec=1.6119   ev/simsec=89250.3
+     Messages:  created: 2296701   present: 461   in FES: 55
+** Event #4860928   t=54.5870082556   Elapsed: 32.0701s (0m 32s)  18% completed  (18% total)
+     Speed:     ev/sec=147665   simsec/sec=1.65547   ev/simsec=89198.1
+     Messages:  created: 2445293   present: 451   in FES: 56
+** Event #5159424   t=57.935   Elapsed: 34.0713s (0m 34s)  19% completed  (19% total)
+     Speed:     ev/sec=149158   simsec/sec=1.67299   ev/simsec=89156.7
+     Messages:  created: 2595420   present: 443   in FES: 50
+** Event #5451776   t=61.214   Elapsed: 36.082s (0m 36s)  20% completed  (20% total)
+     Speed:     ev/sec=145399   simsec/sec=1.63079   ev/simsec=89158.9
+     Messages:  created: 2742495   present: 471   in FES: 64
+** Event #5783040   t=64.927   Elapsed: 38.2618s (0m 38s)  21% completed  (21% total)
+     Speed:     ev/sec=151972   simsec/sec=1.70339   ev/simsec=89217.3
+     Messages:  created: 2909150   present: 483   in FES: 68
+** Event #6094592   t=68.4225   Elapsed: 40.2637s (0m 40s)  22% completed  (22% total)
+     Speed:     ev/sec=155627   simsec/sec=1.74607   ev/simsec=89129.5
+     Messages:  created: 3065868   present: 456   in FES: 58
+** Event #6385152   t=71.679   Elapsed: 42.2642s (0m 42s)  23% completed  (23% total)
+     Speed:     ev/sec=145241   simsec/sec=1.62781   ev/simsec=89224.6
+     Messages:  created: 3212063   present: 459   in FES: 64
+** Event #6678272   t=74.965   Elapsed: 44.2648s (0m 44s)  24% completed  (24% total)
+     Speed:     ev/sec=146520   simsec/sec=1.64255   ev/simsec=89202.7
+     Messages:  created: 3359477   present: 455   in FES: 67
+** Event #6965248   t=78.182   Elapsed: 46.2658s (0m 46s)  26% completed  (26% total)
+     Speed:     ev/sec=143416   simsec/sec=1.60769   ev/simsec=89206.1
+     Messages:  created: 3503819   present: 477   in FES: 73
+** Event #7261184   t=81.502000474   Elapsed: 48.2674s (0m 48s)  27% completed  (27% total)
+     Speed:     ev/sec=147848   simsec/sec=1.65866   ev/simsec=89137.3
+     Messages:  created: 3652680   present: 459   in FES: 52
+** Event #7560192   t=84.854   Elapsed: 50.2683s (0m 50s)  28% completed  (28% total)
+     Speed:     ev/sec=149435   simsec/sec=1.67522   ev/simsec=89202.9
+     Messages:  created: 3803058   present: 458   in FES: 60
+** Event #7840512   t=87.995   Elapsed: 52.2691s (0m 52s)  29% completed  (29% total)
+     Speed:     ev/sec=140104   simsec/sec=1.56987   ev/simsec=89245.5
+     Messages:  created: 3944030   present: 451   in FES: 54
+** Event #8160512   t=91.585   Elapsed: 54.2694s (0m 54s)  30% completed  (30% total)
+     Speed:     ev/sec=159979   simsec/sec=1.79477   ev/simsec=89136.5
+     Messages:  created: 4105011   present: 463   in FES: 59
+** Event #8451072   t=94.845   Elapsed: 56.2702s (0m 56s)  31% completed  (31% total)
+     Speed:     ev/sec=145222   simsec/sec=1.62935   ev/simsec=89128.8
+     Messages:  created: 4251149   present: 461   in FES: 54
+** Event #8747264   t=98.1625   Elapsed: 58.2705s (0m 58s)  32% completed  (32% total)
+     Speed:     ev/sec=148072   simsec/sec=1.65848   ev/simsec=89281.7
+     Messages:  created: 4400154   present: 453   in FES: 55
+** Event #9044480   t=101.4975   Elapsed: 60.2714s (1m 00s)  33% completed  (33% total)
+     Speed:     ev/sec=148546   simsec/sec=1.6668   ev/simsec=89120.2
+     Messages:  created: 4549640   present: 447   in FES: 57
+** Event #9329920   t=104.697   Elapsed: 62.2736s (1m 02s)  34% completed  (34% total)
+     Speed:     ev/sec=142561   simsec/sec=1.59797   ev/simsec=89213.9
+     Messages:  created: 4693231   present: 459   in FES: 62
+** Event #9627648   t=108.0350072388   Elapsed: 64.2741s (1m 04s)  36% completed  (36% total)
+     Speed:     ev/sec=148823   simsec/sec=1.66854   ev/simsec=89193.3
+     Messages:  created: 4842976   present: 466   in FES: 60
+** Event #9913344   t=111.2370021336   Elapsed: 66.2751s (1m 06s)  37% completed  (37% total)
+     Speed:     ev/sec=142779   simsec/sec=1.60022   ev/simsec=89224.4
+     Messages:  created: 4986684   present: 457   in FES: 69
+** Event #10206208   t=114.5225   Elapsed: 68.2984s (1m 08s)  38% completed  (38% total)
+     Speed:     ev/sec=144744   simsec/sec=1.62382   ev/simsec=89138.4
+     Messages:  created: 5134009   present: 460   in FES: 67
+** Event #10537984   t=118.2430031216   Elapsed: 70.2992s (1m 10s)  39% completed  (39% total)
+     Speed:     ev/sec=165821   simsec/sec=1.8595   ev/simsec=89175
+     Messages:  created: 5300888   present: 484   in FES: 72
+** Event #10833408   t=121.555   Elapsed: 72.3003s (1m 12s)  40% completed  (40% total)
+     Speed:     ev/sec=147636   simsec/sec=1.65515   ev/simsec=89198.2
+     Messages:  created: 5449465   present: 487   in FES: 74
+** Event #11132160   t=124.905   Elapsed: 74.3003s (1m 14s)  41% completed  (41% total)
+     Speed:     ev/sec=149375   simsec/sec=1.67499   ev/simsec=89179.7
+     Messages:  created: 5599740   present: 449   in FES: 62
+** Event #11436288   t=128.316   Elapsed: 76.3003s (1m 16s)  42% completed  (42% total)
+     Speed:     ev/sec=152060   simsec/sec=1.70545   ev/simsec=89160.9
+     Messages:  created: 5752700   present: 444   in FES: 63
+** Event #11727360   t=131.5760113272   Elapsed: 78.3012s (1m 18s)  43% completed  (43% total)
+     Speed:     ev/sec=145470   simsec/sec=1.62926   ev/simsec=89285.6
+     Messages:  created: 5899099   present: 445   in FES: 59
+** Event #12031744   t=134.9925   Elapsed: 80.3025s (1m 20s)  44% completed  (44% total)
+     Speed:     ev/sec=152098   simsec/sec=1.70719   ev/simsec=89092.6
+     Messages:  created: 6052190   present: 438   in FES: 60
+** Event #12342784   t=138.481   Elapsed: 82.3033s (1m 22s)  46% completed  (46% total)
+     Speed:     ev/sec=155457   simsec/sec=1.74354   ev/simsec=89161.5
+     Messages:  created: 6208677   present: 466   in FES: 58
+** Event #12633088   t=141.735   Elapsed: 84.3039s (1m 24s)  47% completed  (47% total)
+     Speed:     ev/sec=145110   simsec/sec=1.62653   ev/simsec=89214.5
+     Messages:  created: 6354664   present: 445   in FES: 54
+** Event #12934912   t=145.1170072388   Elapsed: 86.3049s (1m 26s)  48% completed  (48% total)
+     Speed:     ev/sec=150838   simsec/sec=1.69017   ev/simsec=89244
+     Messages:  created: 6506498   present: 469   in FES: 66
+** Event #13264128   t=148.812   Elapsed: 88.3063s (1m 28s)  49% completed  (49% total)
+     Speed:     ev/sec=164490   simsec/sec=1.84618   ev/simsec=89097.9
+     Messages:  created: 6672096   present: 478   in FES: 67
+** Event #13555968   t=152.081   Elapsed: 90.3074s (1m 30s)  50% completed  (50% total)
+     Speed:     ev/sec=145839   simsec/sec=1.63359   ev/simsec=89275
+     Messages:  created: 6818858   present: 457   in FES: 56
+** Event #13855744   t=155.4450041172   Elapsed: 92.3086s (1m 32s)  51% completed  (51% total)
+     Speed:     ev/sec=149800   simsec/sec=1.68102   ev/simsec=89112.9
+     Messages:  created: 6969657   present: 475   in FES: 66
+** Event #14135808   t=158.5825   Elapsed: 94.309s (1m 34s)  52% completed  (52% total)
+     Speed:     ev/sec=140000   simsec/sec=1.56839   ev/simsec=89263.5
+     Messages:  created: 7110512   present: 441   in FES: 56
+** Event #14439168   t=161.989   Elapsed: 96.309s (1m 36s)  53% completed  (53% total)
+     Speed:     ev/sec=151679   simsec/sec=1.70323   ev/simsec=89053.3
+     Messages:  created: 7263097   present: 468   in FES: 60
+** Event #14738944   t=165.346   Elapsed: 98.3093s (1m 38s)  55% completed  (55% total)
+     Speed:     ev/sec=149868   simsec/sec=1.67827   ev/simsec=89298.8
+     Messages:  created: 7413906   present: 461   in FES: 68
+** Event #15029760   t=168.609   Elapsed: 100.31s (1m 40s)  56% completed  (56% total)
+     Speed:     ev/sec=145342   simsec/sec=1.63076   ev/simsec=89125.3
+     Messages:  created: 7560192   present: 456   in FES: 61
+** Event #15343104   t=172.121006172   Elapsed: 102.311s (1m 42s)  57% completed  (57% total)
+     Speed:     ev/sec=156621   simsec/sec=1.75543   ev/simsec=89220.8
+     Messages:  created: 7717795   present: 463   in FES: 64
+** Event #15655936   t=175.63   Elapsed: 104.38s (1m 44s)  58% completed  (58% total)
+     Speed:     ev/sec=151196   simsec/sec=1.69595   ev/simsec=89151.5
+     Messages:  created: 7875157   present: 477   in FES: 71
+** Event #15988224   t=179.356   Elapsed: 106.38s (1m 46s)  59% completed  (59% total)
+     Speed:     ev/sec=166101   simsec/sec=1.86252   ev/simsec=89180.9
+     Messages:  created: 8042275   present: 447   in FES: 62
+** Event #16299520   t=182.8460031504   Elapsed: 108.381s (1m 48s)  60% completed  (60% total)
+     Speed:     ev/sec=155585   simsec/sec=1.74429   ev/simsec=89196.5
+     Messages:  created: 8198865   present: 467   in FES: 66
+** Event #16589312   t=186.095   Elapsed: 110.382s (1m 50s)  62% completed  (62% total)
+     Speed:     ev/sec=144859   simsec/sec=1.62408   ev/simsec=89194.3
+     Messages:  created: 8344592   present: 439   in FES: 58
+** Event #16852480   t=189.046   Elapsed: 112.384s (1m 52s)  63% completed  (63% total)
+     Speed:     ev/sec=131427   simsec/sec=1.47373   ev/simsec=89179.3
+     Messages:  created: 8477000   present: 449   in FES: 60
+** Event #17117952   t=192.021   Elapsed: 114.385s (1m 54s)  64% completed  (64% total)
+     Speed:     ev/sec=132661   simsec/sec=1.48666   ev/simsec=89234.3
+     Messages:  created: 8610536   present: 483   in FES: 67
+** Event #17398528   t=195.1670072388   Elapsed: 116.386s (1m 56s)  65% completed  (65% total)
+     Speed:     ev/sec=140232   simsec/sec=1.57238   ev/simsec=89184.8
+     Messages:  created: 8751627   present: 455   in FES: 65
+** Event #17699072   t=198.539   Elapsed: 118.401s (1m 58s)  66% completed  (66% total)
+     Speed:     ev/sec=149195   simsec/sec=1.67391   ev/simsec=89129.5
+     Messages:  created: 8902827   present: 449   in FES: 65
+** Event #18024960   t=202.194   Elapsed: 120.403s (2m 00s)  67% completed  (67% total)
+     Speed:     ev/sec=162766   simsec/sec=1.82551   ev/simsec=89162.2
+     Messages:  created: 9066756   present: 463   in FES: 71
+** Event #18315776   t=205.4520082556   Elapsed: 122.403s (2m 02s)  68% completed  (68% total)
+     Speed:     ev/sec=145386   simsec/sec=1.62876   ev/simsec=89261.9
+     Messages:  created: 9213003   present: 457   in FES: 73
+** Event #18608128   t=208.7300021336   Elapsed: 124.404s (2m 04s)  69% completed  (69% total)
+     Speed:     ev/sec=146090   simsec/sec=1.63804   ev/simsec=89186.3
+     Messages:  created: 9360067   present: 463   in FES: 69
+** Event #18891520   t=211.9090010668   Elapsed: 126.405s (2m 06s)  70% completed  (70% total)
+     Speed:     ev/sec=141667   simsec/sec=1.58918   ev/simsec=89145
+     Messages:  created: 9502590   present: 469   in FES: 73
+** Event #19183360   t=215.181   Elapsed: 128.406s (2m 08s)  71% completed  (71% total)
+     Speed:     ev/sec=145828   simsec/sec=1.63497   ev/simsec=89193.2
+     Messages:  created: 9649396   present: 455   in FES: 59
+** Event #19468800   t=218.383   Elapsed: 130.407s (2m 10s)  72% completed  (72% total)
+     Speed:     ev/sec=142672   simsec/sec=1.60046   ev/simsec=89144.3
+     Messages:  created: 9792981   present: 466   in FES: 62
+** Event #19755264   t=221.595   Elapsed: 132.408s (2m 12s)  73% completed  (73% total)
+     Speed:     ev/sec=143091   simsec/sec=1.60442   ev/simsec=89185.6
+     Messages:  created: 9937050   present: 458   in FES: 62
+** Event #20081152   t=225.248   Elapsed: 134.409s (2m 14s)  75% completed  (75% total)
+     Speed:     ev/sec=162889   simsec/sec=1.82589   ev/simsec=89211.1
+     Messages:  created: 10101010   present: 457   in FES: 63
+** Event #20370176   t=228.487749056   Elapsed: 136.41s (2m 16s)  76% completed  (76% total)
+     Speed:     ev/sec=144483   simsec/sec=1.61955   ev/simsec=89211.8
+     Messages:  created: 10246344   present: 453   in FES: 59
+** Event #20659968   t=231.74   Elapsed: 138.41s (2m 18s)  77% completed  (77% total)
+     Speed:     ev/sec=144883   simsec/sec=1.62598   ev/simsec=89105.1
+     Messages:  created: 10392136   present: 470   in FES: 64
+** Event #20952832   t=235.0200102892   Elapsed: 140.411s (2m 20s)  78% completed  (78% total)
+     Speed:     ev/sec=146357   simsec/sec=1.63917   ev/simsec=89287.5
+     Messages:  created: 10539419   present: 463   in FES: 66
+** Event #21236224   t=238.1990021336   Elapsed: 142.411s (2m 22s)  79% completed  (79% total)
+     Speed:     ev/sec=141644   simsec/sec=1.58891   ev/simsec=89145.2
+     Messages:  created: 10681950   present: 457   in FES: 61
+** Event #21518592   t=241.3660082344   Elapsed: 144.412s (2m 24s)  80% completed  (80% total)
+     Speed:     ev/sec=141169   simsec/sec=1.58333   ev/simsec=89159.3
+     Messages:  created: 10823994   present: 459   in FES: 59
+** Event #21805824   t=244.589   Elapsed: 146.412s (2m 26s)  81% completed  (81% total)
+     Speed:     ev/sec=143591   simsec/sec=1.61122   ev/simsec=89119.7
+     Messages:  created: 10968485   present: 473   in FES: 71
+** Event #22121728   t=248.13   Elapsed: 148.413s (2m 28s)  82% completed  (82% total)
+     Speed:     ev/sec=157855   simsec/sec=1.76942   ev/simsec=89213.2
+     Messages:  created: 11127396   present: 461   in FES: 67
+** Event #22419712   t=251.47   Elapsed: 150.414s (2m 30s)  83% completed  (83% total)
+     Speed:     ev/sec=148923   simsec/sec=1.66922   ev/simsec=89216.8
+     Messages:  created: 11277246   present: 447   in FES: 62
+** Event #22718464   t=254.82   Elapsed: 152.415s (2m 32s)  84% completed  (84% total)
+     Speed:     ev/sec=149312   simsec/sec=1.67428   ev/simsec=89179.7
+     Messages:  created: 11427497   present: 478   in FES: 74
+** Event #23001088   t=257.9880041884   Elapsed: 154.416s (2m 34s)  85% completed  (85% total)
+     Speed:     ev/sec=141274   simsec/sec=1.58357   ev/simsec=89212
+     Messages:  created: 11569674   present: 470   in FES: 73
+** Event #23292416   t=261.255   Elapsed: 156.416s (2m 36s)  87% completed  (87% total)
+     Speed:     ev/sec=145660   simsec/sec=1.63345   ev/simsec=89173.1
+     Messages:  created: 11716197   present: 482   in FES: 67
+** Event #23575296   t=264.429   Elapsed: 158.418s (2m 38s)  88% completed  (88% total)
+     Speed:     ev/sec=141309   simsec/sec=1.58553   ev/simsec=89124.1
+     Messages:  created: 11858481   present: 448   in FES: 62
+** Event #23874048   t=267.778   Elapsed: 160.419s (2m 40s)  89% completed  (89% total)
+     Speed:     ev/sec=149295   simsec/sec=1.67359   ev/simsec=89206.3
+     Messages:  created: 12008751   present: 469   in FES: 67
+** Event #24171264   t=271.110012344   Elapsed: 162.449s (2m 42s)  90% completed  (90% total)
+     Speed:     ev/sec=146350   simsec/sec=1.6407   ev/simsec=89200.1
+     Messages:  created: 12158233   present: 472   in FES: 67
+** Event #24487168   t=274.6525   Elapsed: 164.45s (2m 44s)  91% completed  (91% total)
+     Speed:     ev/sec=157870   simsec/sec=1.77033   ev/simsec=89175.8
+     Messages:  created: 12317150   present: 458   in FES: 58
+** Event #24777984   t=277.913   Elapsed: 166.451s (2m 46s)  92% completed  (92% total)
+     Speed:     ev/sec=145392   simsec/sec=1.63007   ev/simsec=89193.7
+     Messages:  created: 12463411   present: 443   in FES: 62
+** Event #25079040   t=281.287   Elapsed: 168.451s (2m 48s)  93% completed  (93% total)
+     Speed:     ev/sec=150483   simsec/sec=1.68649   ev/simsec=89228.2
+     Messages:  created: 12614851   present: 451   in FES: 67
+** Event #25361664   t=284.456   Elapsed: 170.451s (2m 50s)  94% completed  (94% total)
+     Speed:     ev/sec=141302   simsec/sec=1.58439   ev/simsec=89184
+     Messages:  created: 12757017   present: 439   in FES: 61
+** Event #25654528   t=287.743   Elapsed: 172.453s (2m 52s)  95% completed  (95% total)
+     Speed:     ev/sec=146349   simsec/sec=1.64257   ev/simsec=89097.7
+     Messages:  created: 12904309   present: 474   in FES: 74
+** Event #25941760   t=290.965   Elapsed: 174.454s (2m 54s)  96% completed  (96% total)
+     Speed:     ev/sec=143530   simsec/sec=1.61004   ev/simsec=89147.1
+     Messages:  created: 13048819   present: 476   in FES: 75
+** Event #26237696   t=294.281   Elapsed: 176.455s (2m 56s)  98% completed  (98% total)
+     Speed:     ev/sec=147872   simsec/sec=1.65692   ev/simsec=89244.9
+     Messages:  created: 13197633   present: 450   in FES: 65
+** Event #26555136   t=297.840012344   Elapsed: 178.575s (2m 58s)  99% completed  (99% total)
+     Speed:     ev/sec=149771   simsec/sec=1.67917   ev/simsec=89193.3
+     Messages:  created: 13357287   present: 464   in FES: 70
+** Event #26741532   t=300   Elapsed: 179.823s (2m 59s)  100% completed  (100% total)
+     Speed:     ev/sec=149284   simsec/sec=1.72993   ev/simsec=86294.5
+     Messages:  created: 13450850   present: 400   in FES: 56
+
+<!> Simulation time limit reached -- at t=300s, event #26741532
+
+Calling finish() at end of Run #0...
+[INFO]	EiraXExperiment.missionBackend.tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.edgeNode.tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.gnb1.tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.gnb1.x2App[0].client: opened 1 sessions
+[INFO]	EiraXExperiment.gnb1.x2App[0].client: sent 0 bytes in 0 packets
+[INFO]	EiraXExperiment.gnb1.x2App[0].client: received 45 bytes in 3 packets
+[INFO]	Client finished
+[INFO]	EiraXExperiment.gnb1.x2App[0].server: opened 1 sessions
+[INFO]	EiraXExperiment.gnb1.x2App[0].server: sent 45 bytes in 3 packets
+[DETAIL]	EiraXExperiment.gnb1.x2App[0].server Assoc: 53
+[DETAIL]		start time: 0
+[DETAIL]		stop time: 0
+[DETAIL]		life time: 0
+[DETAIL]		received bytes:0
+[DETAIL]		throughput: -nan bit/sec
+[INFO]	EiraXExperiment.gnb1.x2App[0].serverOver all 0 packets received
+[INFO]	 EiraXExperiment.gnb1.x2App[0].serverOver all 0 notifications received
+[INFO]	 Server finished
+[INFO]	Deleting SCTP connection (inet::sctp::SctpAssociation)  id= 50
+[DETAIL]	Number of Assocs: 33
+[DETAIL]	assocId: 50 src: <none> dst: <none> lPort: 5000 rPort: 0 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.4.2 dst: 10.0.5.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.4.2 dst: 10.0.5.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.7.1 dst: 10.0.5.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.7.1 dst: 10.0.5.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.8.1 dst: 10.0.5.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.8.1 dst: 10.0.5.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.9.1 dst: 10.0.5.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.9.1 dst: 10.0.5.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.4.2 dst: 10.0.7.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.4.2 dst: 10.0.7.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.7.1 dst: 10.0.7.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.7.1 dst: 10.0.7.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.8.1 dst: 10.0.7.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.8.1 dst: 10.0.7.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.9.1 dst: 10.0.7.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.9.1 dst: 10.0.7.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.4.2 dst: 10.0.8.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.4.2 dst: 10.0.8.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.7.1 dst: 10.0.8.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.7.1 dst: 10.0.8.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.8.1 dst: 10.0.8.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.8.1 dst: 10.0.8.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.9.1 dst: 10.0.8.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.9.1 dst: 10.0.8.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.4.2 dst: 10.0.10.1 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.4.2 dst: 10.0.10.1 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.7.1 dst: 10.0.10.1 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.7.1 dst: 10.0.10.1 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.8.1 dst: 10.0.10.1 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.8.1 dst: 10.0.10.1 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.9.1 dst: 10.0.10.1 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.9.1 dst: 10.0.10.1 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	
+[INFO]	stopTimer T1_INIT of Association 50
+[INFO]	stopTimer T2_SHUTDOWN of Association 50
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 50
+[INFO]	stopTimer SACK_TIMER of Association 50
+[INFO]	stopTimer addIP
+[INFO]	Deleting SCTP connection (inet::sctp::SctpAssociation)  id= 15
+[DETAIL]	Number of Assocs: 32
+[DETAIL]	assocId: 15 src: 10.0.4.2 dst: 10.0.5.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.4.2 dst: 10.0.5.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.7.1 dst: 10.0.5.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.7.1 dst: 10.0.5.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.8.1 dst: 10.0.5.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.8.1 dst: 10.0.5.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.9.1 dst: 10.0.5.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.9.1 dst: 10.0.5.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.4.2 dst: 10.0.7.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.4.2 dst: 10.0.7.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.7.1 dst: 10.0.7.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.7.1 dst: 10.0.7.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.8.1 dst: 10.0.7.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.8.1 dst: 10.0.7.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.9.1 dst: 10.0.7.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.9.1 dst: 10.0.7.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.4.2 dst: 10.0.8.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.4.2 dst: 10.0.8.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.7.1 dst: 10.0.8.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.7.1 dst: 10.0.8.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.8.1 dst: 10.0.8.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.8.1 dst: 10.0.8.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.9.1 dst: 10.0.8.2 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.9.1 dst: 10.0.8.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.4.2 dst: 10.0.10.1 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.4.2 dst: 10.0.10.1 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.7.1 dst: 10.0.10.1 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.7.1 dst: 10.0.10.1 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.8.1 dst: 10.0.10.1 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.8.1 dst: 10.0.10.1 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 15 src: 10.0.9.1 dst: 10.0.10.1 lPort: 33445 rPort: 5000 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.9.1 dst: 10.0.10.1 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 15
+[INFO]	stopTimer T2_SHUTDOWN of Association 15
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 15
+[INFO]	stopTimer SACK_TIMER of Association 15
+[INFO]	stopTimer addIP
+[INFO]	 remove path 10.0.5.2
+[INFO]	stopTimer HB_TIMER 15:10.0.5.2
+[INFO]	stopTimer HB_INT_TIMER 15:10.0.5.2
+[INFO]	stopTimer RTX_TIMER 15:10.0.5.2
+[INFO]	stopTimer CWND_TIMER 15:10.0.5.2
+[INFO]	stopTimer Reset_TIMER 15:10.0.5.2
+[INFO]	stopTimer ASCONF_TIMER 15:10.0.5.2
+[INFO]	stopTimer BLOCKING_TIMER 15:10.0.5.2
+[INFO]	 remove path 10.0.7.2
+[INFO]	stopTimer HB_TIMER 15:10.0.7.2
+[INFO]	stopTimer HB_INT_TIMER 15:10.0.7.2
+[INFO]	stopTimer RTX_TIMER 15:10.0.7.2
+[INFO]	stopTimer CWND_TIMER 15:10.0.7.2
+[INFO]	stopTimer Reset_TIMER 15:10.0.7.2
+[INFO]	stopTimer ASCONF_TIMER 15:10.0.7.2
+[INFO]	stopTimer BLOCKING_TIMER 15:10.0.7.2
+[INFO]	 remove path 10.0.8.2
+[INFO]	stopTimer HB_TIMER 15:10.0.8.2
+[INFO]	stopTimer HB_INT_TIMER 15:10.0.8.2
+[INFO]	stopTimer RTX_TIMER 15:10.0.8.2
+[INFO]	stopTimer CWND_TIMER 15:10.0.8.2
+[INFO]	stopTimer Reset_TIMER 15:10.0.8.2
+[INFO]	stopTimer ASCONF_TIMER 15:10.0.8.2
+[INFO]	stopTimer BLOCKING_TIMER 15:10.0.8.2
+[INFO]	 remove path 10.0.10.1
+[INFO]	stopTimer HB_TIMER 15:10.0.10.1
+[INFO]	stopTimer HB_INT_TIMER 15:10.0.10.1
+[INFO]	stopTimer RTX_TIMER 15:10.0.10.1
+[INFO]	stopTimer CWND_TIMER 15:10.0.10.1
+[INFO]	stopTimer Reset_TIMER 15:10.0.10.1
+[INFO]	stopTimer ASCONF_TIMER 15:10.0.10.1
+[INFO]	stopTimer BLOCKING_TIMER 15:10.0.10.1
+[INFO]	Deleting SCTP connection (inet::sctp::SctpAssociation)  id= 53
+[DETAIL]	Number of Assocs: 16
+[DETAIL]	assocId: 53 src: 10.0.4.2 dst: 10.0.5.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.7.1 dst: 10.0.5.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.8.1 dst: 10.0.5.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.9.1 dst: 10.0.5.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.4.2 dst: 10.0.7.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.7.1 dst: 10.0.7.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.8.1 dst: 10.0.7.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.9.1 dst: 10.0.7.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.4.2 dst: 10.0.8.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.7.1 dst: 10.0.8.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.8.1 dst: 10.0.8.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.9.1 dst: 10.0.8.2 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.4.2 dst: 10.0.10.1 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.7.1 dst: 10.0.10.1 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.8.1 dst: 10.0.10.1 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	assocId: 53 src: 10.0.9.1 dst: 10.0.10.1 lPort: 5000 rPort: 35412 fd: -1
+[DETAIL]	
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 53
+[INFO]	stopTimer T2_SHUTDOWN of assoc 53
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 53
+[INFO]	stopTimer SACK_TIMER of assoc 53
+[INFO]	stopTimer addIP
+[INFO]	 remove path 10.0.5.2
+[INFO]	stopTimer HB_TIMER 53:10.0.5.2
+[INFO]	stopTimer HB_INT_TIMER 53:10.0.5.2
+[INFO]	stopTimer RTX_TIMER 53:10.0.5.2
+[INFO]	stopTimer CWND_TIMER 53:10.0.5.2
+[INFO]	stopTimer Reset_TIMER 53:10.0.5.2
+[INFO]	stopTimer ASCONF_TIMER 53:10.0.5.2
+[INFO]	stopTimer BLOCKING_TIMER 53:10.0.5.2
+[INFO]	 remove path 10.0.7.2
+[INFO]	stopTimer HB_TIMER 53:10.0.7.2
+[INFO]	stopTimer HB_INT_TIMER 53:10.0.7.2
+[INFO]	stopTimer RTX_TIMER 53:10.0.7.2
+[INFO]	stopTimer CWND_TIMER 53:10.0.7.2
+[INFO]	stopTimer Reset_TIMER 53:10.0.7.2
+[INFO]	stopTimer ASCONF_TIMER 53:10.0.7.2
+[INFO]	stopTimer BLOCKING_TIMER 53:10.0.7.2
+[INFO]	 remove path 10.0.8.2
+[INFO]	stopTimer HB_TIMER 53:10.0.8.2
+[INFO]	stopTimer HB_INT_TIMER 53:10.0.8.2
+[INFO]	stopTimer RTX_TIMER 53:10.0.8.2
+[INFO]	stopTimer CWND_TIMER 53:10.0.8.2
+[INFO]	stopTimer Reset_TIMER 53:10.0.8.2
+[INFO]	stopTimer ASCONF_TIMER 53:10.0.8.2
+[INFO]	stopTimer BLOCKING_TIMER 53:10.0.8.2
+[INFO]	 remove path 10.0.10.1
+[INFO]	stopTimer HB_TIMER 53:10.0.10.1
+[INFO]	stopTimer HB_INT_TIMER 53:10.0.10.1
+[INFO]	stopTimer RTX_TIMER 53:10.0.10.1
+[INFO]	stopTimer CWND_TIMER 53:10.0.10.1
+[INFO]	stopTimer Reset_TIMER 53:10.0.10.1
+[INFO]	stopTimer ASCONF_TIMER 53:10.0.10.1
+[INFO]	stopTimer BLOCKING_TIMER 53:10.0.10.1
+[INFO]	EiraXExperiment.gnb1.sctp: finishing SCTP with 0 connections open.
+[DETAIL]	Association 15: started at 0.0000006872 and finished at 300 --> lifetime: 299.9999993128
+[DETAIL]	Association 15: sent bytes=0, acked bytes=0, throughput=0 bit/s
+[DETAIL]	Association 15: transmitted Bytes=0, retransmitted Bytes=0
+[DETAIL]	Association 15: number of Fast RTX=0, number of Timer-Based RTX=0, path failures=0, ForwardTsns=0
+[DETAIL]	AllMessages=104 BadMessages=0
+[DETAIL]	Association 53: started at 0.0000004708 and finished at 300 --> lifetime: 299.9999995292
+[DETAIL]	Association 53: sent bytes=45, acked bytes=45, throughput=1.2 bit/s
+[DETAIL]	Association 53: transmitted Bytes=45, retransmitted Bytes=0
+[DETAIL]	Association 53: number of Fast RTX=0, number of Timer-Based RTX=0, path failures=0, ForwardTsns=0
+[DETAIL]	AllMessages=104 BadMessages=0
+[INFO]	EiraXExperiment.gnb2.tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.gnb2.x2App[0].client: opened 1 sessions
+[INFO]	EiraXExperiment.gnb2.x2App[0].client: sent 0 bytes in 0 packets
+[INFO]	EiraXExperiment.gnb2.x2App[0].client: received 45 bytes in 3 packets
+[INFO]	Client finished
+[INFO]	EiraXExperiment.gnb2.x2App[0].server: opened 1 sessions
+[INFO]	EiraXExperiment.gnb2.x2App[0].server: sent 45 bytes in 3 packets
+[DETAIL]	EiraXExperiment.gnb2.x2App[0].server Assoc: 52
+[DETAIL]		start time: 0
+[DETAIL]		stop time: 0
+[DETAIL]		life time: 0
+[DETAIL]		received bytes:0
+[DETAIL]		throughput: -nan bit/sec
+[INFO]	EiraXExperiment.gnb2.x2App[0].serverOver all 0 packets received
+[INFO]	 EiraXExperiment.gnb2.x2App[0].serverOver all 0 notifications received
+[INFO]	 Server finished
+[INFO]	Deleting SCTP connection (inet::sctp::SctpAssociation)  id= 51
+[DETAIL]	Number of Assocs: 33
+[DETAIL]	assocId: 51 src: <none> dst: <none> lPort: 5000 rPort: 0 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.5.2 dst: 10.0.4.2 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.5.2 dst: 10.0.4.2 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.7.2 dst: 10.0.4.2 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.7.2 dst: 10.0.4.2 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.8.2 dst: 10.0.4.2 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.8.2 dst: 10.0.4.2 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.10.1 dst: 10.0.4.2 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.10.1 dst: 10.0.4.2 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.5.2 dst: 10.0.7.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.5.2 dst: 10.0.7.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.7.2 dst: 10.0.7.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.7.2 dst: 10.0.7.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.8.2 dst: 10.0.7.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.8.2 dst: 10.0.7.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.10.1 dst: 10.0.7.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.10.1 dst: 10.0.7.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.5.2 dst: 10.0.8.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.5.2 dst: 10.0.8.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.7.2 dst: 10.0.8.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.7.2 dst: 10.0.8.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.8.2 dst: 10.0.8.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.8.2 dst: 10.0.8.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.10.1 dst: 10.0.8.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.10.1 dst: 10.0.8.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.5.2 dst: 10.0.9.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.5.2 dst: 10.0.9.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.7.2 dst: 10.0.9.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.7.2 dst: 10.0.9.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.8.2 dst: 10.0.9.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.8.2 dst: 10.0.9.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.10.1 dst: 10.0.9.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.10.1 dst: 10.0.9.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	
+[INFO]	stopTimer T1_INIT of Association 51
+[INFO]	stopTimer T2_SHUTDOWN of Association 51
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 51
+[INFO]	stopTimer SACK_TIMER of Association 51
+[INFO]	stopTimer addIP
+[INFO]	Deleting SCTP connection (inet::sctp::SctpAssociation)  id= 19
+[DETAIL]	Number of Assocs: 32
+[DETAIL]	assocId: 19 src: 10.0.5.2 dst: 10.0.4.2 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.5.2 dst: 10.0.4.2 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.7.2 dst: 10.0.4.2 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.7.2 dst: 10.0.4.2 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.8.2 dst: 10.0.4.2 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.8.2 dst: 10.0.4.2 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.10.1 dst: 10.0.4.2 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.10.1 dst: 10.0.4.2 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.5.2 dst: 10.0.7.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.5.2 dst: 10.0.7.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.7.2 dst: 10.0.7.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.7.2 dst: 10.0.7.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.8.2 dst: 10.0.7.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.8.2 dst: 10.0.7.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.10.1 dst: 10.0.7.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.10.1 dst: 10.0.7.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.5.2 dst: 10.0.8.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.5.2 dst: 10.0.8.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.7.2 dst: 10.0.8.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.7.2 dst: 10.0.8.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.8.2 dst: 10.0.8.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.8.2 dst: 10.0.8.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.10.1 dst: 10.0.8.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.10.1 dst: 10.0.8.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.5.2 dst: 10.0.9.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.5.2 dst: 10.0.9.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.7.2 dst: 10.0.9.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.7.2 dst: 10.0.9.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.8.2 dst: 10.0.9.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.8.2 dst: 10.0.9.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 19 src: 10.0.10.1 dst: 10.0.9.1 lPort: 35412 rPort: 5000 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.10.1 dst: 10.0.9.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 19
+[INFO]	stopTimer T2_SHUTDOWN of Association 19
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 19
+[INFO]	stopTimer SACK_TIMER of Association 19
+[INFO]	stopTimer addIP
+[INFO]	 remove path 10.0.4.2
+[INFO]	stopTimer HB_TIMER 19:10.0.4.2
+[INFO]	stopTimer HB_INT_TIMER 19:10.0.4.2
+[INFO]	stopTimer RTX_TIMER 19:10.0.4.2
+[INFO]	stopTimer CWND_TIMER 19:10.0.4.2
+[INFO]	stopTimer Reset_TIMER 19:10.0.4.2
+[INFO]	stopTimer ASCONF_TIMER 19:10.0.4.2
+[INFO]	stopTimer BLOCKING_TIMER 19:10.0.4.2
+[INFO]	 remove path 10.0.7.1
+[INFO]	stopTimer HB_TIMER 19:10.0.7.1
+[INFO]	stopTimer HB_INT_TIMER 19:10.0.7.1
+[INFO]	stopTimer RTX_TIMER 19:10.0.7.1
+[INFO]	stopTimer CWND_TIMER 19:10.0.7.1
+[INFO]	stopTimer Reset_TIMER 19:10.0.7.1
+[INFO]	stopTimer ASCONF_TIMER 19:10.0.7.1
+[INFO]	stopTimer BLOCKING_TIMER 19:10.0.7.1
+[INFO]	 remove path 10.0.8.1
+[INFO]	stopTimer HB_TIMER 19:10.0.8.1
+[INFO]	stopTimer HB_INT_TIMER 19:10.0.8.1
+[INFO]	stopTimer RTX_TIMER 19:10.0.8.1
+[INFO]	stopTimer CWND_TIMER 19:10.0.8.1
+[INFO]	stopTimer Reset_TIMER 19:10.0.8.1
+[INFO]	stopTimer ASCONF_TIMER 19:10.0.8.1
+[INFO]	stopTimer BLOCKING_TIMER 19:10.0.8.1
+[INFO]	 remove path 10.0.9.1
+[INFO]	stopTimer HB_TIMER 19:10.0.9.1
+[INFO]	stopTimer HB_INT_TIMER 19:10.0.9.1
+[INFO]	stopTimer RTX_TIMER 19:10.0.9.1
+[INFO]	stopTimer CWND_TIMER 19:10.0.9.1
+[INFO]	stopTimer Reset_TIMER 19:10.0.9.1
+[INFO]	stopTimer ASCONF_TIMER 19:10.0.9.1
+[INFO]	stopTimer BLOCKING_TIMER 19:10.0.9.1
+[INFO]	Deleting SCTP connection (inet::sctp::SctpAssociation)  id= 52
+[DETAIL]	Number of Assocs: 16
+[DETAIL]	assocId: 52 src: 10.0.5.2 dst: 10.0.4.2 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.7.2 dst: 10.0.4.2 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.8.2 dst: 10.0.4.2 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.10.1 dst: 10.0.4.2 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.5.2 dst: 10.0.7.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.7.2 dst: 10.0.7.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.8.2 dst: 10.0.7.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.10.1 dst: 10.0.7.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.5.2 dst: 10.0.8.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.7.2 dst: 10.0.8.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.8.2 dst: 10.0.8.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.10.1 dst: 10.0.8.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.5.2 dst: 10.0.9.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.7.2 dst: 10.0.9.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.8.2 dst: 10.0.9.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	assocId: 52 src: 10.0.10.1 dst: 10.0.9.1 lPort: 5000 rPort: 33445 fd: -1
+[DETAIL]	
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 52
+[INFO]	stopTimer T2_SHUTDOWN of assoc 52
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 52
+[INFO]	stopTimer SACK_TIMER of assoc 52
+[INFO]	stopTimer addIP
+[INFO]	 remove path 10.0.4.2
+[INFO]	stopTimer HB_TIMER 52:10.0.4.2
+[INFO]	stopTimer HB_INT_TIMER 52:10.0.4.2
+[INFO]	stopTimer RTX_TIMER 52:10.0.4.2
+[INFO]	stopTimer CWND_TIMER 52:10.0.4.2
+[INFO]	stopTimer Reset_TIMER 52:10.0.4.2
+[INFO]	stopTimer ASCONF_TIMER 52:10.0.4.2
+[INFO]	stopTimer BLOCKING_TIMER 52:10.0.4.2
+[INFO]	 remove path 10.0.7.1
+[INFO]	stopTimer HB_TIMER 52:10.0.7.1
+[INFO]	stopTimer HB_INT_TIMER 52:10.0.7.1
+[INFO]	stopTimer RTX_TIMER 52:10.0.7.1
+[INFO]	stopTimer CWND_TIMER 52:10.0.7.1
+[INFO]	stopTimer Reset_TIMER 52:10.0.7.1
+[INFO]	stopTimer ASCONF_TIMER 52:10.0.7.1
+[INFO]	stopTimer BLOCKING_TIMER 52:10.0.7.1
+[INFO]	 remove path 10.0.8.1
+[INFO]	stopTimer HB_TIMER 52:10.0.8.1
+[INFO]	stopTimer HB_INT_TIMER 52:10.0.8.1
+[INFO]	stopTimer RTX_TIMER 52:10.0.8.1
+[INFO]	stopTimer CWND_TIMER 52:10.0.8.1
+[INFO]	stopTimer Reset_TIMER 52:10.0.8.1
+[INFO]	stopTimer ASCONF_TIMER 52:10.0.8.1
+[INFO]	stopTimer BLOCKING_TIMER 52:10.0.8.1
+[INFO]	 remove path 10.0.9.1
+[INFO]	stopTimer HB_TIMER 52:10.0.9.1
+[INFO]	stopTimer HB_INT_TIMER 52:10.0.9.1
+[INFO]	stopTimer RTX_TIMER 52:10.0.9.1
+[INFO]	stopTimer CWND_TIMER 52:10.0.9.1
+[INFO]	stopTimer Reset_TIMER 52:10.0.9.1
+[INFO]	stopTimer ASCONF_TIMER 52:10.0.9.1
+[INFO]	stopTimer BLOCKING_TIMER 52:10.0.9.1
+[INFO]	EiraXExperiment.gnb2.sctp: finishing SCTP with 0 connections open.
+[DETAIL]	Association 19: started at 0.0000006872 and finished at 300 --> lifetime: 299.9999993128
+[DETAIL]	Association 19: sent bytes=0, acked bytes=0, throughput=0 bit/s
+[DETAIL]	Association 19: transmitted Bytes=0, retransmitted Bytes=0
+[DETAIL]	Association 19: number of Fast RTX=0, number of Timer-Based RTX=0, path failures=0, ForwardTsns=0
+[DETAIL]	AllMessages=104 BadMessages=0
+[DETAIL]	Association 52: started at 0.0000004708 and finished at 300 --> lifetime: 299.9999995292
+[DETAIL]	Association 52: sent bytes=45, acked bytes=45, throughput=1.2 bit/s
+[DETAIL]	Association 52: transmitted Bytes=45, retransmitted Bytes=0
+[DETAIL]	Association 52: number of Fast RTX=0, number of Timer-Based RTX=0, path failures=0, ForwardTsns=0
+[DETAIL]	AllMessages=104 BadMessages=0
+[INFO]	EiraXExperiment.ue[0].tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.ue[1].tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.ue[2].tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.ue[3].tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.ue[4].tcp: finishing with 0 connections open.
+[INFO]	** Signal at T=300 to EiraXExperiment.router.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.router.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.missionBackend.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.missionBackend.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=300 to EiraXExperiment.router.ipv4.routingTable: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.router.ipv4.configurator: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.edgeNode.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.edgeNode.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=300 to EiraXExperiment.upf.ipv4.routingTable: interfaceStateChanged pppIf ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.upf.ipv4.configurator: interfaceStateChanged pppIf ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.router.ipv4.routingTable: interfaceStateChanged ppp2 ID:103 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.router.ipv4.configurator: interfaceStateChanged ppp2 ID:103 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.iUpf.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.iUpf.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.upf.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.upf.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb1.ipv4.routingTable: interfaceStateChanged pppIf ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb1.ipv4.configurator: interfaceStateChanged pppIf ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.iUpf.ipv4.routingTable: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.iUpf.ipv4.configurator: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb2.ipv4.routingTable: interfaceStateChanged pppIf ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.5.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb2.ipv4.configurator: interfaceStateChanged pppIf ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.5.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.iUpf.ipv4.routingTable: interfaceStateChanged ppp2 ID:103 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.5.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.iUpf.ipv4.configurator: interfaceStateChanged ppp2 ID:103 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.5.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb2.ipv4.routingTable: interfaceStateChanged x2ppp0 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.8.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb2.ipv4.configurator: interfaceStateChanged x2ppp0 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.8.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb1.ipv4.routingTable: interfaceStateChanged x2ppp0 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.8.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb1.ipv4.configurator: interfaceStateChanged x2ppp0 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.8.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+
+End.
+Exported 2800 scalars, 4376 parameters, 559 vectors, 68 histograms
+

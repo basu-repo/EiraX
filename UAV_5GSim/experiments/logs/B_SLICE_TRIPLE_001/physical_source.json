@@ -1,0 +1,8 @@
+{
+  "physical_source_run": "B2_HOVER_VIDEO_001",
+  "network_vector_source_run": "B2_HOVER_VIDEO_001",
+  "storage": "hard-linked",
+  "controlled_variable": "logical application-flow slice mapping",
+  "native_5gc_slicing": false,
+  "reason": "installed Simu5G source tree has no native network-slice module"
+}

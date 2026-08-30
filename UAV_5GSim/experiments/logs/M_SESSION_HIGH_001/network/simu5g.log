@@ -1,0 +1,816 @@
+/home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G added to PATH
+OMNeT++ Discrete Event Simulation  (C) 1992-2022 Andras Varga, OpenSim Ltd.
+Version: 6.0.1, build: 220831-e4f07d04b8, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G/simulations:  20
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G/emulation:  7
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G/src:  93
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/inet4.5/src:  1187
+Loading NED files from /home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/M_SESSION_HIGH_001/network/input:  1
+
+Preparing for running configuration General, run #0...
+Assigned runID=General-0-20260806-22:35:59-81312
+Setting up network "EiraXExperiment"...
+[INFO]	sockstate=NOT_BOUND  assocId=12
+[INFO]	sockstate=NOT_BOUND  assocId=16
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 1e-05s (0m 00s)  0% completed  (0% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 214   present: 205   in FES: 45
+** Event #526336   t=40.628   Elapsed: 2.00063s (0m 02s)  13% completed  (13% total)
+     Speed:     ev/sec=263086   simsec/sec=20.3077   ev/simsec=12955
+     Messages:  created: 228772   present: 336   in FES: 35
+** Event #1018624   t=78.632   Elapsed: 4.0011s (0m 04s)  26% completed  (26% total)
+     Speed:     ev/sec=246087   simsec/sec=18.9976   ev/simsec=12953.6
+     Messages:  created: 442354   present: 345   in FES: 47
+** Event #1505280   t=116.192   Elapsed: 6.00174s (0m 06s)  38% completed  (38% total)
+     Speed:     ev/sec=243250   simsec/sec=18.774   ev/simsec=12956.8
+     Messages:  created: 653494   present: 340   in FES: 45
+** Event #2003456   t=152.836   Elapsed: 8.00176s (0m 08s)  50% completed  (50% total)
+     Speed:     ev/sec=249085   simsec/sec=18.3218   ev/simsec=13595
+     Messages:  created: 875049   present: 337   in FES: 40
+** Event #2470144   t=187.358   Elapsed: 10.0023s (0m 10s)  62% completed  (62% total)
+     Speed:     ev/sec=233281   simsec/sec=17.2563   ev/simsec=13518.6
+     Messages:  created: 1082046   present: 341   in FES: 45
+** Event #2969600   t=225.915   Elapsed: 12.0668s (0m 12s)  75% completed  (75% total)
+     Speed:     ev/sec=241929   simsec/sec=18.6764   ev/simsec=12953.7
+     Messages:  created: 1298713   present: 337   in FES: 39
+** Event #3500544   t=266.9050003352   Elapsed: 14.0673s (0m 14s)  88% completed  (88% total)
+     Speed:     ev/sec=265407   simsec/sec=20.4899   ev/simsec=12953
+     Messages:  created: 1529032   present: 347   in FES: 46
+** Event #3928851   t=300   Elapsed: 15.831s (0m 15s)  100% completed  (100% total)
+     Speed:     ev/sec=242839   simsec/sec=18.7641   ev/simsec=12941.7
+     Messages:  created: 1714773   present: 337   in FES: 44
+
+<!> Simulation time limit reached -- at t=300s, event #3928851
+
+Calling finish() at end of Run #0...
+[INFO]	EiraXExperiment.missionBackend.tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.edgeNode.tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.gnb1.tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.gnb1.x2App[0].client: opened 1 sessions
+[INFO]	EiraXExperiment.gnb1.x2App[0].client: sent 0 bytes in 0 packets
+[INFO]	EiraXExperiment.gnb1.x2App[0].client: received 15 bytes in 1 packets
+[INFO]	Client finished
+[INFO]	EiraXExperiment.gnb1.x2App[0].server: opened 1 sessions
+[INFO]	EiraXExperiment.gnb1.x2App[0].server: sent 15 bytes in 1 packets
+[DETAIL]	EiraXExperiment.gnb1.x2App[0].server Assoc: 44
+[DETAIL]		start time: 0
+[DETAIL]		stop time: 0
+[DETAIL]		life time: 0
+[DETAIL]		received bytes:0
+[DETAIL]		throughput: -nan bit/sec
+[INFO]	EiraXExperiment.gnb1.x2App[0].serverOver all 0 packets received
+[INFO]	 EiraXExperiment.gnb1.x2App[0].serverOver all 0 notifications received
+[INFO]	 Server finished
+[INFO]	Deleting SCTP connection (inet::sctp::SctpAssociation)  id= 41
+[DETAIL]	Number of Assocs: 33
+[DETAIL]	assocId: 41 src: <none> dst: <none> lPort: 5000 rPort: 0 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.4.2 dst: 10.0.5.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.4.2 dst: 10.0.5.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.7.1 dst: 10.0.5.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.7.1 dst: 10.0.5.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.8.1 dst: 10.0.5.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.8.1 dst: 10.0.5.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.9.1 dst: 10.0.5.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.9.1 dst: 10.0.5.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.4.2 dst: 10.0.7.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.4.2 dst: 10.0.7.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.7.1 dst: 10.0.7.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.7.1 dst: 10.0.7.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.8.1 dst: 10.0.7.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.8.1 dst: 10.0.7.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.9.1 dst: 10.0.7.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.9.1 dst: 10.0.7.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.4.2 dst: 10.0.8.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.4.2 dst: 10.0.8.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.7.1 dst: 10.0.8.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.7.1 dst: 10.0.8.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.8.1 dst: 10.0.8.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.8.1 dst: 10.0.8.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.9.1 dst: 10.0.8.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.9.1 dst: 10.0.8.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.4.2 dst: 10.0.10.1 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.4.2 dst: 10.0.10.1 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.7.1 dst: 10.0.10.1 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.7.1 dst: 10.0.10.1 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.8.1 dst: 10.0.10.1 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.8.1 dst: 10.0.10.1 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.9.1 dst: 10.0.10.1 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.9.1 dst: 10.0.10.1 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	
+[INFO]	stopTimer T1_INIT of Association 41
+[INFO]	stopTimer T2_SHUTDOWN of Association 41
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 41
+[INFO]	stopTimer SACK_TIMER of Association 41
+[INFO]	stopTimer addIP
+[INFO]	Deleting SCTP connection (inet::sctp::SctpAssociation)  id= 12
+[DETAIL]	Number of Assocs: 32
+[DETAIL]	assocId: 12 src: 10.0.4.2 dst: 10.0.5.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.4.2 dst: 10.0.5.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.7.1 dst: 10.0.5.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.7.1 dst: 10.0.5.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.8.1 dst: 10.0.5.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.8.1 dst: 10.0.5.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.9.1 dst: 10.0.5.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.9.1 dst: 10.0.5.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.4.2 dst: 10.0.7.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.4.2 dst: 10.0.7.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.7.1 dst: 10.0.7.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.7.1 dst: 10.0.7.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.8.1 dst: 10.0.7.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.8.1 dst: 10.0.7.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.9.1 dst: 10.0.7.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.9.1 dst: 10.0.7.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.4.2 dst: 10.0.8.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.4.2 dst: 10.0.8.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.7.1 dst: 10.0.8.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.7.1 dst: 10.0.8.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.8.1 dst: 10.0.8.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.8.1 dst: 10.0.8.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.9.1 dst: 10.0.8.2 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.9.1 dst: 10.0.8.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.4.2 dst: 10.0.10.1 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.4.2 dst: 10.0.10.1 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.7.1 dst: 10.0.10.1 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.7.1 dst: 10.0.10.1 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.8.1 dst: 10.0.10.1 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.8.1 dst: 10.0.10.1 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 12 src: 10.0.9.1 dst: 10.0.10.1 lPort: 39858 rPort: 5000 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.9.1 dst: 10.0.10.1 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 12
+[INFO]	stopTimer T2_SHUTDOWN of Association 12
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 12
+[INFO]	stopTimer SACK_TIMER of Association 12
+[INFO]	stopTimer addIP
+[INFO]	 remove path 10.0.5.2
+[INFO]	stopTimer HB_TIMER 12:10.0.5.2
+[INFO]	stopTimer HB_INT_TIMER 12:10.0.5.2
+[INFO]	stopTimer RTX_TIMER 12:10.0.5.2
+[INFO]	stopTimer CWND_TIMER 12:10.0.5.2
+[INFO]	stopTimer Reset_TIMER 12:10.0.5.2
+[INFO]	stopTimer ASCONF_TIMER 12:10.0.5.2
+[INFO]	stopTimer BLOCKING_TIMER 12:10.0.5.2
+[INFO]	 remove path 10.0.7.2
+[INFO]	stopTimer HB_TIMER 12:10.0.7.2
+[INFO]	stopTimer HB_INT_TIMER 12:10.0.7.2
+[INFO]	stopTimer RTX_TIMER 12:10.0.7.2
+[INFO]	stopTimer CWND_TIMER 12:10.0.7.2
+[INFO]	stopTimer Reset_TIMER 12:10.0.7.2
+[INFO]	stopTimer ASCONF_TIMER 12:10.0.7.2
+[INFO]	stopTimer BLOCKING_TIMER 12:10.0.7.2
+[INFO]	 remove path 10.0.8.2
+[INFO]	stopTimer HB_TIMER 12:10.0.8.2
+[INFO]	stopTimer HB_INT_TIMER 12:10.0.8.2
+[INFO]	stopTimer RTX_TIMER 12:10.0.8.2
+[INFO]	stopTimer CWND_TIMER 12:10.0.8.2
+[INFO]	stopTimer Reset_TIMER 12:10.0.8.2
+[INFO]	stopTimer ASCONF_TIMER 12:10.0.8.2
+[INFO]	stopTimer BLOCKING_TIMER 12:10.0.8.2
+[INFO]	 remove path 10.0.10.1
+[INFO]	stopTimer HB_TIMER 12:10.0.10.1
+[INFO]	stopTimer HB_INT_TIMER 12:10.0.10.1
+[INFO]	stopTimer RTX_TIMER 12:10.0.10.1
+[INFO]	stopTimer CWND_TIMER 12:10.0.10.1
+[INFO]	stopTimer Reset_TIMER 12:10.0.10.1
+[INFO]	stopTimer ASCONF_TIMER 12:10.0.10.1
+[INFO]	stopTimer BLOCKING_TIMER 12:10.0.10.1
+[INFO]	Deleting SCTP connection (inet::sctp::SctpAssociation)  id= 44
+[DETAIL]	Number of Assocs: 16
+[DETAIL]	assocId: 44 src: 10.0.4.2 dst: 10.0.5.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.7.1 dst: 10.0.5.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.8.1 dst: 10.0.5.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.9.1 dst: 10.0.5.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.4.2 dst: 10.0.7.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.7.1 dst: 10.0.7.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.8.1 dst: 10.0.7.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.9.1 dst: 10.0.7.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.4.2 dst: 10.0.8.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.7.1 dst: 10.0.8.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.8.1 dst: 10.0.8.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.9.1 dst: 10.0.8.2 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.4.2 dst: 10.0.10.1 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.7.1 dst: 10.0.10.1 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.8.1 dst: 10.0.10.1 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	assocId: 44 src: 10.0.9.1 dst: 10.0.10.1 lPort: 5000 rPort: 36618 fd: -1
+[DETAIL]	
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 44
+[INFO]	stopTimer T2_SHUTDOWN of assoc 44
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 44
+[INFO]	stopTimer SACK_TIMER of assoc 44
+[INFO]	stopTimer addIP
+[INFO]	 remove path 10.0.5.2
+[INFO]	stopTimer HB_TIMER 44:10.0.5.2
+[INFO]	stopTimer HB_INT_TIMER 44:10.0.5.2
+[INFO]	stopTimer RTX_TIMER 44:10.0.5.2
+[INFO]	stopTimer CWND_TIMER 44:10.0.5.2
+[INFO]	stopTimer Reset_TIMER 44:10.0.5.2
+[INFO]	stopTimer ASCONF_TIMER 44:10.0.5.2
+[INFO]	stopTimer BLOCKING_TIMER 44:10.0.5.2
+[INFO]	 remove path 10.0.7.2
+[INFO]	stopTimer HB_TIMER 44:10.0.7.2
+[INFO]	stopTimer HB_INT_TIMER 44:10.0.7.2
+[INFO]	stopTimer RTX_TIMER 44:10.0.7.2
+[INFO]	stopTimer CWND_TIMER 44:10.0.7.2
+[INFO]	stopTimer Reset_TIMER 44:10.0.7.2
+[INFO]	stopTimer ASCONF_TIMER 44:10.0.7.2
+[INFO]	stopTimer BLOCKING_TIMER 44:10.0.7.2
+[INFO]	 remove path 10.0.8.2
+[INFO]	stopTimer HB_TIMER 44:10.0.8.2
+[INFO]	stopTimer HB_INT_TIMER 44:10.0.8.2
+[INFO]	stopTimer RTX_TIMER 44:10.0.8.2
+[INFO]	stopTimer CWND_TIMER 44:10.0.8.2
+[INFO]	stopTimer Reset_TIMER 44:10.0.8.2
+[INFO]	stopTimer ASCONF_TIMER 44:10.0.8.2
+[INFO]	stopTimer BLOCKING_TIMER 44:10.0.8.2
+[INFO]	 remove path 10.0.10.1
+[INFO]	stopTimer HB_TIMER 44:10.0.10.1
+[INFO]	stopTimer HB_INT_TIMER 44:10.0.10.1
+[INFO]	stopTimer RTX_TIMER 44:10.0.10.1
+[INFO]	stopTimer CWND_TIMER 44:10.0.10.1
+[INFO]	stopTimer Reset_TIMER 44:10.0.10.1
+[INFO]	stopTimer ASCONF_TIMER 44:10.0.10.1
+[INFO]	stopTimer BLOCKING_TIMER 44:10.0.10.1
+[INFO]	EiraXExperiment.gnb1.sctp: finishing SCTP with 0 connections open.
+[DETAIL]	Association 12: started at 0.0000006872 and finished at 300 --> lifetime: 299.9999993128
+[DETAIL]	Association 12: sent bytes=0, acked bytes=0, throughput=0 bit/s
+[DETAIL]	Association 12: transmitted Bytes=0, retransmitted Bytes=0
+[DETAIL]	Association 12: number of Fast RTX=0, number of Timer-Based RTX=0, path failures=0, ForwardTsns=0
+[DETAIL]	AllMessages=102 BadMessages=0
+[DETAIL]	Association 44: started at 0.0000004708 and finished at 300 --> lifetime: 299.9999995292
+[DETAIL]	Association 44: sent bytes=15, acked bytes=15, throughput=0.4 bit/s
+[DETAIL]	Association 44: transmitted Bytes=15, retransmitted Bytes=0
+[DETAIL]	Association 44: number of Fast RTX=0, number of Timer-Based RTX=0, path failures=0, ForwardTsns=0
+[DETAIL]	AllMessages=102 BadMessages=0
+[INFO]	EiraXExperiment.gnb2.tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.gnb2.x2App[0].client: opened 1 sessions
+[INFO]	EiraXExperiment.gnb2.x2App[0].client: sent 0 bytes in 0 packets
+[INFO]	EiraXExperiment.gnb2.x2App[0].client: received 15 bytes in 1 packets
+[INFO]	Client finished
+[INFO]	EiraXExperiment.gnb2.x2App[0].server: opened 1 sessions
+[INFO]	EiraXExperiment.gnb2.x2App[0].server: sent 15 bytes in 1 packets
+[DETAIL]	EiraXExperiment.gnb2.x2App[0].server Assoc: 43
+[DETAIL]		start time: 0
+[DETAIL]		stop time: 0
+[DETAIL]		life time: 0
+[DETAIL]		received bytes:0
+[DETAIL]		throughput: -nan bit/sec
+[INFO]	EiraXExperiment.gnb2.x2App[0].serverOver all 0 packets received
+[INFO]	 EiraXExperiment.gnb2.x2App[0].serverOver all 0 notifications received
+[INFO]	 Server finished
+[INFO]	Deleting SCTP connection (inet::sctp::SctpAssociation)  id= 42
+[DETAIL]	Number of Assocs: 33
+[DETAIL]	assocId: 42 src: <none> dst: <none> lPort: 5000 rPort: 0 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.5.2 dst: 10.0.4.2 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.5.2 dst: 10.0.4.2 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.7.2 dst: 10.0.4.2 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.7.2 dst: 10.0.4.2 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.8.2 dst: 10.0.4.2 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.8.2 dst: 10.0.4.2 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.10.1 dst: 10.0.4.2 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.10.1 dst: 10.0.4.2 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.5.2 dst: 10.0.7.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.5.2 dst: 10.0.7.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.7.2 dst: 10.0.7.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.7.2 dst: 10.0.7.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.8.2 dst: 10.0.7.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.8.2 dst: 10.0.7.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.10.1 dst: 10.0.7.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.10.1 dst: 10.0.7.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.5.2 dst: 10.0.8.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.5.2 dst: 10.0.8.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.7.2 dst: 10.0.8.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.7.2 dst: 10.0.8.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.8.2 dst: 10.0.8.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.8.2 dst: 10.0.8.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.10.1 dst: 10.0.8.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.10.1 dst: 10.0.8.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.5.2 dst: 10.0.9.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.5.2 dst: 10.0.9.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.7.2 dst: 10.0.9.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.7.2 dst: 10.0.9.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.8.2 dst: 10.0.9.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.8.2 dst: 10.0.9.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.10.1 dst: 10.0.9.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.10.1 dst: 10.0.9.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	
+[INFO]	stopTimer T1_INIT of Association 42
+[INFO]	stopTimer T2_SHUTDOWN of Association 42
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 42
+[INFO]	stopTimer SACK_TIMER of Association 42
+[INFO]	stopTimer addIP
+[INFO]	Deleting SCTP connection (inet::sctp::SctpAssociation)  id= 16
+[DETAIL]	Number of Assocs: 32
+[DETAIL]	assocId: 16 src: 10.0.5.2 dst: 10.0.4.2 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.5.2 dst: 10.0.4.2 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.7.2 dst: 10.0.4.2 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.7.2 dst: 10.0.4.2 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.8.2 dst: 10.0.4.2 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.8.2 dst: 10.0.4.2 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.10.1 dst: 10.0.4.2 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.10.1 dst: 10.0.4.2 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.5.2 dst: 10.0.7.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.5.2 dst: 10.0.7.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.7.2 dst: 10.0.7.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.7.2 dst: 10.0.7.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.8.2 dst: 10.0.7.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.8.2 dst: 10.0.7.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.10.1 dst: 10.0.7.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.10.1 dst: 10.0.7.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.5.2 dst: 10.0.8.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.5.2 dst: 10.0.8.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.7.2 dst: 10.0.8.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.7.2 dst: 10.0.8.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.8.2 dst: 10.0.8.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.8.2 dst: 10.0.8.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.10.1 dst: 10.0.8.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.10.1 dst: 10.0.8.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.5.2 dst: 10.0.9.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.5.2 dst: 10.0.9.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.7.2 dst: 10.0.9.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.7.2 dst: 10.0.9.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.8.2 dst: 10.0.9.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.8.2 dst: 10.0.9.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 16 src: 10.0.10.1 dst: 10.0.9.1 lPort: 36618 rPort: 5000 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.10.1 dst: 10.0.9.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of Association 16
+[INFO]	stopTimer T2_SHUTDOWN of Association 16
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of Association 16
+[INFO]	stopTimer SACK_TIMER of Association 16
+[INFO]	stopTimer addIP
+[INFO]	 remove path 10.0.4.2
+[INFO]	stopTimer HB_TIMER 16:10.0.4.2
+[INFO]	stopTimer HB_INT_TIMER 16:10.0.4.2
+[INFO]	stopTimer RTX_TIMER 16:10.0.4.2
+[INFO]	stopTimer CWND_TIMER 16:10.0.4.2
+[INFO]	stopTimer Reset_TIMER 16:10.0.4.2
+[INFO]	stopTimer ASCONF_TIMER 16:10.0.4.2
+[INFO]	stopTimer BLOCKING_TIMER 16:10.0.4.2
+[INFO]	 remove path 10.0.7.1
+[INFO]	stopTimer HB_TIMER 16:10.0.7.1
+[INFO]	stopTimer HB_INT_TIMER 16:10.0.7.1
+[INFO]	stopTimer RTX_TIMER 16:10.0.7.1
+[INFO]	stopTimer CWND_TIMER 16:10.0.7.1
+[INFO]	stopTimer Reset_TIMER 16:10.0.7.1
+[INFO]	stopTimer ASCONF_TIMER 16:10.0.7.1
+[INFO]	stopTimer BLOCKING_TIMER 16:10.0.7.1
+[INFO]	 remove path 10.0.8.1
+[INFO]	stopTimer HB_TIMER 16:10.0.8.1
+[INFO]	stopTimer HB_INT_TIMER 16:10.0.8.1
+[INFO]	stopTimer RTX_TIMER 16:10.0.8.1
+[INFO]	stopTimer CWND_TIMER 16:10.0.8.1
+[INFO]	stopTimer Reset_TIMER 16:10.0.8.1
+[INFO]	stopTimer ASCONF_TIMER 16:10.0.8.1
+[INFO]	stopTimer BLOCKING_TIMER 16:10.0.8.1
+[INFO]	 remove path 10.0.9.1
+[INFO]	stopTimer HB_TIMER 16:10.0.9.1
+[INFO]	stopTimer HB_INT_TIMER 16:10.0.9.1
+[INFO]	stopTimer RTX_TIMER 16:10.0.9.1
+[INFO]	stopTimer CWND_TIMER 16:10.0.9.1
+[INFO]	stopTimer Reset_TIMER 16:10.0.9.1
+[INFO]	stopTimer ASCONF_TIMER 16:10.0.9.1
+[INFO]	stopTimer BLOCKING_TIMER 16:10.0.9.1
+[INFO]	Deleting SCTP connection (inet::sctp::SctpAssociation)  id= 43
+[DETAIL]	Number of Assocs: 16
+[DETAIL]	assocId: 43 src: 10.0.5.2 dst: 10.0.4.2 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.7.2 dst: 10.0.4.2 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.8.2 dst: 10.0.4.2 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.10.1 dst: 10.0.4.2 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.5.2 dst: 10.0.7.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.7.2 dst: 10.0.7.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.8.2 dst: 10.0.7.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.10.1 dst: 10.0.7.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.5.2 dst: 10.0.8.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.7.2 dst: 10.0.8.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.8.2 dst: 10.0.8.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.10.1 dst: 10.0.8.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.5.2 dst: 10.0.9.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.7.2 dst: 10.0.9.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.8.2 dst: 10.0.9.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	assocId: 43 src: 10.0.10.1 dst: 10.0.9.1 lPort: 5000 rPort: 39858 fd: -1
+[DETAIL]	
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	stopTimer T1_INIT of assoc 43
+[INFO]	stopTimer T2_SHUTDOWN of assoc 43
+[INFO]	stopTimer T5_SHUTDOWN_GUARD of assoc 43
+[INFO]	stopTimer SACK_TIMER of assoc 43
+[INFO]	stopTimer addIP
+[INFO]	 remove path 10.0.4.2
+[INFO]	stopTimer HB_TIMER 43:10.0.4.2
+[INFO]	stopTimer HB_INT_TIMER 43:10.0.4.2
+[INFO]	stopTimer RTX_TIMER 43:10.0.4.2
+[INFO]	stopTimer CWND_TIMER 43:10.0.4.2
+[INFO]	stopTimer Reset_TIMER 43:10.0.4.2
+[INFO]	stopTimer ASCONF_TIMER 43:10.0.4.2
+[INFO]	stopTimer BLOCKING_TIMER 43:10.0.4.2
+[INFO]	 remove path 10.0.7.1
+[INFO]	stopTimer HB_TIMER 43:10.0.7.1
+[INFO]	stopTimer HB_INT_TIMER 43:10.0.7.1
+[INFO]	stopTimer RTX_TIMER 43:10.0.7.1
+[INFO]	stopTimer CWND_TIMER 43:10.0.7.1
+[INFO]	stopTimer Reset_TIMER 43:10.0.7.1
+[INFO]	stopTimer ASCONF_TIMER 43:10.0.7.1
+[INFO]	stopTimer BLOCKING_TIMER 43:10.0.7.1
+[INFO]	 remove path 10.0.8.1
+[INFO]	stopTimer HB_TIMER 43:10.0.8.1
+[INFO]	stopTimer HB_INT_TIMER 43:10.0.8.1
+[INFO]	stopTimer RTX_TIMER 43:10.0.8.1
+[INFO]	stopTimer CWND_TIMER 43:10.0.8.1
+[INFO]	stopTimer Reset_TIMER 43:10.0.8.1
+[INFO]	stopTimer ASCONF_TIMER 43:10.0.8.1
+[INFO]	stopTimer BLOCKING_TIMER 43:10.0.8.1
+[INFO]	 remove path 10.0.9.1
+[INFO]	stopTimer HB_TIMER 43:10.0.9.1
+[INFO]	stopTimer HB_INT_TIMER 43:10.0.9.1
+[INFO]	stopTimer RTX_TIMER 43:10.0.9.1
+[INFO]	stopTimer CWND_TIMER 43:10.0.9.1
+[INFO]	stopTimer Reset_TIMER 43:10.0.9.1
+[INFO]	stopTimer ASCONF_TIMER 43:10.0.9.1
+[INFO]	stopTimer BLOCKING_TIMER 43:10.0.9.1
+[INFO]	EiraXExperiment.gnb2.sctp: finishing SCTP with 0 connections open.
+[DETAIL]	Association 16: started at 0.0000006872 and finished at 300 --> lifetime: 299.9999993128
+[DETAIL]	Association 16: sent bytes=0, acked bytes=0, throughput=0 bit/s
+[DETAIL]	Association 16: transmitted Bytes=0, retransmitted Bytes=0
+[DETAIL]	Association 16: number of Fast RTX=0, number of Timer-Based RTX=0, path failures=0, ForwardTsns=0
+[DETAIL]	AllMessages=102 BadMessages=0
+[DETAIL]	Association 43: started at 0.0000004708 and finished at 300 --> lifetime: 299.9999995292
+[DETAIL]	Association 43: sent bytes=15, acked bytes=15, throughput=0.4 bit/s
+[DETAIL]	Association 43: transmitted Bytes=15, retransmitted Bytes=0
+[DETAIL]	Association 43: number of Fast RTX=0, number of Timer-Based RTX=0, path failures=0, ForwardTsns=0
+[DETAIL]	AllMessages=102 BadMessages=0
+[INFO]	EiraXExperiment.ue[0].tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.ue[1].tcp: finishing with 0 connections open.
+[INFO]	** Signal at T=300 to EiraXExperiment.router.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.router.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.missionBackend.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.missionBackend.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=300 to EiraXExperiment.router.ipv4.routingTable: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.router.ipv4.configurator: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.edgeNode.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.edgeNode.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=300 to EiraXExperiment.upf.ipv4.routingTable: interfaceStateChanged pppIf ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.upf.ipv4.configurator: interfaceStateChanged pppIf ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.router.ipv4.routingTable: interfaceStateChanged ppp2 ID:103 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.router.ipv4.configurator: interfaceStateChanged ppp2 ID:103 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.iUpf.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.iUpf.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.upf.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.upf.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb1.ipv4.routingTable: interfaceStateChanged pppIf ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb1.ipv4.configurator: interfaceStateChanged pppIf ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.iUpf.ipv4.routingTable: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.iUpf.ipv4.configurator: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb2.ipv4.routingTable: interfaceStateChanged pppIf ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.5.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb2.ipv4.configurator: interfaceStateChanged pppIf ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.5.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.iUpf.ipv4.routingTable: interfaceStateChanged ppp2 ID:103 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.5.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.iUpf.ipv4.configurator: interfaceStateChanged ppp2 ID:103 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.5.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb2.ipv4.routingTable: interfaceStateChanged x2ppp0 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.8.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb2.ipv4.configurator: interfaceStateChanged x2ppp0 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.8.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb1.ipv4.routingTable: interfaceStateChanged x2ppp0 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.8.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=300 to EiraXExperiment.gnb1.ipv4.configurator: interfaceStateChanged x2ppp0 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.8.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+
+End.
+Exported 1891 scalars, 3143 parameters, 457 vectors, 68 histograms
+

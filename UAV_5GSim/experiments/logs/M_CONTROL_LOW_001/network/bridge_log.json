@@ -1,0 +1,22 @@
+{
+  "aggregation_window_sec": 1.0,
+  "inputs": {
+    "manifest": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/manifests/M_CONTROL_LOW_001.yaml",
+    "rosbag": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/M_CONTROL_LOW_001/rosbag",
+    "pose": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/trace/M_CONTROL_LOW_001_mission_pose.txt",
+    "network": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/M_CONTROL_LOW_001/network/raw/network_metrics.csv"
+  },
+  "output": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/M_CONTROL_LOW_001/network/data/M_CONTROL_LOW_001_cosim.csv",
+  "rows": 600,
+  "derivations": {
+    "raw_metrics": "Simu5G/INET vectors",
+    "jitter_ms": "population standard deviation of delays",
+    "retransmission_rate": "NR HARQ uplink error/retry indicator",
+    "signal_quality_dbm": "uplink SINR + documented -97 dBm noise-floor approximation",
+    "handover": "servingCell changes",
+    "flags": "telemetry thresholds only"
+  },
+  "scenario": "control_protocol_attack",
+  "controlled_flow_contract": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/M_CONTROL_LOW_001/network/input/controlled_flow_contract.json",
+  "labels_applied_after_feature_derivation": true
+}

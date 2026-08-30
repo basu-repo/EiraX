@@ -1,0 +1,835 @@
+{
+  "purpose": "SHA-256 record of the bulk simulation evidence that is present in the delivered directory but excluded from Git by size. Every file below is regenerable from the tracked scenario manifests and OMNeT++/Simu5G configuration.",
+  "excluded_by": "UAV_5GSim/.gitignore and the repository-root .gitignore",
+  "files": 164,
+  "unique_contents": 115,
+  "total_bytes_on_disk": 2992158749,
+  "unique_bytes": 2550462935,
+  "files_by_kind": {
+    "Simu5G vector output": 57,
+    "raw per-flow network metrics": 57,
+    "ROS 2 bag payload (.mcap)": 50
+  },
+  "entries": [
+    {
+      "path": "experiments/document1/rosbag/rosbag_benign_0.mcap",
+      "bytes": 25211425,
+      "sha256": "d2bcd3274309d5cf76bb6c58ce51804339dfa519799dfcc76a5dec2f011dad7d"
+    },
+    {
+      "path": "experiments/document1/scenarios/baseline/raw/network_metrics.csv.gz",
+      "bytes": 1048797,
+      "sha256": "464841929522f42eb2cf69817e8abad384215984628e1dd519aae70e11dd6234"
+    },
+    {
+      "path": "experiments/document1/scenarios/baseline/raw/uas_benign.vec.gz",
+      "bytes": 2694503,
+      "sha256": "63111d0724573f9fdc3bcab3a2e0e5304f2e0c42f1027935a739c9b410b85eb0"
+    },
+    {
+      "path": "experiments/document1/scenarios/control_protocol_attack/raw/network_metrics.csv.gz",
+      "bytes": 2101689,
+      "sha256": "12fdbf1cde69639745d867686cb68cd002522b41abb3f4952bd9c0ef0b3d31e5"
+    },
+    {
+      "path": "experiments/document1/scenarios/control_protocol_attack/raw/uas_benign.vec.gz",
+      "bytes": 4666509,
+      "sha256": "aa766591dac05f884ac2b8bde80a5d516a76fcf8bd00762aa1e8fb49d8b81be0"
+    },
+    {
+      "path": "experiments/document1/scenarios/denial_of_service/raw/network_metrics.csv.gz",
+      "bytes": 5771855,
+      "sha256": "7c48b4b3070843538068fde830d3d85341139ac3c5ef27ff1cad7924bfe8c5bd"
+    },
+    {
+      "path": "experiments/document1/scenarios/denial_of_service/raw/uas_benign.vec.gz",
+      "bytes": 13515541,
+      "sha256": "f0d7e244568f79948b9814e76de4e117badcb873ed1c1529b6d0069c07aa3666"
+    },
+    {
+      "path": "experiments/document1/scenarios/identity_theft/raw/network_metrics.csv.gz",
+      "bytes": 1504446,
+      "sha256": "8125d1e10d20d7d1d06201b27b9ad9b773d4a7c248d59b4c1ac1acfc371e9204"
+    },
+    {
+      "path": "experiments/document1/scenarios/identity_theft/raw/uas_benign.vec.gz",
+      "bytes": 3573243,
+      "sha256": "3e78fbaf5bef4c9a8ee65958fca897f0910f8d444e1356cf58449761c0a1ae6a"
+    },
+    {
+      "path": "experiments/document1/scenarios/lateral_movement/raw/network_metrics.csv.gz",
+      "bytes": 2348470,
+      "sha256": "4e9024480517113395c7c04ab79c9a327326610b84e266d8ea48f584232894f3"
+    },
+    {
+      "path": "experiments/document1/scenarios/lateral_movement/raw/uas_benign.vec.gz",
+      "bytes": 5239338,
+      "sha256": "10b622834bc3bc1bb688c6ebac5269662fae62ec2df76043b19a1e6e911b6bbf"
+    },
+    {
+      "path": "experiments/document1/scenarios/network_application_attack/raw/network_metrics.csv.gz",
+      "bytes": 3897893,
+      "sha256": "b34c91af5b03a52bf8555cdd72ec1cd589fbe70b34e51303215214d3c9ded027"
+    },
+    {
+      "path": "experiments/document1/scenarios/network_application_attack/raw/uas_benign.vec.gz",
+      "bytes": 9118171,
+      "sha256": "99585507538e73f48d8085239bde6d682f720ac96da6c3e9d69bfa6ea625ac33"
+    },
+    {
+      "path": "experiments/document1/scenarios/session_hijacking/raw/network_metrics.csv.gz",
+      "bytes": 1312448,
+      "sha256": "aff55726a54a6d7e9d510f2f6ad03105aa532ec45ed03ab2c66cd8e51463f0b4"
+    },
+    {
+      "path": "experiments/document1/scenarios/session_hijacking/raw/uas_benign.vec.gz",
+      "bytes": 3173213,
+      "sha256": "02418e2b070577c2908d093fe9d87de176f32f0d9ec45877173a3370b607edc3"
+    },
+    {
+      "path": "experiments/document1/scenarios/suspicious/raw/network_metrics.csv.gz",
+      "bytes": 1624365,
+      "sha256": "c52cc70bbfebcfbeb0945738776df63bbd4d5f97945406d3841eb96de64a4b67"
+    },
+    {
+      "path": "experiments/document1/scenarios/suspicious/raw/uas_benign.vec.gz",
+      "bytes": 3761639,
+      "sha256": "fbd3f0cb3aeb8f19eecf630f4c1fd3ae93319dd23d98262f4efb48da48ea7aa1"
+    },
+    {
+      "path": "experiments/live_duration_validation/LIVE_DURATION_05MIN_20260826_215903/network/raw/baseline.vec.gz",
+      "bytes": 18154389,
+      "sha256": "3a1b2588f7de666a33bd6a07437bed161d5733c68dc99233e8f97399056775a2"
+    },
+    {
+      "path": "experiments/live_duration_validation/LIVE_DURATION_05MIN_20260826_215903/network/raw/network_metrics.csv.gz",
+      "bytes": 8038793,
+      "sha256": "d12f7c191cb380aab8a4c8469a15b83bc4ffd8b1c1ece515b8f42ebbcc2ff0e7"
+    },
+    {
+      "path": "experiments/live_duration_validation/LIVE_DURATION_05MIN_20260826_215903/rosbag/rosbag_0.mcap",
+      "bytes": 2438892,
+      "sha256": "4f10b8d00648aed1d47f76089924eaf2b0a8cc764ad11ccf994bdbbc406861eb"
+    },
+    {
+      "path": "experiments/live_duration_validation/LIVE_DURATION_10MIN_20260826_220656/network/raw/baseline.vec.gz",
+      "bytes": 38270331,
+      "sha256": "217b204f38ba39c3d140e46def3df4a8f29fd3b5ebd53da362197affdb458618"
+    },
+    {
+      "path": "experiments/live_duration_validation/LIVE_DURATION_10MIN_20260826_220656/network/raw/network_metrics.csv.gz",
+      "bytes": 16819419,
+      "sha256": "dc5cc9dd061e97c54fad20ba3997f988ffd8059b4fc149ed0d017787d08d25ab"
+    },
+    {
+      "path": "experiments/live_duration_validation/LIVE_DURATION_10MIN_20260826_220656/rosbag/rosbag_0.mcap",
+      "bytes": 4588000,
+      "sha256": "bf4088344b97f3f0244b138438fd0a6f3f1ed37c0f765f66969fffd62abb5bfc"
+    },
+    {
+      "path": "experiments/live_duration_validation/LIVE_DURATION_20MIN_20260826_221941/network/raw/baseline.vec.gz",
+      "bytes": 74157807,
+      "sha256": "726bb309e73db27c5de49c7bbaabd913196b8a3ef6175b0eb78023c56511f75c"
+    },
+    {
+      "path": "experiments/live_duration_validation/LIVE_DURATION_20MIN_20260826_221941/network/raw/network_metrics.csv.gz",
+      "bytes": 32578549,
+      "sha256": "b97bfc9a137fd4e737bcaa7a23cecfabc984029af25ef8003f004118ccafd5b0"
+    },
+    {
+      "path": "experiments/live_duration_validation/LIVE_DURATION_20MIN_20260826_221941/rosbag/rosbag_0.mcap",
+      "bytes": 8872962,
+      "sha256": "65e13d6c7fa53cd1de2b710d31f4f37b85e48d9c1910f79c5b72ea428d31ce34"
+    },
+    {
+      "path": "experiments/logs/B1_BASE_001/network/raw/baseline.vec.gz",
+      "bytes": 19421801,
+      "sha256": "98991ffdc9a7fb8a69b0028ec8b3e4a408dccbba45699642f21f3abe7e02971e"
+    },
+    {
+      "path": "experiments/logs/B1_BASE_001/network/raw/network_metrics.csv.gz",
+      "bytes": 8782643,
+      "sha256": "b6485cfdd65b50384f76f0ba00290e1cd1933bda50f70038c95deef14e3528f4"
+    },
+    {
+      "path": "experiments/logs/B1_BASE_001/rosbag/rosbag_0.mcap",
+      "bytes": 7911376,
+      "sha256": "6d8571bc2cf5b3bcad9ed84de0fe9cdc06baa1cac97390cc34bff67036fdc024"
+    },
+    {
+      "path": "experiments/logs/B1_BASE_002/network/raw/baseline.vec.gz",
+      "bytes": 19378589,
+      "sha256": "dd673845bf70a6859ebbba5db59903dc484f3b4b8f0b156327bd6ca49bd5a78c"
+    },
+    {
+      "path": "experiments/logs/B1_BASE_002/network/raw/network_metrics.csv.gz",
+      "bytes": 8977526,
+      "sha256": "0e6220bae332b50099b75437c3cb4c77dde9b69c67ebfa55f442108dbd9f1d27"
+    },
+    {
+      "path": "experiments/logs/B1_BASE_002/rosbag/rosbag_0.mcap",
+      "bytes": 6386776,
+      "sha256": "8e0b33940bd7233dc3882f850346807921bc4988ef2caaa9d3a994dd6f9a35f9"
+    },
+    {
+      "path": "experiments/logs/B1_BASE_003/network/raw/baseline.vec.gz",
+      "bytes": 18705767,
+      "sha256": "82262f9a02accb3328792d8b4ed6e35b090647ed44953a9fb153d7e2dd898477"
+    },
+    {
+      "path": "experiments/logs/B1_BASE_003/network/raw/network_metrics.csv.gz",
+      "bytes": 7981175,
+      "sha256": "b9602d34340d1b30135e4087644aaca999f5a54a2fdb4865b87eea51b67559f3"
+    },
+    {
+      "path": "experiments/logs/B1_BASE_003/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B1_PILOT_001/network/raw/network_metrics.csv",
+      "bytes": 23363421,
+      "sha256": "509375bfb20ec044b60d89edc4650ec4a47e1b601da282fc7d9f4db034a8dcdd"
+    },
+    {
+      "path": "experiments/logs/B1_PILOT_001/network/raw/pilot.vec",
+      "bytes": 38982312,
+      "sha256": "ebb5e4cb16d8189b211f9a0bfa4b07da6082fea5d053c9fb5920aee8953ea35c"
+    },
+    {
+      "path": "experiments/logs/B1_PILOT_001/rosbag/rosbag_0.mcap",
+      "bytes": 3304396,
+      "sha256": "9219f7aac3ad92ce89805694308b7b1ce273fdfe8ea2f60724c667806328da56"
+    },
+    {
+      "path": "experiments/logs/B2_HOVER_VIDEO_001/network/raw/baseline.vec.gz",
+      "bytes": 14127557,
+      "sha256": "cda900ba93d21e506ed65db0a2ded08c5a377007c3ebfbf8b4a5c1bb524c2945"
+    },
+    {
+      "path": "experiments/logs/B2_HOVER_VIDEO_001/network/raw/network_metrics.csv.gz",
+      "bytes": 5722988,
+      "sha256": "7dcc515b7c71d3877fa382aaad1e2c1188f891a54b41ed99fb659dd0bb2d0907"
+    },
+    {
+      "path": "experiments/logs/B2_HOVER_VIDEO_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_CELLS_3_001/network/raw/baseline.vec.gz",
+      "bytes": 27020626,
+      "sha256": "b80f0578c597d4e529220739f1484c0d0cc728145bd9ed39e705cd5419b06e42"
+    },
+    {
+      "path": "experiments/logs/B_CELLS_3_001/network/raw/network_metrics.csv.gz",
+      "bytes": 11242525,
+      "sha256": "768f26fd9becd85aa6a437790be6ea07609ada32b20083635221cc9c9b140a63"
+    },
+    {
+      "path": "experiments/logs/B_CELLS_3_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_DRONES_3_001/network/raw/baseline.vec.gz",
+      "bytes": 43300565,
+      "sha256": "fe1a80f4df82615fe6c5baa4d75aa0b2fa8c2139d2b282c7110095f769aaeb1e"
+    },
+    {
+      "path": "experiments/logs/B_DRONES_3_001/network/raw/network_metrics.csv.gz",
+      "bytes": 18175660,
+      "sha256": "c58c5362995379c0bf7fb89295540d403aefe4af44e9b50aab95c11dcbb969c5"
+    },
+    {
+      "path": "experiments/logs/B_DRONES_3_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_DRONES_5_001/network/raw/baseline.vec.gz",
+      "bytes": 60375310,
+      "sha256": "eb01da515c8b110d29cd82ffe2540c1f0c52adb2933dc9f39837fb45dd2467ec"
+    },
+    {
+      "path": "experiments/logs/B_DRONES_5_001/network/raw/network_metrics.csv.gz",
+      "bytes": 25840391,
+      "sha256": "b2841bbb1fa860ed1c3108f82ff3578a58e1b15c23ff87a4f8176fdbc7fa8bae"
+    },
+    {
+      "path": "experiments/logs/B_DRONES_5_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_DURATION_10_001/network/raw/baseline.vec.gz",
+      "bytes": 39150376,
+      "sha256": "0a0c8586f76c261694f0367a81ba09c967ce16d6ab58feea153022d8f00a2fb7"
+    },
+    {
+      "path": "experiments/logs/B_DURATION_10_001/network/raw/network_metrics.csv.gz",
+      "bytes": 17538928,
+      "sha256": "c3584eb60a60ef1bd8a6e0b1c1eb1084f4c3ccfa5531d96641a80b60a534b97f"
+    },
+    {
+      "path": "experiments/logs/B_DURATION_10_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_DURATION_20_001/network/raw/baseline.vec.gz",
+      "bytes": 78898724,
+      "sha256": "5b049b647ba078cb894e5751b34722c98a90c23a35a96241235635bf7a75a3ea"
+    },
+    {
+      "path": "experiments/logs/B_DURATION_20_001/network/raw/network_metrics.csv.gz",
+      "bytes": 35312496,
+      "sha256": "a5f47aebe22efee1e54deed209b6b04adeb6bda88895c06f6fb39521fe95be7d"
+    },
+    {
+      "path": "experiments/logs/B_DURATION_20_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_DURATION_5_001/network/raw/baseline.vec.gz",
+      "bytes": 19476556,
+      "sha256": "221e8c4239e79fe7c0eb72be8b61118a145fc3eef2ffe87c65a9b82f330cc82f"
+    },
+    {
+      "path": "experiments/logs/B_DURATION_5_001/network/raw/network_metrics.csv.gz",
+      "bytes": 8804619,
+      "sha256": "bff2ad72536b5051c43457041f40a5e7e48684d8fa6adf932b18ce6e03152d3a"
+    },
+    {
+      "path": "experiments/logs/B_DURATION_5_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_LOAD_HIGH_001/network/raw/baseline.vec.gz",
+      "bytes": 271607531,
+      "sha256": "814fde74ab50ddf5d5ee8c2e28bccab04a61a2d2a9fcbd80b5e75f6eca8f97c8"
+    },
+    {
+      "path": "experiments/logs/B_LOAD_HIGH_001/network/raw/network_metrics.csv.gz",
+      "bytes": 106996215,
+      "sha256": "cdc0d5f892f46feb1e71adc13ec393c4faf4955146e7615155d7895d10222812"
+    },
+    {
+      "path": "experiments/logs/B_LOAD_HIGH_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_LOAD_LOW_001/network/raw/baseline.vec.gz",
+      "bytes": 23371530,
+      "sha256": "fa0b8410802a869a4b53dcc9eaa5061160454323a7b4d8efd8d9a1181bf99b72"
+    },
+    {
+      "path": "experiments/logs/B_LOAD_LOW_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10044933,
+      "sha256": "ae8fcff1767e621c4b577cf42f0cf89675ad51f90a9130113f84ace6daad5549"
+    },
+    {
+      "path": "experiments/logs/B_LOAD_LOW_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_LOAD_MEDIUM_001/network/raw/baseline.vec.gz",
+      "bytes": 68252896,
+      "sha256": "0465bc7321cc67a7b715ee55ca0af35d3e243f53454e2d2ac700cc5896b6cab3"
+    },
+    {
+      "path": "experiments/logs/B_LOAD_MEDIUM_001/network/raw/network_metrics.csv.gz",
+      "bytes": 27116788,
+      "sha256": "68d1b1790126ca9e289f5c1f149d224dd7a1c9d7709a9bea160905ce3fd75ef6"
+    },
+    {
+      "path": "experiments/logs/B_LOAD_MEDIUM_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_SLICE_DUAL_001/network/raw/baseline.vec.gz",
+      "bytes": 14127557,
+      "sha256": "cda900ba93d21e506ed65db0a2ded08c5a377007c3ebfbf8b4a5c1bb524c2945"
+    },
+    {
+      "path": "experiments/logs/B_SLICE_DUAL_001/network/raw/network_metrics.csv.gz",
+      "bytes": 5722988,
+      "sha256": "7dcc515b7c71d3877fa382aaad1e2c1188f891a54b41ed99fb659dd0bb2d0907"
+    },
+    {
+      "path": "experiments/logs/B_SLICE_DUAL_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_SLICE_TRIPLE_001/network/raw/baseline.vec.gz",
+      "bytes": 14127557,
+      "sha256": "cda900ba93d21e506ed65db0a2ded08c5a377007c3ebfbf8b4a5c1bb524c2945"
+    },
+    {
+      "path": "experiments/logs/B_SLICE_TRIPLE_001/network/raw/network_metrics.csv.gz",
+      "bytes": 5722988,
+      "sha256": "7dcc515b7c71d3877fa382aaad1e2c1188f891a54b41ed99fb659dd0bb2d0907"
+    },
+    {
+      "path": "experiments/logs/B_SLICE_TRIPLE_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_SPEED_FAST_001/network/raw/baseline.vec.gz",
+      "bytes": 23369458,
+      "sha256": "92ffd29db77c0f311461d0103b5fc3ab0cf2b6cf9ed7dbc7e3ae0edde3c0cfdf"
+    },
+    {
+      "path": "experiments/logs/B_SPEED_FAST_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10060646,
+      "sha256": "6683d66322cb61bbe886c214fc078af2f04838e029f296067d865146377d534c"
+    },
+    {
+      "path": "experiments/logs/B_SPEED_FAST_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_SPEED_SLOW_001/network/raw/baseline.vec.gz",
+      "bytes": 23418780,
+      "sha256": "3bd554749caa9dd25a80b2bca205f55783d525f0452263d8c3f0f038cb858dcd"
+    },
+    {
+      "path": "experiments/logs/B_SPEED_SLOW_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10254718,
+      "sha256": "fd1d7a1c3308af4bb5fd0645d0fd5f747c619406c7fd487449ac0f9d0432e866"
+    },
+    {
+      "path": "experiments/logs/B_SPEED_SLOW_001/rosbag/rosbag_0.mcap",
+      "bytes": 4339307,
+      "sha256": "dab4ba467d1dc48b3d305153135b073e6b4d68c3e71666b74b75dc26c30074dd"
+    },
+    {
+      "path": "experiments/logs/B_WINDOW_0P5_001/network/raw/baseline.vec.gz",
+      "bytes": 18705767,
+      "sha256": "82262f9a02accb3328792d8b4ed6e35b090647ed44953a9fb153d7e2dd898477"
+    },
+    {
+      "path": "experiments/logs/B_WINDOW_0P5_001/network/raw/network_metrics.csv.gz",
+      "bytes": 7981175,
+      "sha256": "b9602d34340d1b30135e4087644aaca999f5a54a2fdb4865b87eea51b67559f3"
+    },
+    {
+      "path": "experiments/logs/B_WINDOW_0P5_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_WINDOW_5_001/network/raw/baseline.vec.gz",
+      "bytes": 18705767,
+      "sha256": "82262f9a02accb3328792d8b4ed6e35b090647ed44953a9fb153d7e2dd898477"
+    },
+    {
+      "path": "experiments/logs/B_WINDOW_5_001/network/raw/network_metrics.csv.gz",
+      "bytes": 7981175,
+      "sha256": "b9602d34340d1b30135e4087644aaca999f5a54a2fdb4865b87eea51b67559f3"
+    },
+    {
+      "path": "experiments/logs/B_WINDOW_5_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_WIRELESS_EDGE_001/network/raw/baseline.vec.gz",
+      "bytes": 23447786,
+      "sha256": "24aaf25670cb3acabcc2b678f8af5832a4bc7ab0b092f1eeb54d6e3e5311776c"
+    },
+    {
+      "path": "experiments/logs/B_WIRELESS_EDGE_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10087651,
+      "sha256": "5574ef4fbbfec4a77a2ccce5ae1d6119bb243a97669543b0d8ea4baf7824f1a7"
+    },
+    {
+      "path": "experiments/logs/B_WIRELESS_EDGE_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_WIRELESS_GOOD_001/network/raw/baseline.vec.gz",
+      "bytes": 23374286,
+      "sha256": "2018e817a67a55286dd6bca737f5c9ce1b2847d21589e9a2ac4b7446325ff184"
+    },
+    {
+      "path": "experiments/logs/B_WIRELESS_GOOD_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10046493,
+      "sha256": "e79a824bfa826800ea7f4810686c5a6d9803f4958b7f2030c48d8c89661fb2d8"
+    },
+    {
+      "path": "experiments/logs/B_WIRELESS_GOOD_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/B_WIRELESS_MODERATE_001/network/raw/baseline.vec.gz",
+      "bytes": 23373815,
+      "sha256": "be79c934389284cc050dc323a2a6eb9391898b689fedab11d3f6d1c52098ced0"
+    },
+    {
+      "path": "experiments/logs/B_WIRELESS_MODERATE_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10053078,
+      "sha256": "24aa59d496c09d3785c0b27e2ce7d599a5a2a9b527d7cc262c638306b1d069b3"
+    },
+    {
+      "path": "experiments/logs/B_WIRELESS_MODERATE_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/M_API_HIGH_001/network/raw/baseline.vec.gz",
+      "bytes": 52245062,
+      "sha256": "4dbbed6e000bab6ef23b960c85a9ee99f8ea04ef9f603b48905fffc92b52d857"
+    },
+    {
+      "path": "experiments/logs/M_API_HIGH_001/network/raw/network_metrics.csv.gz",
+      "bytes": 21631724,
+      "sha256": "cf3cf5db26d625ffa08cde4f6f3de31fe993f4189de0e6646d9a8f20ed5b7829"
+    },
+    {
+      "path": "experiments/logs/M_API_HIGH_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/M_API_LOW_001/network/raw/baseline.vec.gz",
+      "bytes": 31033177,
+      "sha256": "6fa1f374a9a1492e02759044855f8abf26bbd079d3200e1dbf3f0d0095a61f61"
+    },
+    {
+      "path": "experiments/logs/M_API_LOW_001/network/raw/network_metrics.csv.gz",
+      "bytes": 13600686,
+      "sha256": "6d5df35d4150d1c1befbe16d7e9cbac492693d2d16e7eba6b7f9c18ad5d65ae0"
+    },
+    {
+      "path": "experiments/logs/M_API_LOW_001/rosbag/rosbag_0.mcap",
+      "bytes": 6386776,
+      "sha256": "8e0b33940bd7233dc3882f850346807921bc4988ef2caaa9d3a994dd6f9a35f9"
+    },
+    {
+      "path": "experiments/logs/M_CONTROL_HIGH_001/network/raw/baseline.vec.gz",
+      "bytes": 25280752,
+      "sha256": "b3a4482c7c6cd4511151c2bf396961ce6b5bd66d73789673cfe0c19ab312bca4"
+    },
+    {
+      "path": "experiments/logs/M_CONTROL_HIGH_001/network/raw/network_metrics.csv.gz",
+      "bytes": 11040235,
+      "sha256": "b2147a2c98152ee0485f6b00c4814b7c1748fda49d41b00a467b2230c1254d02"
+    },
+    {
+      "path": "experiments/logs/M_CONTROL_HIGH_001/rosbag/rosbag_0.mcap",
+      "bytes": 6386776,
+      "sha256": "8e0b33940bd7233dc3882f850346807921bc4988ef2caaa9d3a994dd6f9a35f9"
+    },
+    {
+      "path": "experiments/logs/M_CONTROL_LOW_001/network/raw/baseline.vec.gz",
+      "bytes": 24429909,
+      "sha256": "9ed22c3ac843ba442a417af64e52f61ca05a27eeaa133f36fe23c14ca0476328"
+    },
+    {
+      "path": "experiments/logs/M_CONTROL_LOW_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10472231,
+      "sha256": "d9fbb71bb2040f726f4412ebc78b987acf8a0911fa257063f517eb2fe3ce396c"
+    },
+    {
+      "path": "experiments/logs/M_CONTROL_LOW_001/rosbag/rosbag_0.mcap",
+      "bytes": 7911376,
+      "sha256": "6d8571bc2cf5b3bcad9ed84de0fe9cdc06baa1cac97390cc34bff67036fdc024"
+    },
+    {
+      "path": "experiments/logs/M_DOS_30S_001/network/raw/baseline.vec.gz",
+      "bytes": 38532325,
+      "sha256": "85f729e0ab060d25be7443bb35f8ef200819766267a2ea9d6614c013854e3004"
+    },
+    {
+      "path": "experiments/logs/M_DOS_30S_001/network/raw/network_metrics.csv.gz",
+      "bytes": 16571187,
+      "sha256": "03f79c2ecbff54982886736893519e430db668df58a9030c65ced864f2fd9576"
+    },
+    {
+      "path": "experiments/logs/M_DOS_30S_001/rosbag/rosbag_0.mcap",
+      "bytes": 6386776,
+      "sha256": "8e0b33940bd7233dc3882f850346807921bc4988ef2caaa9d3a994dd6f9a35f9"
+    },
+    {
+      "path": "experiments/logs/M_DOS_90S_001/network/raw/baseline.vec.gz",
+      "bytes": 67303397,
+      "sha256": "45de53b964f5e467c4cee19ee5fe41078a58d8897bb9fbbcee370ec76ca905de"
+    },
+    {
+      "path": "experiments/logs/M_DOS_90S_001/network/raw/network_metrics.csv.gz",
+      "bytes": 28236007,
+      "sha256": "db9959adfeb12c28c0c3db63f46f630ad595ab3abf21d584c858cb8f593e9aba"
+    },
+    {
+      "path": "experiments/logs/M_DOS_90S_001/rosbag/rosbag_0.mcap",
+      "bytes": 6386776,
+      "sha256": "8e0b33940bd7233dc3882f850346807921bc4988ef2caaa9d3a994dd6f9a35f9"
+    },
+    {
+      "path": "experiments/logs/M_DOS_HIGH_001/network/raw/baseline.vec.gz",
+      "bytes": 52958677,
+      "sha256": "edb9450a4c05b29a33be60569d3991ae098cd4cb70e80f980c1673338127f691"
+    },
+    {
+      "path": "experiments/logs/M_DOS_HIGH_001/network/raw/network_metrics.csv.gz",
+      "bytes": 22412795,
+      "sha256": "ca0b6076c697051f955c0159e194f9e1613b9d427b2e16f2e53282af96ff86cc"
+    },
+    {
+      "path": "experiments/logs/M_DOS_HIGH_001/rosbag/rosbag_0.mcap",
+      "bytes": 6386776,
+      "sha256": "8e0b33940bd7233dc3882f850346807921bc4988ef2caaa9d3a994dd6f9a35f9"
+    },
+    {
+      "path": "experiments/logs/M_DOS_LOW_001/network/raw/baseline.vec.gz",
+      "bytes": 31203404,
+      "sha256": "24ba72ed398518e3485a4108240c5e20d334eb97bc8db505cf73fee5f4f36373"
+    },
+    {
+      "path": "experiments/logs/M_DOS_LOW_001/network/raw/network_metrics.csv.gz",
+      "bytes": 13486576,
+      "sha256": "167261786e2beb2ce8953db581b67516bdb420376deb83fe9979d27698e5af75"
+    },
+    {
+      "path": "experiments/logs/M_DOS_LOW_001/rosbag/rosbag_0.mcap",
+      "bytes": 7911376,
+      "sha256": "6d8571bc2cf5b3bcad9ed84de0fe9cdc06baa1cac97390cc34bff67036fdc024"
+    },
+    {
+      "path": "experiments/logs/M_DOS_REPEATED_001/network/raw/baseline.vec.gz",
+      "bytes": 40599097,
+      "sha256": "956030139ed318113c484b4f1c62bb6df099e616a4bb4a8ea698e3e9b1f75128"
+    },
+    {
+      "path": "experiments/logs/M_DOS_REPEATED_001/network/raw/network_metrics.csv.gz",
+      "bytes": 17154545,
+      "sha256": "3e992cf0a2eb5aa1a38e6a1245a0ef109f532dc76bb60c495e4af3ae3162ac45"
+    },
+    {
+      "path": "experiments/logs/M_DOS_REPEATED_001/rosbag/rosbag_0.mcap",
+      "bytes": 6386776,
+      "sha256": "8e0b33940bd7233dc3882f850346807921bc4988ef2caaa9d3a994dd6f9a35f9"
+    },
+    {
+      "path": "experiments/logs/M_IDENTITY_HIGH_001/network/raw/baseline.vec.gz",
+      "bytes": 24366826,
+      "sha256": "80493551d5f7de041e1f45b3f3b00ced49472abeb5695bbdf78cd44608150e2b"
+    },
+    {
+      "path": "experiments/logs/M_IDENTITY_HIGH_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10436157,
+      "sha256": "c4629f3a11a509dda8f73a724494b4f7ee1cf100017bdd1962529568dd9a8b2b"
+    },
+    {
+      "path": "experiments/logs/M_IDENTITY_HIGH_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/M_IDENTITY_LOW_001/network/raw/baseline.vec.gz",
+      "bytes": 24313387,
+      "sha256": "c0a62a166557268b9707ea92578fdaee0ea9976d37ed3459188d25115413a1fb"
+    },
+    {
+      "path": "experiments/logs/M_IDENTITY_LOW_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10586503,
+      "sha256": "f06fdfb0cc2d5a991baae82876279bc081f55db9152cf8556d2ca84b1f26a105"
+    },
+    {
+      "path": "experiments/logs/M_IDENTITY_LOW_001/rosbag/rosbag_0.mcap",
+      "bytes": 6386776,
+      "sha256": "8e0b33940bd7233dc3882f850346807921bc4988ef2caaa9d3a994dd6f9a35f9"
+    },
+    {
+      "path": "experiments/logs/M_LATERAL_HIGH_001/network/raw/baseline.vec.gz",
+      "bytes": 24444559,
+      "sha256": "8a3746739b56dec216e38643473dfa4097e33c1d1c75cf586c841d7ac9fa99c1"
+    },
+    {
+      "path": "experiments/logs/M_LATERAL_HIGH_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10489330,
+      "sha256": "3a5e6184756088dee27ec24a14921a41df025e65801d06a45f9214c98ef5e644"
+    },
+    {
+      "path": "experiments/logs/M_LATERAL_HIGH_001/rosbag/rosbag_0.mcap",
+      "bytes": 7911376,
+      "sha256": "6d8571bc2cf5b3bcad9ed84de0fe9cdc06baa1cac97390cc34bff67036fdc024"
+    },
+    {
+      "path": "experiments/logs/M_LATERAL_LOW_001/network/raw/baseline.vec.gz",
+      "bytes": 24415024,
+      "sha256": "df9038383c63133d4c1827daf35257addf7b26bd13b1f80a6556dc8600f107cd"
+    },
+    {
+      "path": "experiments/logs/M_LATERAL_LOW_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10474439,
+      "sha256": "f1166a8bdceee93e3474ca981c0b02aab94e85c8814a3986d1d280c83d214c7b"
+    },
+    {
+      "path": "experiments/logs/M_LATERAL_LOW_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/M_SESSION_HIGH_001/network/raw/baseline.vec.gz",
+      "bytes": 24594095,
+      "sha256": "1041eb683a33af6d8f254fa9f053b23d31a72d81f2b37590976273593159edb1"
+    },
+    {
+      "path": "experiments/logs/M_SESSION_HIGH_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10545013,
+      "sha256": "43c2d1b581ed5f06337b77898f511312c27f5798920740abc05b27f775017abd"
+    },
+    {
+      "path": "experiments/logs/M_SESSION_HIGH_001/rosbag/rosbag_0.mcap",
+      "bytes": 7911376,
+      "sha256": "6d8571bc2cf5b3bcad9ed84de0fe9cdc06baa1cac97390cc34bff67036fdc024"
+    },
+    {
+      "path": "experiments/logs/M_SESSION_LOW_001/network/raw/baseline.vec.gz",
+      "bytes": 24386880,
+      "sha256": "a10caf394c96fb355a156a9c4f7f80d7062689f5be8c73eeedb55d90b225f702"
+    },
+    {
+      "path": "experiments/logs/M_SESSION_LOW_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10433212,
+      "sha256": "f09f847fafce2bb3deb2ba1bcfb484d3c8add9cc0a989bfc7714ca6172e89473"
+    },
+    {
+      "path": "experiments/logs/M_SESSION_LOW_001/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/S1_HANDOVER_LOSS_001/network/raw/baseline.vec.gz",
+      "bytes": 23150108,
+      "sha256": "41e893cd084808e239bddf014801fa0c7263ac1021f5b870263fc6007be14544"
+    },
+    {
+      "path": "experiments/logs/S1_HANDOVER_LOSS_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10165918,
+      "sha256": "24b76fa45b374cad931b8e767cccb06f503758d54ade16cb7cb354d12868bbfe"
+    },
+    {
+      "path": "experiments/logs/S1_HANDOVER_LOSS_001/rosbag/rosbag_0.mcap",
+      "bytes": 6386776,
+      "sha256": "8e0b33940bd7233dc3882f850346807921bc4988ef2caaa9d3a994dd6f9a35f9"
+    },
+    {
+      "path": "experiments/logs/S1_HANDOVER_LOSS_002/network/raw/baseline.vec.gz",
+      "bytes": 23282427,
+      "sha256": "a08c285f95b5d736564220e12d70696116a54afaf1663d4d26fdac8938b8412a"
+    },
+    {
+      "path": "experiments/logs/S1_HANDOVER_LOSS_002/network/raw/network_metrics.csv.gz",
+      "bytes": 9997377,
+      "sha256": "f7c07ef84c2402e461ee3d4d2951d998f1aa4b19edc5a0b1565e195894894093"
+    },
+    {
+      "path": "experiments/logs/S1_HANDOVER_LOSS_002/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/S2_AUTH_001/network/raw/baseline.vec.gz",
+      "bytes": 23329802,
+      "sha256": "cfb0a1bb466b582676ed8a524f9be7fcbbacaea829f8151e0e58797c5cd440f2"
+    },
+    {
+      "path": "experiments/logs/S2_AUTH_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10030146,
+      "sha256": "8a95b29d33b806661a875b40f08b6c536335afff8738d9646abad98c4cee463e"
+    },
+    {
+      "path": "experiments/logs/S2_AUTH_001/rosbag/rosbag_0.mcap",
+      "bytes": 7911376,
+      "sha256": "6d8571bc2cf5b3bcad9ed84de0fe9cdc06baa1cac97390cc34bff67036fdc024"
+    },
+    {
+      "path": "experiments/logs/S2_AUTH_002/network/raw/baseline.vec.gz",
+      "bytes": 23493438,
+      "sha256": "6a8b1ee4eeb5ff53b86e15e534cf2f2b21c1c8230a8ba6de32e4cfe22776a51d"
+    },
+    {
+      "path": "experiments/logs/S2_AUTH_002/network/raw/network_metrics.csv.gz",
+      "bytes": 10370150,
+      "sha256": "f20320336b3461aba4699f86ffac315da77ba607669f4c40452cd9195b6d980e"
+    },
+    {
+      "path": "experiments/logs/S2_AUTH_002/rosbag/rosbag_0.mcap",
+      "bytes": 6386776,
+      "sha256": "8e0b33940bd7233dc3882f850346807921bc4988ef2caaa9d3a994dd6f9a35f9"
+    },
+    {
+      "path": "experiments/logs/S3_API_RETRY_001/network/raw/baseline.vec.gz",
+      "bytes": 23364918,
+      "sha256": "645b3921ce411f7cd2924a6e0f90ad17fc46dd0eb73e57d4c39535ade0174ffe"
+    },
+    {
+      "path": "experiments/logs/S3_API_RETRY_001/network/raw/network_metrics.csv.gz",
+      "bytes": 10301509,
+      "sha256": "0ee505dde5574bb7624a186ad3e3153845f35f7a0fc143b03c9911edb0f1eaf8"
+    },
+    {
+      "path": "experiments/logs/S3_API_RETRY_001/rosbag/rosbag_0.mcap",
+      "bytes": 6386776,
+      "sha256": "8e0b33940bd7233dc3882f850346807921bc4988ef2caaa9d3a994dd6f9a35f9"
+    },
+    {
+      "path": "experiments/logs/S3_API_RETRY_002/network/raw/baseline.vec.gz",
+      "bytes": 26594550,
+      "sha256": "6f6bf7f326dc5a835f07bed5f5d961c715f0434d5036fe38ad7c0fb6b3f89cf2"
+    },
+    {
+      "path": "experiments/logs/S3_API_RETRY_002/network/raw/network_metrics.csv.gz",
+      "bytes": 11684989,
+      "sha256": "a3758d0682a11ed1cf102a99ec0ab90215250bf38b2390c3b0277aabc1e56510"
+    },
+    {
+      "path": "experiments/logs/S3_API_RETRY_002/rosbag/rosbag_0.mcap",
+      "bytes": 9620752,
+      "sha256": "08cd2e91a30c230a96b3f383db1b8edb0ab207982c44026d14acb3d632cafbc1"
+    },
+    {
+      "path": "experiments/logs/S4_DROPOUT_001/network/raw/baseline.vec.gz",
+      "bytes": 23114091,
+      "sha256": "315cbaf6645e84bb87ce5871dc68605be5814312dfc669edf1a35ee9add82ee9"
+    },
+    {
+      "path": "experiments/logs/S4_DROPOUT_001/network/raw/network_metrics.csv.gz",
+      "bytes": 9943469,
+      "sha256": "08ee5f4cbbd0e7c4a87e911e3bc94d960adf50f192ad9ca184e76d333352611c"
+    },
+    {
+      "path": "experiments/logs/S4_DROPOUT_001/rosbag/rosbag_0.mcap",
+      "bytes": 7911376,
+      "sha256": "6d8571bc2cf5b3bcad9ed84de0fe9cdc06baa1cac97390cc34bff67036fdc024"
+    },
+    {
+      "path": "experiments/logs/S4_DROPOUT_002/network/raw/baseline.vec.gz",
+      "bytes": 22526388,
+      "sha256": "42169e6f1ec7cf917c7c03fd151db5cb538f3d0160af839612924ba35c7ba13a"
+    },
+    {
+      "path": "experiments/logs/S4_DROPOUT_002/network/raw/network_metrics.csv.gz",
+      "bytes": 9933991,
+      "sha256": "8ffc300c76f8ad0ffdf1e33e09fcf5d1100e669f0d3cdd8e28f5a33600706278"
+    },
+    {
+      "path": "experiments/logs/S4_DROPOUT_002/rosbag/rosbag_0.mcap",
+      "bytes": 6386776,
+      "sha256": "8e0b33940bd7233dc3882f850346807921bc4988ef2caaa9d3a994dd6f9a35f9"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+/home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G added to PATH
+OMNeT++ Discrete Event Simulation  (C) 1992-2022 Andras Varga, OpenSim Ltd.
+Version: 6.0.1, build: 220831-e4f07d04b8, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G/simulations:  20
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G/emulation:  7
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G/src:  93
+Loading NED files from /home/basudeo/Documents/EiraX/UGV_UAV_5G_CoSimulation/sim/simu5g/inet4.5/src:  1187
+Loading NED files from /home/basudeo/Documents/EiraX/UAV_5GSim/notebook_runs/run_20260805_210640/network/denial_of_service/input:  1
+
+Preparing for running configuration General, run #0...
+Assigned runID=General-0-20260805-21:16:57-70884
+Setting up network "EiraXOneUas"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 1e-05s (0m 00s)  0% completed  (0% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 149   present: 143   in FES: 30
+** Event #274688   t=14.8540041884   Elapsed: 2.00005s (0m 02s)  18% completed  (18% total)
+     Speed:     ev/sec=137341   simsec/sec=7.42683   ev/simsec=18492.6
+     Messages:  created: 139834   present: 139   in FES: 15
+** Event #509440   t=27.481   Elapsed: 4.00056s (0m 04s)  33% completed  (33% total)
+     Speed:     ev/sec=117347   simsec/sec=6.31191   ev/simsec=18591.3
+     Messages:  created: 259282   present: 140   in FES: 15
+** Event #753408   t=40.585002076   Elapsed: 6.00201s (0m 06s)  49% completed  (49% total)
+     Speed:     ev/sec=121895   simsec/sec=6.54723   ev/simsec=18617.8
+     Messages:  created: 383502   present: 140   in FES: 15
+** Event #1019648   t=54.842   Elapsed: 8.00245s (0m 08s)  66% completed  (66% total)
+     Speed:     ev/sec=133091   simsec/sec=7.12694   ev/simsec=18674.3
+     Messages:  created: 519248   present: 140   in FES: 16
+** Event #1244928   t=66.844   Elapsed: 10.0035s (0m 10s)  81% completed  (81% total)
+     Speed:     ev/sec=112579   simsec/sec=5.99777   ev/simsec=18770.2
+     Messages:  created: 634415   present: 143   in FES: 17
+** Event #1463808   t=78.46   Elapsed: 12.0065s (0m 12s)  95% completed  (95% total)
+     Speed:     ev/sec=109277   simsec/sec=5.79933   ev/simsec=18843
+     Messages:  created: 746449   present: 145   in FES: 16
+** Event #1532446   t=82.152   Elapsed: 12.6477s (0m 12s)  100% completed  (100% total)
+     Speed:     ev/sec=107048   simsec/sec=5.75816   ev/simsec=18590.7
+     Messages:  created: 781601   present: 127   in FES: 6
+
+<!> Simulation time limit reached -- at t=82.152s, event #1532446
+
+Calling finish() at end of Run #0...
+[INFO]	EiraXOneUas.missionBackend.tcp: finishing with 0 connections open.
+[INFO]	EiraXOneUas.edgeNode.tcp: finishing with 0 connections open.
+[INFO]	EiraXOneUas.gnb.tcp: finishing with 0 connections open.
+[INFO]	EiraXOneUas.gnb.sctp: finishing SCTP with 0 connections open.
+[INFO]	EiraXOneUas.ue[0].tcp: finishing with 0 connections open.
+[INFO]	** Signal at T=82.152 to EiraXOneUas.router.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.router.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.missionBackend.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.missionBackend.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=82.152 to EiraXOneUas.router.ipv4.routingTable: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.router.ipv4.configurator: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.edgeNode.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.edgeNode.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=82.152 to EiraXOneUas.upf.ipv4.routingTable: interfaceStateChanged pppIf ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.upf.ipv4.configurator: interfaceStateChanged pppIf ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.router.ipv4.routingTable: interfaceStateChanged ppp2 ID:103 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.router.ipv4.configurator: interfaceStateChanged ppp2 ID:103 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.iUpf.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.iUpf.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.upf.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.upf.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=82.152 to EiraXOneUas.gnb.ipv4.routingTable: interfaceStateChanged pppIf ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.gnb.ipv4.configurator: interfaceStateChanged pppIf ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.iUpf.ipv4.routingTable: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=82.152 to EiraXOneUas.iUpf.ipv4.configurator: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+
+End.
+Exported 1046 scalars, 2061 parameters, 175 vectors, 48 histograms
+

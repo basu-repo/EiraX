@@ -1,0 +1,16 @@
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1785961670.751082208] [rosbag2_recorder]: Press SPACE for pausing/resuming
+[INFO] [1785961670.751087171] [rosbag2_recorder]: Event publisher thread: Started
+[INFO] [1785961670.756283854] [rosbag2_recorder]: Starting recording to '/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B1_PILOT_001/rosbag'
+[INFO] [1785961670.758096219] [rosbag2_recorder]: Listening for topics...
+[INFO] [1785961670.758148068] [rosbag2_recorder]: Recording...
+[INFO] [1785961670.758136507] [rosbag2_recorder]: Topics discovery started.
+[INFO] [1785961670.881833291] [rosbag2_recorder]: Subscribed to topic '/mavros/global_position/raw/fix'
+[INFO] [1785961670.986901560] [rosbag2_recorder]: Subscribed to topic '/mavros/local_position/pose'
+[INFO] [1785961671.104840034] [rosbag2_recorder]: Subscribed to topic '/mavros/state'
+[INFO] [1785961671.104897395] [rosbag2_recorder]: All requested topics are subscribed. Stopping discovery...
+[INFO] [1785961671.104906141] [rosbag2_recorder]: Topics discovery stopped.
+[INFO] [1785962064.655114301] [rosbag2_recorder]: Pausing recording.
+[INFO] [1785962064.658563498] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1785962064.663672945] [rosbag2_recorder]: Recording stopped
+[WARN] [1785962064.663713913] [rosbag2_recorder]: Number of messages lost on the transport layer: 6
+[INFO] [1785962064.665891108] [rosbag2_recorder]: Event publisher thread: Exited

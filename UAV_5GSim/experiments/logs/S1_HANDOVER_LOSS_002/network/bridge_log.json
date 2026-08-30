@@ -1,0 +1,26 @@
+{
+  "aggregation_window_sec": 1.0,
+  "inputs": {
+    "manifest": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/manifests/S1_HANDOVER_LOSS_002.yaml",
+    "rosbag": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/S1_HANDOVER_LOSS_002/rosbag",
+    "pose": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/trace/S1_HANDOVER_LOSS_002_mission_pose.txt",
+    "network": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/S1_HANDOVER_LOSS_002/network/raw/network_metrics.csv"
+  },
+  "output": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/S1_HANDOVER_LOSS_002/network/data/S1_HANDOVER_LOSS_002_cosim.csv",
+  "rows": 600,
+  "derivations": {
+    "raw_metrics": "Simu5G/INET vectors",
+    "jitter_ms": "population standard deviation of delays",
+    "retransmission_rate": "NR HARQ uplink error/retry indicator",
+    "signal_quality_dbm": "uplink SINR + documented -97 dBm noise-floor approximation",
+    "handover": "per-window changes in measured Simu5G NR servingCell vector",
+    "flags": "telemetry thresholds only"
+  },
+  "scenario": "S1 short handover loss spike (non-attack)",
+  "predeclared_label_window_sec": [
+    46,
+    77
+  ],
+  "physical_source_run": "B1_BASE_003",
+  "label_application": "labels copied only from pre-run manifest after feature derivation"
+}

@@ -1,0 +1,25 @@
+{
+  "run_id": "B1_BASE_001",
+  "aggregation_window_sec": 1.0,
+  "inputs": {
+    "manifest": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/manifests/B1_BASE_001.yaml",
+    "rosbag": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B1_BASE_001/rosbag",
+    "pose": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/trace/B1_BASE_001_mission_pose.txt",
+    "network": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B1_BASE_001/network/raw/network_metrics.csv"
+  },
+  "output": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B1_BASE_001/network/data/B1_BASE_001_cosim.csv",
+  "rows": 600,
+  "derivations": {
+    "raw_metrics": "Simu5G/INET vectors",
+    "packets_per_second": "received packet count / one-second window",
+    "throughput_kbps": "received bytes * 8 / 1000 / window",
+    "jitter_ms": "population standard deviation of measured delays",
+    "packet_loss_rate": "expected application packets minus received packets",
+    "retransmission_rate": "NR HARQ uplink error/retry indicator",
+    "signal_quality_dbm": "measured uplink SINR plus documented -97 dBm reference",
+    "handover": "serving-cell changes",
+    "unusual_destination_flag": "destination outside manifest allowed_destinations",
+    "session_reuse_flag": "same session observed from a different source IP",
+    "traffic_burst_flag": "packets_per_second > 3 * benign flow rate"
+  }
+}

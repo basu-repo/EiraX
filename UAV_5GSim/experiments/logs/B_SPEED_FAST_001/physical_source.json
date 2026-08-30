@@ -1,0 +1,5 @@
+{
+  "source_run": "B1_BASE_003",
+  "storage": "hard-linked",
+  "transformation": "fast trace uses measured geometry with time-scaled timestamps"
+}

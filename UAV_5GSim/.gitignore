@@ -1,0 +1,28 @@
+# UAV_5GSim evidence policy
+#
+# Both supplied UAS documents require the raw simulation evidence to be
+# delivered alongside the dataset. Everything the documents name as a
+# deliverable is tracked here: scenario manifests, Simu5G scalar results
+# (.sca), OMNeT++/Simu5G run configuration, ROS bag metadata, pose and
+# mobility traces, bridge logs, per-run 44-column datasets, validator output,
+# provenance and leakage audits.
+#
+# Only the bulk regenerable simulator dumps are excluded, because they are
+# large binaries that Git cannot delta-compress and that any reviewer can
+# rebuild from the tracked manifests and configuration:
+#
+#   Simu5G vector output        ~1.5 GB
+#   raw per-flow metric dumps   ~654 MB
+#   ROS 2 .mcap bag payloads    ~54 MB
+#
+# Their SHA-256 checksums, sizes and source runs are recorded in
+# experiments/reports/raw_evidence_manifest.json so the delivered archive
+# remains verifiable without them.
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Interactive runtime scratch written by UAV_5GSim.ipynb and run_uav_gazebo.py
+/notebook_runs/
+/logs/

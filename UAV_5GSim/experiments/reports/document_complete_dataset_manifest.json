@@ -1,5 +1,5 @@
 {
-  "dataset": "experiments/data/drone_network_telemetry_cosim_document_complete.csv",
+  "dataset": "experiments/data/drone_network_telemetry_cosim.csv",
   "rows": 25490,
   "columns": 44,
   "missions": 37,

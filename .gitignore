@@ -54,6 +54,11 @@
 **/install/
 **/log/
 **/logs/
+# UAV_5GSim keeps its per-run experiment evidence under experiments/logs/.
+# That tree is required deliverable material, not build output, so it is
+# re-included here; UAV_5GSim/.gitignore then excludes only the bulk
+# regenerable simulator dumps inside it.
+!/UAV_5GSim/experiments/logs/
 **/build_*/
 **/install_*/
 **/log_*/
@@ -83,10 +88,11 @@
 # regenerable from the scenario manifests and run to hundreds of megabytes per
 # batch. Scalars (.sca), the assembled cosim datasets, pose traces, manifests
 # and summaries stay in Git as the experiment evidence.
-**/network/raw/*.vec
-**/network/raw/*.vec.gz
-**/network/raw/*.vci
-**/network/raw/*.csv.gz
+**/raw/*.vec
+**/raw/*.vec.gz
+**/raw/*.vci
+**/raw/*.csv.gz
+**/raw/network_metrics.csv
 
 # Temporary files
 **/*.tmp

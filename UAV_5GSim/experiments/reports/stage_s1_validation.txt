@@ -1,4 +1,0 @@
-RESULT: PASSED (5760 rows, 44 columns)
-
-Class distribution: normal=5632, suspicious=128, malicious=0.
-The dataset contains ten complete missions and must be split by mission_id.

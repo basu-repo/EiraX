@@ -1,0 +1,26 @@
+{
+  "aggregation_window_sec": 1.0,
+  "inputs": {
+    "manifest": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/manifests/B_LOAD_LOW_001.yaml",
+    "rosbag": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_LOAD_LOW_001/rosbag",
+    "pose": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/trace/B_LOAD_LOW_001_mission_pose.txt",
+    "network": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_LOAD_LOW_001/network/raw/network_metrics.csv"
+  },
+  "output": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_LOAD_LOW_001/network/data/B_LOAD_LOW_001_cosim.csv",
+  "rows": 600,
+  "derivations": {
+    "raw_metrics": "Simu5G/INET vectors",
+    "jitter_ms": "population standard deviation of delays",
+    "retransmission_rate": "NR HARQ uplink error/retry indicator",
+    "signal_quality_dbm": "uplink SINR + documented -97 dBm noise-floor approximation",
+    "handover": "per-window changes in measured servingCell vector",
+    "flags": "telemetry thresholds only"
+  },
+  "controlled_network_variation": {
+    "background": "low",
+    "ues": 0,
+    "rate": 0.0,
+    "size": 0
+  },
+  "physical_source_run": "B1_BASE_003"
+}

@@ -1,0 +1,32 @@
+{
+  "aggregation_window_sec": 1.0,
+  "inputs": {
+    "manifest": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/manifests/B_SPEED_SLOW_001.yaml",
+    "rosbag": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_SPEED_SLOW_001/rosbag",
+    "pose": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/trace/B_SPEED_SLOW_001_mission_pose.txt",
+    "network": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_SPEED_SLOW_001/network/raw/network_metrics.csv"
+  },
+  "output": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_SPEED_SLOW_001/network/data/B_SPEED_SLOW_001_cosim.csv",
+  "rows": 600,
+  "derivations": {
+    "raw_metrics": "Simu5G/INET vectors",
+    "jitter_ms": "population standard deviation of delays",
+    "retransmission_rate": "NR HARQ uplink error/retry indicator",
+    "signal_quality_dbm": "uplink SINR + documented -97 dBm noise-floor approximation",
+    "handover": "per-window changes in measured Simu5G servingCell vector; cumulative count retained",
+    "flags": "telemetry thresholds only"
+  },
+  "radio_topology": {
+    "cells": 2,
+    "gnb_1_xy_m": [
+      500,
+      500
+    ],
+    "gnb_2_xy_m": [
+      260,
+      470
+    ],
+    "dynamic_cell_association": true,
+    "x2_handover": true
+  }
+}

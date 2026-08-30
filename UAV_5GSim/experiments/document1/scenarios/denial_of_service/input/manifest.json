@@ -1,0 +1,16 @@
+{
+  "organization_id": "eirax",
+  "fleet_id": "fleet_1",
+  "drone_id": "uav_1",
+  "mission_id": "run_20260805_210640_denial_of_service",
+  "domain": "public_safety",
+  "mission_type": "search_and_rescue",
+  "scenario": "denial_of_service",
+  "attack_type": "denial_of_service",
+  "attack_stage": "impact",
+  "severity": "critical",
+  "incident_label": "malicious",
+  "recommended_response": "rate_limit_and_block_flow",
+  "seed": 0,
+  "rosbag_source": "/home/basudeo/Documents/EiraX/UAV_5GSim/notebook_runs/run_20260805_210640/rosbag_benign"
+}

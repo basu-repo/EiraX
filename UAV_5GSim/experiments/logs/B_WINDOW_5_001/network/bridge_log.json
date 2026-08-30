@@ -1,0 +1,19 @@
+{
+  "aggregation_window_sec": 5.0,
+  "inputs": {
+    "manifest": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/manifests/B_WINDOW_5_001.yaml",
+    "rosbag": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_WINDOW_5_001/rosbag",
+    "pose": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/trace/B1_BASE_003_mission_pose.txt",
+    "network": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_WINDOW_5_001/network/raw/network_metrics.csv"
+  },
+  "output": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_WINDOW_5_001/network/data/B_WINDOW_5_001_cosim.csv",
+  "rows": 120,
+  "derivations": {
+    "raw_metrics": "Simu5G/INET vectors",
+    "jitter_ms": "population standard deviation of delays",
+    "retransmission_rate": "NR HARQ uplink error/retry indicator",
+    "signal_quality_dbm": "uplink SINR + documented -97 dBm noise-floor approximation",
+    "handover": "servingCell changes",
+    "flags": "telemetry thresholds only"
+  }
+}

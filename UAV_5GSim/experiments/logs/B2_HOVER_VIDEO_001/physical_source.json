@@ -1,0 +1,5 @@
+{
+  "physical_source_run": "B1_BASE_003",
+  "construction": "measured takeoff and landing profiles with a constant measured hover pose",
+  "status": "measured-profile counterfactual; not a separate physical hover flight"
+}

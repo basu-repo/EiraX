@@ -1,0 +1,20 @@
+[
+  {
+    "rate": 5.0,
+    "size": 128,
+    "start": 120,
+    "end": 180,
+    "source_ue": 1,
+    "name": "unauthorized_command",
+    "activity": "command",
+    "source_component": "external_host",
+    "source_ip": "10.0.0.99",
+    "destination_component": "drone",
+    "destination_ip": "10.0.0.1",
+    "source_port": 7993,
+    "destination_port": 8993,
+    "protocol": "MAVLink-like",
+    "session_id": "rogue-command",
+    "receiver_app": 4
+  }
+]

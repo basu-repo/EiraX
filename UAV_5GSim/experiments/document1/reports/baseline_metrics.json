@@ -1,0 +1,50 @@
+{
+  "split": "deterministic temporal holdout: every fifth window per scenario",
+  "accuracy": 0.95822454308094,
+  "macro_f1": 0.9618272841051314,
+  "false_alarm_rate": 0.0,
+  "confusion_matrix_labels": [
+    "normal",
+    "suspicious",
+    "malicious"
+  ],
+  "confusion_matrix": [
+    [
+      264,
+      0,
+      0
+    ],
+    [
+      0,
+      17,
+      0
+    ],
+    [
+      16,
+      0,
+      86
+    ]
+  ],
+  "detection_delay_windows": {
+    "run_20260805_210640_control_protocol_attack": 0,
+    "run_20260805_210640_denial_of_service": 0,
+    "run_20260805_210640_identity_theft": 0,
+    "run_20260805_210640_lateral_movement": 0,
+    "run_20260805_210640_network_application_attack": 0,
+    "run_20260805_210640_session_hijacking": 0,
+    "run_20260805_210640_suspicious": 0
+  },
+  "feature_importance": {
+    "jitter_ms": 0.4026597849059926,
+    "traffic_burst_flag": 0.20729898792270915,
+    "anomaly_score": 0.1496072438862512,
+    "packets_per_second": 0.06277428320068452,
+    "failed_connection_attempts": 0.05724911853798689,
+    "throughput_kbps": 0.0449547951439918,
+    "unusual_destination_flag": 0.02725329351711135,
+    "session_reuse_flag": 0.027253293517110398,
+    "latency_ms": 0.02062807614751746,
+    "packet_loss_rate": 0.0002644307658886315,
+    "signal_quality_dbm": 5.6692454755789807e-05
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "dataset": "experiments/data/drone_network_telemetry_cosim_document_complete.csv",
+  "dataset": "experiments/data/drone_network_telemetry_cosim.csv",
   "rows": 25490,
   "missions": 37,
   "split_policy": "complete mission IDs; every measured-source derivative kept in held-out test",

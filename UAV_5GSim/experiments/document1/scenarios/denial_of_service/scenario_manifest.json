@@ -1,0 +1,7 @@
+{
+  "scenario": "denial_of_service",
+  "injection_point": "INET high-rate flood flow",
+  "rosbag_strategy": "same measured flight used as controlled trace-driven mobility input",
+  "source_rosbag": "/home/basudeo/Documents/EiraX/UAV_5GSim/notebook_runs/run_20260805_210640/rosbag_benign",
+  "network_dataset": "/home/basudeo/Documents/EiraX/UAV_5GSim/notebook_runs/run_20260805_210640/network/denial_of_service/data/drone_network_telemetry_cosim.csv"
+}

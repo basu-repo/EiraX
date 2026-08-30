@@ -1,0 +1,39 @@
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="x500_mapping_base"]/link[@name="base_link"]/sensor[@name="air_pressure_sensor"]/gz_frame_id:/home/basudeo/Documents/EiraX/simulation/models/x500_mapping_base/model.sdf:L219]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="x500_mapping_base"]/link[@name="base_link"]/sensor[@name="magnetometer_sensor"]/gz_frame_id:/home/basudeo/Documents/EiraX/simulation/models/x500_mapping_base/model.sdf:L233]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="x500_mapping_base"]/link[@name="base_link"]/sensor[@name="imu_sensor"]/gz_frame_id:/home/basudeo/Documents/EiraX/simulation/models/x500_mapping_base/model.sdf:L259]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="x500_mapping_base"]/link[@name="base_link"]/sensor[@name="navsat_sensor"]/gz_frame_id:/home/basudeo/Documents/EiraX/simulation/models/x500_mapping_base/model.sdf:L311]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="x500_mapping_base"]/link[@name="base_link"]/sensor[@name="lidar_32"]/gz_frame_id:/home/basudeo/Documents/EiraX/simulation/models/x500_mapping_base/model.sdf:L331]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+libEGL warning: pci id for fd 110: 10de:2191, driver (null)
+
+pci id for fd 111: 10de:2191, driver (null)
+pci id for fd 112: 10de:2191, driver (null)
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: pci id for fd 110: 10de:2191, driver (null)
+
+pci id for fd 111: 10de:2191, driver (null)
+pci id for fd 112: 10de:2191, driver (null)
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: pci id for fd 110: 10de:2191, driver (null)
+
+libEGL warning: pci id for fd 69: 10de:2191, driver (null)
+
+pci id for fd 70: 10de:2191, driver (null)
+pci id for fd 71: 10de:2191, driver (null)
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: pci id for fd 69: 10de:2191, driver (null)
+
+pci id for fd 70: 10de:2191, driver (null)
+pci id for fd 71: 10de:2191, driver (null)
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: pci id for fd 69: 10de:2191, driver (null)
+
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="x500_mapping_0"]/link[@name="base_link"]/sensor[@name="air_pressure_sensor"]/gz_frame_id:<data-string>:L232]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="x500_mapping_0"]/link[@name="base_link"]/sensor[@name="magnetometer_sensor"]/gz_frame_id:<data-string>:L254]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="x500_mapping_0"]/link[@name="base_link"]/sensor[@name="imu_sensor"]/gz_frame_id:<data-string>:L301]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="x500_mapping_0"]/link[@name="base_link"]/sensor[@name="navsat_sensor"]/gz_frame_id:<data-string>:L306]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="x500_mapping_0"]/link[@name="base_link"]/sensor[@name="lidar_32"]/gz_frame_id:<data-string>:L355]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="x500_mapping_0"]/link[@name="base_link"]/sensor[@name="air_pressure_sensor"]/gz_frame_id:<data-string>:L232]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="x500_mapping_0"]/link[@name="base_link"]/sensor[@name="magnetometer_sensor"]/gz_frame_id:<data-string>:L254]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="x500_mapping_0"]/link[@name="base_link"]/sensor[@name="imu_sensor"]/gz_frame_id:<data-string>:L301]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="x500_mapping_0"]/link[@name="base_link"]/sensor[@name="navsat_sensor"]/gz_frame_id:<data-string>:L307]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="x500_mapping_0"]/link[@name="base_link"]/sensor[@name="lidar_32"]/gz_frame_id:<data-string>:L355]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].

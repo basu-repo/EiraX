@@ -1,0 +1,608 @@
+{
+  "dataset": "experiments/data/drone_network_telemetry_cosim.csv",
+  "rows": 25490,
+  "missions": 37,
+  "split_policy": "complete mission IDs; every measured-source derivative kept in held-out test",
+  "split_source": "experiments/reports/model_split.json",
+  "excluded_from_features": [
+    "attack_type",
+    "attack_stage",
+    "severity",
+    "recommended_response",
+    "incident_label",
+    "timestamp",
+    "organization_id",
+    "fleet_id",
+    "drone_id",
+    "mission_id",
+    "session_id",
+    "source_ip",
+    "destination_ip"
+  ],
+  "train_missions": [
+    "B1_BASE_001",
+    "B1_BASE_002",
+    "B1_PILOT_001",
+    "B_LOAD_LOW_001",
+    "B_LOAD_MEDIUM_001",
+    "B_SPEED_SLOW_001",
+    "M_API_LOW_001",
+    "M_CONTROL_LOW_001",
+    "M_DOS_LOW_001",
+    "M_IDENTITY_LOW_001",
+    "M_LATERAL_LOW_001",
+    "M_SESSION_LOW_001",
+    "S1_HANDOVER_LOSS_001",
+    "S2_AUTH_001",
+    "S3_API_RETRY_001",
+    "S4_DROPOUT_001"
+  ],
+  "test_missions": [
+    "B1_BASE_003",
+    "B2_HOVER_VIDEO_001",
+    "B_DURATION_10_001",
+    "B_DURATION_20_001",
+    "B_DURATION_5_001",
+    "B_LOAD_HIGH_001",
+    "B_SLICE_DUAL_001",
+    "B_SLICE_TRIPLE_001",
+    "M_API_HIGH_001",
+    "M_CONTROL_HIGH_001",
+    "M_DOS_30S_001",
+    "M_DOS_90S_001",
+    "M_DOS_HIGH_001",
+    "M_DOS_REPEATED_001",
+    "M_IDENTITY_HIGH_001",
+    "M_LATERAL_HIGH_001",
+    "M_SESSION_HIGH_001",
+    "S1_HANDOVER_LOSS_002",
+    "S2_AUTH_002",
+    "S3_API_RETRY_002",
+    "S4_DROPOUT_002"
+  ],
+  "feature_groups": {
+    "raw_network": {
+      "logistic_regression": {
+        "accuracy": 0.8569774919614148,
+        "macro_f1": 0.48090066268736625,
+        "confusion_matrix": [
+          [
+            12616,
+            0,
+            540
+          ],
+          [
+            644,
+            20,
+            20
+          ],
+          [
+            1020,
+            0,
+            690
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.8834733893557423,
+            "recall": 0.9589540893888719,
+            "f1": 0.9196675900277008,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 1.0,
+            "recall": 0.029239766081871343,
+            "f1": 0.056818181818181816,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.552,
+            "recall": 0.40350877192982454,
+            "f1": 0.46621621621621623,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.041045910611128
+      },
+      "random_forest": {
+        "accuracy": 0.8866237942122186,
+        "macro_f1": 0.6122217614746838,
+        "confusion_matrix": [
+          [
+            12779,
+            143,
+            234
+          ],
+          [
+            498,
+            142,
+            44
+          ],
+          [
+            843,
+            1,
+            866
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.905028328611898,
+            "recall": 0.9713438735177866,
+            "f1": 0.9370142249596715,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.4965034965034965,
+            "recall": 0.20760233918128654,
+            "f1": 0.2927835051546392,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.756993006993007,
+            "recall": 0.5064327485380117,
+            "f1": 0.6068675543097407,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.02865612648221344
+      }
+    },
+    "raw_plus_5g_context": {
+      "logistic_regression": {
+        "accuracy": 0.8885530546623794,
+        "macro_f1": 0.5353594826834616,
+        "confusion_matrix": [
+          [
+            13086,
+            0,
+            70
+          ],
+          [
+            624,
+            41,
+            19
+          ],
+          [
+            1020,
+            0,
+            690
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.8883910386965377,
+            "recall": 0.9946792338096686,
+            "f1": 0.9385354658251452,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 1.0,
+            "recall": 0.059941520467836254,
+            "f1": 0.11310344827586206,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.8857509627727856,
+            "recall": 0.40350877192982454,
+            "f1": 0.5544395339493773,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.005320766190331408
+      },
+      "random_forest": {
+        "accuracy": 0.9297749196141479,
+        "macro_f1": 0.7489739663730912,
+        "confusion_matrix": [
+          [
+            13016,
+            83,
+            57
+          ],
+          [
+            385,
+            279,
+            20
+          ],
+          [
+            466,
+            81,
+            1163
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.9386312829018533,
+            "recall": 0.9893584676193372,
+            "f1": 0.9633275358028346,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.6297968397291196,
+            "recall": 0.40789473684210525,
+            "f1": 0.4951197870452529,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.9379032258064516,
+            "recall": 0.6801169590643275,
+            "f1": 0.7884745762711864,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.010641532380662816
+      }
+    },
+    "security_indicators": {
+      "logistic_regression": {
+        "accuracy": 0.8457877813504823,
+        "macro_f1": 0.4998994757188024,
+        "confusion_matrix": [
+          [
+            12522,
+            634,
+            0
+          ],
+          [
+            624,
+            60,
+            0
+          ],
+          [
+            1140,
+            0,
+            570
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.876522469550609,
+            "recall": 0.9518090605047127,
+            "f1": 0.9126156985642446,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.08645533141210375,
+            "recall": 0.08771929824561403,
+            "f1": 0.08708272859216255,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.04819093949528732
+      },
+      "random_forest": {
+        "accuracy": 0.8892604501607717,
+        "macro_f1": 0.6248050298362404,
+        "confusion_matrix": [
+          [
+            12724,
+            135,
+            297
+          ],
+          [
+            495,
+            144,
+            45
+          ],
+          [
+            749,
+            1,
+            960
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.9109392898052692,
+            "recall": 0.9671632715110976,
+            "f1": 0.9382097035835423,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.5142857142857142,
+            "recall": 0.21052631578947367,
+            "f1": 0.2987551867219917,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.7373271889400922,
+            "recall": 0.5614035087719298,
+            "f1": 0.6374501992031872,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.0328367284889024
+      }
+    },
+    "complete": {
+      "logistic_regression": {
+        "accuracy": 0.8587138263665595,
+        "macro_f1": 0.5128311609654558,
+        "confusion_matrix": [
+          [
+            12674,
+            399,
+            83
+          ],
+          [
+            624,
+            60,
+            0
+          ],
+          [
+            1091,
+            0,
+            619
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.880811731183543,
+            "recall": 0.9633627242322894,
+            "f1": 0.920239607914322,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.13071895424836602,
+            "recall": 0.08771929824561403,
+            "f1": 0.10498687664041995,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.8817663817663818,
+            "recall": 0.36198830409356725,
+            "f1": 0.5132669983416253,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.03663727576771055
+      },
+      "random_forest": {
+        "accuracy": 0.9295176848874598,
+        "macro_f1": 0.7499305068050707,
+        "confusion_matrix": [
+          [
+            13010,
+            84,
+            62
+          ],
+          [
+            382,
+            282,
+            20
+          ],
+          [
+            470,
+            78,
+            1162
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.9385370076468043,
+            "recall": 0.9889024019458802,
+            "f1": 0.9630616625953068,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.6351351351351351,
+            "recall": 0.41228070175438597,
+            "f1": 0.5,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.9340836012861736,
+            "recall": 0.6795321637426901,
+            "f1": 0.7867298578199052,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.011097598054119794
+      }
+    }
+  },
+  "feature_importance": [
+    {
+      "feature": "numeric__connection_duration_sec",
+      "importance": 0.3459647562895085
+    },
+    {
+      "feature": "numeric__signal_quality_dbm",
+      "importance": 0.24113721720676445
+    },
+    {
+      "feature": "numeric__handover_event",
+      "importance": 0.06839572055089858
+    },
+    {
+      "feature": "numeric__source_port",
+      "importance": 0.06257052536749318
+    },
+    {
+      "feature": "numeric__anomaly_score",
+      "importance": 0.057119069981069616
+    },
+    {
+      "feature": "numeric__latency_ms",
+      "importance": 0.03763723022158944
+    },
+    {
+      "feature": "numeric__failed_connection_attempts",
+      "importance": 0.022939264364616987
+    },
+    {
+      "feature": "numeric__unusual_destination_flag",
+      "importance": 0.020766199455549056
+    },
+    {
+      "feature": "categorical__source_component_drone",
+      "importance": 0.01906445098182361
+    },
+    {
+      "feature": "numeric__handover_count",
+      "importance": 0.016869520092972573
+    },
+    {
+      "feature": "numeric__packets_per_second",
+      "importance": 0.014379409396545235
+    },
+    {
+      "feature": "categorical__source_component_external_host",
+      "importance": 0.013543431563212544
+    },
+    {
+      "feature": "numeric__destination_port",
+      "importance": 0.010876152895434787
+    },
+    {
+      "feature": "categorical__cell_id_gnb_1",
+      "importance": 0.009732013172411272
+    },
+    {
+      "feature": "numeric__packet_count",
+      "importance": 0.009590072330275982
+    },
+    {
+      "feature": "categorical__cell_id_gnb_2",
+      "importance": 0.009484252975208548
+    },
+    {
+      "feature": "categorical__protocol_TCP",
+      "importance": 0.008159307183690049
+    },
+    {
+      "feature": "numeric__throughput_kbps",
+      "importance": 0.0069350498275035
+    },
+    {
+      "feature": "numeric__byte_count",
+      "importance": 0.006046082555376047
+    },
+    {
+      "feature": "numeric__jitter_ms",
+      "importance": 0.005835896761402992
+    },
+    {
+      "feature": "categorical__protocol_HTTPS",
+      "importance": 0.002589269809947629
+    },
+    {
+      "feature": "numeric__command_channel_activity",
+      "importance": 0.0020122117589537305
+    },
+    {
+      "feature": "numeric__retransmission_rate",
+      "importance": 0.001714175380698935
+    },
+    {
+      "feature": "numeric__traffic_burst_flag",
+      "importance": 0.0012442096862609084
+    },
+    {
+      "feature": "numeric__packet_loss_rate",
+      "importance": 0.0010825899765772092
+    },
+    {
+      "feature": "categorical__authentication_status_failed",
+      "importance": 0.0006603185617176465
+    },
+    {
+      "feature": "numeric__api_request_count",
+      "importance": 0.0006107948163816266
+    },
+    {
+      "feature": "categorical__authentication_status_success",
+      "importance": 0.0005749442242797048
+    },
+    {
+      "feature": "numeric__session_reuse_flag",
+      "importance": 0.0005311896503681443
+    },
+    {
+      "feature": "categorical__protocol_UDP",
+      "importance": 0.0004007124584582664
+    },
+    {
+      "feature": "categorical__destination_component_mission_backend",
+      "importance": 0.00032905242060121524
+    },
+    {
+      "feature": "numeric__telemetry_stream_activity",
+      "importance": 0.0003157729420747931
+    },
+    {
+      "feature": "categorical__protocol_MAVLink-like",
+      "importance": 0.0002532975081975577
+    },
+    {
+      "feature": "categorical__network_slice_id_slice_1",
+      "importance": 0.00021151025354227386
+    },
+    {
+      "feature": "categorical__destination_component_drone",
+      "importance": 0.0001724058294995037
+    },
+    {
+      "feature": "categorical__network_slice_id_slice_4",
+      "importance": 0.000151042581306977
+    },
+    {
+      "feature": "categorical__protocol_HTTP",
+      "importance": 0.00010087896778674363
+    },
+    {
+      "feature": "numeric__video_stream_activity",
+      "importance": 0.0
+    }
+  ],
+  "synthetic_reference_best": {
+    "accuracy": 0.9980027960854804,
+    "macro_f1": 0.9977044934677785,
+    "confusion_matrix": [
+      [
+        3093,
+        3,
+        0
+      ],
+      [
+        4,
+        936,
+        0
+      ],
+      [
+        3,
+        0,
+        968
+      ]
+    ],
+    "per_class": {
+      "normal": {
+        "precision": 0.997741935483871,
+        "recall": 0.999031007751938,
+        "f1": 0.9983860555196902,
+        "support": 3096
+      },
+      "suspicious": {
+        "precision": 0.9968051118210862,
+        "recall": 0.9957446808510638,
+        "f1": 0.9962746141564662,
+        "support": 940
+      },
+      "malicious": {
+        "precision": 1.0,
+        "recall": 0.9969104016477858,
+        "f1": 0.998452810727179,
+        "support": 971
+      }
+    },
+    "false_alarm_rate": 0.0009689922480620155,
+    "rows": 10000,
+    "train_missions": 400,
+    "test_missions": 400
+  }
+}

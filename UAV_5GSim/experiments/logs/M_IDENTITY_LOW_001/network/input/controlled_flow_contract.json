@@ -1,0 +1,23 @@
+[
+  {
+    "rate": 1.0,
+    "size": 512,
+    "start": 120,
+    "end": 180,
+    "source_ue": 1,
+    "name": "stolen_uav_identity",
+    "activity": "authentication",
+    "source_component": "external_host",
+    "source_ip": "10.0.0.99",
+    "destination_component": "mission_backend",
+    "destination_ip": "10.0.0.2",
+    "source_port": 7992,
+    "destination_port": 8992,
+    "protocol": "HTTPS",
+    "session_id": "stolen-identity",
+    "authentication_failed": true,
+    "claimed_drone_id": "uav_1",
+    "network_slice_id": "slice_4",
+    "receiver_app": 4
+  }
+]

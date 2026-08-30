@@ -1,0 +1,47 @@
+organization_id: eirax
+fleet_id: fleet_1
+drone_id: uav_1
+mission_id: B_SPEED_SLOW_001
+domain: public_safety
+mission_type: surveillance
+scenario_id: B_SPEED_SLOW_001
+scenario_family: benign
+simulation:
+  drone_count: 1
+  mission_speed_mps: 1.0024191594460135
+  duration_sec: 300
+  aggregation_window_sec: 1.0
+  cells: 2
+  background_traffic: low
+  network_slice_profile: single_mission_slice
+  route:
+  - spawn
+  - waypoint_1
+  - waypoint_2
+  - goal
+  speed_derivation:
+    route_distance_m: 265.64107725319354
+    non_horizontal_reserve_sec: 35.0
+    formula: route_distance_m / (duration_sec - non_horizontal_reserve_sec)
+attack:
+  enabled: false
+  attack_type: none
+  injection_point: none
+  start_sec: null
+  end_sec: null
+  intensity: 'off'
+label_windows:
+- start_sec: 0
+  end_sec: 300
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+allowed_destinations:
+- 10.0.0.2
+expected_effects:
+- long slow patrol
+- minimal goal hold
+- normal telemetry and command rates
+- possible benign multi-cell handover

@@ -1,0 +1,65 @@
+organization_id: eirax
+fleet_id: fleet_1
+drone_id: uav_1
+mission_id: S2_AUTH_002
+domain: public_safety
+mission_type: surveillance
+scenario_id: S2_AUTH_002
+scenario_family: suspicious
+simulation:
+  drone_count: 1
+  mission_speed_mps: 3.0
+  duration_sec: 300
+  aggregation_window_sec: 1.0
+  cells: 2
+  background_traffic: low
+  network_slice_profile: single_mission_slice
+  route:
+  - spawn
+  - waypoint_1
+  - waypoint_2
+  - goal
+  physical_source_run: B1_BASE_002
+  controlled_variable: authentication_burst
+attack:
+  enabled: false
+  attack_type: none
+  injection_point: none
+  start_sec: null
+  end_sec: null
+  intensity: 'off'
+label_windows:
+- start_sec: 0
+  end_sec: 120
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+- start_sec: 120
+  end_sec: 140
+  attack_type: unknown_anomaly
+  attack_stage: none
+  severity: high
+  incident_label: suspicious
+  recommended_response: increase_monitoring
+- start_sec: 140
+  end_sec: 300
+  attack_type: none
+  attack_stage: recovery
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+allowed_destinations:
+- 10.0.0.2
+expected_effects:
+- features measured from Simu5G receiver and radio vectors
+- label fields applied only after feature derivation
+- one controlled scenario per run
+suspicious_event:
+  type: authentication_burst
+  start_sec: 120
+  end_sec: 140
+  intensity: high
+  known_legitimate_client: true
+  selection_basis: predeclared operational event; no telemetry label input

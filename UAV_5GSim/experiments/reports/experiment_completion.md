@@ -45,9 +45,8 @@ The remaining experiment-only clauses were completed with a small, provenance-pr
 - A new mission-separated model evaluation and synthetic comparison. The complete-feature random forest achieved 0.9278 accuracy, 0.7384 macro-F1 and 0.0122 false-alarm rate on the document-complete held-out set.
 
 The document-complete dataset is the required canonical file
-`experiments/data/drone_network_telemetry_cosim.csv`. The identical
-`experiments/data/drone_network_telemetry_cosim_document_complete.csv` is kept
-as a provenance alias, and the original core benchmark is preserved as
+`experiments/data/drone_network_telemetry_cosim.csv`. The original core
+benchmark is preserved as
 `experiments/data/drone_network_telemetry_cosim_core.csv`.
 
 ## Work outside this simulation-only completion

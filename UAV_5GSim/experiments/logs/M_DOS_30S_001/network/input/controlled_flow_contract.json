@@ -1,0 +1,23 @@
+[
+  {
+    "rate": 1000.0,
+    "baseline_rate": 100.0,
+    "size": 1200,
+    "start": 120,
+    "end": 150,
+    "source_ue": 1,
+    "name": "rogue_flood_1",
+    "activity": "network",
+    "source_component": "external_host",
+    "source_ip": "10.0.0.99",
+    "destination_component": "mission_backend",
+    "destination_ip": "10.0.0.2",
+    "source_port": 7990,
+    "destination_port": 8701,
+    "protocol": "UDP",
+    "session_id": "rogue-flood-1",
+    "known_destination": true,
+    "receiver_app": 4,
+    "receiver_module": "EiraXExperiment.edgeNode.app[4]"
+  }
+]

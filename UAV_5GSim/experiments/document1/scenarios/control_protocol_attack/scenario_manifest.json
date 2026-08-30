@@ -1,0 +1,7 @@
+{
+  "scenario": "control_protocol_attack",
+  "injection_point": "extra MAVLink-like command flow",
+  "rosbag_strategy": "same measured flight used as controlled trace-driven mobility input",
+  "source_rosbag": "/home/basudeo/Documents/EiraX/UAV_5GSim/notebook_runs/run_20260805_210640/rosbag_benign",
+  "network_dataset": "/home/basudeo/Documents/EiraX/UAV_5GSim/notebook_runs/run_20260805_210640/network/control_protocol_attack/data/drone_network_telemetry_cosim.csv"
+}

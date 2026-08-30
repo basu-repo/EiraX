@@ -1,4 +1,6 @@
 {
+  "record_type": "historical",
+  "note": "Point-in-time audit of an earlier notebook cleanup, taken during the 28-mission core stage. Its row counts describe that stage, not the current canonical dataset. Authoritative current figures are in final_dataset_manifest.json and submission_checklist.md.",
   "notebook": "/home/basudeo/Documents/EiraX/UAV_5GSim/UAV_5GSim_Experiments.ipynb",
   "backup": "/tmp/UAV_5GSim_Experiments_before_cleanup.ipynb",
   "original_cell_count": 68,
@@ -87,8 +89,7 @@
   "live_capture_default": false,
   "validated_outputs": {
     "drone_network_telemetry_cosim.csv": "17720 rows, 44 columns, passed",
-    "drone_network_telemetry_sensitivity.csv": "5520 rows, 44 columns, passed",
-    "drone_network_telemetry_cosim_document_complete.csv": "25490 rows, 44 columns, passed"
+    "drone_network_telemetry_sensitivity.csv": "5520 rows, 44 columns, passed"
   },
   "free_storage_gib_after_cleanup": 231.54,
   "full_notebook_rerun": {
