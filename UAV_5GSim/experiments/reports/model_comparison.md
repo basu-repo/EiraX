@@ -6,9 +6,9 @@ Regenerate with `python evaluate_models.py`.
 
 | Metric | Simulation-derived dataset | Synthetic reference |
 |---|---:|---:|
-| Accuracy | 0.9295 | 0.9980 |
-| Macro-F1 | 0.7499 | 0.9977 |
-| False-alarm rate | 0.0111 | 0.0010 |
+| Accuracy | 0.9268 | 0.9980 |
+| Macro-F1 | 0.7134 | 0.9977 |
+| False-alarm rate | 0.0106 | 0.0010 |
 
 ## Feature-group comparison
 
@@ -16,41 +16,41 @@ The experiment document requires the contribution of each feature layer to be re
 
 | Feature group | Model | Accuracy | Macro-F1 | False-alarm rate |
 |---|---|---:|---:|---:|
-| raw_network | logistic_regression | 0.8570 | 0.4809 | 0.0410 |
-| raw_network | random_forest | 0.8866 | 0.6122 | 0.0287 |
-| raw_plus_5g_context | logistic_regression | 0.8886 | 0.5354 | 0.0053 |
-| raw_plus_5g_context | random_forest | 0.9298 | 0.7490 | 0.0106 |
-| security_indicators | logistic_regression | 0.8458 | 0.4999 | 0.0482 |
-| security_indicators | random_forest | 0.8893 | 0.6248 | 0.0328 |
-| complete | logistic_regression | 0.8587 | 0.5128 | 0.0366 |
-| complete | random_forest | 0.9295 | 0.7499 | 0.0111 |
+| raw_network | logistic_regression | 0.8484 | 0.4762 | 0.0512 |
+| raw_network | random_forest | 0.8901 | 0.5607 | 0.0151 |
+| raw_plus_5g_context | logistic_regression | 0.8821 | 0.5096 | 0.0113 |
+| raw_plus_5g_context | random_forest | 0.9246 | 0.7057 | 0.0135 |
+| security_indicators | logistic_regression | 0.8832 | 0.5179 | 0.0100 |
+| security_indicators | random_forest | 0.8904 | 0.5615 | 0.0147 |
+| complete | logistic_regression | 0.8813 | 0.5085 | 0.0123 |
+| complete | random_forest | 0.9268 | 0.7134 | 0.0106 |
 
 ## Held-out confusion matrix, complete features, random forest
 
 Rows are the true class, columns the predicted class, ordered normal, suspicious, malicious.
 
 ```text
-   13010      84      62
-     382     282      20
-     470      78    1162
+   13016      75      65
+     465     179      40
+     483      10    1217
 ```
 
 ## Top features
 
 | Feature | Importance |
 |---|---:|
-| `numeric__connection_duration_sec` | 0.3460 |
-| `numeric__signal_quality_dbm` | 0.2411 |
-| `numeric__handover_event` | 0.0684 |
-| `numeric__source_port` | 0.0626 |
-| `numeric__anomaly_score` | 0.0571 |
-| `numeric__latency_ms` | 0.0376 |
-| `numeric__failed_connection_attempts` | 0.0229 |
-| `numeric__unusual_destination_flag` | 0.0208 |
-| `categorical__source_component_drone` | 0.0191 |
-| `numeric__handover_count` | 0.0169 |
-| `numeric__packets_per_second` | 0.0144 |
-| `categorical__source_component_external_host` | 0.0135 |
+| `numeric__signal_quality_dbm` | 0.3343 |
+| `numeric__connection_duration_sec` | 0.3188 |
+| `numeric__source_port` | 0.0632 |
+| `numeric__latency_ms` | 0.0489 |
+| `numeric__anomaly_score` | 0.0294 |
+| `numeric__handover_count` | 0.0276 |
+| `numeric__unusual_destination_flag` | 0.0273 |
+| `numeric__failed_connection_attempts` | 0.0221 |
+| `categorical__source_component_drone` | 0.0196 |
+| `categorical__source_component_external_host` | 0.0170 |
+| `categorical__cell_id_gnb_1` | 0.0150 |
+| `categorical__cell_id_gnb_2` | 0.0138 |
 
 ## Split policy
 

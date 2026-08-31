@@ -1,22 +1,22 @@
 {
   "aggregation_window_sec": 1.0,
   "inputs": {
-    "manifest": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/manifests/S3_API_RETRY_002.yaml",
-    "rosbag": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/S3_API_RETRY_002/rosbag",
-    "pose": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/trace/S3_API_RETRY_002_mission_pose.txt",
-    "network": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/S3_API_RETRY_002/network/raw/network_metrics.csv"
+    "ros_log": "experiments/logs/S3_API_RETRY_002",
+    "network_csv": "/tmp/S3_API_RETRY_002_net.csv",
+    "manifest": "experiments/manifests/S3_API_RETRY_002.yaml",
+    "flow_contract": "experiments/logs/S3_API_RETRY_002/network/input/flow_contract.json"
   },
-  "output": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/S3_API_RETRY_002/network/data/S3_API_RETRY_002_cosim.csv",
-  "rows": 600,
+  "output": "experiments/logs/S3_API_RETRY_002/network/data/S3_API_RETRY_002_cosim.csv",
+  "rows": 620,
+  "columns": 44,
+  "feature_order": "features derived before manifest labels",
   "derivations": {
-    "raw_metrics": "Simu5G/INET vectors",
-    "jitter_ms": "population standard deviation of delays",
-    "retransmission_rate": "NR HARQ uplink error/retry indicator",
-    "signal_quality_dbm": "uplink SINR + documented -97 dBm noise-floor approximation",
-    "handover": "servingCell changes",
-    "flags": "telemetry thresholds only"
-  },
-  "scenario": "api_retry_storm",
-  "controlled_flow_contract": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/S3_API_RETRY_002/network/input/controlled_flow_contract.json",
-  "labels_applied_after_feature_derivation": true
+    "packet_metrics": "Simu5G receiver vectors",
+    "jitter_ms": "population standard deviation of delay samples",
+    "packet_loss_rate": "expected packets from configured rate minus received packets",
+    "retransmission_rate": "Simu5G uplink HARQ error vector",
+    "signal_quality_dbm": "measured uplink SINR plus documented -97 dBm reference",
+    "handover": "cumulative servingCell changes",
+    "flags": "flow behavior and benign thresholds only"
+  }
 }

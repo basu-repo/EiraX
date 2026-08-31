@@ -1,12 +1,12 @@
 {
   "aggregation_window_sec": 1.0,
   "inputs": {
-    "ros_log": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_SLICE_TRIPLE_001/rosbag",
-    "network_csv": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_SLICE_TRIPLE_001/network/raw/network_metrics.csv",
-    "manifest": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/manifests/B_SLICE_TRIPLE_001.yaml",
-    "flow_contract": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_SLICE_TRIPLE_001/network/input/flow_contract.json"
+    "ros_log": "experiments/logs/B_SLICE_TRIPLE_001",
+    "network_csv": "/tmp/B_SLICE_TRIPLE_001_net.csv",
+    "manifest": "experiments/manifests/B_SLICE_TRIPLE_001.yaml",
+    "flow_contract": "experiments/logs/B_SLICE_TRIPLE_001/network/input/flow_contract.json"
   },
-  "output": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_SLICE_TRIPLE_001/network/data/B_SLICE_TRIPLE_001_cosim.csv",
+  "output": "experiments/logs/B_SLICE_TRIPLE_001/network/data/B_SLICE_TRIPLE_001_cosim.csv",
   "rows": 540,
   "columns": 44,
   "feature_order": "features derived before manifest labels",

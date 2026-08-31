@@ -1,5 +1,17 @@
 # 5G/UAS Co-Simulation project recheck — audit report
 
+> **Update after the audit.** The two blocking findings below (§5 bridge
+> reproducibility, §2 missing traces) have since been resolved: the bridge was
+> corrected to implement the derivations the flow contracts carry, all 46
+> per-run datasets and the canonical file were regenerated with it, and it now
+> reproduces all 46 byte for byte. The two S1 manifest label-window gaps were
+> closed and the five missing `trace/` files supplied from each run's measured
+> Simu5G mobility input. The canonical dataset keeps 25,490 rows, 44 columns,
+> 37 missions and the same label distribution; its SHA-256 changed to
+> `4ee9d150310c39b6720724d06a469de55dd16b118ecada5c5c85ef837cc84d47` and the
+> model result moved to 0.9268 accuracy / 0.7134 macro-F1. The findings below
+> are preserved as the state at audit time.
+
 **Project root used:** `/home/basudeo/Documents/EiraX/UAV_5GSim` (not `~/uas_lab`).
 **Audited:** 2026-08-31. **Reference documents:** `1 - UAS_CoSimulation_Seput_Instruction.docx` (setup) and `2 - UAS_CoSimulation_Experiment_Instructions.docx` (experiment).
 

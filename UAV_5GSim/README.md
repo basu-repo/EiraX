@@ -27,6 +27,7 @@ rather than reading a stored report, and writes
 | Item | Result |
 |---|---:|
 | Document requirement checks | 53/53 pass |
+| Per-run datasets reproduced byte-for-byte by the bridge | 46/46 |
 | Document 1 scenario runs (baseline, suspicious, six attack classes) | 8 |
 | Document 1 dataset rows | 1,901 |
 | Experiment manifests | 46 |
@@ -568,25 +569,26 @@ complete-feature random-forest result is:
 
 | Metric | Simulation-derived dataset | Synthetic reference |
 |---|---:|---:|
-| Accuracy | 0.9295 | 0.9980 |
-| Macro-F1 | 0.7499 | 0.9977 |
-| False-alarm rate | 0.0111 | 0.0010 |
+| Accuracy | 0.9268 | 0.9980 |
+| Macro-F1 | 0.7134 | 0.9977 |
+| False-alarm rate | 0.0106 | 0.0010 |
 
 The experiment document requires the contribution of each feature layer to be
 reported separately. Held-out macro-F1 by feature set, random forest:
 
 | Feature set | Macro-F1 |
 |---|---:|
-| `raw_network` | 0.6122 |
-| `raw_plus_5g_context` | 0.7490 |
-| `security_indicators` | 0.6248 |
-| `complete` | 0.7499 |
+| `raw_network` | 0.5607 |
+| `raw_plus_5g_context` | 0.7057 |
+| `security_indicators` | 0.5615 |
+| `complete` | 0.7134 |
 
-The earlier evaluation stored in
+These figures are computed from datasets that `sim/bridge/assemble.py`
+reproduces byte for byte, so the whole chain from Simu5G output to model result
+is regenerable. The earlier stored evaluation in
 `experiments/reports/document_complete_model_evaluation.json` reported 0.9278
-accuracy and 0.7384 macro-F1. Its training code was not part of the delivery,
-so `evaluate_models.py` was written to reproduce the comparison; the two agree
-to within about one point, and the reproducible run is the reported result.
+accuracy and 0.7384 macro-F1 against the previous, non-reproducible datasets;
+it is kept as the historical record.
 
 The performance gap is expected: the supplied synthetic reference is easier to
 separate than the simulation-derived telemetry. Detailed per-class metrics,

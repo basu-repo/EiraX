@@ -3,7 +3,7 @@
   "rows": 25490,
   "columns": 44,
   "missions": 37,
-  "sha256": "9a3d3c06b6f1bb740a4a772b8c4590800732393ed21f0d6a1adff1557c8ee372",
+  "sha256": "4ee9d150310c39b6720724d06a469de55dd16b118ecada5c5c85ef837cc84d47",
   "class_distribution": {
     "normal": 21282,
     "malicious": 2970,
@@ -49,5 +49,6 @@
     "M_DOS_REPEATED_001"
   ],
   "validation": "passed",
-  "core_dataset_preserved": "experiments/data/drone_network_telemetry_cosim_core.csv"
+  "core_dataset_preserved": "experiments/data/drone_network_telemetry_cosim_core.csv",
+  "regenerated": "All 46 per-run datasets and this file were rebuilt by sim/bridge/assemble.py; the bridge reproduces every one byte for byte."
 }

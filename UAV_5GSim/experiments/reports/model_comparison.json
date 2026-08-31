@@ -63,13 +63,13 @@
   "feature_groups": {
     "raw_network": {
       "logistic_regression": {
-        "accuracy": 0.8569774919614148,
-        "macro_f1": 0.48090066268736625,
+        "accuracy": 0.8484244372990354,
+        "macro_f1": 0.4762377566988967,
         "confusion_matrix": [
           [
-            12616,
-            0,
-            540
+            12483,
+            136,
+            537
           ],
           [
             644,
@@ -84,83 +84,83 @@
         ],
         "per_class": {
           "normal": {
-            "precision": 0.8834733893557423,
-            "recall": 0.9589540893888719,
-            "f1": 0.9196675900277008,
+            "precision": 0.882377889305153,
+            "recall": 0.9488446336272424,
+            "f1": 0.9144050104384134,
             "support": 13156
           },
           "suspicious": {
-            "precision": 1.0,
+            "precision": 0.1282051282051282,
             "recall": 0.029239766081871343,
-            "f1": 0.056818181818181816,
+            "f1": 0.047619047619047616,
             "support": 684
           },
           "malicious": {
-            "precision": 0.552,
+            "precision": 0.5533279871692061,
             "recall": 0.40350877192982454,
-            "f1": 0.46621621621621623,
+            "f1": 0.466689212039229,
             "support": 1710
           }
         },
-        "false_alarm_rate": 0.041045910611128
+        "false_alarm_rate": 0.05115536637275768
       },
       "random_forest": {
-        "accuracy": 0.8866237942122186,
-        "macro_f1": 0.6122217614746838,
+        "accuracy": 0.890096463022508,
+        "macro_f1": 0.5606621540224648,
         "confusion_matrix": [
           [
-            12779,
-            143,
-            234
+            12958,
+            58,
+            140
           ],
           [
-            498,
-            142,
-            44
+            580,
+            54,
+            50
           ],
           [
-            843,
-            1,
-            866
+            873,
+            8,
+            829
           ]
         ],
         "per_class": {
           "normal": {
-            "precision": 0.905028328611898,
-            "recall": 0.9713438735177866,
-            "f1": 0.9370142249596715,
+            "precision": 0.8991742418985497,
+            "recall": 0.9849498327759197,
+            "f1": 0.9401095512750752,
             "support": 13156
           },
           "suspicious": {
-            "precision": 0.4965034965034965,
-            "recall": 0.20760233918128654,
-            "f1": 0.2927835051546392,
+            "precision": 0.45,
+            "recall": 0.07894736842105263,
+            "f1": 0.13432835820895522,
             "support": 684
           },
           "malicious": {
-            "precision": 0.756993006993007,
-            "recall": 0.5064327485380117,
-            "f1": 0.6068675543097407,
+            "precision": 0.8135426889106968,
+            "recall": 0.4847953216374269,
+            "f1": 0.6075485525833638,
             "support": 1710
           }
         },
-        "false_alarm_rate": 0.02865612648221344
+        "false_alarm_rate": 0.015050167224080268
       }
     },
     "raw_plus_5g_context": {
       "logistic_regression": {
-        "accuracy": 0.8885530546623794,
-        "macro_f1": 0.5353594826834616,
+        "accuracy": 0.8821221864951768,
+        "macro_f1": 0.5096132099335596,
         "confusion_matrix": [
           [
-            13086,
+            13007,
             0,
-            70
+            149
           ],
           [
-            624,
-            41,
-            19
+            644,
+            20,
+            20
           ],
           [
             1020,
@@ -170,393 +170,393 @@
         ],
         "per_class": {
           "normal": {
-            "precision": 0.8883910386965377,
-            "recall": 0.9946792338096686,
-            "f1": 0.9385354658251452,
+            "precision": 0.8865789653057051,
+            "recall": 0.9886743691091517,
+            "f1": 0.9348474503180364,
             "support": 13156
           },
           "suspicious": {
             "precision": 1.0,
-            "recall": 0.059941520467836254,
-            "f1": 0.11310344827586206,
+            "recall": 0.029239766081871343,
+            "f1": 0.056818181818181816,
             "support": 684
           },
           "malicious": {
-            "precision": 0.8857509627727856,
+            "precision": 0.8032596041909197,
             "recall": 0.40350877192982454,
-            "f1": 0.5544395339493773,
+            "f1": 0.5371739976644608,
             "support": 1710
           }
         },
-        "false_alarm_rate": 0.005320766190331408
+        "false_alarm_rate": 0.011325630890848282
       },
       "random_forest": {
-        "accuracy": 0.9297749196141479,
-        "macro_f1": 0.7489739663730912,
+        "accuracy": 0.9245659163987138,
+        "macro_f1": 0.7057227315706927,
         "confusion_matrix": [
           [
-            13016,
-            83,
-            57
+            12979,
+            94,
+            83
           ],
           [
-            385,
-            279,
-            20
+            465,
+            179,
+            40
           ],
           [
-            466,
-            81,
-            1163
+            450,
+            41,
+            1219
           ]
         ],
         "per_class": {
           "normal": {
-            "precision": 0.9386312829018533,
-            "recall": 0.9893584676193372,
-            "f1": 0.9633275358028346,
+            "precision": 0.9341442349215489,
+            "recall": 0.9865460626330191,
+            "f1": 0.959630314232902,
             "support": 13156
           },
           "suspicious": {
-            "precision": 0.6297968397291196,
-            "recall": 0.40789473684210525,
-            "f1": 0.4951197870452529,
+            "precision": 0.5700636942675159,
+            "recall": 0.26169590643274854,
+            "f1": 0.3587174348697395,
             "support": 684
           },
           "malicious": {
-            "precision": 0.9379032258064516,
-            "recall": 0.6801169590643275,
-            "f1": 0.7884745762711864,
+            "precision": 0.9083457526080477,
+            "recall": 0.7128654970760234,
+            "f1": 0.7988204456094364,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.013453937366980846
+      }
+    },
+    "security_indicators": {
+      "logistic_regression": {
+        "accuracy": 0.8832154340836013,
+        "macro_f1": 0.5178641990482945,
+        "confusion_matrix": [
+          [
+            13024,
+            132,
+            0
+          ],
+          [
+            644,
+            20,
+            20
+          ],
+          [
+            1020,
+            0,
+            690
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.8867102396514162,
+            "recall": 0.9899665551839465,
+            "f1": 0.9354977733084326,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.13157894736842105,
+            "recall": 0.029239766081871343,
+            "f1": 0.04784688995215311,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.971830985915493,
+            "recall": 0.40350877192982454,
+            "f1": 0.5702479338842975,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.010033444816053512
+      },
+      "random_forest": {
+        "accuracy": 0.8904180064308682,
+        "macro_f1": 0.5615418833357402,
+        "confusion_matrix": [
+          [
+            12962,
+            58,
+            136
+          ],
+          [
+            582,
+            54,
+            48
+          ],
+          [
+            877,
+            3,
+            830
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.8988280979127661,
+            "recall": 0.9852538765582244,
+            "f1": 0.9400587446060122,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.46956521739130436,
+            "recall": 0.07894736842105263,
+            "f1": 0.13516896120150187,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.8185404339250493,
+            "recall": 0.4853801169590643,
+            "f1": 0.6093979441997063,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.014746123441775616
+      }
+    },
+    "complete": {
+      "logistic_regression": {
+        "accuracy": 0.8812861736334405,
+        "macro_f1": 0.5085457311641114,
+        "confusion_matrix": [
+          [
+            12994,
+            0,
+            162
+          ],
+          [
+            644,
+            20,
+            20
+          ],
+          [
+            1020,
+            0,
+            690
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.8864783735843907,
+            "recall": 0.9876862268166616,
+            "f1": 0.9343496081110232,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 1.0,
+            "recall": 0.029239766081871343,
+            "f1": 0.056818181818181816,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.7912844036697247,
+            "recall": 0.40350877192982454,
+            "f1": 0.5344694035631293,
+            "support": 1710
+          }
+        },
+        "false_alarm_rate": 0.0123137731833384
+      },
+      "random_forest": {
+        "accuracy": 0.9268167202572347,
+        "macro_f1": 0.7134298617500684,
+        "confusion_matrix": [
+          [
+            13016,
+            75,
+            65
+          ],
+          [
+            465,
+            179,
+            40
+          ],
+          [
+            483,
+            10,
+            1217
+          ]
+        ],
+        "per_class": {
+          "normal": {
+            "precision": 0.932111142938986,
+            "recall": 0.9893584676193372,
+            "f1": 0.959882005899705,
+            "support": 13156
+          },
+          "suspicious": {
+            "precision": 0.678030303030303,
+            "recall": 0.26169590643274854,
+            "f1": 0.37763713080168776,
+            "support": 684
+          },
+          "malicious": {
+            "precision": 0.9205748865355522,
+            "recall": 0.7116959064327485,
+            "f1": 0.8027704485488126,
             "support": 1710
           }
         },
         "false_alarm_rate": 0.010641532380662816
       }
-    },
-    "security_indicators": {
-      "logistic_regression": {
-        "accuracy": 0.8457877813504823,
-        "macro_f1": 0.4998994757188024,
-        "confusion_matrix": [
-          [
-            12522,
-            634,
-            0
-          ],
-          [
-            624,
-            60,
-            0
-          ],
-          [
-            1140,
-            0,
-            570
-          ]
-        ],
-        "per_class": {
-          "normal": {
-            "precision": 0.876522469550609,
-            "recall": 0.9518090605047127,
-            "f1": 0.9126156985642446,
-            "support": 13156
-          },
-          "suspicious": {
-            "precision": 0.08645533141210375,
-            "recall": 0.08771929824561403,
-            "f1": 0.08708272859216255,
-            "support": 684
-          },
-          "malicious": {
-            "precision": 1.0,
-            "recall": 0.3333333333333333,
-            "f1": 0.5,
-            "support": 1710
-          }
-        },
-        "false_alarm_rate": 0.04819093949528732
-      },
-      "random_forest": {
-        "accuracy": 0.8892604501607717,
-        "macro_f1": 0.6248050298362404,
-        "confusion_matrix": [
-          [
-            12724,
-            135,
-            297
-          ],
-          [
-            495,
-            144,
-            45
-          ],
-          [
-            749,
-            1,
-            960
-          ]
-        ],
-        "per_class": {
-          "normal": {
-            "precision": 0.9109392898052692,
-            "recall": 0.9671632715110976,
-            "f1": 0.9382097035835423,
-            "support": 13156
-          },
-          "suspicious": {
-            "precision": 0.5142857142857142,
-            "recall": 0.21052631578947367,
-            "f1": 0.2987551867219917,
-            "support": 684
-          },
-          "malicious": {
-            "precision": 0.7373271889400922,
-            "recall": 0.5614035087719298,
-            "f1": 0.6374501992031872,
-            "support": 1710
-          }
-        },
-        "false_alarm_rate": 0.0328367284889024
-      }
-    },
-    "complete": {
-      "logistic_regression": {
-        "accuracy": 0.8587138263665595,
-        "macro_f1": 0.5128311609654558,
-        "confusion_matrix": [
-          [
-            12674,
-            399,
-            83
-          ],
-          [
-            624,
-            60,
-            0
-          ],
-          [
-            1091,
-            0,
-            619
-          ]
-        ],
-        "per_class": {
-          "normal": {
-            "precision": 0.880811731183543,
-            "recall": 0.9633627242322894,
-            "f1": 0.920239607914322,
-            "support": 13156
-          },
-          "suspicious": {
-            "precision": 0.13071895424836602,
-            "recall": 0.08771929824561403,
-            "f1": 0.10498687664041995,
-            "support": 684
-          },
-          "malicious": {
-            "precision": 0.8817663817663818,
-            "recall": 0.36198830409356725,
-            "f1": 0.5132669983416253,
-            "support": 1710
-          }
-        },
-        "false_alarm_rate": 0.03663727576771055
-      },
-      "random_forest": {
-        "accuracy": 0.9295176848874598,
-        "macro_f1": 0.7499305068050707,
-        "confusion_matrix": [
-          [
-            13010,
-            84,
-            62
-          ],
-          [
-            382,
-            282,
-            20
-          ],
-          [
-            470,
-            78,
-            1162
-          ]
-        ],
-        "per_class": {
-          "normal": {
-            "precision": 0.9385370076468043,
-            "recall": 0.9889024019458802,
-            "f1": 0.9630616625953068,
-            "support": 13156
-          },
-          "suspicious": {
-            "precision": 0.6351351351351351,
-            "recall": 0.41228070175438597,
-            "f1": 0.5,
-            "support": 684
-          },
-          "malicious": {
-            "precision": 0.9340836012861736,
-            "recall": 0.6795321637426901,
-            "f1": 0.7867298578199052,
-            "support": 1710
-          }
-        },
-        "false_alarm_rate": 0.011097598054119794
-      }
     }
   },
   "feature_importance": [
     {
-      "feature": "numeric__connection_duration_sec",
-      "importance": 0.3459647562895085
-    },
-    {
       "feature": "numeric__signal_quality_dbm",
-      "importance": 0.24113721720676445
+      "importance": 0.33427982876945855
     },
     {
-      "feature": "numeric__handover_event",
-      "importance": 0.06839572055089858
+      "feature": "numeric__connection_duration_sec",
+      "importance": 0.3187905117952195
     },
     {
       "feature": "numeric__source_port",
-      "importance": 0.06257052536749318
-    },
-    {
-      "feature": "numeric__anomaly_score",
-      "importance": 0.057119069981069616
+      "importance": 0.06321257168116831
     },
     {
       "feature": "numeric__latency_ms",
-      "importance": 0.03763723022158944
+      "importance": 0.048899356814353014
     },
     {
-      "feature": "numeric__failed_connection_attempts",
-      "importance": 0.022939264364616987
-    },
-    {
-      "feature": "numeric__unusual_destination_flag",
-      "importance": 0.020766199455549056
-    },
-    {
-      "feature": "categorical__source_component_drone",
-      "importance": 0.01906445098182361
+      "feature": "numeric__anomaly_score",
+      "importance": 0.029428999359330296
     },
     {
       "feature": "numeric__handover_count",
-      "importance": 0.016869520092972573
+      "importance": 0.027646842718731506
     },
     {
-      "feature": "numeric__packets_per_second",
-      "importance": 0.014379409396545235
+      "feature": "numeric__unusual_destination_flag",
+      "importance": 0.0272512115322269
+    },
+    {
+      "feature": "numeric__failed_connection_attempts",
+      "importance": 0.022121966350927856
+    },
+    {
+      "feature": "categorical__source_component_drone",
+      "importance": 0.019628389239990097
     },
     {
       "feature": "categorical__source_component_external_host",
-      "importance": 0.013543431563212544
-    },
-    {
-      "feature": "numeric__destination_port",
-      "importance": 0.010876152895434787
+      "importance": 0.01701677920950742
     },
     {
       "feature": "categorical__cell_id_gnb_1",
-      "importance": 0.009732013172411272
-    },
-    {
-      "feature": "numeric__packet_count",
-      "importance": 0.009590072330275982
+      "importance": 0.014992301626126796
     },
     {
       "feature": "categorical__cell_id_gnb_2",
-      "importance": 0.009484252975208548
+      "importance": 0.013764632519486402
     },
     {
-      "feature": "categorical__protocol_TCP",
-      "importance": 0.008159307183690049
+      "feature": "numeric__packets_per_second",
+      "importance": 0.013594065406522938
     },
     {
-      "feature": "numeric__throughput_kbps",
-      "importance": 0.0069350498275035
+      "feature": "numeric__packet_count",
+      "importance": 0.009945324502378047
+    },
+    {
+      "feature": "numeric__destination_port",
+      "importance": 0.009226693180645305
     },
     {
       "feature": "numeric__byte_count",
-      "importance": 0.006046082555376047
+      "importance": 0.006203345824546544
     },
     {
-      "feature": "numeric__jitter_ms",
-      "importance": 0.005835896761402992
+      "feature": "numeric__throughput_kbps",
+      "importance": 0.006078915385799455
+    },
+    {
+      "feature": "categorical__protocol_TCP",
+      "importance": 0.005751788205089539
     },
     {
       "feature": "categorical__protocol_HTTPS",
-      "importance": 0.002589269809947629
+      "importance": 0.0025766107700382133
     },
     {
-      "feature": "numeric__command_channel_activity",
-      "importance": 0.0020122117589537305
+      "feature": "numeric__jitter_ms",
+      "importance": 0.0023250708530700133
     },
     {
       "feature": "numeric__retransmission_rate",
-      "importance": 0.001714175380698935
-    },
-    {
-      "feature": "numeric__traffic_burst_flag",
-      "importance": 0.0012442096862609084
-    },
-    {
-      "feature": "numeric__packet_loss_rate",
-      "importance": 0.0010825899765772092
-    },
-    {
-      "feature": "categorical__authentication_status_failed",
-      "importance": 0.0006603185617176465
-    },
-    {
-      "feature": "numeric__api_request_count",
-      "importance": 0.0006107948163816266
-    },
-    {
-      "feature": "categorical__authentication_status_success",
-      "importance": 0.0005749442242797048
+      "importance": 0.0017667554180593363
     },
     {
       "feature": "numeric__session_reuse_flag",
-      "importance": 0.0005311896503681443
+      "importance": 0.0011198938508323022
     },
     {
-      "feature": "categorical__protocol_UDP",
-      "importance": 0.0004007124584582664
+      "feature": "numeric__packet_loss_rate",
+      "importance": 0.0011117560368921297
     },
     {
-      "feature": "categorical__destination_component_mission_backend",
-      "importance": 0.00032905242060121524
+      "feature": "categorical__authentication_status_success",
+      "importance": 0.0005674951405339039
     },
     {
-      "feature": "numeric__telemetry_stream_activity",
-      "importance": 0.0003157729420747931
+      "feature": "numeric__handover_event",
+      "importance": 0.0005606024394228199
+    },
+    {
+      "feature": "categorical__authentication_status_failed",
+      "importance": 0.0005422848118064205
     },
     {
       "feature": "categorical__protocol_MAVLink-like",
-      "importance": 0.0002532975081975577
-    },
-    {
-      "feature": "categorical__network_slice_id_slice_1",
-      "importance": 0.00021151025354227386
+      "importance": 0.00034271437212763495
     },
     {
       "feature": "categorical__destination_component_drone",
-      "importance": 0.0001724058294995037
+      "importance": 0.000291166980880878
     },
     {
-      "feature": "categorical__network_slice_id_slice_4",
-      "importance": 0.000151042581306977
+      "feature": "numeric__command_channel_activity",
+      "importance": 0.00026053596852982866
+    },
+    {
+      "feature": "numeric__telemetry_stream_activity",
+      "importance": 0.0002499071622921685
+    },
+    {
+      "feature": "categorical__protocol_UDP",
+      "importance": 0.0002395854150690308
+    },
+    {
+      "feature": "categorical__network_slice_id_slice_1",
+      "importance": 0.00015503192607970576
     },
     {
       "feature": "categorical__protocol_HTTP",
-      "importance": 0.00010087896778674363
+      "importance": 3.175272203901031e-05
+    },
+    {
+      "feature": "categorical__network_slice_id_slice_4",
+      "importance": 2.5312010818172903e-05
     },
     {
       "feature": "numeric__video_stream_activity",
+      "importance": 0.0
+    },
+    {
+      "feature": "numeric__api_request_count",
+      "importance": 0.0
+    },
+    {
+      "feature": "numeric__traffic_burst_flag",
+      "importance": 0.0
+    },
+    {
+      "feature": "categorical__destination_component_mission_backend",
       "importance": 0.0
     }
   ],

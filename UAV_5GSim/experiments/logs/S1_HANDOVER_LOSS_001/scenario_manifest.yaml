@@ -30,14 +30,14 @@ attack:
   intensity: 'off'
 label_windows:
 - start_sec: 0
-  end_sec: 46
+  end_sec: 47
   attack_type: none
   attack_stage: none
   severity: none
   incident_label: normal
   recommended_response: continue_monitoring
 - start_sec: 47
-  end_sec: 78
+  end_sec: 79
   attack_type: unknown_anomaly
   attack_stage: none
   severity: low
