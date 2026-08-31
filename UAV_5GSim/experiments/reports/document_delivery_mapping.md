@@ -13,7 +13,7 @@ project uses `/home/basudeo/Documents/EiraX/UAV_5GSim` instead.
 | `trace/` | `experiments/trace/` |
 | `reports/` | `experiments/reports/` |
 | `sim/bridge/` | `sim/bridge/` |
-| `sim/simu5g/` | shared install at `../UGV_UAV_5G_CoSimulation/sim/simu5g/`; per-run scenario configuration under `experiments/logs/<run_id>/network/input/`. See `sim/simu5g/README.md` |
+| `sim/simu5g/` | not created. Simu5G is a shared install at `../UGV_UAV_5G_CoSimulation/sim/simu5g/Simu5G`, and every run keeps its own complete scenario configuration and OMNeT++ results under `experiments/logs/<run_id>/network/{input,raw}/`, so a central copy would only duplicate them |
 | `schema_reference.json` | `schema_reference.json` |
 | `validate_dataset.py` | `validate_dataset.py` |
 

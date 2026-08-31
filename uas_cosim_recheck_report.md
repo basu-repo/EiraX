@@ -10,7 +10,10 @@
 > 37 missions and the same label distribution; its SHA-256 changed to
 > `4ee9d150310c39b6720724d06a469de55dd16b118ecada5c5c85ef837cc84d47` and the
 > model result moved to 0.9268 accuracy / 0.7134 macro-F1. The findings below
-> are preserved as the state at audit time.
+> are preserved as the state at audit time. `sim/simu5g/` was subsequently
+> removed rather than populated: it held only a pointer README, and the
+> scenario configuration and OMNeT++ results it would have duplicated already
+> live under each run.
 
 **Project root used:** `/home/basudeo/Documents/EiraX/UAV_5GSim` (not `~/uas_lab`).
 **Audited:** 2026-08-31. **Reference documents:** `1 - UAS_CoSimulation_Seput_Instruction.docx` (setup) and `2 - UAS_CoSimulation_Experiment_Instructions.docx` (experiment).
@@ -57,7 +60,7 @@ The instructions require `data/`, `logs/`, `manifests/`, `results/`, `trace/` an
 | `reports/` | `experiments/reports/` | FAIL (nested) |
 | `results/` | absent | MISSING |
 | `sim/bridge/` | `assemble.py`, `concat.py`, `export_pose_trace.py` | PASS |
-| `sim/simu5g/` | contains only `README.md` | PARTIAL |
+| `sim/simu5g/` | not created (see update banner) | MISSING |
 
 - The nesting is deliberate and documented in
   `experiments/reports/document_delivery_mapping.md`, which maps each document
@@ -66,11 +69,12 @@ The instructions require `data/`, `logs/`, `manifests/`, `results/`, `trace/` an
 - `results/` does not exist. It was removed during the earlier rework after it
   was confirmed that no code writes into it; the delivery mapping now records
   `results/ → experiments/reports/`.
-- `sim/simu5g/` contains a README explaining that Simu5G itself is a shared
-  install at `../UGV_UAV_5G_CoSimulation/sim/simu5g/` and that each run keeps its
-  own scenario configuration under `experiments/logs/<run_id>/network/input/`.
-  The instructions expect the scenario configs and OMNeT++ `results/` (`.sca`,
-  `.vec`) here. They are present per run, not centrally.
+- `sim/simu5g/` does not exist. Simu5G is a shared install outside this folder,
+  and each run keeps its own complete scenario configuration and OMNeT++ results
+  under `experiments/logs/<run_id>/network/{input,raw}/`. The instructions expect
+  the scenario configs and results here; they are present per run, not centrally.
+  The directory was deliberately not created, since a central copy would only
+  duplicate the per-run evidence. Recorded in `document_delivery_mapping.md`.
 
 **Extra top-level content:** `automate_live_duration_tests.py`, `mission.py`,
 `prepare_world.py`, `run_uav_gazebo.py`, `config.json`, `uav_gui.config`,
@@ -346,8 +350,9 @@ without a bag. No run_id spelling inconsistency was found.
    Either rename or state the convention in the delivery mapping.
 5. **Restore `results/` or record its removal (§1).** It is named in the setup
    instructions. The mapping currently redirects it to `experiments/reports/`.
-6. **Populate or explain `sim/simu5g/` (§1).** The instructions expect scenario
-   configs and OMNeT++ results here; both exist per run instead.
+6. **`sim/simu5g/` (§1) — decided.** Not created. The scenario configs and
+   OMNeT++ results exist per run; the delivery mapping records why there is no
+   central copy.
 7. **State the concatenation convention (§2).** The project uses an explicit
    37-run list rather than `data/*_cosim.csv`; the reason (excluding the 9
    sensitivity runs) is sound but should be visible in the delivery mapping.

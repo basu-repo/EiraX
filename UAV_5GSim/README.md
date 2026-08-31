@@ -363,13 +363,10 @@ UAV_5GSim/
 ├── worlds/
 │   ├── baylands_uav_goal.world
 │   └── baylands_uav_experiment.world
-├── sim/
-│   ├── bridge/
-│   │   ├── assemble.py
-│   │   ├── concat.py
-│   │   └── export_pose_trace.py
-│   └── simu5g/
-│       └── README.md
+├── sim/bridge/
+│   ├── assemble.py
+│   ├── concat.py
+│   └── export_pose_trace.py
 └── experiments/
     ├── data/
     ├── document1/          # setup-document completion evidence
@@ -393,7 +390,6 @@ UAV_5GSim/
 | `sim/bridge/assemble.py` | Builds a per-run dataset from a manifest, ROS evidence, and network metrics |
 | `sim/bridge/concat.py` | Concatenates complete per-run datasets and validates the result |
 | `sim/bridge/export_pose_trace.py` | Exports a Simu5G mobility trace from a recorded ROS 2 bag |
-| `sim/simu5g/README.md` | Where the Simu5G install and the per-run scenario configuration live |
 | `experiments/document1/` | Setup-document evidence: 8 scenario runs, its 1,901-row dataset, join and flag audits |
 | `experiments/manifests/` | One YAML scenario definition per network experiment run |
 | `experiments/logs/<run_id>/` | Physical evidence, mobility, Simu5G input/output, bridge result, and per-run CSV |
