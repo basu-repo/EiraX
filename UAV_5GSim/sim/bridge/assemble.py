@@ -49,6 +49,12 @@ def values_in(samples, start, end):
     return [value for stamp, value in samples if start <= stamp < end]
 
 
+def session_key(flow, flow_index):
+    """Identify one flow across windows for duration and session tracking."""
+    return (flow.get("session_id", f"flow-{flow_index}"),
+            flow.get("source_port"), flow.get("destination_port"))
+
+
 def label_for(manifest, second):
     for window in manifest["label_windows"]:
         if float(window["start_sec"]) <= second < float(window["end_sec"]):
@@ -83,9 +89,16 @@ def main():
     manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
     contract_path = infer_contract(net_csv, args.flow_contract)
     flows = json.loads(contract_path.read_text(encoding="utf-8"))
+    # The base contract defines the mission's expected communication profile.
+    # Anything injected on top of it is, by default, off that profile.
+    for flow in flows:
+        flow.setdefault("known_destination", True)
     controlled_path = contract_path.with_name("controlled_flow_contract.json")
     if controlled_path.is_file():
-        flows.extend(json.loads(controlled_path.read_text(encoding="utf-8")))
+        controlled = json.loads(controlled_path.read_text(encoding="utf-8"))
+        for flow in controlled:
+            flow.setdefault("known_destination", False)
+        flows.extend(controlled)
     vectors = vector_rows(net_csv)
     duration = int(manifest["simulation"]["duration_sec"])
     if duration % args.window:
@@ -102,6 +115,7 @@ def main():
         "harqErrorRateUl:vector")
     allowed_destinations = set(manifest.get("allowed_destinations", []))
     seen_sessions = {}
+    first_seen = {}
     handover_total = 0
     previous_cell = int(serving[0][1]) if serving else 1
     epoch = datetime(2026, 1, 1, tzinfo=timezone.utc)
@@ -145,13 +159,32 @@ def main():
             session = flow.get("session_id", f"flow-{flow_index}")
             old_source = seen_sessions.setdefault(session, source)
             activity = flow.get("activity", "network")
-            anomaly = min(1.0, packet_loss + retransmission + 0.2 * burst)
+
+            # A destination is unusual when it is off the mission's expected
+            # communication profile. The profile is the endpoint, not the host
+            # alone: a probe to a closed port on an allowed host is unusual.
+            unusual = int(destination not in allowed_destinations
+                          or not flow.get("known_destination", True))
+
+            # Attempts that the simulated service never accepted: connection
+            # timeouts against closed ports, and rejected authentications.
+            failed_connections = packet_count if (
+                flow.get("timeout_failed") or flow.get("authentication_failed")
+                or activity == "failed_connection") else 0
+
+            # Flow duration is measured from the first window the flow appears
+            # in, not from the start of the mission.
+            first_seen.setdefault(session_key(flow, flow_index), start)
+            # The schema requires a whole number of seconds.
+            elapsed = int(math.ceil(end - first_seen[session_key(flow, flow_index)]))
+
+            anomaly = min(1.0, 0.2 * packet_loss + 0.2 * burst + unusual)
 
             rows.append({
                 "timestamp": (epoch + timedelta(seconds=start)).isoformat(),
                 "organization_id": manifest["organization_id"],
                 "fleet_id": manifest["fleet_id"],
-                "drone_id": manifest["drone_id"],
+                "drone_id": flow.get("claimed_drone_id", manifest["drone_id"]),
                 "mission_id": manifest["mission_id"],
                 "domain": manifest["domain"],
                 "mission_type": manifest["mission_type"],
@@ -173,19 +206,20 @@ def main():
                 "jitter_ms": float(np.std(delay_ms)) if len(delay_ms) > 1 else 0.0,
                 "packet_loss_rate": packet_loss,
                 "retransmission_rate": retransmission,
-                "connection_duration_sec": int(math.ceil(end)),
-                "authentication_status": flow.get("authentication_status", "success"),
+                "connection_duration_sec": elapsed,
+                "authentication_status": "failed" if flow.get("authentication_failed")
+                else flow.get("authentication_status", "success"),
                 "handover_event": int(handovers > 0),
                 "handover_count": handover_total,
                 "signal_quality_dbm": max(
                     -200.0, min(0.0, -97.0 + (float(np.mean(sinr_window)) if sinr_window else 0.0))),
-                "command_channel_activity": packet_count if activity == "command" else 0,
+                "command_channel_activity": int(activity == "command" and packet_count > 0),
                 "video_stream_activity": int(activity == "video" and packet_count > 0),
                 "telemetry_stream_activity": int(activity == "telemetry" and packet_count > 0),
                 "api_request_count": packet_count if activity == "api" else 0,
-                "failed_connection_attempts": packet_count if activity == "failed_connection" else 0,
-                "unusual_destination_flag": int(destination not in allowed_destinations),
-                "session_reuse_flag": int(old_source != source),
+                "failed_connection_attempts": failed_connections,
+                "unusual_destination_flag": unusual,
+                "session_reuse_flag": int(bool(flow.get("session_reuse")) or old_source != source),
                 "traffic_burst_flag": burst,
                 "anomaly_score": round(anomaly, 6),
                 "attack_type": label["attack_type"],
