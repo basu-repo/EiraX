@@ -26,3 +26,6 @@ __pycache__/
 # Interactive runtime scratch written by UAV_5GSim.ipynb and run_uav_gazebo.py
 /notebook_runs/
 /logs/
+# Output of Document1_Workflow.ipynb. It is a re-run of the setup document,
+# not delivered evidence; the delivered copy is experiments/document1/.
+/experiments/document1_workflow/
