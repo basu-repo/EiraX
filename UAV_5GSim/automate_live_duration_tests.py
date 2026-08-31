@@ -723,6 +723,80 @@ def compress_raw_network(run_dir: Path) -> None:
         path.unlink()
 
 
+def start_simulation_stack(run_dir: Path) -> tuple[list["ManagedProcess"], Path]:
+    """Start headless Gazebo, PX4, MAVROS and the ROS 2 recorder for one run.
+
+    Returns the started processes, outermost last, and the bag directory. The
+    caller is responsible for stopping them in reverse order.
+    """
+    # Use the document world but replace only the mapping UAV with PX4's plain
+    # x500.  This generated run-local world leaves both saved source worlds intact.
+    runtime_world = run_dir / "baylands_uav_duration.world"
+    world_text = WORLD.read_text(encoding="utf-8")
+    world_text = world_text.replace("model://x500_mapping", "model://x500")
+    world_text = world_text.replace(
+        "<name>x500_mapping_0</name>", f"<name>{UAV_ENTITY}</name>")
+    runtime_world.write_text(world_text, encoding="utf-8")
+
+    env = os.environ.copy()
+    env["GZ_SIM_RESOURCE_PATH"] = ":".join(
+        [str(MODELS), str(PX4 / "models"), env.get("GZ_SIM_RESOURCE_PATH", "")]
+    ).rstrip(":")
+    env["GZ_SIM_SYSTEM_PLUGIN_PATH"] = ":".join(
+        [str(PX4 / "plugins"), env.get("GZ_SIM_SYSTEM_PLUGIN_PATH", "")]
+    ).rstrip(":")
+
+    processes: list[ManagedProcess] = []
+    gazebo = ManagedProcess(
+        "gazebo", ["gz", "sim", "-s", "-r", str(runtime_world)],
+        run_dir / "gazebo.log", cwd=HERE, env=env, stdin=subprocess.DEVNULL)
+    processes.append(gazebo)
+    time.sleep(8)
+    if gazebo.process.poll() is not None:
+        raise RuntimeError("Gazebo exited during startup")
+
+    px4_env = env.copy()
+    px4_env.update({
+        "PX4_SYS_AUTOSTART": "4001",
+        "PX4_GZ_MODEL_NAME": UAV_ENTITY,
+        "PX4_GZ_STANDALONE": "1",
+        "PX4_GZ_NO_FOLLOW": "1",
+        "PX4_GZ_WORLD": WORLD_NAME,
+        "HEADLESS": "1",
+    })
+    px4 = ManagedProcess(
+        "px4", [str(PX4 / "bin/px4"), "-d"], run_dir / "px4.log",
+        cwd=PX4 / "rootfs", env=px4_env, stdin=subprocess.PIPE)
+    processes.append(px4)
+    time.sleep(10)
+    if px4.process.poll() is not None:
+        raise RuntimeError("PX4 exited during startup")
+
+    ros_prefix = "source /opt/ros/jazzy/setup.bash && "
+    mavros = ManagedProcess(
+        "mavros",
+        ["bash", "-lc", ros_prefix
+         + "exec ros2 run mavros mavros_node --ros-args "
+         + "-p fcu_url:=udp://:14550@127.0.0.1:18570"],
+        run_dir / "mavros.log", cwd=HERE, env=env, stdin=subprocess.DEVNULL)
+    processes.append(mavros)
+    time.sleep(6)
+    if mavros.process.poll() is not None:
+        raise RuntimeError("MAVROS exited during startup")
+
+    bag_dir = run_dir / "rosbag"
+    rosbag = ManagedProcess(
+        "rosbag",
+        ["bash", "-lc", ros_prefix
+         + f"exec ros2 bag record -o {bag_dir} "
+         + "/mavros/local_position/pose /mavros/state "
+         + "/mavros/global_position/raw/fix"],
+        run_dir / "rosbag.log", cwd=HERE, env=env, stdin=subprocess.DEVNULL)
+    processes.append(rosbag)
+    time.sleep(3)
+    return processes, bag_dir
+
+
 def run_one(duration_sec: int, speed_mps: float, altitude_m: float) -> dict:
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     run_id = f"LIVE_DURATION_{duration_sec // 60:02d}MIN_{stamp}"
@@ -737,103 +811,15 @@ def run_one(duration_sec: int, speed_mps: float, altitude_m: float) -> dict:
     }
     (run_dir / "status.json").write_text(json.dumps(state, indent=2) + "\n")
 
-    # Use the document world but replace only the mapping UAV with PX4's plain
-    # x500.  This generated run-local world leaves both saved source worlds intact.
-    runtime_world = run_dir / "baylands_uav_duration.world"
-    world_text = WORLD.read_text(encoding="utf-8")
-    world_text = world_text.replace("model://x500_mapping", "model://x500")
-    world_text = world_text.replace("<name>x500_mapping_0</name>", f"<name>{UAV_ENTITY}</name>")
-    runtime_world.write_text(world_text, encoding="utf-8")
-
-    env = os.environ.copy()
-    env["GZ_SIM_RESOURCE_PATH"] = ":".join(
-        [str(MODELS), str(PX4 / "models"), env.get("GZ_SIM_RESOURCE_PATH", "")]
-    ).rstrip(":")
-    env["GZ_SIM_SYSTEM_PLUGIN_PATH"] = ":".join(
-        [str(PX4 / "plugins"), env.get("GZ_SIM_SYSTEM_PLUGIN_PATH", "")]
-    ).rstrip(":")
-    processes = []
+    processes: list[ManagedProcess] = []
     try:
-        gazebo = ManagedProcess(
-            "gazebo",
-            ["gz", "sim", "-s", "-r", str(runtime_world)],
-            run_dir / "gazebo.log",
-            cwd=HERE,
-            env=env,
-            stdin=subprocess.DEVNULL,
-        )
-        processes.append(gazebo)
-        time.sleep(8)
-        if gazebo.process.poll() is not None:
-            raise RuntimeError("Gazebo exited during startup")
-
-        px4_env = env.copy()
-        px4_env.update(
-            {
-                "PX4_SYS_AUTOSTART": "4001",
-                "PX4_GZ_MODEL_NAME": UAV_ENTITY,
-                "PX4_GZ_STANDALONE": "1",
-                "PX4_GZ_NO_FOLLOW": "1",
-                "PX4_GZ_WORLD": WORLD_NAME,
-                "HEADLESS": "1",
-            }
-        )
-        px4 = ManagedProcess(
-            "px4",
-            [str(PX4 / "bin/px4"), "-d"],
-            run_dir / "px4.log",
-            cwd=PX4 / "rootfs",
-            env=px4_env,
-            stdin=subprocess.PIPE,
-        )
-        processes.append(px4)
-        time.sleep(10)
-        if px4.process.poll() is not None:
-            raise RuntimeError("PX4 exited during startup")
-
-        ros_prefix = "source /opt/ros/jazzy/setup.bash && "
-        mavros = ManagedProcess(
-            "mavros",
-            [
-                "bash",
-                "-lc",
-                ros_prefix
-                + "exec ros2 run mavros mavros_node --ros-args "
-                + "-p fcu_url:=udp://:14550@127.0.0.1:18570",
-            ],
-            run_dir / "mavros.log",
-            cwd=HERE,
-            env=env,
-            stdin=subprocess.DEVNULL,
-        )
-        processes.append(mavros)
-        time.sleep(6)
-        if mavros.process.poll() is not None:
-            raise RuntimeError("MAVROS exited during startup")
-
-        bag_dir = run_dir / "rosbag"
-        rosbag = ManagedProcess(
-            "rosbag",
-            [
-                "bash",
-                "-lc",
-                ros_prefix
-                + f"exec ros2 bag record -o {bag_dir} "
-                + "/mavros/local_position/pose /mavros/state "
-                + "/mavros/global_position/raw/fix",
-            ],
-            run_dir / "rosbag.log",
-            cwd=HERE,
-            env=env,
-            stdin=subprocess.DEVNULL,
-        )
-        processes.append(rosbag)
-        time.sleep(3)
+        processes, bag_dir = start_simulation_stack(run_dir)
 
         print(f"[LIVE TEST] {duration_sec // 60} minutes: starting flight", flush=True)
         flight = fly_for_duration(run_dir, duration_sec, speed_mps, altitude_m)
-        rosbag.stop()
-        processes.remove(rosbag)
+        # The recorder is started last, so it is the one to stop first.
+        recorder = processes.pop()
+        recorder.stop()
         ros = extract_ros_evidence(run_dir, bag_dir)
 
         for process in reversed(processes):

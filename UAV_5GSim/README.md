@@ -92,6 +92,24 @@ A fresh live run of this notebook writes into `notebook_runs/`, which is local
 runtime output and is not delivered. The completed evidence above is the
 delivered copy and is not overwritten by a new run.
 
+### `Document1_Workflow.ipynb` — setup document, sections 4 to 8
+
+A compact re-implementation of the setup document from section 4 onward, for
+when you want to run that workflow rather than read the completed evidence. It
+does not reimplement the simulator: it calls `sim/bridge/export_pose_trace.py`,
+`sim/bridge/assemble.py`, `sim/bridge/concat.py` and `validate_dataset.py`, and
+reuses the launch and flight helpers in `automate_live_duration_tests.py`, so
+the code it runs is the code that ships.
+
+Its eleven code cells fly one benign mission, build the one-UAV 5G scenario,
+assemble and validate the dataset, add the suspicious run and the six attack
+classes one at a time, concatenate, and close on the document's own eight-item
+deliverables checklist. Output goes to `experiments/document1_workflow/`, so it
+never overwrites the delivered `experiments/document1/` evidence.
+
+The flight cell launches headless Gazebo, PX4 and MAVROS and takes about five
+minutes. Do not run it alongside another Gazebo instance.
+
 ### `UAV_5GSim_Experiments.ipynb` — experiment document
 
 This is the simplified second-document notebook. Its 12 steps are:
@@ -349,6 +367,7 @@ UAV_5GSim/
 ├── README.md
 ├── UAV_5GSim.ipynb
 ├── UAV_5GSim_Experiments.ipynb
+├── Document1_Workflow.ipynb
 ├── config.json
 ├── automate_live_duration_tests.py
 ├── mission.py
