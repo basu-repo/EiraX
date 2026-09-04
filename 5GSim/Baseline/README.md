@@ -11,6 +11,10 @@ The experiment that follows this stage lives in `../Experiment_Cyber_Telemetry`.
 
 ## Prerequisites
 
+None of these ship with this folder; `../README.md` lists what is missing and
+which versions were used. Checking the delivered datasets, manifests, reports
+and notebook needs none of them.
+
 - Ubuntu 24.04 with ROS 2 Jazzy, Gazebo Sim 8 and MAVROS installed.
 - The PX4 SITL runtime in `../../UGV_UAV/px4_runtime` (relative to the
   repository root).

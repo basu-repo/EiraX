@@ -12,6 +12,10 @@ status.
 
 ## Prerequisites
 
+None of these ship with this folder; `../README.md` lists what is missing and
+which versions were used. Checking the delivered datasets, manifests, reports
+and notebook needs none of them.
+
 The same as the Baseline folder: ROS 2 Jazzy, Gazebo Sim 8, MAVROS, the PX4
 SITL runtime in `../../UGV_UAV/px4_runtime`, OMNeT++ 6.0.1 with INET 4.5 at
 `~/inet`, and the `eirax` conda environment. `sim/Simu5G` is a link to the
