@@ -1,0 +1,37 @@
+organization_id: org_01
+fleet_id: fleet_09
+drone_id: UAS-0063
+domain: public_safety
+mission_type: surveillance
+mission_id: B_WIRELESS_MODERATE_001
+scenario_id: B_WIRELESS_MODERATE_001
+scenario_family: benign
+simulation:
+  drone_count: 1
+  mission_speed_mps: 3.0
+  duration_sec: 135
+  aggregation_window_sec: 1.0
+  cells: 1
+  background_traffic: low
+  network_slice_profile: single_mission_slice
+  wireless_condition: moderate
+  mission_profile: route
+  seed: 1
+attack:
+  enabled: false
+  attack_type: none
+  injection_point: none
+  intensity: 'off'
+label_windows:
+- start_sec: 0
+  end_sec: 135
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+allowed_destinations:
+- 10.0.0.2
+expected_effects:
+- lower signal_quality_dbm
+- more retransmissions and loss without any attack

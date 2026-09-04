@@ -1,0 +1,1 @@
+window_sec=1.0 ros_log=logs/B_BASE_003 net_csv=logs/B_BASE_003_net.csv manifest=manifests/B_BASE_003.yaml flows=logs/B_BASE_003/network/flow_contract.json out=data/B_BASE_003_cosim.csv flows_joined=2 rows=270 columns=44

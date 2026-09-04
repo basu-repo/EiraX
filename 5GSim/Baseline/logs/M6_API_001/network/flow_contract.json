@@ -1,0 +1,52 @@
+[
+ {
+  "name": "telemetry",
+  "activity": "telemetry",
+  "size": 76,
+  "rate": 49.942,
+  "source_port": 7701,
+  "destination_port": 8701,
+  "protocol": "UDP",
+  "session_id": "telemetry-session",
+  "network_slice_id": "slice_1",
+  "ue": 0,
+  "drone_index": 0,
+  "slot": 0,
+  "app": 0
+ },
+ {
+  "name": "command",
+  "activity": "command",
+  "size": 200,
+  "rate": 0.992,
+  "source_port": 7702,
+  "destination_port": 8702,
+  "protocol": "MAVLink-like",
+  "session_id": "command-session",
+  "network_slice_id": "slice_1",
+  "ue": 0,
+  "drone_index": 0,
+  "slot": 1,
+  "app": 1
+ },
+ {
+  "name": "api_flood",
+  "activity": "api_request",
+  "rate": 200.0,
+  "size": 800,
+  "source_port": 7995,
+  "destination_port": 8995,
+  "protocol": "HTTP",
+  "session_id": "rogue-api",
+  "source_component": "external_host",
+  "source_ip": "10.0.0.99",
+  "unanswered": true,
+  "start": 40.0,
+  "end": 80.0,
+  "bind_port": 7995,
+  "ue": 0,
+  "drone_index": 0,
+  "slot": 2,
+  "app": 2
+ }
+]

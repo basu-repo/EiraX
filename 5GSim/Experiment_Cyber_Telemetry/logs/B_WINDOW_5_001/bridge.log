@@ -1,0 +1,1 @@
+window_sec=5.0 ros_log=logs/B_WINDOW_5_001 net_csv=logs/B_WINDOW_5_001_net.csv manifest=manifests/B_WINDOW_5_001.yaml flows=logs/B_WINDOW_5_001/network/flow_contract.json out=data/B_WINDOW_5_001_cosim.csv flows_joined=2 rows=54 columns=44

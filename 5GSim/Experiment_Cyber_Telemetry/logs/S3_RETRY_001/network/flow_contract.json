@@ -1,0 +1,50 @@
+[
+ {
+  "name": "telemetry",
+  "activity": "telemetry",
+  "size": 76,
+  "rate": 49.897,
+  "source_port": 7701,
+  "destination_port": 8701,
+  "protocol": "UDP",
+  "session_id": "telemetry-session",
+  "network_slice_id": "slice_1",
+  "ue": 0,
+  "drone_index": 0,
+  "slot": 0,
+  "app": 0
+ },
+ {
+  "name": "command",
+  "activity": "command",
+  "size": 200,
+  "rate": 0.993,
+  "source_port": 7702,
+  "destination_port": 8702,
+  "protocol": "MAVLink-like",
+  "session_id": "command-session",
+  "network_slice_id": "slice_1",
+  "ue": 0,
+  "drone_index": 0,
+  "slot": 1,
+  "app": 1
+ },
+ {
+  "name": "retry_storm",
+  "activity": "api_request",
+  "rate": 30.0,
+  "size": 400,
+  "source_port": 7744,
+  "destination_port": 8744,
+  "protocol": "HTTP",
+  "session_id": "retrying-client",
+  "unanswered": true,
+  "start": 40.0,
+  "end": 80.0,
+  "bind_port": 7744,
+  "ue": 0,
+  "drone_index": 0,
+  "slot": 2,
+  "app": 2
+ }
+]

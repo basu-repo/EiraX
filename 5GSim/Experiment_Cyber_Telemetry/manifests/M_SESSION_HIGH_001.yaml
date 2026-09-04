@@ -1,0 +1,71 @@
+organization_id: org_01
+fleet_id: fleet_09
+drone_id: UAS-0063
+domain: public_safety
+mission_type: surveillance
+mission_id: M_SESSION_HIGH_001
+scenario_id: M_SESSION_HIGH_001
+scenario_family: malicious
+simulation:
+  drone_count: 1
+  mission_speed_mps: 3.0
+  duration_sec: 135
+  aggregation_window_sec: 1.0
+  cells: 1
+  background_traffic: low
+  network_slice_profile: single_mission_slice
+  wireless_condition: good
+  mission_profile: route
+  seed: 1
+attack:
+  enabled: true
+  attack_type: session_hijacking
+  injection_point: rogue_mavlink_node
+  intensity: high
+  start_sec: 40
+  end_sec: 80
+  flow:
+    name: replayed_session
+    activity: command
+    size: 200
+    source_port: 7991
+    destination_port: 8702
+    protocol: MAVLink-like
+    session_id: command-session
+    source_component: external_host
+    source_ip: 10.0.0.99
+    rate: 5.0
+label_windows:
+- start_sec: 0
+  end_sec: 40
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+- start_sec: 40
+  end_sec: 80
+  attack_type: session_hijacking
+  attack_stage: execution
+  severity: high
+  incident_label: malicious
+  recommended_response: revoke_session_force_reauth
+- start_sec: 80
+  end_sec: 90
+  attack_type: unknown_anomaly
+  attack_stage: recovery
+  severity: low
+  incident_label: suspicious
+  recommended_response: increase_monitoring
+- start_sec: 90
+  end_sec: 135
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+allowed_destinations:
+- 10.0.0.2
+expected_effects:
+- session_reuse_flag = 1 on the replayed command session
+- command_channel_activity above the drone's own rate

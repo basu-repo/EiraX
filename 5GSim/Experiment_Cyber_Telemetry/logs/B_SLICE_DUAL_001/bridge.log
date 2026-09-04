@@ -1,0 +1,1 @@
+window_sec=1.0 ros_log=logs/B_SLICE_DUAL_001 net_csv=logs/B_SLICE_DUAL_001_net.csv manifest=manifests/B_SLICE_DUAL_001.yaml flows=logs/B_SLICE_DUAL_001/network/flow_contract.json out=data/B_SLICE_DUAL_001_cosim.csv flows_joined=3 rows=405 columns=44

@@ -1,0 +1,56 @@
+organization_id: org_01
+fleet_id: fleet_09
+drone_id: UAS-0063
+domain: public_safety
+mission_type: surveillance
+mission_id: M4_CONTROL_001
+scenario_id: M4_CONTROL_001
+scenario_family: malicious
+simulation:
+  drone_count: 1
+  mission_speed_mps: 3.0
+  duration_sec: 135
+  aggregation_window_sec: 1.0
+  cells: 1
+  background_traffic: low
+  network_slice_profile: single_mission_slice
+attack:
+  enabled: true
+  attack_type: control_protocol_attack
+  start_sec: 40
+  end_sec: 80
+  flow:
+    name: unauthorized_commands
+    activity: command
+    rate: 20.0
+    size: 128
+    source_port: 7993
+    destination_port: 8993
+    protocol: MAVLink-like
+    session_id: rogue-command
+    source_component: external_host
+    source_ip: 10.0.0.99
+label_windows:
+- start_sec: 0
+  end_sec: 40
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+- start_sec: 40
+  end_sec: 80
+  attack_type: control_protocol_attack
+  attack_stage: execution
+  severity: high
+  incident_label: malicious
+  recommended_response: block_command_channel_safe_mode
+- start_sec: 80
+  end_sec: 135
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+allowed_destinations:
+- 10.0.0.2

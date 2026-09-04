@@ -1,0 +1,1 @@
+window_sec=1.0 ros_log=logs/B_DRONES_3_001 net_csv=logs/B_DRONES_3_001_net.csv manifest=manifests/B_DRONES_3_001.yaml flows=logs/B_DRONES_3_001/network/flow_contract.json out=data/B_DRONES_3_001_cosim.csv flows_joined=6 rows=810 columns=44

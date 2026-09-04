@@ -1,0 +1,1 @@
+window_sec=1.0 ros_log=logs/M_SESSION_HIGH_001 net_csv=logs/M_SESSION_HIGH_001_net.csv manifest=manifests/M_SESSION_HIGH_001.yaml flows=logs/M_SESSION_HIGH_001/network/flow_contract.json out=data/M_SESSION_HIGH_001_cosim.csv flows_joined=3 rows=310 columns=44

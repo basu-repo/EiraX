@@ -59,6 +59,11 @@
 # re-included here; UAV_5GSim/.gitignore then excludes only the bulk
 # regenerable simulator dumps inside it.
 !/UAV_5GSim/experiments/logs/
+# 5GSim keeps the same kind of per-run evidence under Baseline/logs/ and
+# Experiment_Cyber_Telemetry/logs/, so both trees are re-included here and
+# 5GSim/.gitignore excludes only the bulk regenerable dumps inside them.
+!/5GSim/Baseline/logs/
+!/5GSim/Experiment_Cyber_Telemetry/logs/
 **/build_*/
 **/install_*/
 **/log_*/
@@ -83,6 +88,9 @@
 **/px4_runtime/rootfs/log/
 **/px4_runtime/rootfs/eeprom/
 **/px4_runtime/rootfs/mavlink/
+# One rootfs per SITL instance, left behind by multi-drone runs. Same runtime
+# state as the rules above, one directory deeper.
+**/px4_runtime/rootfs/instance_*/
 
 # Raw OMNeT++/Simu5G vector output and compressed metric dumps. These are
 # regenerable from the scenario manifests and run to hundreds of megabytes per

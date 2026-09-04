@@ -1,0 +1,22 @@
+# What stays out of Git under 5GSim.
+#
+# The per-run evidence trees Baseline/logs/ and Experiment_Cyber_Telemetry/logs/
+# are re-included by the root .gitignore. The rules below then drop only the
+# bulk output inside them, which any run regenerates from the manifest and the
+# pose trace. The assembled datasets, pose traces, manifests, scalar results,
+# scenario configuration, reports and notebooks all stay in Git.
+
+# OMNeT++/Simu5G vector dumps and their indexes, about 2.2 GB across the two
+# stages, up to 255 MB for a single 20-minute run. The scalar results (.sca)
+# beside them are small and stay in Git.
+**/*.vec
+**/*.vci
+
+# Raw per-flow metric exports, about 1.3 GB, up to 145 MB for one run. These are
+# the bridge's input; its output, data/<run>_cosim.csv and the final dataset,
+# is the deliverable and stays in Git.
+**/logs/*_net.csv
+
+# Simu5G itself is an upstream checkout built locally during setup, not part of
+# this work. Experiment_Cyber_Telemetry/sim/Simu5G is a link into it.
+/Baseline/sim/Simu5G/

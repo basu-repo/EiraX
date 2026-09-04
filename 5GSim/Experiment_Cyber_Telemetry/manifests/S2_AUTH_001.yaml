@@ -1,0 +1,64 @@
+organization_id: org_01
+fleet_id: fleet_09
+drone_id: UAS-0063
+domain: public_safety
+mission_type: surveillance
+mission_id: S2_AUTH_001
+scenario_id: S2_AUTH_001
+scenario_family: suspicious
+simulation:
+  drone_count: 1
+  mission_speed_mps: 3.0
+  duration_sec: 135
+  aggregation_window_sec: 1.0
+  cells: 1
+  background_traffic: low
+  network_slice_profile: single_mission_slice
+  wireless_condition: good
+  mission_profile: route
+  seed: 1
+attack:
+  enabled: true
+  attack_type: unknown_anomaly
+  injection_point: misconfigured_client
+  intensity: low
+  start_sec: 40
+  end_sec: 80
+  flow:
+    name: failed_logins
+    activity: authentication
+    rate: 3.0
+    size: 256
+    source_port: 7743
+    destination_port: 8743
+    protocol: HTTPS
+    session_id: misconfigured-client
+    auth_failed: true
+label_windows:
+- start_sec: 0
+  end_sec: 40
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+- start_sec: 40
+  end_sec: 80
+  attack_type: unknown_anomaly
+  attack_stage: execution
+  severity: low
+  incident_label: suspicious
+  recommended_response: increase_monitoring
+- start_sec: 80
+  end_sec: 135
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+allowed_destinations:
+- 10.0.0.2
+expected_effects:
+- failed_connection_attempts above the benign baseline
+- authentication_status failed on a known client
+- destination stays expected

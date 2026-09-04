@@ -1,0 +1,1 @@
+window_sec=1.0 ros_log=logs/B_LOAD_HIGH_001 net_csv=logs/B_LOAD_HIGH_001_net.csv manifest=manifests/B_LOAD_HIGH_001.yaml flows=logs/B_LOAD_HIGH_001/network/flow_contract.json out=data/B_LOAD_HIGH_001_cosim.csv flows_joined=2 rows=270 columns=44

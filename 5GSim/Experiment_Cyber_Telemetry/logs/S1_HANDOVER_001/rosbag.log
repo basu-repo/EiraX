@@ -1,0 +1,16 @@
+[WARN] [ros2bag]: Positional "topics" argument deprecated. Please use optional "--topics" argument instead.
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1788465463.861263359] [rosbag2_recorder]: Press SPACE for pausing/resuming
+[INFO] [1788465463.861269949] [rosbag2_recorder]: Event publisher thread: Started
+[INFO] [1788465463.865311804] [rosbag2_recorder]: Starting recording to '/home/basudeo/Documents/EiraX/5GSim/Experiment_Cyber_Telemetry/logs/S1_HANDOVER_001/rosbag'
+[INFO] [1788465463.866815132] [rosbag2_recorder]: Listening for topics...
+[INFO] [1788465463.866843445] [rosbag2_recorder]: Topics discovery started.
+[INFO] [1788465463.866844704] [rosbag2_recorder]: Recording...
+[INFO] [1788465464.211925797] [rosbag2_recorder]: Subscribed to topic '/mavros/global_position/raw/fix'
+[INFO] [1788465464.430358551] [rosbag2_recorder]: Subscribed to topic '/mavros/local_position/pose'
+[INFO] [1788465464.760525707] [rosbag2_recorder]: Subscribed to topic '/mavros/state'
+[INFO] [1788465464.760566446] [rosbag2_recorder]: All requested topics are subscribed. Stopping discovery...
+[INFO] [1788465464.760571989] [rosbag2_recorder]: Topics discovery stopped.
+[INFO] [1788465606.726461014] [rosbag2_recorder]: Pausing recording.
+[INFO] [1788465606.726536312] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1788465606.728755819] [rosbag2_recorder]: Recording stopped
+[INFO] [1788465606.730452422] [rosbag2_recorder]: Event publisher thread: Exited

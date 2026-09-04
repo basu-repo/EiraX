@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "status": "reconstructed_from_primary_sources",
+    "reference_doi": "10.5281/zenodo.20825334",
+    "reference_dataset_md5": "bc1ae6f3ae56c28b02cc3c2a7749f779",
+    "sources": [
+      "source_documents/1 - UAS_CoSimulation_Seput_Instruction.docx",
+      "source_documents/2 - UAS_CoSimulation_Experiment_Instructions.docx",
+      "data_ref/drone_network_telemetry_dataset.csv",
+      "data_ref/source_package/generate_drone_network_telemetry_dataset.py",
+      "data_ref/source_package/label_map.json"
+    ],
+    "note": "The documents reference but do not contain or publish the original schema_reference.json."
+  },
+  "columns": [
+    "timestamp",
+    "organization_id",
+    "fleet_id",
+    "drone_id",
+    "mission_id",
+    "domain",
+    "mission_type",
+    "source_component",
+    "destination_component",
+    "source_ip",
+    "destination_ip",
+    "source_port",
+    "destination_port",
+    "protocol",
+    "network_slice_id",
+    "cell_id",
+    "session_id",
+    "packet_count",
+    "byte_count",
+    "packets_per_second",
+    "throughput_kbps",
+    "latency_ms",
+    "jitter_ms",
+    "packet_loss_rate",
+    "retransmission_rate",
+    "connection_duration_sec",
+    "authentication_status",
+    "handover_event",
+    "handover_count",
+    "signal_quality_dbm",
+    "command_channel_activity",
+    "video_stream_activity",
+    "telemetry_stream_activity",
+    "api_request_count",
+    "failed_connection_attempts",
+    "unusual_destination_flag",
+    "session_reuse_flag",
+    "traffic_burst_flag",
+    "anomaly_score",
+    "attack_type",
+    "attack_stage",
+    "severity",
+    "recommended_response",
+    "incident_label"
+  ],
+  "categorical_values": {
+    "domain": [
+      "logistics",
+      "civil_defense",
+      "environmental_monitoring",
+      "public_safety"
+    ],
+    "mission_type": [
+      "delivery",
+      "surveillance",
+      "search_and_rescue",
+      "environmental_sensing",
+      "emergency_response"
+    ],
+    "source_component": [
+      "drone",
+      "ground_control_station",
+      "edge_node",
+      "5g_core",
+      "mission_backend",
+      "security_monitor",
+      "external_host"
+    ],
+    "destination_component": [
+      "drone",
+      "ground_control_station",
+      "edge_node",
+      "5g_core",
+      "mission_backend",
+      "security_monitor"
+    ],
+    "protocol": [
+      "UDP",
+      "TCP",
+      "MQTT",
+      "HTTP",
+      "HTTPS",
+      "MAVLink-like"
+    ],
+    "network_slice_id": [
+      "slice_1",
+      "slice_2",
+      "slice_3",
+      "slice_4",
+      "slice_5",
+      "slice_6"
+    ],
+    "authentication_status": [
+      "success",
+      "expired",
+      "failed",
+      "unknown"
+    ],
+    "attack_type": [
+      "none",
+      "unknown_anomaly",
+      "denial_of_service",
+      "session_hijacking",
+      "identity_theft",
+      "control_protocol_attack",
+      "lateral_movement",
+      "network_application_attack"
+    ],
+    "attack_stage": [
+      "none",
+      "initial_access",
+      "execution",
+      "persistence",
+      "lateral_movement",
+      "impact",
+      "recovery"
+    ],
+    "severity": [
+      "none",
+      "low",
+      "medium",
+      "high",
+      "critical"
+    ],
+    "recommended_response": [
+      "continue_monitoring",
+      "increase_monitoring",
+      "rate_limit_and_block_flow",
+      "revoke_session_force_reauth",
+      "suspend_identity_quarantine_device",
+      "block_command_channel_safe_mode",
+      "segment_slice_isolate_component",
+      "rate_limit_api_alert_security_team"
+    ],
+    "incident_label": [
+      "normal",
+      "suspicious",
+      "malicious"
+    ]
+  },
+  "response_by_attack": {
+    "none": "continue_monitoring",
+    "unknown_anomaly": "increase_monitoring",
+    "denial_of_service": "rate_limit_and_block_flow",
+    "session_hijacking": "revoke_session_force_reauth",
+    "identity_theft": "suspend_identity_quarantine_device",
+    "control_protocol_attack": "block_command_channel_safe_mode",
+    "lateral_movement": "segment_slice_isolate_component",
+    "network_application_attack": "rate_limit_api_alert_security_team"
+  },
+  "integer_nonnegative": [
+    "packet_count",
+    "byte_count",
+    "connection_duration_sec",
+    "handover_count",
+    "command_channel_activity",
+    "api_request_count",
+    "failed_connection_attempts"
+  ],
+  "number_nonnegative": [
+    "packets_per_second",
+    "throughput_kbps",
+    "latency_ms",
+    "jitter_ms"
+  ],
+  "unit_interval": [
+    "packet_loss_rate",
+    "retransmission_rate",
+    "anomaly_score"
+  ],
+  "binary": [
+    "handover_event",
+    "video_stream_activity",
+    "telemetry_stream_activity",
+    "unusual_destination_flag",
+    "session_reuse_flag",
+    "traffic_burst_flag"
+  ],
+  "ports": [
+    "source_port",
+    "destination_port"
+  ],
+  "ip_addresses": [
+    "source_ip",
+    "destination_ip"
+  ],
+  "signal_quality_dbm": {
+    "minimum": -200.0,
+    "maximum": 0.0
+  }
+}

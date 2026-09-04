@@ -1,0 +1,72 @@
+organization_id: org_01
+fleet_id: fleet_09
+drone_id: UAS-0063
+domain: public_safety
+mission_type: surveillance
+mission_id: M_API_HIGH_001
+scenario_id: M_API_HIGH_001
+scenario_family: malicious
+simulation:
+  drone_count: 1
+  mission_speed_mps: 3.0
+  duration_sec: 135
+  aggregation_window_sec: 1.0
+  cells: 1
+  background_traffic: low
+  network_slice_profile: single_mission_slice
+  wireless_condition: good
+  mission_profile: route
+  seed: 1
+attack:
+  enabled: true
+  attack_type: network_application_attack
+  injection_point: backend_api_flood
+  intensity: high
+  start_sec: 40
+  end_sec: 80
+  flow:
+    name: api_flood
+    activity: api_request
+    size: 800
+    source_port: 7995
+    destination_port: 8995
+    protocol: HTTP
+    session_id: rogue-api
+    source_component: external_host
+    source_ip: 10.0.0.99
+    unanswered: true
+    rate: 200.0
+label_windows:
+- start_sec: 0
+  end_sec: 40
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+- start_sec: 40
+  end_sec: 80
+  attack_type: network_application_attack
+  attack_stage: execution
+  severity: high
+  incident_label: malicious
+  recommended_response: rate_limit_api_alert_security_team
+- start_sec: 80
+  end_sec: 90
+  attack_type: unknown_anomaly
+  attack_stage: recovery
+  severity: low
+  incident_label: suspicious
+  recommended_response: increase_monitoring
+- start_sec: 90
+  end_sec: 135
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+allowed_destinations:
+- 10.0.0.2
+expected_effects:
+- api_request_count and failed_connection_attempts rise
+- backend latency rises, traffic_burst_flag = 1 at high rate

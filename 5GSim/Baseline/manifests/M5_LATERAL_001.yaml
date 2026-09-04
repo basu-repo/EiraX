@@ -1,0 +1,58 @@
+organization_id: org_01
+fleet_id: fleet_09
+drone_id: UAS-0063
+domain: public_safety
+mission_type: surveillance
+mission_id: M5_LATERAL_001
+scenario_id: M5_LATERAL_001
+scenario_family: malicious
+simulation:
+  drone_count: 1
+  mission_speed_mps: 3.0
+  duration_sec: 135
+  aggregation_window_sec: 1.0
+  cells: 1
+  background_traffic: low
+  network_slice_profile: single_mission_slice
+attack:
+  enabled: true
+  attack_type: lateral_movement
+  start_sec: 40
+  end_sec: 80
+  flow:
+    name: port_scan
+    activity: network
+    rate: 4.0
+    size: 96
+    source_port: 7900
+    destination_port: 8100
+    protocol: TCP
+    session_id: probe
+    source_component: external_host
+    source_ip: 10.0.0.99
+    destination_ip: 10.0.0.3
+    unanswered: true
+label_windows:
+- start_sec: 0
+  end_sec: 40
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+- start_sec: 40
+  end_sec: 80
+  attack_type: lateral_movement
+  attack_stage: execution
+  severity: high
+  incident_label: malicious
+  recommended_response: segment_slice_isolate_component
+- start_sec: 80
+  end_sec: 135
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+allowed_destinations:
+- 10.0.0.2

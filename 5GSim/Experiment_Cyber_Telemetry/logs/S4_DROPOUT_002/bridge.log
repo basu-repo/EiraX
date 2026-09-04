@@ -1,0 +1,1 @@
+window_sec=1.0 ros_log=logs/S4_DROPOUT_002 net_csv=logs/S4_DROPOUT_002_net.csv manifest=manifests/S4_DROPOUT_002.yaml flows=logs/S4_DROPOUT_002/network/flow_contract.json out=data/S4_DROPOUT_002_cosim.csv flows_joined=2 rows=270 columns=44

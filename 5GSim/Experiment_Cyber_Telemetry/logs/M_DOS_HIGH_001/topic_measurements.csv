@@ -1,0 +1,4 @@
+topic,frequency_hz,bandwidth
+/mavros/local_position/pose,39.354,3.85
+/mavros/state,0.999,WARNING:
+/mavros/global_position/raw/fix,4.958,759

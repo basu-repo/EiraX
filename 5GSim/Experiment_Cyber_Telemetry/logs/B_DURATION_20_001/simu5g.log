@@ -1,0 +1,158 @@
+/home/basudeo/Documents/EiraX/5GSim/Experiment_Cyber_Telemetry/sim/Simu5G added to PATH
+OMNeT++ Discrete Event Simulation  (C) 1992-2022 Andras Varga, OpenSim Ltd.
+Version: 6.0.1, build: 220831-e4f07d04b8, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from /home/basudeo/Documents/EiraX/5GSim/Experiment_Cyber_Telemetry/sim/Simu5G/simulations:  20
+Loading NED files from /home/basudeo/Documents/EiraX/5GSim/Experiment_Cyber_Telemetry/sim/Simu5G/emulation:  7
+Loading NED files from /home/basudeo/Documents/EiraX/5GSim/Experiment_Cyber_Telemetry/sim/Simu5G/src:  93
+Loading NED files from /home/basudeo/Documents/EiraX/5GSim/Experiment_Cyber_Telemetry/sim/inet4.5/src:  1187
+Loading NED files from /home/basudeo/Documents/EiraX/5GSim/Experiment_Cyber_Telemetry/logs/B_DURATION_20_001/network:  1
+
+Preparing for running configuration General, run #0...
+Assigned runID=General-0-20260903-23:45:34-170188
+Setting up network "EiraXExperiment"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 8e-06s (0m 00s)  0% completed  (0% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 141   present: 137   in FES: 24
+** Event #419840   t=50.99   Elapsed: 2.00013s (0m 02s)  4% completed  (4% total)
+     Speed:     ev/sec=209908   simsec/sec=25.4935   ev/simsec=8233.79
+     Messages:  created: 190115   present: 130   in FES: 12
+** Event #792576   t=96.20961   Elapsed: 4.00045s (0m 04s)  8% completed  (8% total)
+     Speed:     ev/sec=186338   simsec/sec=22.6061   ev/simsec=8242.8
+     Messages:  created: 358760   present: 125   in FES: 11
+** Event #1175552   t=141.817   Elapsed: 6.0054s (0m 06s)  11% completed  (11% total)
+     Speed:     ev/sec=191016   simsec/sec=22.7474   ev/simsec=8397.24
+     Messages:  created: 535703   present: 129   in FES: 12
+** Event #1553152   t=187.6270002852   Elapsed: 8.00566s (0m 08s)  15% completed  (15% total)
+     Speed:     ev/sec=188775   simsec/sec=22.902   ev/simsec=8242.74
+     Messages:  created: 706555   present: 132   in FES: 13
+** Event #1936896   t=234.196   Elapsed: 10.0059s (0m 10s)  19% completed  (19% total)
+     Speed:     ev/sec=191852   simsec/sec=23.2821   ev/simsec=8240.33
+     Messages:  created: 880138   present: 124   in FES: 10
+** Event #2342656   t=283.38   Elapsed: 12.0065s (0m 12s)  23% completed  (23% total)
+     Speed:     ev/sec=202814   simsec/sec=24.584   ev/simsec=8249.84
+     Messages:  created: 1063828   present: 131   in FES: 13
+** Event #2707968   t=327.6977561388   Elapsed: 14.007s (0m 14s)  27% completed  (27% total)
+     Speed:     ev/sec=182614   simsec/sec=22.1537   ev/simsec=8243.02
+     Messages:  created: 1229118   present: 134   in FES: 14
+** Event #3117824   t=377.417   Elapsed: 16.007s (0m 16s)  31% completed  (31% total)
+     Speed:     ev/sec=204928   simsec/sec=24.8596   ev/simsec=8243.41
+     Messages:  created: 1414557   present: 125   in FES: 11
+** Event #3499520   t=423.732   Elapsed: 18.0083s (0m 18s)  35% completed  (35% total)
+     Speed:     ev/sec=190726   simsec/sec=23.1427   ev/simsec=8241.3
+     Messages:  created: 1587228   present: 130   in FES: 12
+** Event #3874304   t=469.196   Elapsed: 20.0096s (0m 20s)  39% completed  (39% total)
+     Speed:     ev/sec=187269   simsec/sec=22.7171   ev/simsec=8243.53
+     Messages:  created: 1756839   present: 132   in FES: 13
+** Event #4275712   t=517.791764   Elapsed: 22.0106s (0m 22s)  43% completed  (43% total)
+     Speed:     ev/sec=200601   simsec/sec=24.2854   ev/simsec=8260.14
+     Messages:  created: 1938842   present: 126   in FES: 11
+** Event #4650752   t=563.2460003352   Elapsed: 24.0109s (0m 24s)  46% completed  (46% total)
+     Speed:     ev/sec=187494   simsec/sec=22.7239   ev/simsec=8250.94
+     Messages:  created: 2108618   present: 132   in FES: 13
+** Event #5024512   t=608.599   Elapsed: 26.0162s (0m 26s)  50% completed  (50% total)
+     Speed:     ev/sec=186381   simsec/sec=22.6159   ev/simsec=8241.13
+     Messages:  created: 2277709   present: 126   in FES: 11
+** Event #5436160   t=658.4940001176   Elapsed: 28.0167s (0m 28s)  54% completed  (54% total)
+     Speed:     ev/sec=205781   simsec/sec=24.9423   ev/simsec=8250.29
+     Messages:  created: 2464043   present: 131   in FES: 13
+** Event #5794048   t=701.43   Elapsed: 30.0176s (0m 30s)  58% completed  (58% total)
+     Speed:     ev/sec=178863   simsec/sec=21.4583   ev/simsec=8335.38
+     Messages:  created: 2628186   present: 126   in FES: 12
+** Event #6184960   t=748.2830001176   Elapsed: 32.0179s (0m 32s)  62% completed  (62% total)
+     Speed:     ev/sec=195428   simsec/sec=23.4231   ev/simsec=8343.37
+     Messages:  created: 2807541   present: 130   in FES: 12
+** Event #6568704   t=794.839   Elapsed: 34.0181s (0m 34s)  66% completed  (66% total)
+     Speed:     ev/sec=191850   simsec/sec=23.2753   ev/simsec=8242.63
+     Messages:  created: 2981174   present: 126   in FES: 11
+** Event #6964736   t=842.913   Elapsed: 36.0184s (0m 36s)  70% completed  (70% total)
+     Speed:     ev/sec=197986   simsec/sec=24.0333   ev/simsec=8237.97
+     Messages:  created: 3160417   present: 131   in FES: 13
+** Event #7396608   t=895.31   Elapsed: 38.0192s (0m 38s)  74% completed  (74% total)
+     Speed:     ev/sec=215849   simsec/sec=26.1879   ev/simsec=8242.3
+     Messages:  created: 3355877   present: 128   in FES: 12
+** Event #7779584   t=941.743   Elapsed: 40.0197s (0m 40s)  78% completed  (78% total)
+     Speed:     ev/sec=191438   simsec/sec=23.2104   ev/simsec=8247.93
+     Messages:  created: 3529267   present: 133   in FES: 14
+** Event #8167936   t=988.835   Elapsed: 42.0207s (0m 42s)  82% completed  (82% total)
+     Speed:     ev/sec=194085   simsec/sec=23.535   ev/simsec=8246.67
+     Messages:  created: 3705077   present: 125   in FES: 11
+** Event #8604416   t=1041.795   Elapsed: 44.0209s (0m 44s)  86% completed  (86% total)
+     Speed:     ev/sec=218218   simsec/sec=26.4773   ev/simsec=8241.69
+     Messages:  created: 3902559   present: 124   in FES: 10
+** Event #8994560   t=1088.762   Elapsed: 46.0212s (0m 46s)  90% completed  (90% total)
+     Speed:     ev/sec=195039   simsec/sec=23.4795   ev/simsec=8306.77
+     Messages:  created: 4080698   present: 131   in FES: 11
+** Event #9415680   t=1139.777   Elapsed: 48.0219s (0m 48s)  94% completed  (94% total)
+     Speed:     ev/sec=210482   simsec/sec=25.4981   ev/simsec=8254.83
+     Messages:  created: 4271465   present: 125   in FES: 10
+** Event #9808128   t=1187.3837162776   Elapsed: 50.0221s (0m 50s)  98% completed  (98% total)
+     Speed:     ev/sec=196206   simsec/sec=23.8012   ev/simsec=8243.54
+     Messages:  created: 4449050   present: 132   in FES: 13
+** Event #9911830   t=1200   Elapsed: 50.4853s (0m 50s)  100% completed  (100% total)
+     Speed:     ev/sec=223872   simsec/sec=27.2363   ev/simsec=8219.62
+     Messages:  created: 4495931   present: 125   in FES: 8
+
+<!> Simulation time limit reached -- at t=1200s, event #9911830
+
+Calling finish() at end of Run #0...
+[INFO]	EiraXExperiment.missionBackend.tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.edgeNode.tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.gnb.tcp: finishing with 0 connections open.
+[INFO]	EiraXExperiment.gnb.sctp: finishing SCTP with 0 connections open.
+[INFO]	EiraXExperiment.ue[0].tcp: finishing with 0 connections open.
+[INFO]	** Signal at T=1200 to EiraXExperiment.router.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.router.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.missionBackend.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.missionBackend.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.0.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=1200 to EiraXExperiment.router.ipv4.routingTable: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.router.ipv4.configurator: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.edgeNode.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.edgeNode.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.1.1/24 mcastgrps:224.0.0.1} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=1200 to EiraXExperiment.upf.ipv4.routingTable: interfaceStateChanged pppIf ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.upf.ipv4.configurator: interfaceStateChanged pppIf ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.router.ipv4.routingTable: interfaceStateChanged ppp2 ID:103 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.router.ipv4.configurator: interfaceStateChanged ppp2 ID:103 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.2.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.iUpf.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.iUpf.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.upf.ipv4.routingTable: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.upf.ipv4.configurator: interfaceStateChanged ppp0 ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.3.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=1200 to EiraXExperiment.gnb.ipv4.routingTable: interfaceStateChanged pppIf ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.gnb.ipv4.configurator: interfaceStateChanged pppIf ID:101 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.2/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.iUpf.ipv4.routingTable: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=1200 to EiraXExperiment.iUpf.ipv4.configurator: interfaceStateChanged ppp1 ID:102 MTU:4470 UP NOCARRIER MULTICAST POINTTOPOINT macAddr:n/a Ipv4:{inet_addr:10.0.4.1/24 mcastgrps:224.0.0.1,224.0.0.2} changed field: 0
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+
+End.
+Exported 1012 scalars, 2039 parameters, 165 vectors, 48 histograms

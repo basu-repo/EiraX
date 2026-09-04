@@ -1,0 +1,72 @@
+organization_id: org_01
+fleet_id: fleet_09
+drone_id: UAS-0063
+domain: public_safety
+mission_type: surveillance
+mission_id: M_DOS_30S_001
+scenario_id: M_DOS_30S_001
+scenario_family: malicious
+simulation:
+  drone_count: 1
+  mission_speed_mps: 3.0
+  duration_sec: 135
+  aggregation_window_sec: 1.0
+  cells: 1
+  background_traffic: low
+  network_slice_profile: single_mission_slice
+  wireless_condition: good
+  mission_profile: route
+  seed: 1
+attack:
+  enabled: true
+  attack_type: denial_of_service
+  injection_point: simu5g_flood_node
+  intensity: high
+  start_sec: 40
+  end_sec: 70
+  flow:
+    name: rogue_flood
+    activity: network
+    size: 1200
+    source_port: 7990
+    destination_port: 8701
+    protocol: UDP
+    session_id: rogue-flood
+    source_component: external_host
+    source_ip: 10.0.0.99
+    rate: 200.0
+label_windows:
+- start_sec: 0
+  end_sec: 40
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+- start_sec: 40
+  end_sec: 70
+  attack_type: denial_of_service
+  attack_stage: execution
+  severity: high
+  incident_label: malicious
+  recommended_response: rate_limit_and_block_flow
+- start_sec: 70
+  end_sec: 80
+  attack_type: unknown_anomaly
+  attack_stage: recovery
+  severity: low
+  incident_label: suspicious
+  recommended_response: increase_monitoring
+- start_sec: 80
+  end_sec: 135
+  attack_type: none
+  attack_stage: none
+  severity: none
+  incident_label: normal
+  recommended_response: continue_monitoring
+allowed_destinations:
+- 10.0.0.2
+expected_effects:
+- packets_per_second, byte_count, latency_ms, jitter_ms and packet_loss_rate rise
+- traffic_burst_flag = 1 on the flood flow
+- a single 30 s window

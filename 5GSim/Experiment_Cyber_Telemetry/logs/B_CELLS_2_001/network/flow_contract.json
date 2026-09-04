@@ -1,0 +1,32 @@
+[
+ {
+  "name": "telemetry",
+  "activity": "telemetry",
+  "size": 76,
+  "rate": 50.003,
+  "source_port": 7701,
+  "destination_port": 8701,
+  "protocol": "UDP",
+  "session_id": "telemetry-session",
+  "network_slice_id": "slice_1",
+  "ue": 0,
+  "drone_index": 0,
+  "slot": 0,
+  "app": 0
+ },
+ {
+  "name": "command",
+  "activity": "command",
+  "size": 200,
+  "rate": 0.849,
+  "source_port": 7702,
+  "destination_port": 8702,
+  "protocol": "MAVLink-like",
+  "session_id": "command-session",
+  "network_slice_id": "slice_1",
+  "ue": 0,
+  "drone_index": 0,
+  "slot": 1,
+  "app": 1
+ }
+]
