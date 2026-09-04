@@ -1,9 +1,0 @@
-{
-  "seed": 21,
-  "physical_source_run": "B1_BASE_002",
-  "expected_boundary_crossing_sec": 57.5,
-  "label_window_sec": [
-    47,
-    78
-  ]
-}

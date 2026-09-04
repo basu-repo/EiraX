@@ -1,7 +1,0 @@
-{
-  "scenario": "identity_theft",
-  "injection_point": "rogue identity source with failed authentication",
-  "rosbag_strategy": "same measured flight used as controlled trace-driven mobility input",
-  "source_rosbag": "/home/basudeo/Documents/EiraX/UAV_5GSim/notebook_runs/run_20260805_210640/rosbag_benign",
-  "network_dataset": "/home/basudeo/Documents/EiraX/UAV_5GSim/notebook_runs/run_20260805_210640/network/identity_theft/data/drone_network_telemetry_cosim.csv"
-}

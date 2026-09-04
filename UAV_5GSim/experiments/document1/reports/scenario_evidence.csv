@@ -1,9 +1,0 @@
-scenario,injection_point,measured_evidence,passed,rows
-baseline,none,normal measured flows only,True,165
-suspicious,ambiguous authentication retry; no malicious attack,ambiguous authentication behaviour,True,248
-denial_of_service,INET high-rate flood flow,packet-rate and burst increase,True,248
-session_hijacking,rogue command-session source,session reuse and command activity,True,248
-identity_theft,rogue identity source with failed authentication,failed rogue-identity authentication,True,248
-control_protocol_attack,extra MAVLink-like command flow,command-channel spike,True,248
-lateral_movement,INET internal-destination scanner flow,unusual internal destination,True,248
-network_application_attack,mission-backend API flood flow,API request and burst increase,True,248

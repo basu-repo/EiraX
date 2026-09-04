@@ -1,4 +1,0 @@
-run_id,requested_duration_sec,active_duration_sec,landed_and_disarmed,final_goal_error_m,pose_messages,ros_recording_duration_sec,simu5g_end_confirmed,dataset_rows,dataset_columns,status
-LIVE_DURATION_05MIN_20260826_215903,300,300.0047625219995,True,0.030353382182553325,16869,337.731104102,True,600,44,passed
-LIVE_DURATION_10MIN_20260826_220656,600,600.0033533880014,True,0.07189689675948104,31889,638.277914915,True,1200,44,passed
-LIVE_DURATION_20MIN_20260826_221941,1200,1200.0112831530023,True,0.05387052637070794,61840,1238.492260735,True,2400,44,passed

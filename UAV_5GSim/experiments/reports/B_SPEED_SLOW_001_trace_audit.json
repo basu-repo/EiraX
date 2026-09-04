@@ -1,7 +1,0 @@
-{
-  "source": "/home/basudeo/Documents/EiraX/UAV_5GSim/experiments/logs/B_SPEED_SLOW_001/ros_pose_trace.csv",
-  "takeoff_bag_sec": 14.592766378,
-  "duration_sec": 300,
-  "resample_hz": 10,
-  "samples": 3001
-}

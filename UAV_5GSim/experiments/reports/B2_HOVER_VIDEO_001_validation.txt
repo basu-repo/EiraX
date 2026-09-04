@@ -1,1 +1,0 @@
-RESULT: PASSED (540 rows, 44 columns)

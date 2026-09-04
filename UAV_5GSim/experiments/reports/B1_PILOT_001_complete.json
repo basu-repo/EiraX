@@ -1,9 +1,0 @@
-{
-  "physical": "passed",
-  "simu5g": "passed",
-  "bridge": "passed",
-  "validation": "passed",
-  "rows": 360,
-  "columns": 44,
-  "free_gib": 231.53856658935547
-}

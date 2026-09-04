@@ -1,5 +1,0 @@
-{
-  "source_run": "B1_BASE_003",
-  "reason": "Hold measured flight behavior constant while varying only Simu5G background load",
-  "storage": "hard-linked ROS evidence; no duplicated bag bytes"
-}

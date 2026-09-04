@@ -1,4 +1,0 @@
-topic,message_count,duration_sec,frequency_hz,total_serialized_bytes,average_serialized_message_bytes,bandwidth_kbps
-/mavros/global_position/raw/fix,1687,337.571641602,4.997457701109231,229432,136.0,5.437233978806843
-/mavros/local_position/pose,16869,337.731104102,49.94802017081998,1282044,76.0,30.368396263858546
-/mavros/state,344,337.476318158,1.0193307840905912,13796,40.104651162790695,0.32703924412357666

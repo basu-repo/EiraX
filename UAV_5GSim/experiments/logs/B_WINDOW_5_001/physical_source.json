@@ -1,6 +1,0 @@
-{
-  "source_run": "B1_BASE_003",
-  "storage": "hard-linked",
-  "network_vectors": "hard-linked; unchanged",
-  "controlled_variable": "aggregation_window_sec"
-}
